@@ -10,6 +10,8 @@
     <!-- Add Chart.js CDN links -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- Latest compiled and minified Bootstrap CSS -->
     
     <style>
@@ -120,66 +122,368 @@
 <body>
     <h1>This is an example of 1 interactive wheel and 5 questions</h1>
     <div id="app">
-        <h1>{{ message }}</h1>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-
-                    <div class="question">
-                        <div>1. I eat health balance diet</div>
-                        <div class="range-slider">
-                            <input v-model="rangeslide1" class="range-slider__range" type="range" value="0" min="0" max="100">
-                            <span class="range-slider__value">0</span>
+        <div>
+            <!-- SOMATIC WEALTH -->
+            <div id="somatic_wealth_slide" class="livweal_slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>{{ options.slide_title[0] }}</h2>
                         </div>
                     </div>
-
-                    <div class="question">
-                        <div>2. I eat health balance diet</div>
-                        <div class="range-slider">
-                            <input v-model="rangeslide2" class="range-slider__range" type="range" value="0" min="0" max="100">
-                            <span class="range-slider__value">0</span>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="question">
+                                <div>{{ options.questions.somatic_wealth[0] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="somatic_wealth_question1" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.somatic_wealth[1] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="somatic_wealth_question2" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.somatic_wealth[2] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="somatic_wealth_question3" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.somatic_wealth[3] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="somatic_wealth_question4" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.somatic_wealth[4] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="somatic_wealth_question5" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="question">
-                        <div>3. I eat health balance diet</div>
-                        <div class="range-slider">
-                            <input v-model="rangeslide3" class="range-slider__range" type="range" value="0" min="0" max="100">
-                            <span class="range-slider__value">0</span>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                                <canvas id="somatic_wealth_chart"></canvas>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="question">
-                        <div>4. I eat health balance diet</div>
-                        <div class="range-slider">
-                            <input v-model="rangeslide4" class="range-slider__range" type="range" value="0" min="0" max="100">
-                            <span class="range-slider__value">0</span>
-                        </div>
-                    </div>
-
-                    <div class="question">
-                        <div>5. I eat health balance diet</div>
-                        <div class="range-slider">
-                            <input v-model="rangeslide5" class="range-slider__range" type="range" value="0" min="0" max="100">
-                            <span class="range-slider__value">0</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
-                        <canvas id="myChart"></canvas>
                     </div>
                 </div>
             </div>
+
+            <!-- MENTAL WEALTH -->
+            <div id="mental_wealth_slide" class="livweal_slide" style="display: none;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>{{ options.slide_title[1] }}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="question">
+                                <div>{{ options.questions.mental_wealth[0] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="mental_wealth_question1" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.mental_wealth[1] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="mental_wealth_question2" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.mental_wealth[2] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="mental_wealth_question3" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.mental_wealth[3] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="mental_wealth_question4" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.mental_wealth[4] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="mental_wealth_question5" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                                <canvas id="mental_wealth_chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EMOTIONAL WEALTH -->
+            <div id="emotional_wealth_slide" class="livweal_slide" style="display: none;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>{{ options.slide_title[2] }}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="question">
+                                <div>{{ options.questions.emotional_wealth[0] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="emotional_wealth_question1" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.emotional_wealth[1] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="emotional_wealth_question2" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.emotional_wealth[2] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="emotional_wealth_question3" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.emotional_wealth[3] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="emotional_wealth_question4" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.emotional_wealth[4] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="emotional_wealth_question5" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                                <canvas id="emotional_wealth_chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTERPERSONAL WEALTH -->
+            <div id="interpersonal_wealth_slide" class="livweal_slide" style="display: none;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>{{ options.slide_title[3] }}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="question">
+                                <div>{{ options.questions.interpersonal_wealth[0] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="interpersonal_wealth_question1" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.interpersonal_wealth[1] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="interpersonal_wealth_question2" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.interpersonal_wealth[2] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="interpersonal_wealth_question3" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.interpersonal_wealth[3] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="interpersonal_wealth_question4" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.interpersonal_wealth[4] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="interpersonal_wealth_question5" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                                <canvas id="interpersonal_wealth_chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ENERGETIC WEALTH -->
+            <div id="energetic_wealth_slide" class="livweal_slide" style="display: none;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>{{ options.slide_title[4] }}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="question">
+                                <div>{{ options.questions.energetic_wealth[0] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="energetic_wealth_question1" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.energetic_wealth[1] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="energetic_wealth_question2" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.energetic_wealth[2] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="energetic_wealth_question3" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.energetic_wealth[3] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="energetic_wealth_question4" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.energetic_wealth[4] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="energetic_wealth_question5" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                                <canvas id="energetic_wealth_chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FINANCIAL WEALTH -->
+            <div id="financial_wealth_slide" class="livweal_slide" style="display: none;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>{{ options.slide_title[5] }}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="question">
+                                <div>{{ options.questions.financial_wealth[0] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="financial_wealth_question1" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.financial_wealth[1] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="financial_wealth_question2" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.financial_wealth[2] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="financial_wealth_question3" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.financial_wealth[3] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="financial_wealth_question4" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+        
+                            <div class="question">
+                                <div>{{ options.questions.financial_wealth[4] }}</div>
+                                <div class="range-slider">
+                                    <input v-model="financial_wealth_question5" class="range-slider__range" type="range" value="0" min="0" max="100">
+                                    <span class="range-slider__value">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                                <canvas id="financial_wealth_chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-6"><button @click="prevChart">Previous</button></div>
+                    <div class="col-6"><button @click="nextChart">Next</button></div>
+                </div>
+            </div>
         </div>
-
-        <!-- Chart.js canvas element -->
-        
-
-        <button @click="changeData">Change Data</button>
-
-        
     </div>
 
     <!-- Your Vue.js script with Polar Area Chart.js integration -->
@@ -187,45 +491,221 @@
         new Vue({
             el: '#app',
             data: {
-                message: 'Somatic Wealth',
-                data: [0, 0, 0, 0, 0, 0],
-                myChart: null,
-                rangeslide1: 0,
-                rangeslide2: 0,
-                rangeslide3: 0,
-                rangeslide4: 0,
-                rangeslide5: 0,
+                current_chart: 0,
+                somatic_wealth_chart: null,
+                mental_wealth_chart: null,
+                emotional_wealth_chart: null,
+                interpersonal_wealth_chart: null,
+                energetic_wealth_chart: null,
+                financial_wealth_chart: null,
+                somatic_wealth_question1: 0,
+                somatic_wealth_question2: 0,
+                somatic_wealth_question3: 0,
+                somatic_wealth_question4: 0,
+                somatic_wealth_question5: 0,
+                mental_wealth_question1: 0,
+                mental_wealth_question2: 0,
+                mental_wealth_question3: 0,
+                mental_wealth_question4: 0,
+                mental_wealth_question5: 0,
+                emotional_wealth_question1: 0,
+                emotional_wealth_question2: 0,
+                emotional_wealth_question3: 0,
+                emotional_wealth_question4: 0,
+                emotional_wealth_question5: 0,
+                interpersonal_wealth_question1: 0,
+                interpersonal_wealth_question2: 0,
+                interpersonal_wealth_question3: 0,
+                interpersonal_wealth_question4: 0,
+                interpersonal_wealth_question5: 0,
+                energetic_wealth_question1: 0,
+                energetic_wealth_question2: 0,
+                energetic_wealth_question3: 0,
+                energetic_wealth_question4: 0,
+                energetic_wealth_question5: 0,
+                financial_wealth_question1: 0,
+                financial_wealth_question2: 0,
+                financial_wealth_question3: 0,
+                financial_wealth_question4: 0,
+                financial_wealth_question5: 0,
+                options: {
+                    slide_title: [
+                        "Somatic Wealth",
+                        "Mental Wealth",
+                        "Emotional Wealth",
+                        "Interpersonal Wealth",
+                        "Energetic Wealth",
+                        "Financial Wealth"
+                    ],
+                    questions: {
+                        somatic_wealth: [
+                            "1. I eat health balance diet",
+                            "2. I exercise atleast 3 times a week",
+                            "3. I take responsibility for my physical health",
+                            "4. I am generally free from illness",
+                            "5. I have annual check-ups and specific medical checks as prescribed"
+                        ],
+                        mental_wealth: [
+                            "I enjoy learning new skills and information",
+                            "I have positive thoughts (low degree)",
+                            "I am generally satisfied with my vocation/major",
+                            "I commit time and energy to professional growth",
+                            "I pursue mentally stimulating interests and hobbies"
+                        ],
+                        emotional_wealth: [
+                            "1. I have a sense of control in my life and am able to adapt to change.",
+                            "2. I perceived problems as opportunities for growth.",
+                            "3. I am able to comfort or console myself when I am troubled.",
+                            "4. I have a sense of fun and can laugh at myself,",
+                            "5. Others would describe me as emotionally stable"
+                        ],
+                        interpersonal_wealth: [
+                            "1. I have atleast three people with whom I have close.",
+                            "2. I am able to resolve conflicts in all areas of my life.",
+                            "3. I have satisfying social interactions with others.",
+                            "4. I am aware of feelings of others and can respond appropriately",
+                            "5. I have sense of belonging to a group or within organizations."
+                        ],
+                        energetic_wealth: [
+                            "1. I have a sense of control in my life and am able to adapt to change.",
+                            "2. I perceived problems as opportunities for growth.",
+                            "3. I am able to comfort or console myself when I am troubled.",
+                            "4. I have a sense of fun and can laugh at myself,",
+                            "5. Others would describe me as emotionally stable"
+                        ],
+                        financial_wealth: [
+                            "I enjoy learning new skills and information",
+                            "I have positive thoughts (low degree)",
+                            "I am generally satisfied with my vocation/major",
+                            "I commit time and energy to professional growth",
+                            "I pursue mentally stimulating interests and hobbies"
+                        ],
+
+                    }
+                }
             },
             watch: {
-                rangeslide1($value) { this.changeData(); },
-                rangeslide2($value) { this.changeData(); },
-                rangeslide3($value) { this.changeData(); },
-                rangeslide4($value) { this.changeData(); },
-                rangeslide5($value) { this.changeData(); }
+                somatic_wealth_question1($value) { this.updateSomaticWealthData(); },
+                somatic_wealth_question2($value) { this.updateSomaticWealthData(); },
+                somatic_wealth_question3($value) { this.updateSomaticWealthData(); },
+                somatic_wealth_question4($value) { this.updateSomaticWealthData(); },
+                somatic_wealth_question5($value) { this.updateSomaticWealthData(); },
+
+                mental_wealth_question1($value) { this.updateMentalWealthData(); },
+                mental_wealth_question2($value) { this.updateMentalWealthData(); },
+                mental_wealth_question3($value) { this.updateMentalWealthData(); },
+                mental_wealth_question4($value) { this.updateMentalWealthData(); },
+                mental_wealth_question5($value) { this.updateMentalWealthData(); },
+
+                emotional_wealth_question1($value) { this.updateEmotionalWealthData(); },
+                emotional_wealth_question2($value) { this.updateEmotionalWealthData(); },
+                emotional_wealth_question3($value) { this.updateEmotionalWealthData(); },
+                emotional_wealth_question4($value) { this.updateEmotionalWealthData(); },
+                emotional_wealth_question5($value) { this.updateEmotionalWealthData(); },
+
+                interpersonal_wealth_question1($value) { this.updateInterpersonalWealthData(); },
+                interpersonal_wealth_question2($value) { this.updateInterpersonalWealthData(); },
+                interpersonal_wealth_question3($value) { this.updateInterpersonalWealthData(); },
+                interpersonal_wealth_question4($value) { this.updateInterpersonalWealthData(); },
+                interpersonal_wealth_question5($value) { this.updateInterpersonalWealthData(); },
+
+                energetic_wealth_question1($value) { this.updateEnergeticWealthData(); },
+                energetic_wealth_question2($value) { this.updateEnergeticWealthData(); },
+                energetic_wealth_question3($value) { this.updateEnergeticWealthData(); },
+                energetic_wealth_question4($value) { this.updateEnergeticWealthData(); },
+                energetic_wealth_question5($value) { this.updateEnergeticWealthData(); },
+
+                financial_wealth_question1($value) { this.updateFinancialWealthData(); },
+                financial_wealth_question2($value) { this.updateFinancialWealthData(); },
+                financial_wealth_question3($value) { this.updateFinancialWealthData(); },
+                financial_wealth_question4($value) { this.updateFinancialWealthData(); },
+                financial_wealth_question5($value) { this.updateFinancialWealthData(); },
             },
             methods: {
-                changeData() {
-                    this.data = [
-                        this.rangeslide1,
-                        this.rangeslide2,
-                        this.rangeslide3,
-                        this.rangeslide4,
-                        this.rangeslide5
+                updateSomaticWealthData() {
+                    const $data = [
+                        this.somatic_wealth_question1,
+                        this.somatic_wealth_question2,
+                        this.somatic_wealth_question3,
+                        this.somatic_wealth_question4,
+                        this.somatic_wealth_question5
                     ];
-                    this.myChart.data.datasets[0].data = this.data;
-                    this.myChart.update();
+                    this.somatic_wealth_chart.data.datasets[0].data = $data;
+                    this.somatic_wealth_chart.update();
                 },
-                renderData() {
-                    // Chart.js configuration
-                    const ctx = document.getElementById('myChart').getContext('2d');
+                updateMentalWealthData() {
+                    const $data = [
+                        this.mental_wealth_question1,
+                        this.mental_wealth_question2,
+                        this.mental_wealth_question3,
+                        this.mental_wealth_question4,
+                        this.mental_wealth_question5
+                    ];
+                    this.mental_wealth_chart.data.datasets[0].data = $data;
+                    this.mental_wealth_chart.update();  
+                },
+                updateEmotionalWealthData() {
+                    const $data = [
+                        this.emotional_wealth_question1,
+                        this.emotional_wealth_question2,
+                        this.emotional_wealth_question3,
+                        this.emotional_wealth_question4,
+                        this.emotional_wealth_question5
+                    ];
+                    this.emotional_wealth_chart.data.datasets[0].data = $data;
+                    this.emotional_wealth_chart.update();  
+                },
+                updateInterpersonalWealthData() {
+                    const $data = [
+                        this.interpersonal_wealth_question1,
+                        this.interpersonal_wealth_question2,
+                        this.interpersonal_wealth_question3,
+                        this.interpersonal_wealth_question4,
+                        this.interpersonal_wealth_question5
+                    ];
+                    this.interpersonal_wealth_chart.data.datasets[0].data = $data;
+                    this.interpersonal_wealth_chart.update();  
+                },
+                updateEnergeticWealthData() {
+                    const $data = [
+                        this.energetic_wealth_question1,
+                        this.energetic_wealth_question2,
+                        this.energetic_wealth_question3,
+                        this.energetic_wealth_question4,
+                        this.energetic_wealth_question5
+                    ];
+                    this.energetic_wealth_chart.data.datasets[0].data = $data;
+                    this.energetic_wealth_chart.update();  
+                },
+                updateFinancialWealthData() {
+                    const $data = [
+                        this.financial_wealth_question1,
+                        this.financial_wealth_question2,
+                        this.financial_wealth_question3,
+                        this.financial_wealth_question4,
+                        this.financial_wealth_question5
+                    ];
+                    this.financial_wealth_chart.data.datasets[0].data = $data;
+                    this.financial_wealth_chart.update();  
+                },
 
-                    this.myChart = new Chart(ctx, {
+                renderSomaticWealthWheel() {
+                    // Chart.js configuration
+                    const ctx = document.getElementById('somatic_wealth_chart').getContext('2d');
+                    const $data = [
+                        this.somatic_wealth_question1,
+                        this.somatic_wealth_question2,
+                        this.somatic_wealth_question3,
+                        this.somatic_wealth_question4,
+                        this.somatic_wealth_question5
+                    ]
+                    this.somatic_wealth_chart = new Chart(ctx, {
                         type: 'polarArea',
                         data: {
                             labels: ['1', '2', '3', '4', '5'],
                             datasets: [{
                                 label: 'Sample Data Only',
-                                data: this.data,
+                                data: $data,
                                 backgroundColor: [
                                     'rgba(255, 99, 132, 0.8)',
                                     'rgba(54, 162, 235, 0.8)',
@@ -249,10 +729,255 @@
                             }
                         }
                     });
+                },
+                renderMentalWealthWheel() {
+                    // Chart.js configuration
+                    const ctx = document.getElementById('mental_wealth_chart').getContext('2d');
+                    const $data = [
+                        this.mental_wealth_question1,
+                        this.mental_wealth_question2,
+                        this.mental_wealth_question3,
+                        this.mental_wealth_question4,
+                        this.mental_wealth_question5
+                    ]
+                    this.mental_wealth_chart = new Chart(ctx, {
+                        type: 'polarArea',
+                        data: {
+                            labels: ['1', '2', '3', '4', '5'],
+                            datasets: [{
+                                label: 'Sample Data Only',
+                                data: $data,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.8)',
+                                    'rgba(54, 162, 235, 0.8)',
+                                    'rgba(255, 255, 0, 0.8)',
+                                    'rgba(75, 192, 192, 0.8)',
+                                    'rgba(153, 102, 255, 0.8)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scale: {
+                                ticks: {
+                                    beginAtZero: true,
+                                    steps: 0,
+                                    stepValue: 5,
+                                    max: 100,
+                                    suggestedMax: 100,
+                                    suggestedMin: 0
+                                }
+                            }
+                        }
+                    });
+                },
+                renderEmotionalWealthWheel() {
+                    // Chart.js configuration
+                    const ctx = document.getElementById('emotional_wealth_chart').getContext('2d');
+                    const $data = [
+                        this.emotional_wealth_question1,
+                        this.emotional_wealth_question2,
+                        this.emotional_wealth_question3,
+                        this.emotional_wealth_question4,
+                        this.emotional_wealth_question5
+                    ]
+                    this.emotional_wealth_chart = new Chart(ctx, {
+                        type: 'polarArea',
+                        data: {
+                            labels: ['1', '2', '3', '4', '5'],
+                            datasets: [{
+                                label: 'Sample Data Only',
+                                data: $data,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.8)',
+                                    'rgba(54, 162, 235, 0.8)',
+                                    'rgba(255, 255, 0, 0.8)',
+                                    'rgba(75, 192, 192, 0.8)',
+                                    'rgba(153, 102, 255, 0.8)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scale: {
+                                ticks: {
+                                    beginAtZero: true,
+                                    steps: 0,
+                                    stepValue: 5,
+                                    max: 100,
+                                    suggestedMax: 100,
+                                    suggestedMin: 0
+                                }
+                            }
+                        }
+                    });
+                },
+                renderInterpersonalWealthWheel() {
+                    // Chart.js configuration
+                    const ctx = document.getElementById('interpersonal_wealth_chart').getContext('2d');
+                    const $data = [
+                        this.interpersonal_wealth_question1,
+                        this.interpersonal_wealth_question2,
+                        this.interpersonal_wealth_question3,
+                        this.interpersonal_wealth_question4,
+                        this.interpersonal_wealth_question5
+                    ]
+                    this.interpersonal_wealth_chart = new Chart(ctx, {
+                        type: 'polarArea',
+                        data: {
+                            labels: ['1', '2', '3', '4', '5'],
+                            datasets: [{
+                                label: 'Sample Data Only',
+                                data: $data,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.8)',
+                                    'rgba(54, 162, 235, 0.8)',
+                                    'rgba(255, 255, 0, 0.8)',
+                                    'rgba(75, 192, 192, 0.8)',
+                                    'rgba(153, 102, 255, 0.8)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scale: {
+                                ticks: {
+                                    beginAtZero: true,
+                                    steps: 0,
+                                    stepValue: 5,
+                                    max: 100,
+                                    suggestedMax: 100,
+                                    suggestedMin: 0
+                                }
+                            }
+                        }
+                    });
+                },
+                renderEnergeticWealthWheel() {
+                    // Chart.js configuration
+                    const ctx = document.getElementById('energetic_wealth_chart').getContext('2d');
+                    const $data = [
+                        this.energetic_wealth_question1,
+                        this.energetic_wealth_question2,
+                        this.energetic_wealth_question3,
+                        this.energetic_wealth_question4,
+                        this.energetic_wealth_question5
+                    ]
+                    this.energetic_wealth_chart = new Chart(ctx, {
+                        type: 'polarArea',
+                        data: {
+                            labels: ['1', '2', '3', '4', '5'],
+                            datasets: [{
+                                label: 'Sample Data Only',
+                                data: $data,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.8)',
+                                    'rgba(54, 162, 235, 0.8)',
+                                    'rgba(255, 255, 0, 0.8)',
+                                    'rgba(75, 192, 192, 0.8)',
+                                    'rgba(153, 102, 255, 0.8)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scale: {
+                                ticks: {
+                                    beginAtZero: true,
+                                    steps: 0,
+                                    stepValue: 5,
+                                    max: 100,
+                                    suggestedMax: 100,
+                                    suggestedMin: 0
+                                }
+                            }
+                        }
+                    });
+                },
+                renderFinancialWealthWheel() {
+                    // Chart.js configuration
+                    const ctx = document.getElementById('financial_wealth_chart').getContext('2d');
+                    const $data = [
+                        this.financial_wealth_question1,
+                        this.financial_wealth_question2,
+                        this.financial_wealth_question3,
+                        this.financial_wealth_question4,
+                        this.financial_wealth_question5
+                    ]
+                    this.financial_wealth_chart = new Chart(ctx, {
+                        type: 'polarArea',
+                        data: {
+                            labels: ['1', '2', '3', '4', '5'],
+                            datasets: [{
+                                label: 'Sample Data Only',
+                                data: $data,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.8)',
+                                    'rgba(54, 162, 235, 0.8)',
+                                    'rgba(255, 255, 0, 0.8)',
+                                    'rgba(75, 192, 192, 0.8)',
+                                    'rgba(153, 102, 255, 0.8)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scale: {
+                                ticks: {
+                                    beginAtZero: true,
+                                    steps: 0,
+                                    stepValue: 5,
+                                    max: 100,
+                                    suggestedMax: 100,
+                                    suggestedMin: 0
+                                }
+                            }
+                        }
+                    });
+                },
+                prevChart() {
+                    if(this.current_chart !== 0) {
+                        this.current_chart--;
+                        this.manageVisibility();
+                    }
+                },
+                nextChart() {
+                    if(this.current_chart !== 5) {
+                        this.current_chart++;
+                        this.manageVisibility();
+                    }
+                },
+                manageVisibility() {
+                    $('#somatic_wealth_slide').css('display', 'none');
+                    $('#mental_wealth_slide').css('display', 'none');
+                    $('#emotional_wealth_slide').css('display', 'none');
+                    $('#interpersonal_wealth_slide').css('display', 'none');
+                    $('#energetic_wealth_slide').css('display', 'none');
+                    $('#financial_wealth_slide').css('display', 'none');
+                    
+                    switch(this.current_chart) {
+                        case 0: 
+                            $('#somatic_wealth_slide').css('display', 'block'); break;
+                        case 1:
+                            $('#mental_wealth_slide').css('display', 'block'); break;
+                        case 2:
+                            $('#emotional_wealth_slide').css('display', 'block'); break;
+                        case 3:
+                            $('#interpersonal_wealth_slide').css('display', 'block'); break;
+                        case 4:
+                            $('#energetic_wealth_slide').css('display', 'block'); break;
+                        case 5:
+                            $('#financial_wealth_slide').css('display', 'block'); break;
+                    }
                 }
             },
             mounted() {
-                this.renderData();
+                this.renderSomaticWealthWheel();
+                this.renderMentalWealthWheel();
+                this.renderEmotionalWealthWheel();
+                this.renderInterpersonalWealthWheel();
+                this.renderEnergeticWealthWheel();
+                this.renderFinancialWealthWheel();
             }
         });
     </script>
