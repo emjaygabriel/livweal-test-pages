@@ -1,0 +1,1 @@
+// Enter code here for all the functionalities only inside offerings page.

@@ -51,50 +51,71 @@ new Vue({
             ],
             questions: {
                 somatic_wealth: [
-                    "1. I eat health balance diet",
-                    "2. I exercise atleast 3 times a week",
-                    "3. I take responsibility for my physical health",
-                    "4. I am generally free from illness",
-                    "5. I have annual check-ups and specific medical checks as prescribed"
+                    "1. I can move my body with confidence, ease and freedom.",
+                    "2. I am physically resilient and bounce back easily from periods of stress, illness, or injury.",
+                    "3. I eat a balanced, nourishing diet and exercise regularly to maintain my health and joy.",
+                    "4. I am connected with my body and I give it what it needs, when it needs it.",
+                    "5. I am in flow with my environment and actively consider the impact and consequences of my choices."
                 ],
                 mental_wealth: [
-                    "I enjoy learning new skills and information",
-                    "I have positive thoughts (low degree)",
-                    "I am generally satisfied with my vocation/major",
-                    "I commit time and energy to professional growth",
-                    "I pursue mentally stimulating interests and hobbies"
+                    "1. I think, understand, and process information easily and efficiently.",
+                    "2. I am able to problem solve, think creatively, and learn new things.",
+                    "3. I am present with my own thoughts, feelings, and behaviors.",
+                    "4. I have an optimistic outlook and trust myself and others.",
+                    "5. I am in full alignment with my needs, values, and desires."
                 ],
                 emotional_wealth: [
-                    "1. I have a sense of control in my life and am able to adapt to change.",
-                    "2. I perceived problems as opportunities for growth.",
-                    "3. I am able to comfort or console myself when I am troubled.",
-                    "4. I have a sense of fun and can laugh at myself,",
-                    "5. Others would describe me as emotionally stable"
+                    "1. I identify and manage my emotions responsibly for myself and in social situations.",
+                    "2. I am able to deal with, and effectively recover from, adversity, disappointment and stress.",
+                    "3. I feel and appropriately express a wide range of emotions.",
+                    "4. Others would describe me as even-keeled and emotionally stable.",
+                    "5. I recognize my value and see all of life’s events as opportunities for growth."
                 ],
                 interpersonal_wealth: [
-                    "1. I have atleast three people with whom I have close.",
-                    "2. I am able to resolve conflicts in all areas of my life.",
-                    "3. I have satisfying social interactions with others.",
-                    "4. I am aware of feelings of others and can respond appropriately",
-                    "5. I have sense of belonging to a group or within organizations."
+                    "1. I recognise the impact that words and actions have on others and myself.",
+                    "2. I have at least three people with whom I have an open, trusting and connected relationship.",
+                    "3. I experience a sense of belonging in relationships with others.",
+                    "4. My self-awareness informs my decisions and choices with others.",
+                    "5. I am able to communicate and establish effective boundaries for myself and with others."
                 ],
                 energetic_wealth: [
-                    "1. I have a sense of control in my life and am able to adapt to change.",
-                    "2. I perceived problems as opportunities for growth.",
-                    "3. I am able to comfort or console myself when I am troubled.",
-                    "4. I have a sense of fun and can laugh at myself,",
-                    "5. Others would describe me as emotionally stable"
+                    "1. I am able to remain open, receptive, and at peace with what life brings.",
+                    "2. I feel deeply connected with myself, others, and the greater world around me.",
+                    "3. My purpose guides my decisions and how I show up every day.",
+                    "4. My life is full of gratitude, pleasure, creativity and satisfaction.",
+                    "5. I use my values to filter how I spend my time, resources and attention."
                 ],
                 financial_wealth: [
-                    "I enjoy learning new skills and information",
-                    "I have positive thoughts (low degree)",
-                    "I am generally satisfied with my vocation/major",
-                    "I commit time and energy to professional growth",
-                    "I pursue mentally stimulating interests and hobbies"
+                    "1. I comfortably manage expenses and have no financial stress about handling the unexpected.",
+                    "2. I am financially self-reliant without need of external income or employment.",
+                    "3. I understand how money works and make empowered financial decisions for myself.",
+                    "4. I have a regular practice of reviewing and managing my financial resources and investments.",
+                    "5. My financial activities are in alignment with my life values and circumstances."
                 ],
-
+            },
+            colors: {
+                somatic_wealth: [
+                    "#14594C","#437A70", "#729B94", "#A1BDB7", "#D0DEDB"
+                ],
+                mental_wealth: [
+                    "#253671", "#515E8D", "#7C86AA", "#A8AFC6", "#D3D7E3"
+                ],
+                emotional_wealth: [
+                    "#831220", "#9C414D", "#B57179", "#CDA0A6", "#E6D0D2"
+                ],
+                interpersonal_wealth: [
+                    "#4F3080", "#725999", "#9583B3", "#B9ACCC", "#DCD6E6"
+                ],
+                energetic_wealth: [
+                    "#D06C68", "#D98986", "#E3A7A4", "#ECC4C3", "#F6E2E1"
+                ],
+                financial_wealth: [
+                    "#B0C39A", "#C0CFAE", "#D0DBC2", "#DFE7D7", "#EFF3EB"
+                ]
             }
-        }
+        },
+        full_name: "",
+        email_address: ""
     },
     watch: {
         somatic_wealth_question1($value) { this.updateSomaticWealthData(); },
@@ -229,6 +250,11 @@ new Vue({
                     }]
                 },
                 options: {
+                    plugins: {
+                        legend: {
+                          display: false
+                        }
+                    },
                     scale: {
                         ticks: {
                             beginAtZero: true,

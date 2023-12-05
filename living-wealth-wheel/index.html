@@ -16,6 +16,10 @@
     <link href="livweal-vue.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css" />
 
+    <link rel="stylesheet" href="//optassets.ontraport.com/opt_assets/static/css/moonrayform.paymentplandisplay.css" type="text/css" />
+    <link rel="stylesheet" href="https://optassets.ontraport.com/opt_assets/css/form.default.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://forms.ontraport.com/v2.4/include/formEditor/gencss.php?uid=p2c186826f156" type="text/css" />
+    <script type="text/javascript" src="https://forms.ontraport.com/v2.4/include/formEditor/genjs-v3.php?html=false&uid=p2c186826f156"></script>
 </head>
 <body>
     <div id="app">
@@ -399,6 +403,214 @@
                         <button class="nav-button" v-if="current_chart === 5" @click="renderFinalResult">View Result</button>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="moonray-form-p2c186826f156 ussr" style="display: none;">
+            <div class="moonray-form moonray-form-label-pos-left">
+              <form class="moonray-form-clearfix" action="https://forms.ontraport.com/v2.4/form_processor.php?" method="post" accept-charset="UTF-8">
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-323877635092" class="moonray-form-label">Name</label>
+                  <input name="firstname" v-model="full_name" type="text" class="moonray-form-input" id="mr-field-element-323877635092" required value="" placeholder />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-email">
+                  <label for="mr-field-element-243592629670" class="moonray-form-label">E-mail Address</label>
+                  <input name="email" v-model="email_address" type="email" class="moonray-form-input" id="mr-field-element-243592629670" required value="" placeholder />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-953306770013" class="moonray-form-label">How did you hear about us?</label>
+                  <input name="f1571" type="text" class="moonray-form-input" id="mr-field-element-953306770013" value="" placeholder />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-930213014495" class="moonray-form-label">I am able to remain open, receptive, and at peace with what life brings.</label>
+                  <input name="f2242" required type="text" v-model="energetic_wealth_question1" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-930213014495" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-100153283779" class="moonray-form-label">I feel deeply connected with myself, others, and the greater world around me.</label>
+                  <input name="f2243" required type="text" v-model="energetic_wealth_question2" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-100153283779" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-124986556226" class="moonray-form-label">My purpose guides my decisions and how I show up every day.</label>
+                  <input name="f2244" required type="text" v-model="energetic_wealth_question3" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-124986556226" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-738818465275" class="moonray-form-label">My life is full of gratitude, pleasure, creativity and satisfaction.</label>
+                  <input name="f2245" required type="text" v-model="energetic_wealth_question4" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-738818465275" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-528347514831" class="moonray-form-label">I use my values to filter how I spend my time, resources and attention.</label>
+                  <input name="f2246" required type="text" v-model="energetic_wealth_question5" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-528347514831" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-955559910915" class="moonray-form-label">I identify and manage my emotions responsibly for myself and in social situations.</label>
+                  <input name="f2247" required type="text" v-model="emotional_wealth_question1" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-955559910915" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-91235513764" class="moonray-form-label">I am able to deal with, and effectively recover from adversity, disappointment and stress.</label>
+                  <input name="f2248" required type="text" v-model="emotional_wealth_question2" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-91235513764" value="" placeholder />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-647912370396" class="moonray-form-label">I feel and appropriately express a wide range of emotions.</label>
+                  <input name="f2249" required type="text" v-model="emotional_wealth_question3" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-647912370396" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-634622433751" class="moonray-form-label">Others would describe me as even-keeled and emotionally stable.</label>
+                  <input name="f2250" required type="text" v-model="emotional_wealth_question4" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-634622433751" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-447624841827" class="moonray-form-label">I recognise my value and see all of life’s events as opportunities for growth.</label>
+                  <input name="f2251" required type="text" v-model="emotional_wealth_question5" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-447624841827" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-468320537301" class="moonray-form-label">I recognise the impact that words and actions have on others and myself.</label>
+                  <input name="f2252" required type="text" v-model="interpersonal_wealth_question1" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-468320537301" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-197949720275" class="moonray-form-label">I have at least three people with whom I have an open, trusting and connected relationship.</label>
+                  <input name="f2253" required type="text" v-model="interpersonal_wealth_question2" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-197949720275" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-627583137544" class="moonray-form-label">I experience a sense of belonging in relationships with others.</label>
+                  <input name="f2254" required type="text" v-model="interpersonal_wealth_question3" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-627583137544" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-128227939172" class="moonray-form-label">My self-awareness informs my decisions and choices with others.</label>
+                  <input name="f2255" required type="text" v-model="interpersonal_wealth_question4" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-128227939172" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-286779901879" class="moonray-form-label">I am able to communicate and establish effective boundaries for myself and with others.</label>
+                  <input name="f2256" required type="text" v-model="interpersonal_wealth_question5" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-286779901879" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-688872654169" class="moonray-form-label">I think, understand, and process information easily and efficiently.</label>
+                  <input name="f2257" required type="text" v-model="mental_wealth_question1" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-688872654169" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-51172093514" class="moonray-form-label">I am able to problem solve, think creatively, and learn new things.</label>
+                  <input name="f2258" required type="text" v-model="mental_wealth_question2" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-51172093514" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-121316109248" class="moonray-form-label">I am present with my own thoughts, feelings, and behaviors.</label>
+                  <input name="f2259" required type="text" v-model="mental_wealth_question3" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-121316109248" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-790705943441" class="moonray-form-label">I have an optimistic outlook and trust myself and others.</label>
+                  <input name="f2260" required type="text" v-model="mental_wealth_question4" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-790705943441" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-823916210757" class="moonray-form-label">I am in full alignment with my needs, values, and desires.</label>
+                  <input name="f2261" required type="text" v-model="mental_wealth_question5" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-823916210757" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-412174135274" class="moonray-form-label">I comfortably manage expenses and have no financial stress about handling the unexpected.</label>
+                  <input name="f2262" required type="text" v-model="financial_wealth_question1" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-412174135274" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-557839783208" class="moonray-form-label">I am financially self-reliant without need of external income or employment.</label>
+                  <input name="f2263" required type="text" v-model="financial_wealth_question2" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-557839783208" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-904106224227" class="moonray-form-label">I understand how money works and make empowered financial decisions for myself.</label>
+                  <input name="f2264" required type="text" v-model="financial_wealth_question3" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-904106224227" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-412384920324" class="moonray-form-label">I have a regular practice of reviewing and managing my financial resources and investments.</label>
+                  <input name="f2265" required type="text" v-model="financial_wealth_question4" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-412384920324" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-401772319393" class="moonray-form-label">My financial activities are in alignment with my life values and circumstances.</label>
+                  <input name="f2266" required type="text" v-model="financial_wealth_question5" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-401772319393" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-878732388693" class="moonray-form-label">I can move my body with confidence, ease and freedom.</label>
+                  <input name="f2267" v-model="somatic_wealth_question1" required type="text" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-878732388693" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-730351875852" class="moonray-form-label">I am physically resilient and bounce back easily from periods of stress, illness, or injury.</label>
+                  <input name="f2268" required type="text" v-model="somatic_wealth_question2" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-730351875852" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-654917754401" class="moonray-form-label">I eat a balanced, nourishing diet and exercise regularly to maintain my health and joy.</label>
+                  <input name="f2269" required type="text" v-model="somatic_wealth_question3" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-654917754401" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-472493004064" class="moonray-form-label">I am connected with my body and I give it what it needs, when it needs it.</label>
+                  <input name="f2270" required type="text" v-model="somatic_wealth_question4" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-472493004064" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                  <label for="mr-field-element-906626996623" class="moonray-form-label">I am in flow with my environment and actively consider the impact and consequences of my choices.</label>
+                  <input name="f2271" required type="text" v-model="somatic_wealth_question5" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-906626996623" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-center moonray-form-input-type-submit">
+                  <input type="submit" name="submit-button" value="SIGN UP!" class="moonray-form-input" id="mr-field-element-996842232134" src />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="afft_" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="aff_" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="sess_" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="ref_" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="own_" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="oprid" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="contact_id" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="utm_source" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="utm_medium" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="utm_term" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="utm_content" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="utm_campaign" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="referral_page" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="_op_gclid" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="_op_gcid" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="_fbc" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="_fbp" type="hidden" value="" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="uid" type="hidden" value="p2c186826f156" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="uniquep2c186826f156" type="hidden" value="0" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="mopsbbk" type="hidden" value="581991BDECE70DBB27FD1810:27633C681908E12B3C5D585C" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="mopbelg" type="hidden" value="0165801:C98EBE5F3672AC9F27C7DEDE:6A7B7C56767D07FD60840218" />
+                </div>
+                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                  <input name="_vcid" type="hidden" value="NzkzNTY3fCQyYSQwOCRHbm1KLlNmcnBxWjgxd3lVbnVrT0xleC5PUm5xU2R1bThiNDgvaEMvM0VoQ1dyeUFPNUxsRw==" />
+                </div>
+              </form>
             </div>
         </div>
     </div>

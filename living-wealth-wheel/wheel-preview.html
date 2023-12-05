@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js with Polar Area Chart.js CDN Template</title>
+    
+    <!-- Add Vue.js CDN link -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- Add Chart.js CDN links -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link href="livweal-vue.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css" />
+
+</head>
+<body>
+    <div id="app">
+        <h1 style="text-align: center; margin-bottom: 3rem;">Your Living Wealthy Wheel Result</h1>
+        <div>
+            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                <canvas id="somatic_wealth_preview_chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your Vue.js script with Polar Area Chart.js integration -->
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                somatic_wealth_preview_chart: null,
+                current_chart: 0,
+				is_view_result: false,
+				somatic_wealth_chart: null,
+				mental_wealth_chart: null,
+				emotional_wealth_chart: null,
+				interpersonal_wealth_chart: null,
+				energetic_wealth_chart: null,
+				financial_wealth_chart: null,
+				final_result_chart: null,
+				somatic_wealth_question1: 0,
+				somatic_wealth_question2: 0,
+				somatic_wealth_question3: 0,
+				somatic_wealth_question4: 0,
+				somatic_wealth_question5: 0,
+				mental_wealth_question1: 0,
+				mental_wealth_question2: 0,
+				mental_wealth_question3: 0,
+				mental_wealth_question4: 0,
+				mental_wealth_question5: 0,
+				emotional_wealth_question1: 0,
+				emotional_wealth_question2: 0,
+				emotional_wealth_question3: 0,
+				emotional_wealth_question4: 0,
+				emotional_wealth_question5: 0,
+				interpersonal_wealth_question1: 0,
+				interpersonal_wealth_question2: 0,
+				interpersonal_wealth_question3: 0,
+				interpersonal_wealth_question4: 0,
+				interpersonal_wealth_question5: 0,
+				energetic_wealth_question1: 0,
+				energetic_wealth_question2: 0,
+				energetic_wealth_question3: 0,
+				energetic_wealth_question4: 0,
+				energetic_wealth_question5: 0,
+				financial_wealth_question1: 0,
+				financial_wealth_question2: 0,
+				financial_wealth_question3: 0,
+				financial_wealth_question4: 0,
+				financial_wealth_question5: 0,
+				options: {
+					slide_title: [
+						"Somatic Wealth",
+						"Mental Wealth",
+						"Emotional Wealth",
+						"Interpersonal Wealth",
+						"Energetic Wealth",
+						"Financial Wealth"
+					],
+					questions: {
+						somatic_wealth: [
+							"1. I can move my body with confidence, ease and freedom.",
+							"2. I am physically resilient and bounce back easily from periods of stress, illness, or injury.",
+							"3. I eat a balanced, nourishing diet and exercise regularly to maintain my health and joy.",
+							"4. I am connected with my body and I give it what it needs, when it needs it.",
+							"5. I am in flow with my environment and actively consider the impact and consequences of my choices."
+						],
+						mental_wealth: [
+							"1. I think, understand, and process information easily and efficiently.",
+							"2. I am able to problem solve, think creatively, and learn new things.",
+							"3. I am present with my own thoughts, feelings, and behaviors.",
+							"4. I have an optimistic outlook and trust myself and others.",
+							"5. I am in full alignment with my needs, values, and desires."
+						],
+						emotional_wealth: [
+							"1. I identify and manage my emotions responsibly for myself and in social situations.",
+							"2. I am able to deal with, and effectively recover from, adversity, disappointment and stress.",
+							"3. I feel and appropriately express a wide range of emotions.",
+							"4. Others would describe me as even-keeled and emotionally stable.",
+							"5. I recognize my value and see all of life’s events as opportunities for growth."
+						],
+						interpersonal_wealth: [
+							"1. I recognise the impact that words and actions have on others and myself.",
+							"2. I have at least three people with whom I have an open, trusting and connected relationship.",
+							"3. I experience a sense of belonging in relationships with others.",
+							"4. My self-awareness informs my decisions and choices with others.",
+							"5. I am able to communicate and establish effective boundaries for myself and with others."
+						],
+						energetic_wealth: [
+							"1. I am able to remain open, receptive, and at peace with what life brings.",
+							"2. I feel deeply connected with myself, others, and the greater world around me.",
+							"3. My purpose guides my decisions and how I show up every day.",
+							"4. My life is full of gratitude, pleasure, creativity and satisfaction.",
+							"5. I use my values to filter how I spend my time, resources and attention."
+						],
+						financial_wealth: [
+							"1. I comfortably manage expenses and have no financial stress about handling the unexpected.",
+							"2. I am financially self-reliant without need of external income or employment.",
+							"3. I understand how money works and make empowered financial decisions for myself.",
+							"4. I have a regular practice of reviewing and managing my financial resources and investments.",
+							"5. My financial activities are in alignment with my life values and circumstances."
+						],
+					},
+					colors: {
+						somatic_wealth: [
+							"#14594C","#437A70", "#729B94", "#A1BDB7", "#D0DEDB"
+						],
+						mental_wealth: [
+							"#253671", "#515E8D", "#7C86AA", "#A8AFC6", "#D3D7E3"
+						],
+						emotional_wealth: [
+							"#831220", "#9C414D", "#B57179", "#CDA0A6", "#E6D0D2"
+						],
+						interpersonal_wealth: [
+							"#4F3080", "#725999", "#9583B3", "#B9ACCC", "#DCD6E6"
+						],
+						energetic_wealth: [
+							"#D06C68", "#D98986", "#E3A7A4", "#ECC4C3", "#F6E2E1"
+						],
+						financial_wealth: [
+							"#B0C39A", "#C0CFAE", "#D0DBC2", "#DFE7D7", "#EFF3EB"
+						]
+					}
+				}
+            },
+            created() {
+                this.somatic_wealth_question1 = this.getURLParameters("q1");
+                this.somatic_wealth_question2 = this.getURLParameters("q2");
+                this.somatic_wealth_question3 = this.getURLParameters("q3");
+                this.somatic_wealth_question4 = this.getURLParameters("q4");
+                this.somatic_wealth_question5 = this.getURLParameters("q5");
+                this.mental_wealth_question1 = this.getURLParameters("q6");
+                this.mental_wealth_question2 = this.getURLParameters("q7");
+                this.mental_wealth_question3 = this.getURLParameters("q8");
+                this.mental_wealth_question4 = this.getURLParameters("q9");
+                this.mental_wealth_question5 = this.getURLParameters("q10");
+                this.emotional_wealth_question1 = this.getURLParameters("q11");
+                this.emotional_wealth_question2 = this.getURLParameters("q12");
+                this.emotional_wealth_question3 = this.getURLParameters("q13");
+                this.emotional_wealth_question4 = this.getURLParameters("q14");
+                this.emotional_wealth_question5 = this.getURLParameters("q15");
+                this.interpersonal_wealth_question1 = this.getURLParameters("q16");
+                this.interpersonal_wealth_question2 = this.getURLParameters("q17");
+                this.interpersonal_wealth_question3 = this.getURLParameters("q18");
+                this.interpersonal_wealth_question4 = this.getURLParameters("q19");
+                this.interpersonal_wealth_question5 = this.getURLParameters("q20");
+                this.energetic_wealth_question1 = this.getURLParameters("q21");
+                this.energetic_wealth_question2 = this.getURLParameters("q22");
+                this.energetic_wealth_question3 = this.getURLParameters("q23");
+                this.energetic_wealth_question4 = this.getURLParameters("q24");
+                this.energetic_wealth_question5 = this.getURLParameters("q25");
+                this.financial_wealth_question1 = this.getURLParameters("q26");
+                this.financial_wealth_question2 = this.getURLParameters("q27");
+                this.financial_wealth_question3 = this.getURLParameters("q28");
+                this.financial_wealth_question4 = this.getURLParameters("q29");
+                this.financial_wealth_question5 = this.getURLParameters("q30");
+            },
+            watch: {
+                
+            },
+            methods: {
+                renderChart() {
+                    // Chart.js configuration
+                    const ctx = document.getElementById('somatic_wealth_preview_chart').getContext('2d');
+                    const $data = [
+                        this.somatic_wealth_question1,
+                        this.somatic_wealth_question2,
+                        this.somatic_wealth_question3,
+                        this.somatic_wealth_question4,
+                        this.somatic_wealth_question5,
+                        this.mental_wealth_question1,
+                        this.mental_wealth_question2,
+                        this.mental_wealth_question3,
+                        this.mental_wealth_question4,
+                        this.mental_wealth_question5,
+                        this.emotional_wealth_question1,
+                        this.emotional_wealth_question2,
+                        this.emotional_wealth_question3,
+                        this.emotional_wealth_question4,
+                        this.emotional_wealth_question5,
+                        this.interpersonal_wealth_question1,
+                        this.interpersonal_wealth_question2,
+                        this.interpersonal_wealth_question3,
+                        this.interpersonal_wealth_question4,
+                        this.interpersonal_wealth_question5,
+                        this.energetic_wealth_question1,
+                        this.energetic_wealth_question2,
+                        this.energetic_wealth_question3,
+                        this.energetic_wealth_question4,
+                        this.energetic_wealth_question5,
+                        this.financial_wealth_question1,
+                        this.financial_wealth_question2,
+                        this.financial_wealth_question3,
+                        this.financial_wealth_question4,
+                        this.financial_wealth_question5,
+                    ]
+                    this.somatic_wealth_preview_chart = new Chart(ctx, {
+                        type: 'polarArea',
+                        data: {
+                            labels: [
+                                this.options.questions.somatic_wealth[0],
+                                this.options.questions.somatic_wealth[1],
+                                this.options.questions.somatic_wealth[2],
+                                this.options.questions.somatic_wealth[3],
+                                this.options.questions.somatic_wealth[4],
+                                this.options.questions.mental_wealth[0],
+                                this.options.questions.mental_wealth[1],
+                                this.options.questions.mental_wealth[2],
+                                this.options.questions.mental_wealth[3],
+                                this.options.questions.mental_wealth[4],
+                                this.options.questions.emotional_wealth[0],
+                                this.options.questions.emotional_wealth[1],
+                                this.options.questions.emotional_wealth[2],
+                                this.options.questions.emotional_wealth[3],
+                                this.options.questions.emotional_wealth[4],
+                                this.options.questions.interpersonal_wealth[0],
+                                this.options.questions.interpersonal_wealth[1],
+                                this.options.questions.interpersonal_wealth[2],
+                                this.options.questions.interpersonal_wealth[3],
+                                this.options.questions.interpersonal_wealth[4],
+                                this.options.questions.energetic_wealth[0],
+                                this.options.questions.energetic_wealth[1],
+                                this.options.questions.energetic_wealth[2],
+                                this.options.questions.energetic_wealth[3],
+                                this.options.questions.energetic_wealth[4],
+                                this.options.questions.financial_wealth[0],
+                                this.options.questions.financial_wealth[1],
+                                this.options.questions.financial_wealth[2],
+                                this.options.questions.financial_wealth[3],
+                                this.options.questions.financial_wealth[4],
+                            ],
+                            datasets: [{
+                                label: 'Living Wealth Wheel',
+                                data: $data,
+                                backgroundColor: [
+                                    this.options.colors.somatic_wealth[0],
+                                    this.options.colors.somatic_wealth[1],
+                                    this.options.colors.somatic_wealth[2],
+                                    this.options.colors.somatic_wealth[3],
+                                    this.options.colors.somatic_wealth[4],
+                                    this.options.colors.mental_wealth[0],
+                                    this.options.colors.mental_wealth[1],
+                                    this.options.colors.mental_wealth[2],
+                                    this.options.colors.mental_wealth[3],
+                                    this.options.colors.mental_wealth[4],
+                                    this.options.colors.emotional_wealth[0],
+                                    this.options.colors.emotional_wealth[1],
+                                    this.options.colors.emotional_wealth[2],
+                                    this.options.colors.emotional_wealth[3],
+                                    this.options.colors.emotional_wealth[4],
+                                    this.options.colors.interpersonal_wealth[0],
+                                    this.options.colors.interpersonal_wealth[1],
+                                    this.options.colors.interpersonal_wealth[2],
+                                    this.options.colors.interpersonal_wealth[3],
+                                    this.options.colors.interpersonal_wealth[4],
+                                    this.options.colors.energetic_wealth[0],
+                                    this.options.colors.energetic_wealth[1],
+                                    this.options.colors.energetic_wealth[2],
+                                    this.options.colors.energetic_wealth[3],
+                                    this.options.colors.energetic_wealth[4],
+                                    this.options.colors.financial_wealth[0],
+                                    this.options.colors.financial_wealth[1],
+                                    this.options.colors.financial_wealth[2],
+                                    this.options.colors.financial_wealth[3],
+                                    this.options.colors.financial_wealth[4],
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scale: {
+                                ticks: {
+                                    beginAtZero: true,
+                                    steps: 0,
+                                    stepValue: 5,
+                                    max: 100,
+                                    suggestedMax: 100,
+                                    suggestedMin: 0
+                                }
+                            }
+                        }
+                    });
+
+                },
+                getURLParameters(paramName) {
+                    var sURL = window.document.URL.toString();
+                    if (sURL.indexOf("?") > 0)
+                    {
+                        var arrParams = sURL.split("?");
+                        var arrURLParams = arrParams[1].split("&");
+                        var arrParamNames = new Array(arrURLParams.length);
+                        var arrParamValues = new Array(arrURLParams.length);
+
+                        var i = 0;
+                        for (i = 0; i<arrURLParams.length; i++)
+                        {
+                            var sParam =  arrURLParams[i].split("=");
+                            arrParamNames[i] = sParam[0];
+                            if (sParam[1] != "")
+                                arrParamValues[i] = unescape(sParam[1]);
+                            else
+                                arrParamValues[i] = "No Value";
+                        }
+
+                        for (i=0; i<arrURLParams.length; i++)
+                        {
+                            if (arrParamNames[i] == paramName)
+                            {
+                                //alert("Parameter:" + arrParamValues[i]);
+                                return arrParamValues[i];
+                            }
+                        }
+                        return "No Parameters Found";
+                    }
+                }
+            },
+            mounted() {
+                this.renderChart();
+            }
+        });
+    </script>
+
+</body>
+</html>
