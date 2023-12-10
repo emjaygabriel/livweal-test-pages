@@ -2,31 +2,16 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 <!-- Add Chart.js CDN links -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<!-- Latest compiled and minified Bootstrap CSS -->
+
 <style>
-    *, *:before, *:after {
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: sans-serif;
-    }
-
-    .question {
-        margin-bottom: 2rem;
-    }
-
-    .range-slider {
-        margin: 10px 0 0 0;
-    }
-
-    .range-slider {
-        width: 100%;
-    }
-
+    *, *:before, *:after { box-sizing: border-box; }
+    body { font-family: sans-serif; }
+    .question { margin-bottom: 2rem; }
+    .range-slider { margin: 10px 0 0 0; }
+    .range-slider { width: 100%; }
     .range-slider__range {
         -webkit-appearance: none;
         width: calc(100% - (73px));
@@ -121,8 +106,9 @@
     }
 
     .livweal_slide h2 {
-        margin-bottom: 2rem;
+        margin-bottom: -3rem;
     }
+    .mbottom-2 { margin-bottom: 2rem; }
     .text-center { text-align:center; }
     .wheel-form { margin: 2rem auto 0 auto; width: 380px; }
     .wheel-form .form-fields { margin-bottom: 1rem; }
@@ -131,22 +117,235 @@
         width: 100%;
         padding: 0.5rem;
         border-radius: 5px;
-        color: #000;
+        color: #000 !important;
         display: block;
         font-size: 1rem;
      }
 
+     .moonray-form-input { color: #000 !important; }
+
+     #somatic_wealth_slide .range-slider__value { background-color: #14594c; }
+     #somatic_wealth_slide .range-slider__value:after { border-right: 7px solid #14594c; }
+     #somatic_wealth_slide .range-slider__range::-webkit-slider-thumb { background-color: #14594c; }
+     #somatic_wealth_slide .range-slider__range::-webkit-slider-thumb:hover { background-color: #14594c; }
+     #somatic_wealth_slide .range-slider__range:active::-webkit-slider-thumb { background-color: #14594c; }
+     #somatic_wealth_slide .range-slider__range::-moz-range-thumb { background-color: #14594c; }
+     #somatic_wealth_slide .range-slider__range::-moz-range-thumb:hover { background-color: #14594c; }
+     #somatic_wealth_slide .range-slider__range:active::-moz-range-thumb { background-color: #14594c; }
+     #somatic_wealth_slide .range-slider__range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 3px #fff, 0 0 0 6px #14594c; }
+     
+     #mental_wealth_slide .range-slider__value { background-color: #253671; }
+     #mental_wealth_slide .range-slider__value:after { border-right: 7px solid #253671; }
+     #mental_wealth_slide .range-slider__range::-webkit-slider-thumb { background-color: #253671; }
+     #mental_wealth_slide .range-slider__range::-webkit-slider-thumb:hover { background-color: #253671; }
+     #mental_wealth_slide .range-slider__range:active::-webkit-slider-thumb { background-color: #253671; }
+     #mental_wealth_slide .range-slider__range::-moz-range-thumb { background-color: #253671; }
+     #mental_wealth_slide .range-slider__range::-moz-range-thumb:hover { background-color: #253671; }
+     #mental_wealth_slide .range-slider__range:active::-moz-range-thumb { background-color: #253671; }
+     #mental_wealth_slide .range-slider__range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 3px #fff, 0 0 0 6px #253671; }
+     
+     #emotional_wealth_slide .range-slider__value { background-color: #831220; }
+     #emotional_wealth_slide .range-slider__value:after { border-right: 7px solid #831220; }
+     #emotional_wealth_slide .range-slider__range::-webkit-slider-thumb { background-color: #831220; }
+     #emotional_wealth_slide .range-slider__range::-webkit-slider-thumb:hover { background-color: #831220; }
+     #emotional_wealth_slide .range-slider__range:active::-webkit-slider-thumb { background-color: #831220; }
+     #emotional_wealth_slide .range-slider__range::-moz-range-thumb { background-color: #831220; }
+     #emotional_wealth_slide .range-slider__range::-moz-range-thumb:hover { background-color: #831220; }
+     #emotional_wealth_slide .range-slider__range:active::-moz-range-thumb { background-color: #831220; }
+     #emotional_wealth_slide .range-slider__range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 3px #fff, 0 0 0 6px #831220; }
+     
+     #interpersonal_wealth_slide .range-slider__value { background-color: #4F3080; }
+     #interpersonal_wealth_slide .range-slider__value:after { border-right: 7px solid #4F3080; }
+     #interpersonal_wealth_slide .range-slider__range::-webkit-slider-thumb { background-color: #4F3080; }
+     #interpersonal_wealth_slide .range-slider__range::-webkit-slider-thumb:hover { background-color: #4F3080; }
+     #interpersonal_wealth_slide .range-slider__range:active::-webkit-slider-thumb { background-color: #4F3080; }
+     #interpersonal_wealth_slide .range-slider__range::-moz-range-thumb { background-color: #4F3080; }
+     #interpersonal_wealth_slide .range-slider__range::-moz-range-thumb:hover { background-color: #4F3080; }
+     #interpersonal_wealth_slide .range-slider__range:active::-moz-range-thumb { background-color: #4F3080; }
+     #interpersonal_wealth_slide .range-slider__range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 3px #fff, 0 0 0 6px #4F3080; }
+     
+     #energetic_wealth_slide .range-slider__value { background-color: #D06C68; }
+     #energetic_wealth_slide .range-slider__value:after { border-right: 7px solid #D06C68; }
+     #energetic_wealth_slide .range-slider__range::-webkit-slider-thumb { background-color: #D06C68; }
+     #energetic_wealth_slide .range-slider__range::-webkit-slider-thumb:hover { background-color: #D06C68; }
+     #energetic_wealth_slide .range-slider__range:active::-webkit-slider-thumb { background-color: #D06C68; }
+     #energetic_wealth_slide .range-slider__range::-moz-range-thumb { background-color: #D06C68; }
+     #energetic_wealth_slide .range-slider__range::-moz-range-thumb:hover { background-color: #D06C68; }
+     #energetic_wealth_slide .range-slider__range:active::-moz-range-thumb { background-color: #D06C68; }
+     #energetic_wealth_slide .range-slider__range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 3px #fff, 0 0 0 6px #D06C68; }
+     
+     #financial_wealth_slide .range-slider__value { background-color: #B0C39A; }
+     #financial_wealth_slide .range-slider__value:after { border-right: 7px solid #B0C39A; }
+     #financial_wealth_slide .range-slider__range::-webkit-slider-thumb { background-color: #B0C39A; }
+     #financial_wealth_slide .range-slider__range::-webkit-slider-thumb:hover { background-color: #B0C39A; }
+     #financial_wealth_slide .range-slider__range:active::-webkit-slider-thumb { background-color: #B0C39A; }
+     #financial_wealth_slide .range-slider__range::-moz-range-thumb { background-color: #B0C39A; }
+     #financial_wealth_slide .range-slider__range::-moz-range-thumb:hover { background-color: #B0C39A; }
+     #financial_wealth_slide .range-slider__range:active::-moz-range-thumb { background-color: #B0C39A; }
+     #financial_wealth_slide .range-slider__range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 3px #fff, 0 0 0 6px #B0C39A; }
+
      /* #somatic_wealth_chart { margin-left: auto; margin-right: auto; } */
      .canvas_parent { max-width: 500px; margin-left: auto; margin-right: auto; }
+
+     #introduction_slide .green-box {
+        max-width: 500px;
+        padding: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #14594C;
+        text-align: center;
+        border-radius: 15px;
+        margin-bottom: 3rem;
+     }
+     #introduction_slide .green-box img {
+        max-width: 300px;
+     }
+
+    #introduction_slide .main-title h1 { 
+        font-family: "Libre Baskerville", serif;
+        font-size: 60px;
+          text-align: center;
+        margin-bottom: 6rem;
+    }
+
+    #introduction_slide .direction-box {
+        background-color: #1C917E;
+        padding: 3rem 6rem;
+        color: #fff;
+        font-family: "Work Sans", sans-serif;
+        margin-bottom: 5rem;
+    }
+
+    #introduction_slide .direction-box h2 {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-bottom: 0;
+        font-family: "Libre Baskerville", serif !important;
+        font-size: 2rem;
+    }
+
+    #introduction_slide .direction-box p {
+        font-size: 1.2rem;
+        font-weight: normal;
+        line-height: 2rem;
+        font-family: "Work Sans", sans-serif;
+    }
+
+    #introduction_slide .love-warning {
+        margin-bottom: 5rem;
+    }
+
+    #introduction_slide .love-warning .love-warning-logo {
+        max-width: 370px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #introduction_slide .love-warning h2 {
+        font-size: 52px;
+        color: #14594C;
+        font-family: "Libre Baskerville", serif;
+        margin-bottom: 2rem;
+    }
+
+    .livweal_slide h2 {
+        margin-bottom: 2rem;
+    }
+
+    #introduction_slide .love-warning p {
+        font-family: "Work Sans", sans-serif;
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+    #introduction_slide .important-note p {
+        color: #000;
+        font-size: 1rem;
+    }
+    #introduction_slide .important-note {
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        padding: 1rem 0rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .overall_average {
+        margin-top: -3rem;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 3rem;
+    }
+
+    .form-preview .field-item label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-preview .field-item {
+        margin-bottom: 3rem;
+    }
+
+    .form-preview .field-item input[type="text"], .form-preview .field-item input[type="email"], .form-preview .field-item select, .form-preview .field-item textarea, .form-preview .field-item input[type="date"] {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 5px;
+        color: #000 !important;
+        display: block;
+        font-size: 1rem;
+
+    }
+
+    .form-preview .field-item select {
+
+    }   
+    
+    .form-preview .field-item textarea {
+        height: 150px;
+    }
+
+    .main_h1 { 
+        text-align: center; margin-bottom: 2rem;
+    }
+    
+    .canvas_container {
+        max-width: 800px; margin-left: auto; margin-right: auto; margin-top: -3rem;
+    }
+
+    @media (max-width: 960px) { 
+        .main_h1 { 
+            margin-top: 5rem;
+            line-height: 1.5;
+        }
+        
+        .canvas_container {
+            margin-top: 0;
+            margin-bottom: 4rem;
+        }
+
+        .overall_average {
+            line-height: 1.5;
+        }
+    }
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css" />
 
 <div id="app">
-    <h1 style="text-align: center; margin-bottom: 3rem;">Your Living Wealthy Wheel Result</h1>
+    <!-- <h1 style="text-align: center;">Your Living Wealthy Wheel Result</h1> -->
+    <h1 class="main_h1">Your Living Wealth Wheel</h1>
+
     <div>
-        <div style="max-width: 700px; margin-left: auto; margin-right: auto;">
-            <canvas id="somatic_wealth_preview_chart"></canvas>
+        <div class="canvas_container">
+            <canvas id="wheel_preview_chart"></canvas>
         </div>
+        <div class="overall_average">
+            Living Wealthy Total: {{ overall_average }}%
+        </div>
+
+
+        
+
+       
     </div>
 </div>
 
@@ -154,7 +353,8 @@
     new Vue({
         el: '#app',
         data: {
-            somatic_wealth_preview_chart: null,
+            arc_label_font_size: 18,
+            overall_average: 0,
             current_chart: 0,
             is_view_result: false,
             somatic_wealth_chart: null,
@@ -267,10 +467,17 @@
                         "#B0C39A", "#C0CFAE", "#D0DBC2", "#DFE7D7", "#EFF3EB"
                     ]
                 }
-            }
+            },
+            full_name: "",
+            email_address: ""
         },
         created() {
-            this.somatic_wealth_question1 = this.getURLParameters("q1");
+            const screen_width = document.documentElement.clientWidth;
+            if(screen_width < 980) {
+                this.arc_label_font_size = 12;
+            }
+
+            this.somatic_wealth_question1 = this.getURLParameters("q1") ;
             this.somatic_wealth_question2 = this.getURLParameters("q2");
             this.somatic_wealth_question3 = this.getURLParameters("q3");
             this.somatic_wealth_question4 = this.getURLParameters("q4");
@@ -305,9 +512,80 @@
             
         },
         methods: {
+            calculateAverage() {
+                const $s1 = parseInt(this.somatic_wealth_question1);
+                const $s2 = parseInt(this.somatic_wealth_question2);
+                const $s3 = parseInt(this.somatic_wealth_question3);
+                const $s4 = parseInt(this.somatic_wealth_question4);
+                const $s5 = parseInt(this.somatic_wealth_question5);
+                const $m1 = parseInt(this.mental_wealth_question1);
+                const $m2 = parseInt(this.mental_wealth_question2);
+                const $m3 = parseInt(this.mental_wealth_question3);
+                const $m4 = parseInt(this.mental_wealth_question4);
+                const $m5 = parseInt(this.mental_wealth_question5);
+                const $em1 = parseInt(this.emotional_wealth_question1);
+                const $em2 = parseInt(this.emotional_wealth_question2);
+                const $em3 = parseInt(this.emotional_wealth_question3);
+                const $em4 = parseInt(this.emotional_wealth_question4);
+                const $em5 = parseInt(this.emotional_wealth_question5);
+                const $i1 = parseInt(this.interpersonal_wealth_question1);
+                const $i2 = parseInt(this.interpersonal_wealth_question2);
+                const $i3 = parseInt(this.interpersonal_wealth_question3);
+                const $i4 = parseInt(this.interpersonal_wealth_question4);
+                const $i5 = parseInt(this.interpersonal_wealth_question5);
+                const $en1 = parseInt(this.energetic_wealth_question1);
+                const $en2 = parseInt(this.energetic_wealth_question2);
+                const $en3 = parseInt(this.energetic_wealth_question3);
+                const $en4 = parseInt(this.energetic_wealth_question4);
+                const $en5 = parseInt(this.energetic_wealth_question5);
+                const $f1 = parseInt(this.financial_wealth_question1);
+                const $f2 = parseInt(this.financial_wealth_question2);
+                const $f3 = parseInt(this.financial_wealth_question3);
+                const $f4 = parseInt(this.financial_wealth_question4);
+                const $f5 = parseInt(this.financial_wealth_question5);
+
+                const $average_somatic = parseFloat((($s1 + $s2 + $s3 + $s4 + $s5) / 5).toFixed(2));
+
+                const $average_mental = parseFloat((($m1 + $m2 + $m3 + $m4 + $m5) / 5).toFixed(2));
+
+                const $average_emotional = parseFloat((($em1 + $em2 + $em3 + $em4 + $em5) / 5).toFixed(2));
+
+                const $average_interpersonal = parseFloat((($i1 + $i2 + $i3 + $i4 + $i5) / 5).toFixed(2));
+
+                const $average_energetic = parseFloat((($en1 + $en2 + $en3 + $en4 + $en5) / 5).toFixed(2));
+
+                const $average_financial = parseFloat((($f1 + $f2 + $f3 + $f4 + $f5) / 5).toFixed(2));
+
+                this.overall_average = parseFloat((($average_somatic + $average_mental + $average_emotional + $average_interpersonal + $average_energetic + $average_financial) / 6).toFixed(2));
+
+                const screen_width = document.documentElement.clientWidth;
+                let $return_data = [];
+                if(screen_width < 600) {
+                    $return_data = [
+                        ['Somatic',`${$average_somatic}%`],
+                        ['Mental',`${$average_mental}%`],
+                        ['Emotional',`${$average_emotional}%`],
+                        ['Interpersonal',`${$average_interpersonal}%`],
+                        ['Energetic',`${$average_energetic}%`],
+                        ['Financial',`${$average_financial}%`]
+                    ];
+                } else {
+                    $return_data = [
+                        ['Somatic Wealth',`${$average_somatic}%`],
+                        ['Mental Wealth',`${$average_mental}%`],
+                        ['Emotional Wealth',`${$average_emotional}%`],
+                        ['Interpersonal Wealth',`${$average_interpersonal}%`],
+                        ['Energetic Wealth',`${$average_energetic}%`],
+                        ['Financial Wealth',`${$average_financial}%`]
+                    ];
+                }
+
+                return $return_data;
+            },
             renderChart() {
                 // Chart.js configuration
-                const ctx = document.getElementById('somatic_wealth_preview_chart').getContext('2d');
+                const ctx = document.getElementById('wheel_preview_chart').getContext('2d');
+                
                 const $data = [
                     this.somatic_wealth_question1,
                     this.somatic_wealth_question2,
@@ -340,75 +618,21 @@
                     this.financial_wealth_question4,
                     this.financial_wealth_question5,
                 ]
-                this.somatic_wealth_preview_chart = new Chart(ctx, {
+                
+                this.wheel_preview_chart = new Chart(ctx, {
                     type: 'polarArea',
                     data: {
-                        labels: [
-                            this.options.questions.somatic_wealth[0],
-                            this.options.questions.somatic_wealth[1],
-                            this.options.questions.somatic_wealth[2],
-                            this.options.questions.somatic_wealth[3],
-                            this.options.questions.somatic_wealth[4],
-                            this.options.questions.mental_wealth[0],
-                            this.options.questions.mental_wealth[1],
-                            this.options.questions.mental_wealth[2],
-                            this.options.questions.mental_wealth[3],
-                            this.options.questions.mental_wealth[4],
-                            this.options.questions.emotional_wealth[0],
-                            this.options.questions.emotional_wealth[1],
-                            this.options.questions.emotional_wealth[2],
-                            this.options.questions.emotional_wealth[3],
-                            this.options.questions.emotional_wealth[4],
-                            this.options.questions.interpersonal_wealth[0],
-                            this.options.questions.interpersonal_wealth[1],
-                            this.options.questions.interpersonal_wealth[2],
-                            this.options.questions.interpersonal_wealth[3],
-                            this.options.questions.interpersonal_wealth[4],
-                            this.options.questions.energetic_wealth[0],
-                            this.options.questions.energetic_wealth[1],
-                            this.options.questions.energetic_wealth[2],
-                            this.options.questions.energetic_wealth[3],
-                            this.options.questions.energetic_wealth[4],
-                            this.options.questions.financial_wealth[0],
-                            this.options.questions.financial_wealth[1],
-                            this.options.questions.financial_wealth[2],
-                            this.options.questions.financial_wealth[3],
-                            this.options.questions.financial_wealth[4],
-                        ],
+                        labels: this.calculateAverage(),
                         datasets: [{
-                            label: 'Living Wealth Wheel',
+                            label: 'Living Wealthy Wheel',
                             data: $data,
                             backgroundColor: [
-                                this.options.colors.somatic_wealth[0],
-                                this.options.colors.somatic_wealth[1],
-                                this.options.colors.somatic_wealth[2],
-                                this.options.colors.somatic_wealth[3],
-                                this.options.colors.somatic_wealth[4],
-                                this.options.colors.mental_wealth[0],
-                                this.options.colors.mental_wealth[1],
-                                this.options.colors.mental_wealth[2],
-                                this.options.colors.mental_wealth[3],
-                                this.options.colors.mental_wealth[4],
-                                this.options.colors.emotional_wealth[0],
-                                this.options.colors.emotional_wealth[1],
-                                this.options.colors.emotional_wealth[2],
-                                this.options.colors.emotional_wealth[3],
-                                this.options.colors.emotional_wealth[4],
-                                this.options.colors.interpersonal_wealth[0],
-                                this.options.colors.interpersonal_wealth[1],
-                                this.options.colors.interpersonal_wealth[2],
-                                this.options.colors.interpersonal_wealth[3],
-                                this.options.colors.interpersonal_wealth[4],
-                                this.options.colors.energetic_wealth[0],
-                                this.options.colors.energetic_wealth[1],
-                                this.options.colors.energetic_wealth[2],
-                                this.options.colors.energetic_wealth[3],
-                                this.options.colors.energetic_wealth[4],
-                                this.options.colors.financial_wealth[0],
-                                this.options.colors.financial_wealth[1],
-                                this.options.colors.financial_wealth[2],
-                                this.options.colors.financial_wealth[3],
-                                this.options.colors.financial_wealth[4],
+                                ...this.options.colors.somatic_wealth,
+                                ...this.options.colors.mental_wealth,
+                                ...this.options.colors.emotional_wealth,
+                                ...this.options.colors.interpersonal_wealth,
+                                ...this.options.colors.energetic_wealth,
+                                ...this.options.colors.financial_wealth
                             ],
                             borderWidth: 1
                         }]
@@ -421,6 +645,7 @@
                         },
                         scale: {
                             ticks: {
+                                display: false,
                                 beginAtZero: true,
                                 steps: 0,
                                 stepValue: 5,
@@ -428,10 +653,25 @@
                                 suggestedMax: 100,
                                 suggestedMin: 0
                             }
+                        },
+                        scales: {
+                            r: {
+                                pointLabels: {
+                                    display: true,
+                                    centerPointLabels: true,
+                                    font: {
+                                        size: this.arc_label_font_size
+                                    },
+                                    arc: true,
+                                    position: 'outside'
+                                },
+                                ticks: {
+                                    display: false // Remove vertical numbers
+                                }
+                            }
                         }
                     }
                 });
-
             },
             getURLParameters(paramName) {
                 var sURL = window.document.URL.toString();

@@ -9,17 +9,196 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <!-- Add Chart.js CDN links -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- Latest compiled and minified Bootstrap CSS -->
-    <link href="livweal-vue.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css" />
-
-    <link rel="stylesheet" href="//optassets.ontraport.com/opt_assets/static/css/moonrayform.paymentplandisplay.css" type="text/css" />
+	<link rel="stylesheet" href="//optassets.ontraport.com/opt_assets/static/css/moonrayform.paymentplandisplay.css" type="text/css" />
     <link rel="stylesheet" href="https://optassets.ontraport.com/opt_assets/css/form.default.min.css" type="text/css" />
     <link rel="stylesheet" href="https://forms.ontraport.com/v2.4/include/formEditor/gencss.php?uid=p2c186826f156" type="text/css" />
     <script type="text/javascript" src="https://forms.ontraport.com/v2.4/include/formEditor/genjs-v3.php?html=false&uid=p2c186826f156"></script>
+    <style>
+		*, *:before, *:after { box-sizing: border-box; }
+		body { font-family: sans-serif; }
+		.question { margin-bottom: 2rem; }
+		.range-slider { margin: 10px 0 0 0; }
+		.range-slider { width: 100%; }
+		.range-slider__range {
+			-webkit-appearance: none;
+			width: calc(100% - (73px));
+			height: 10px;
+			border-radius: 5px;
+			background: #d7dcdf;
+			outline: none;
+			padding: 0;
+			margin: 0;
+		}
+		.range-slider__range::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: #2c3e50;
+			cursor: pointer;
+			-webkit-transition: background 0.15s ease-in-out;
+			transition: background 0.15s ease-in-out;
+		}
+		.range-slider__range::-webkit-slider-thumb:hover {
+			background: #1abc9c;
+		}
+		.range-slider__range:active::-webkit-slider-thumb {
+			background: #1abc9c;
+		}
+		.range-slider__range::-moz-range-thumb {
+			width: 20px;
+			height: 20px;
+			border: 0;
+			border-radius: 50%;
+			background: #2c3e50;
+			cursor: pointer;
+			-moz-transition: background 0.15s ease-in-out;
+			transition: background 0.15s ease-in-out;
+		}
+		.range-slider__range::-moz-range-thumb:hover {
+			background: #1abc9c;
+		}
+		.range-slider__range:active::-moz-range-thumb {
+			background: #1abc9c;
+		}
+		.range-slider__range:focus::-webkit-slider-thumb {
+			box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1abc9c;
+		}
+
+		.range-slider__value {
+			display: inline-block;
+			position: relative;
+			width: 60px;
+			color: #fff;
+			line-height: 20px;
+			text-align: center;
+			border-radius: 3px;
+			background: #2c3e50;
+			padding: 5px 10px;
+			margin-left: 8px;
+		}
+		.range-slider__value:after {
+			position: absolute;
+			top: 8px;
+			left: -7px;
+			width: 0;
+			height: 0;
+			border-top: 7px solid transparent;
+			border-right: 7px solid #2c3e50;
+			border-bottom: 7px solid transparent;
+			content: "";
+		}
+
+		::-moz-range-track {
+			background: #d7dcdf;
+			border: 0;
+		}
+
+		input::-moz-focus-inner,
+		input::-moz-focus-outer {
+			border: 0;
+		}
+
+		.text-left { text-align: left; }
+		.text-right { text-align: right; }
+		.nav-button {
+			border: 0;
+			background-color: #14594c;
+			color: #fff;
+			padding: 1rem 2rem;
+			font-size: 1rem;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+        .livweal_slide h2 {
+            margin-bottom: 2rem;
+        }
+        .text-center { text-align:center; }
+        .wheel-form { margin: 2rem auto 0 auto; width: 380px; }
+        .wheel-form .form-fields { margin-bottom: 1rem; }
+        .wheel-form .form-fields label { display: block; }
+        .wheel-form .form-fields input[type=text] {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 5px;
+            color: #000 !important;
+            display: block;
+            font-size: 1rem;
+         }
+
+		 .moonray-form-input { color: #000 !important; }
+
+		 #somatic_wealth_slide .range-slider__value { background-color: #14594c; }
+		 #somatic_wealth_slide .range-slider__value:after { border-right: 7px solid #14594c; }
+		 #somatic_wealth_slide .range-slider__range::-webkit-slider-thumb { background-color: #14594c; }
+		 #somatic_wealth_slide .range-slider__range::-webkit-slider-thumb:hover { background-color: #14594c; }
+		 #somatic_wealth_slide .range-slider__range:active::-webkit-slider-thumb { background-color: #14594c; }
+		 #somatic_wealth_slide .range-slider__range::-moz-range-thumb { background-color: #14594c; }
+		 #somatic_wealth_slide .range-slider__range::-moz-range-thumb:hover { background-color: #14594c; }
+		 #somatic_wealth_slide .range-slider__range:active::-moz-range-thumb { background-color: #14594c; }
+		 #somatic_wealth_slide .range-slider__range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 3px #fff, 0 0 0 6px #14594c; }
+		 
+		 #mental_wealth_slide .range-slider__value { background-color: #253671; }
+		 #mental_wealth_slide .range-slider__value:after { border-right: 7px solid #253671; }
+		 #mental_wealth_slide .range-slider__range::-webkit-slider-thumb { background-color: #253671; }
+		 #mental_wealth_slide .range-slider__range::-webkit-slider-thumb:hover { background-color: #253671; }
+		 #mental_wealth_slide .range-slider__range:active::-webkit-slider-thumb { background-color: #253671; }
+		 #mental_wealth_slide .range-slider__range::-moz-range-thumb { background-color: #253671; }
+		 #mental_wealth_slide .range-slider__range::-moz-range-thumb:hover { background-color: #253671; }
+		 #mental_wealth_slide .range-slider__range:active::-moz-range-thumb { background-color: #253671; }
+		 #mental_wealth_slide .range-slider__range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 3px #fff, 0 0 0 6px #253671; }
+		 
+		 #emotional_wealth_slide .range-slider__value { background-color: #831220; }
+		 #emotional_wealth_slide .range-slider__value:after { border-right: 7px solid #831220; }
+		 #emotional_wealth_slide .range-slider__range::-webkit-slider-thumb { background-color: #831220; }
+		 #emotional_wealth_slide .range-slider__range::-webkit-slider-thumb:hover { background-color: #831220; }
+		 #emotional_wealth_slide .range-slider__range:active::-webkit-slider-thumb { background-color: #831220; }
+		 #emotional_wealth_slide .range-slider__range::-moz-range-thumb { background-color: #831220; }
+		 #emotional_wealth_slide .range-slider__range::-moz-range-thumb:hover { background-color: #831220; }
+		 #emotional_wealth_slide .range-slider__range:active::-moz-range-thumb { background-color: #831220; }
+		 #emotional_wealth_slide .range-slider__range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 3px #fff, 0 0 0 6px #831220; }
+		 
+		 #interpersonal_wealth_slide .range-slider__value { background-color: #4F3080; }
+		 #interpersonal_wealth_slide .range-slider__value:after { border-right: 7px solid #4F3080; }
+		 #interpersonal_wealth_slide .range-slider__range::-webkit-slider-thumb { background-color: #4F3080; }
+		 #interpersonal_wealth_slide .range-slider__range::-webkit-slider-thumb:hover { background-color: #4F3080; }
+		 #interpersonal_wealth_slide .range-slider__range:active::-webkit-slider-thumb { background-color: #4F3080; }
+		 #interpersonal_wealth_slide .range-slider__range::-moz-range-thumb { background-color: #4F3080; }
+		 #interpersonal_wealth_slide .range-slider__range::-moz-range-thumb:hover { background-color: #4F3080; }
+		 #interpersonal_wealth_slide .range-slider__range:active::-moz-range-thumb { background-color: #4F3080; }
+		 #interpersonal_wealth_slide .range-slider__range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 3px #fff, 0 0 0 6px #4F3080; }
+		 
+		 #energetic_wealth_slide .range-slider__value { background-color: #D06C68; }
+		 #energetic_wealth_slide .range-slider__value:after { border-right: 7px solid #D06C68; }
+		 #energetic_wealth_slide .range-slider__range::-webkit-slider-thumb { background-color: #D06C68; }
+		 #energetic_wealth_slide .range-slider__range::-webkit-slider-thumb:hover { background-color: #D06C68; }
+		 #energetic_wealth_slide .range-slider__range:active::-webkit-slider-thumb { background-color: #D06C68; }
+		 #energetic_wealth_slide .range-slider__range::-moz-range-thumb { background-color: #D06C68; }
+		 #energetic_wealth_slide .range-slider__range::-moz-range-thumb:hover { background-color: #D06C68; }
+		 #energetic_wealth_slide .range-slider__range:active::-moz-range-thumb { background-color: #D06C68; }
+		 #energetic_wealth_slide .range-slider__range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 3px #fff, 0 0 0 6px #D06C68; }
+		 
+		 #financial_wealth_slide .range-slider__value { background-color: #B0C39A; }
+		 #financial_wealth_slide .range-slider__value:after { border-right: 7px solid #B0C39A; }
+		 #financial_wealth_slide .range-slider__range::-webkit-slider-thumb { background-color: #B0C39A; }
+		 #financial_wealth_slide .range-slider__range::-webkit-slider-thumb:hover { background-color: #B0C39A; }
+		 #financial_wealth_slide .range-slider__range:active::-webkit-slider-thumb { background-color: #B0C39A; }
+		 #financial_wealth_slide .range-slider__range::-moz-range-thumb { background-color: #B0C39A; }
+		 #financial_wealth_slide .range-slider__range::-moz-range-thumb:hover { background-color: #B0C39A; }
+		 #financial_wealth_slide .range-slider__range:active::-moz-range-thumb { background-color: #B0C39A; }
+		 #financial_wealth_slide .range-slider__range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 3px #fff, 0 0 0 6px #B0C39A; }
+
+		 /* #somatic_wealth_chart { margin-left: auto; margin-right: auto; } */
+		 .canvas_parent { max-width: 500px; margin-left: auto; margin-right: auto; }
+	</style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css" />
 </head>
 <body>
     <div id="app">
@@ -33,7 +212,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
                             <div class="question">
                                 <div>{{ options.questions.somatic_wealth[0] }}</div>
                                 <div class="range-slider">
@@ -74,8 +253,9 @@
                                 </div>
                             </div>
                         </div>
+						<div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <div class="canvas_parent">
                                 <canvas id="somatic_wealth_chart"></canvas>
                             </div>
                         </div>
@@ -92,7 +272,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
                             <div class="question">
                                 <div>{{ options.questions.mental_wealth[0] }}</div>
                                 <div class="range-slider">
@@ -133,8 +313,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+						<div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div class="canvas_parent">
                                 <canvas id="mental_wealth_chart"></canvas>
                             </div>
                         </div>
@@ -151,7 +332,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
                             <div class="question">
                                 <div>{{ options.questions.emotional_wealth[0] }}</div>
                                 <div class="range-slider">
@@ -192,8 +373,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+						<div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div class="canvas_parent">
                                 <canvas id="emotional_wealth_chart"></canvas>
                             </div>
                         </div>
@@ -210,7 +392,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
                             <div class="question">
                                 <div>{{ options.questions.interpersonal_wealth[0] }}</div>
                                 <div class="range-slider">
@@ -251,8 +433,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+						<div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div class="canvas_parent">
                                 <canvas id="interpersonal_wealth_chart"></canvas>
                             </div>
                         </div>
@@ -269,7 +452,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
                             <div class="question">
                                 <div>{{ options.questions.energetic_wealth[0] }}</div>
                                 <div class="range-slider">
@@ -310,8 +493,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+						<div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div class="canvas_parent">
                                 <canvas id="energetic_wealth_chart"></canvas>
                             </div>
                         </div>
@@ -328,7 +512,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
                             <div class="question">
                                 <div>{{ options.questions.financial_wealth[0] }}</div>
                                 <div class="range-slider">
@@ -369,8 +553,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+						<div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div class="canvas_parent">
                                 <canvas id="financial_wealth_chart"></canvas>
                             </div>
                         </div>
@@ -381,7 +566,10 @@
             <div id="final_result_slide" class="livweal_slide" style="display: none;">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
+						<div class="col-12 text-center">
+							<h1>Living Wealthy Wheel</h1>
+						</div>
+                        <div class="col-12 text-center">
                             <h2>Final Result</h2>
                         </div>
                     </div>
@@ -389,6 +577,20 @@
                         <div class="col-12">
                             <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
                                 <canvas id="final_result_chart"></canvas>
+                                <div style="margin-top: 2rem; text-align: justify;">To receive prompts and reflections from your Living Wealthy Wheel results for taking specific steps towards even more wholistic wealth in your life, share your best contact details here.</div>
+								<div class="wheel-form">
+                                    <div class="form-fields">
+                                        <label>Name</label>
+                                        <input v-model="full_name" type="text" />
+                                    </div>
+                                    <div class="form-fields">
+                                        <label>Email</label>
+                                        <input v-model="email_address" type="text" />
+                                    </div>
+                                    <div class="form-fields text-center">
+                                        <button class="nav-button" @click="submitResult">Submit</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -406,7 +608,9 @@
             </div>
         </div>
 
-        <div class="moonray-form-p2c186826f156 ussr" style="display: none;">
+
+		<!-- FORM -->
+		<div class="moonray-form-p2c186826f156 ussr" style="display: none;">
             <div class="moonray-form moonray-form-label-pos-left">
               <form class="moonray-form-clearfix" action="https://forms.ontraport.com/v2.4/form_processor.php?" method="post" accept-charset="UTF-8">
                 <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
@@ -613,10 +817,763 @@
               </form>
             </div>
         </div>
+		<!-- END FORM -->
     </div>
 
     <!-- Your Vue.js script with Polar Area Chart.js integration -->
-    <script src="livweal-vue.js"></script>
+    <!-- Your Vue.js script with Polar Area Chart.js integration -->
+    <script>
+		new Vue({
+			el: '#app',
+			data: {
+				current_chart: 0,
+				is_view_result: false,
+				somatic_wealth_chart: null,
+				mental_wealth_chart: null,
+				emotional_wealth_chart: null,
+				interpersonal_wealth_chart: null,
+				energetic_wealth_chart: null,
+				financial_wealth_chart: null,
+				final_result_chart: null,
+				somatic_wealth_question1: 0,
+				somatic_wealth_question2: 0,
+				somatic_wealth_question3: 0,
+				somatic_wealth_question4: 0,
+				somatic_wealth_question5: 0,
+				mental_wealth_question1: 0,
+				mental_wealth_question2: 0,
+				mental_wealth_question3: 0,
+				mental_wealth_question4: 0,
+				mental_wealth_question5: 0,
+				emotional_wealth_question1: 0,
+				emotional_wealth_question2: 0,
+				emotional_wealth_question3: 0,
+				emotional_wealth_question4: 0,
+				emotional_wealth_question5: 0,
+				interpersonal_wealth_question1: 0,
+				interpersonal_wealth_question2: 0,
+				interpersonal_wealth_question3: 0,
+				interpersonal_wealth_question4: 0,
+				interpersonal_wealth_question5: 0,
+				energetic_wealth_question1: 0,
+				energetic_wealth_question2: 0,
+				energetic_wealth_question3: 0,
+				energetic_wealth_question4: 0,
+				energetic_wealth_question5: 0,
+				financial_wealth_question1: 0,
+				financial_wealth_question2: 0,
+				financial_wealth_question3: 0,
+				financial_wealth_question4: 0,
+				financial_wealth_question5: 0,
+				options: {
+					slide_title: [
+						"Somatic Wealth",
+						"Mental Wealth",
+						"Emotional Wealth",
+						"Interpersonal Wealth",
+						"Energetic Wealth",
+						"Financial Wealth"
+					],
+					questions: {
+						somatic_wealth: [
+							"1. I can move my body with confidence, ease and freedom.",
+							"2. I am physically resilient and bounce back easily from periods of stress, illness, or injury.",
+							"3. I eat a balanced, nourishing diet and exercise regularly to maintain my health and joy.",
+							"4. I am connected with my body and I give it what it needs, when it needs it.",
+							"5. I am in flow with my environment and actively consider the impact and consequences of my choices."
+						],
+						mental_wealth: [
+							"1. I think, understand, and process information easily and efficiently.",
+							"2. I am able to problem solve, think creatively, and learn new things.",
+							"3. I am present with my own thoughts, feelings, and behaviors.",
+							"4. I have an optimistic outlook and trust myself and others.",
+							"5. I am in full alignment with my needs, values, and desires."
+						],
+						emotional_wealth: [
+							"1. I identify and manage my emotions responsibly for myself and in social situations.",
+							"2. I am able to deal with, and effectively recover from, adversity, disappointment and stress.",
+							"3. I feel and appropriately express a wide range of emotions.",
+							"4. Others would describe me as even-keeled and emotionally stable.",
+							"5. I recognize my value and see all of life’s events as opportunities for growth."
+						],
+						interpersonal_wealth: [
+							"1. I recognise the impact that words and actions have on others and myself.",
+							"2. I have at least three people with whom I have an open, trusting and connected relationship.",
+							"3. I experience a sense of belonging in relationships with others.",
+							"4. My self-awareness informs my decisions and choices with others.",
+							"5. I am able to communicate and establish effective boundaries for myself and with others."
+						],
+						energetic_wealth: [
+							"1. I am able to remain open, receptive, and at peace with what life brings.",
+							"2. I feel deeply connected with myself, others, and the greater world around me.",
+							"3. My purpose guides my decisions and how I show up every day.",
+							"4. My life is full of gratitude, pleasure, creativity and satisfaction.",
+							"5. I use my values to filter how I spend my time, resources and attention."
+						],
+						financial_wealth: [
+							"1. I comfortably manage expenses and have no financial stress about handling the unexpected.",
+							"2. I am financially self-reliant without need of external income or employment.",
+							"3. I understand how money works and make empowered financial decisions for myself.",
+							"4. I have a regular practice of reviewing and managing my financial resources and investments.",
+							"5. My financial activities are in alignment with my life values and circumstances."
+						],
+					},
+					colors: {
+						somatic_wealth: [
+							"#14594C","#437A70", "#729B94", "#A1BDB7", "#D0DEDB"
+						],
+						mental_wealth: [
+							"#253671", "#515E8D", "#7C86AA", "#A8AFC6", "#D3D7E3"
+						],
+						emotional_wealth: [
+							"#831220", "#9C414D", "#B57179", "#CDA0A6", "#E6D0D2"
+						],
+						interpersonal_wealth: [
+							"#4F3080", "#725999", "#9583B3", "#B9ACCC", "#DCD6E6"
+						],
+						energetic_wealth: [
+							"#D06C68", "#D98986", "#E3A7A4", "#ECC4C3", "#F6E2E1"
+						],
+						financial_wealth: [
+							"#B0C39A", "#C0CFAE", "#D0DBC2", "#DFE7D7", "#EFF3EB"
+						]
+					}
+				},
+				full_name: "",
+				email_address: "",
+				preview_url: ""
+			},
+			watch: {
+				somatic_wealth_question1($value) { this.updateSomaticWealthData(); },
+				somatic_wealth_question2($value) { this.updateSomaticWealthData(); },
+				somatic_wealth_question3($value) { this.updateSomaticWealthData(); },
+				somatic_wealth_question4($value) { this.updateSomaticWealthData(); },
+				somatic_wealth_question5($value) { this.updateSomaticWealthData(); },
+
+				mental_wealth_question1($value) { this.updateMentalWealthData(); },
+				mental_wealth_question2($value) { this.updateMentalWealthData(); },
+				mental_wealth_question3($value) { this.updateMentalWealthData(); },
+				mental_wealth_question4($value) { this.updateMentalWealthData(); },
+				mental_wealth_question5($value) { this.updateMentalWealthData(); },
+
+				emotional_wealth_question1($value) { this.updateEmotionalWealthData(); },
+				emotional_wealth_question2($value) { this.updateEmotionalWealthData(); },
+				emotional_wealth_question3($value) { this.updateEmotionalWealthData(); },
+				emotional_wealth_question4($value) { this.updateEmotionalWealthData(); },
+				emotional_wealth_question5($value) { this.updateEmotionalWealthData(); },
+
+				interpersonal_wealth_question1($value) { this.updateInterpersonalWealthData(); },
+				interpersonal_wealth_question2($value) { this.updateInterpersonalWealthData(); },
+				interpersonal_wealth_question3($value) { this.updateInterpersonalWealthData(); },
+				interpersonal_wealth_question4($value) { this.updateInterpersonalWealthData(); },
+				interpersonal_wealth_question5($value) { this.updateInterpersonalWealthData(); },
+
+				energetic_wealth_question1($value) { this.updateEnergeticWealthData(); },
+				energetic_wealth_question2($value) { this.updateEnergeticWealthData(); },
+				energetic_wealth_question3($value) { this.updateEnergeticWealthData(); },
+				energetic_wealth_question4($value) { this.updateEnergeticWealthData(); },
+				energetic_wealth_question5($value) { this.updateEnergeticWealthData(); },
+
+				financial_wealth_question1($value) { this.updateFinancialWealthData(); },
+				financial_wealth_question2($value) { this.updateFinancialWealthData(); },
+				financial_wealth_question3($value) { this.updateFinancialWealthData(); },
+				financial_wealth_question4($value) { this.updateFinancialWealthData(); },
+				financial_wealth_question5($value) { this.updateFinancialWealthData(); },
+			},
+			methods: {
+				updateSomaticWealthData() {
+					const $data = [
+						this.somatic_wealth_question1,
+						this.somatic_wealth_question2,
+						this.somatic_wealth_question3,
+						this.somatic_wealth_question4,
+						this.somatic_wealth_question5
+					];
+					this.somatic_wealth_chart.data.datasets[0].data = $data;
+					this.somatic_wealth_chart.update();
+				},
+				updateMentalWealthData() {
+					const $data = [
+						this.mental_wealth_question1,
+						this.mental_wealth_question2,
+						this.mental_wealth_question3,
+						this.mental_wealth_question4,
+						this.mental_wealth_question5
+					];
+					this.mental_wealth_chart.data.datasets[0].data = $data;
+					this.mental_wealth_chart.update();  
+				},
+				updateEmotionalWealthData() {
+					const $data = [
+						this.emotional_wealth_question1,
+						this.emotional_wealth_question2,
+						this.emotional_wealth_question3,
+						this.emotional_wealth_question4,
+						this.emotional_wealth_question5
+					];
+					this.emotional_wealth_chart.data.datasets[0].data = $data;
+					this.emotional_wealth_chart.update();  
+				},
+				updateInterpersonalWealthData() {
+					const $data = [
+						this.interpersonal_wealth_question1,
+						this.interpersonal_wealth_question2,
+						this.interpersonal_wealth_question3,
+						this.interpersonal_wealth_question4,
+						this.interpersonal_wealth_question5
+					];
+					this.interpersonal_wealth_chart.data.datasets[0].data = $data;
+					this.interpersonal_wealth_chart.update();  
+				},
+				updateEnergeticWealthData() {
+					const $data = [
+						this.energetic_wealth_question1,
+						this.energetic_wealth_question2,
+						this.energetic_wealth_question3,
+						this.energetic_wealth_question4,
+						this.energetic_wealth_question5
+					];
+					this.energetic_wealth_chart.data.datasets[0].data = $data;
+					this.energetic_wealth_chart.update();  
+				},
+				updateFinancialWealthData() {
+					const $data = [
+						this.financial_wealth_question1,
+						this.financial_wealth_question2,
+						this.financial_wealth_question3,
+						this.financial_wealth_question4,
+						this.financial_wealth_question5
+					];
+					this.financial_wealth_chart.data.datasets[0].data = $data;
+					this.financial_wealth_chart.update();  
+				},
+
+				renderSomaticWealthWheel() {
+					// Chart.js configuration
+					const ctx = document.getElementById('somatic_wealth_chart').getContext('2d');
+					const $data = [
+						this.somatic_wealth_question1,
+						this.somatic_wealth_question2,
+						this.somatic_wealth_question3,
+						this.somatic_wealth_question4,
+						this.somatic_wealth_question5
+					]
+					this.somatic_wealth_chart = new Chart(ctx, {
+						type: 'polarArea',
+						data: {
+							labels: [
+								this.options.questions.somatic_wealth[0],
+								this.options.questions.somatic_wealth[1],
+								this.options.questions.somatic_wealth[2],
+								this.options.questions.somatic_wealth[3],
+								this.options.questions.somatic_wealth[4]
+							],
+							datasets: [{
+								label: 'Somatic Wealth',
+								data: $data,
+								backgroundColor: [
+									this.options.colors.somatic_wealth[0],
+									this.options.colors.somatic_wealth[1],
+									this.options.colors.somatic_wealth[2],
+									this.options.colors.somatic_wealth[3],
+									this.options.colors.somatic_wealth[4]
+								],
+								borderWidth: 1
+							}]
+						},
+						options: {
+							plugins: {
+                                legend: {
+									display: false
+								}
+							},
+							scale: {
+								ticks: {
+									beginAtZero: true,
+									steps: 0,
+									stepValue: 5,
+									max: 100,
+									suggestedMax: 100,
+									suggestedMin: 0
+								}
+							}
+						}
+					});
+				},
+				renderMentalWealthWheel() {
+					// Chart.js configuration
+					const ctx = document.getElementById('mental_wealth_chart').getContext('2d');
+					const $data = [
+						this.mental_wealth_question1,
+						this.mental_wealth_question2,
+						this.mental_wealth_question3,
+						this.mental_wealth_question4,
+						this.mental_wealth_question5
+					]
+					this.mental_wealth_chart = new Chart(ctx, {
+						type: 'polarArea',
+						data: {
+							labels: [
+								this.options.questions.mental_wealth[0],
+								this.options.questions.mental_wealth[1],
+								this.options.questions.mental_wealth[2],
+								this.options.questions.mental_wealth[3],
+								this.options.questions.mental_wealth[4]
+							],
+							datasets: [{
+								label: 'Sample Data Only',
+								data: $data,
+								backgroundColor: [
+									this.options.colors.mental_wealth[0],
+									this.options.colors.mental_wealth[1],
+									this.options.colors.mental_wealth[2],
+									this.options.colors.mental_wealth[3],
+									this.options.colors.mental_wealth[4]
+								],
+								borderWidth: 1
+							}]
+						},
+						options: {
+							plugins: {
+								legend: {
+								display: false
+								}
+							},
+							scale: {
+								ticks: {
+									beginAtZero: true,
+									steps: 0,
+									stepValue: 5,
+									max: 100,
+									suggestedMax: 100,
+									suggestedMin: 0
+								}
+							}
+						}
+					});
+				},
+				renderEmotionalWealthWheel() {
+					// Chart.js configuration
+					const ctx = document.getElementById('emotional_wealth_chart').getContext('2d');
+					const $data = [
+						this.emotional_wealth_question1,
+						this.emotional_wealth_question2,
+						this.emotional_wealth_question3,
+						this.emotional_wealth_question4,
+						this.emotional_wealth_question5
+					]
+					this.emotional_wealth_chart = new Chart(ctx, {
+						type: 'polarArea',
+						data: {
+							labels: [
+								this.options.questions.emotional_wealth[0],
+								this.options.questions.emotional_wealth[1],
+								this.options.questions.emotional_wealth[2],
+								this.options.questions.emotional_wealth[3],
+								this.options.questions.emotional_wealth[4]
+							],
+							datasets: [{
+								label: 'Emotional Wealth',
+								data: $data,
+								backgroundColor: [
+									this.options.colors.emotional_wealth[0],
+									this.options.colors.emotional_wealth[1],
+									this.options.colors.emotional_wealth[2],
+									this.options.colors.emotional_wealth[3],
+									this.options.colors.emotional_wealth[4]
+								],
+								borderWidth: 1
+							}]
+						},
+						options: {
+							plugins: {
+								legend: {
+								display: false
+								}
+							},
+							scale: {
+								ticks: {
+									beginAtZero: true,
+									steps: 0,
+									stepValue: 5,
+									max: 100,
+									suggestedMax: 100,
+									suggestedMin: 0
+								}
+							}
+						}
+					});
+				},
+				renderInterpersonalWealthWheel() {
+					// Chart.js configuration
+					const ctx = document.getElementById('interpersonal_wealth_chart').getContext('2d');
+					const $data = [
+						this.interpersonal_wealth_question1,
+						this.interpersonal_wealth_question2,
+						this.interpersonal_wealth_question3,
+						this.interpersonal_wealth_question4,
+						this.interpersonal_wealth_question5
+					]
+					this.interpersonal_wealth_chart = new Chart(ctx, {
+						type: 'polarArea',
+						data: {
+							labels: [
+								this.options.questions.interpersonal_wealth[0],
+								this.options.questions.interpersonal_wealth[1],
+								this.options.questions.interpersonal_wealth[2],
+								this.options.questions.interpersonal_wealth[3],
+								this.options.questions.interpersonal_wealth[4]
+							],
+							datasets: [{
+								label: 'Interpersonal Wealth',
+								data: $data,
+								backgroundColor: [
+									this.options.colors.interpersonal_wealth[0],
+									this.options.colors.interpersonal_wealth[1],
+									this.options.colors.interpersonal_wealth[2],
+									this.options.colors.interpersonal_wealth[3],
+									this.options.colors.interpersonal_wealth[4]
+								],
+								borderWidth: 1
+							}]
+						},
+						options: {
+							plugins: {
+								legend: {
+								display: false
+								}
+							},
+							scale: {
+								ticks: {
+									beginAtZero: true,
+									steps: 0,
+									stepValue: 5,
+									max: 100,
+									suggestedMax: 100,
+									suggestedMin: 0
+								}
+							}
+						}
+					});
+				},
+				renderEnergeticWealthWheel() {
+					// Chart.js configuration
+					const ctx = document.getElementById('energetic_wealth_chart').getContext('2d');
+					const $data = [
+						this.energetic_wealth_question1,
+						this.energetic_wealth_question2,
+						this.energetic_wealth_question3,
+						this.energetic_wealth_question4,
+						this.energetic_wealth_question5
+					]
+					this.energetic_wealth_chart = new Chart(ctx, {
+						type: 'polarArea',
+						data: {
+							labels: [
+								this.options.questions.energetic_wealth[0],
+								this.options.questions.energetic_wealth[1],
+								this.options.questions.energetic_wealth[2],
+								this.options.questions.energetic_wealth[3],
+								this.options.questions.energetic_wealth[4]
+							],
+							datasets: [{
+								label: 'Energetic Wealth',
+								data: $data,
+								backgroundColor: [
+									this.options.colors.energetic_wealth[0],
+									this.options.colors.energetic_wealth[1],
+									this.options.colors.energetic_wealth[2],
+									this.options.colors.energetic_wealth[3],
+									this.options.colors.energetic_wealth[4]
+								],
+								borderWidth: 1
+							}]
+						},
+						options: {
+							plugins: {
+								legend: {
+								display: false
+								}
+							},
+							scale: {
+								ticks: {
+									beginAtZero: true,
+									steps: 0,
+									stepValue: 5,
+									max: 100,
+									suggestedMax: 100,
+									suggestedMin: 0
+								}
+							}
+						}
+					});
+				},
+				renderFinancialWealthWheel() {
+					// Chart.js configuration
+					const ctx = document.getElementById('financial_wealth_chart').getContext('2d');
+					const $data = [
+						this.financial_wealth_question1,
+						this.financial_wealth_question2,
+						this.financial_wealth_question3,
+						this.financial_wealth_question4,
+						this.financial_wealth_question5
+					]
+					this.financial_wealth_chart = new Chart(ctx, {
+						type: 'polarArea',
+						data: {
+							labels: [
+								this.options.questions.financial_wealth[0],
+								this.options.questions.financial_wealth[1],
+								this.options.questions.financial_wealth[2],
+								this.options.questions.financial_wealth[3],
+								this.options.questions.financial_wealth[4]
+							],
+							datasets: [{
+								label: 'Financial Wealth',
+								data: $data,
+								backgroundColor: [
+									this.options.colors.financial_wealth[0],
+									this.options.colors.financial_wealth[1],
+									this.options.colors.financial_wealth[2],
+									this.options.colors.financial_wealth[3],
+									this.options.colors.financial_wealth[4]
+								],
+								borderWidth: 1
+							}]
+						},
+						options: {
+							plugins: {
+								legend: {
+								display: false
+								}
+							},
+							scale: {
+								ticks: {
+									beginAtZero: true,
+									steps: 0,
+									stepValue: 5,
+									max: 100,
+									suggestedMax: 100,
+									suggestedMin: 0
+								}
+							}
+						}
+					});
+
+					
+				},
+                calculateAverage() {
+                    const $s1 = parseInt(this.somatic_wealth_question1);
+                    const $s2 = parseInt(this.somatic_wealth_question2);
+                    const $s3 = parseInt(this.somatic_wealth_question3);
+                    const $s4 = parseInt(this.somatic_wealth_question4);
+                    const $s5 = parseInt(this.somatic_wealth_question5);
+                    const $m1 = parseInt(this.mental_wealth_question1);
+                    const $m2 = parseInt(this.mental_wealth_question2);
+                    const $m3 = parseInt(this.mental_wealth_question3);
+                    const $m4 = parseInt(this.mental_wealth_question4);
+                    const $m5 = parseInt(this.mental_wealth_question5);
+                    const $em1 = parseInt(this.emotional_wealth_question1);
+                    const $em2 = parseInt(this.emotional_wealth_question2);
+                    const $em3 = parseInt(this.emotional_wealth_question3);
+                    const $em4 = parseInt(this.emotional_wealth_question4);
+                    const $em5 = parseInt(this.emotional_wealth_question5);
+                    const $i1 = parseInt(this.interpersonal_wealth_question1);
+                    const $i2 = parseInt(this.interpersonal_wealth_question2);
+                    const $i3 = parseInt(this.interpersonal_wealth_question3);
+                    const $i4 = parseInt(this.interpersonal_wealth_question4);
+                    const $i5 = parseInt(this.interpersonal_wealth_question5);
+                    const $en1 = parseInt(this.energetic_wealth_question1);
+                    const $en2 = parseInt(this.energetic_wealth_question2);
+                    const $en3 = parseInt(this.energetic_wealth_question3);
+                    const $en4 = parseInt(this.energetic_wealth_question4);
+                    const $en5 = parseInt(this.energetic_wealth_question5);
+                    const $f1 = parseInt(this.financial_wealth_question1);
+                    const $f2 = parseInt(this.financial_wealth_question2);
+                    const $f3 = parseInt(this.financial_wealth_question3);
+                    const $f4 = parseInt(this.financial_wealth_question4);
+                    const $f5 = parseInt(this.financial_wealth_question5);
+
+                    const $average_somatic = parseFloat((($s1 + $s2 + $s3 + $s4 + $s5) / 5).toFixed(2));
+
+                    const $average_mental = parseFloat((($m1 + $m2 + $m3 + $m4 + $m5) / 5).toFixed(2));
+
+                    const $average_emotional = parseFloat((($em1 + $em2 + $em3 + $em4 + $em5) / 5).toFixed(2));
+
+                    const $average_interpersonal = parseFloat((($i1 + $i2 + $i3 + $i4 + $i5) / 5).toFixed(2));
+
+                    const $average_energetic = parseFloat((($en1 + $en2 + $en3 + $en4 + $en5) / 5).toFixed(2));
+
+                    const $average_financial = parseFloat((($f1 + $f2 + $f3 + $f4 + $f5) / 5).toFixed(2));
+                    
+                    
+
+                    return [$average_somatic, $average_mental, $average_emotional, $average_interpersonal, $average_energetic, $average_financial];
+                },
+				renderFinalResult() {
+					// Chart.js configuration
+					const ctx = document.getElementById('final_result_chart').getContext('2d');
+
+					const $data = this.calculateAverage();
+
+					this.preview_url = `?
+						q1=${this.somatic_wealth_question1}&
+						q2=${this.somatic_wealth_question2}&
+						q3=${this.somatic_wealth_question3}&
+						q4=${this.somatic_wealth_question4}&
+						q5=${this.somatic_wealth_question5}&
+						q6=${this.mental_wealth_question1}&
+						q7=${this.mental_wealth_question2}&
+						q8=${this.mental_wealth_question3}&
+						q9=${this.mental_wealth_question4}&
+						q10=${this.mental_wealth_question5}&
+						q11=${this.emotional_wealth_question1}&
+						q12=${this.emotional_wealth_question2}&
+						q13=${this.emotional_wealth_question3}&
+						q14=${this.emotional_wealth_question4}&
+						q15=${this.emotional_wealth_question5}&
+						q16=${this.interpersonal_wealth_question1}&
+						q17=${this.interpersonal_wealth_question2}&
+						q18=${this.interpersonal_wealth_question3}&
+						q19=${this.interpersonal_wealth_question4}&
+						q20=${this.interpersonal_wealth_question5}&
+						q21=${this.energetic_wealth_question1}&
+						q22=${this.energetic_wealth_question2}&
+						q23=${this.energetic_wealth_question3}&
+						q24=${this.energetic_wealth_question4}&
+						q25=${this.energetic_wealth_question5}&
+						q26=${this.financial_wealth_question1}&
+						q27=${this.financial_wealth_question2}&
+						q28=${this.financial_wealth_question3}&
+						q29=${this.financial_wealth_question4}&
+						q30=${this.financial_wealth_question5}`;
+
+					this.final_result_chart = new Chart(ctx, {
+						type: 'polarArea',
+						data: {
+							labels: this.options.slide_title,
+							datasets: [{
+								label: 'Average',
+								data: $data,
+								backgroundColor: [
+                                    this.options.colors.somatic_wealth[0],
+                                    this.options.colors.mental_wealth[0],
+                                    this.options.colors.emotional_wealth[0],
+                                    this.options.colors.interpersonal_wealth[0],
+                                    this.options.colors.energetic_wealth[0],
+                                    this.options.colors.financial_wealth[0]
+								],
+								borderWidth: 1
+							}]
+						},
+						options: {
+							plugins: {
+								legend: {
+								    display: false
+								}
+							},
+							scale: {
+								ticks: {
+									beginAtZero: true,
+									steps: 0,
+									stepValue: 5,
+									max: 100,
+									suggestedMax: 100,
+									suggestedMin: 0
+								}
+							},
+                            scales: {
+                                r: {
+                                    pointLabels: {
+                                        display: true,
+                                        centerPointLabels: true,
+                                        font: {
+                                            size: 18
+                                        },
+                                        arc: true,
+                                        position: 'outside'
+                                    }
+                                }
+                            }
+						}
+					});
+
+					$('#financial_wealth_slide').css('display', 'none');
+					$('#final_result_slide').css('display','block');
+					$('#nav_buttons').css('display', 'none');
+					// this.is_view_result = true;
+				},
+				prevChart() {
+					if(this.current_chart !== 0) {
+						this.current_chart--;
+						this.manageVisibility();
+					}
+				},
+				nextChart() {
+					if(this.current_chart !== 5) {
+						this.current_chart++;
+						this.manageVisibility();
+					}
+				},
+				manageVisibility() {
+					$('#somatic_wealth_slide').css('display', 'none');
+					$('#mental_wealth_slide').css('display', 'none');
+					$('#emotional_wealth_slide').css('display', 'none');
+					$('#interpersonal_wealth_slide').css('display', 'none');
+					$('#energetic_wealth_slide').css('display', 'none');
+					$('#financial_wealth_slide').css('display', 'none');
+					
+					switch(this.current_chart) {
+						case 0: 
+							$('#somatic_wealth_slide').css('display', 'block'); break;
+						case 1:
+							$('#mental_wealth_slide').css('display', 'block'); break;
+						case 2:
+							$('#emotional_wealth_slide').css('display', 'block'); break;
+						case 3:
+							$('#interpersonal_wealth_slide').css('display', 'block'); break;
+						case 4:
+							$('#energetic_wealth_slide').css('display', 'block'); break;
+						case 5:
+							$('#financial_wealth_slide').css('display', 'block'); break;
+					}
+				},
+				submitResult() {
+					console.log("submit result!");
+					$('#mr-field-element-996842232134').click();
+				}
+			},
+			mounted() {
+				this.renderSomaticWealthWheel();
+				this.renderMentalWealthWheel();
+				this.renderEmotionalWealthWheel();
+				this.renderInterpersonalWealthWheel();
+				this.renderEnergeticWealthWheel();
+				this.renderFinancialWealthWheel();
+			}
+		});
+
+
+		var rangeSlider = function(){
+			var slider = $('.range-slider'),
+			range = $('.range-slider__range'),
+			value = $('.range-slider__value');
+				
+			slider.each(function() {
+
+				value.each(function(){
+				var value = $(this).prev().attr('value');
+					$(this).html(value);
+				});
+
+				range.on('input', function(){
+					$(this).next(value).html(`${this.value}%`);
+				});
+			});
+		};
+
+		rangeSlider();
+	</script>
 
 </body>
 </html>

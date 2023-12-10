@@ -22,7 +22,7 @@
         <h1 style="text-align: center; margin-bottom: 3rem;">Your Living Wealthy Wheel Result</h1>
         <div>
             <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
-                <canvas id="somatic_wealth_preview_chart"></canvas>
+                <canvas id="wheel_preview_chart"></canvas>
             </div>
         </div>
     </div>
@@ -32,8 +32,7 @@
         new Vue({
             el: '#app',
             data: {
-                somatic_wealth_preview_chart: null,
-                current_chart: 0,
+				current_chart: 0,
 				is_view_result: false,
 				somatic_wealth_chart: null,
 				mental_wealth_chart: null,
@@ -145,8 +144,10 @@
 							"#B0C39A", "#C0CFAE", "#D0DBC2", "#DFE7D7", "#EFF3EB"
 						]
 					}
-				}
-            },
+				},
+				full_name: "",
+				email_address: ""
+			},
             created() {
                 this.somatic_wealth_question1 = this.getURLParameters("q1");
                 this.somatic_wealth_question2 = this.getURLParameters("q2");
@@ -183,126 +184,106 @@
                 
             },
             methods: {
+                calculateAverage() {
+                    const $s1 = parseInt(this.somatic_wealth_question1);
+                    const $s2 = parseInt(this.somatic_wealth_question2);
+                    const $s3 = parseInt(this.somatic_wealth_question3);
+                    const $s4 = parseInt(this.somatic_wealth_question4);
+                    const $s5 = parseInt(this.somatic_wealth_question5);
+                    const $m1 = parseInt(this.mental_wealth_question1);
+                    const $m2 = parseInt(this.mental_wealth_question2);
+                    const $m3 = parseInt(this.mental_wealth_question3);
+                    const $m4 = parseInt(this.mental_wealth_question4);
+                    const $m5 = parseInt(this.mental_wealth_question5);
+                    const $em1 = parseInt(this.emotional_wealth_question1);
+                    const $em2 = parseInt(this.emotional_wealth_question2);
+                    const $em3 = parseInt(this.emotional_wealth_question3);
+                    const $em4 = parseInt(this.emotional_wealth_question4);
+                    const $em5 = parseInt(this.emotional_wealth_question5);
+                    const $i1 = parseInt(this.interpersonal_wealth_question1);
+                    const $i2 = parseInt(this.interpersonal_wealth_question2);
+                    const $i3 = parseInt(this.interpersonal_wealth_question3);
+                    const $i4 = parseInt(this.interpersonal_wealth_question4);
+                    const $i5 = parseInt(this.interpersonal_wealth_question5);
+                    const $en1 = parseInt(this.energetic_wealth_question1);
+                    const $en2 = parseInt(this.energetic_wealth_question2);
+                    const $en3 = parseInt(this.energetic_wealth_question3);
+                    const $en4 = parseInt(this.energetic_wealth_question4);
+                    const $en5 = parseInt(this.energetic_wealth_question5);
+                    const $f1 = parseInt(this.financial_wealth_question1);
+                    const $f2 = parseInt(this.financial_wealth_question2);
+                    const $f3 = parseInt(this.financial_wealth_question3);
+                    const $f4 = parseInt(this.financial_wealth_question4);
+                    const $f5 = parseInt(this.financial_wealth_question5);
+
+                    const $average_somatic = parseFloat((($s1 + $s2 + $s3 + $s4 + $s5) / 5).toFixed(2));
+
+                    const $average_mental = parseFloat((($m1 + $m2 + $m3 + $m4 + $m5) / 5).toFixed(2));
+
+                    const $average_emotional = parseFloat((($em1 + $em2 + $em3 + $em4 + $em5) / 5).toFixed(2));
+
+                    const $average_interpersonal = parseFloat((($i1 + $i2 + $i3 + $i4 + $i5) / 5).toFixed(2));
+
+                    const $average_energetic = parseFloat((($en1 + $en2 + $en3 + $en4 + $en5) / 5).toFixed(2));
+
+                    const $average_financial = parseFloat((($f1 + $f2 + $f3 + $f4 + $f5) / 5).toFixed(2));
+
+                    return [$average_somatic, $average_mental, $average_emotional, $average_interpersonal, $average_energetic, $average_financial];
+                },
                 renderChart() {
                     // Chart.js configuration
-                    const ctx = document.getElementById('somatic_wealth_preview_chart').getContext('2d');
-                    const $data = [
-                        this.somatic_wealth_question1,
-                        this.somatic_wealth_question2,
-                        this.somatic_wealth_question3,
-                        this.somatic_wealth_question4,
-                        this.somatic_wealth_question5,
-                        this.mental_wealth_question1,
-                        this.mental_wealth_question2,
-                        this.mental_wealth_question3,
-                        this.mental_wealth_question4,
-                        this.mental_wealth_question5,
-                        this.emotional_wealth_question1,
-                        this.emotional_wealth_question2,
-                        this.emotional_wealth_question3,
-                        this.emotional_wealth_question4,
-                        this.emotional_wealth_question5,
-                        this.interpersonal_wealth_question1,
-                        this.interpersonal_wealth_question2,
-                        this.interpersonal_wealth_question3,
-                        this.interpersonal_wealth_question4,
-                        this.interpersonal_wealth_question5,
-                        this.energetic_wealth_question1,
-                        this.energetic_wealth_question2,
-                        this.energetic_wealth_question3,
-                        this.energetic_wealth_question4,
-                        this.energetic_wealth_question5,
-                        this.financial_wealth_question1,
-                        this.financial_wealth_question2,
-                        this.financial_wealth_question3,
-                        this.financial_wealth_question4,
-                        this.financial_wealth_question5,
-                    ]
-                    this.somatic_wealth_preview_chart = new Chart(ctx, {
+                    const ctx = document.getElementById('wheel_preview_chart').getContext('2d');
+                    
+                    const $data = this.calculateAverage();
+                    
+                    this.wheel_preview_chart = new Chart(ctx, {
                         type: 'polarArea',
                         data: {
-                            labels: [
-                                this.options.questions.somatic_wealth[0],
-                                this.options.questions.somatic_wealth[1],
-                                this.options.questions.somatic_wealth[2],
-                                this.options.questions.somatic_wealth[3],
-                                this.options.questions.somatic_wealth[4],
-                                this.options.questions.mental_wealth[0],
-                                this.options.questions.mental_wealth[1],
-                                this.options.questions.mental_wealth[2],
-                                this.options.questions.mental_wealth[3],
-                                this.options.questions.mental_wealth[4],
-                                this.options.questions.emotional_wealth[0],
-                                this.options.questions.emotional_wealth[1],
-                                this.options.questions.emotional_wealth[2],
-                                this.options.questions.emotional_wealth[3],
-                                this.options.questions.emotional_wealth[4],
-                                this.options.questions.interpersonal_wealth[0],
-                                this.options.questions.interpersonal_wealth[1],
-                                this.options.questions.interpersonal_wealth[2],
-                                this.options.questions.interpersonal_wealth[3],
-                                this.options.questions.interpersonal_wealth[4],
-                                this.options.questions.energetic_wealth[0],
-                                this.options.questions.energetic_wealth[1],
-                                this.options.questions.energetic_wealth[2],
-                                this.options.questions.energetic_wealth[3],
-                                this.options.questions.energetic_wealth[4],
-                                this.options.questions.financial_wealth[0],
-                                this.options.questions.financial_wealth[1],
-                                this.options.questions.financial_wealth[2],
-                                this.options.questions.financial_wealth[3],
-                                this.options.questions.financial_wealth[4],
-                            ],
+                            labels: this.options.slide_title,
                             datasets: [{
-                                label: 'Living Wealth Wheel',
+                                label: 'Average',
                                 data: $data,
                                 backgroundColor: [
                                     this.options.colors.somatic_wealth[0],
-                                    this.options.colors.somatic_wealth[1],
-                                    this.options.colors.somatic_wealth[2],
-                                    this.options.colors.somatic_wealth[3],
-                                    this.options.colors.somatic_wealth[4],
                                     this.options.colors.mental_wealth[0],
-                                    this.options.colors.mental_wealth[1],
-                                    this.options.colors.mental_wealth[2],
-                                    this.options.colors.mental_wealth[3],
-                                    this.options.colors.mental_wealth[4],
                                     this.options.colors.emotional_wealth[0],
-                                    this.options.colors.emotional_wealth[1],
-                                    this.options.colors.emotional_wealth[2],
-                                    this.options.colors.emotional_wealth[3],
-                                    this.options.colors.emotional_wealth[4],
                                     this.options.colors.interpersonal_wealth[0],
-                                    this.options.colors.interpersonal_wealth[1],
-                                    this.options.colors.interpersonal_wealth[2],
-                                    this.options.colors.interpersonal_wealth[3],
-                                    this.options.colors.interpersonal_wealth[4],
                                     this.options.colors.energetic_wealth[0],
-                                    this.options.colors.energetic_wealth[1],
-                                    this.options.colors.energetic_wealth[2],
-                                    this.options.colors.energetic_wealth[3],
-                                    this.options.colors.energetic_wealth[4],
-                                    this.options.colors.financial_wealth[0],
-                                    this.options.colors.financial_wealth[1],
-                                    this.options.colors.financial_wealth[2],
-                                    this.options.colors.financial_wealth[3],
-                                    this.options.colors.financial_wealth[4],
+                                    this.options.colors.financial_wealth[0]
                                 ],
                                 borderWidth: 1
                             }]
                         },
                         options: {
-                            scale: {
-                                ticks: {
-                                    beginAtZero: true,
-                                    steps: 0,
-                                    stepValue: 5,
-                                    max: 100,
-                                    suggestedMax: 100,
-                                    suggestedMin: 0
+							plugins: {
+								legend: {
+								    display: false
+								}
+							},
+							scale: {
+								ticks: {
+									beginAtZero: true,
+									steps: 0,
+									stepValue: 5,
+									max: 100,
+									suggestedMax: 100,
+									suggestedMin: 0
+								}
+							},
+                            scales: {
+                                r: {
+                                    pointLabels: {
+                                        display: true,
+                                        centerPointLabels: true,
+                                        font: {
+                                            size: 18
+                                        },
+                                        arc: true,
+                                        position: 'outside'
+                                    }
                                 }
                             }
-                        }
+						}
                     });
 
                 },

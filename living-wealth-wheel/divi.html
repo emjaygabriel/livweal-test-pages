@@ -26,6 +26,7 @@
 			padding: 0;
 			margin: 0;
 		}
+		
 		.range-slider__range::-webkit-slider-thumb {
 			-webkit-appearance: none;
 			appearance: none;
@@ -110,10 +111,11 @@
 		}
 
         .livweal_slide h2 {
-            margin-bottom: 2rem;
+            margin-bottom: -3rem;
         }
+		.mbottom-2 { margin-bottom: 2rem; }
         .text-center { text-align:center; }
-        .wheel-form { margin: 2rem auto 0 auto; width: 380px; }
+        .wheel-form { margin: 2rem auto 0 auto; max-width: 380px; }
         .wheel-form .form-fields { margin-bottom: 1rem; }
         .wheel-form .form-fields label { display: block; }
         .wheel-form .form-fields input[type=text] {
@@ -189,13 +191,203 @@
 
 		 /* #somatic_wealth_chart { margin-left: auto; margin-right: auto; } */
 		 .canvas_parent { max-width: 500px; margin-left: auto; margin-right: auto; }
+
+		 #introduction_slide .green-box {
+			max-width: 500px;
+			padding: 3rem;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #14594C;
+			text-align: center;
+			border-radius: 15px;
+			margin-bottom: 3rem;
+		 }
+
+		 #introduction_slide .new-box {
+			max-width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			margin-bottom: 3rem;
+		 }
+
+		 /* #introduction_slide .new-box img {
+			max-width: 300px;
+		 } */
+
+		 #introduction_slide .green-box img {
+			max-width: 300px;
+		 }
+
+		#introduction_slide .main-title h1 { 
+			font-family: "Libre Baskerville", serif;
+			font-size: 60px;
+  			text-align: center;
+			margin-bottom: 6rem;
+		}
+
+		#introduction_slide .direction-box {
+			background-color: #1C917E;
+			padding: 3rem 6rem;
+			color: #fff;
+			font-family: "Work Sans", sans-serif;
+			margin-bottom: 5rem;
+		}
+
+		#introduction_slide .direction-box h2 {
+			color: #fff;
+			text-align: center;
+			margin-bottom: 2rem;
+			padding-bottom: 0;
+			font-family: "Libre Baskerville", serif !important;
+			font-size: 2rem;
+		}
+
+		#introduction_slide .direction-box p {
+			font-size: 1.2rem;
+			font-weight: normal;
+			line-height: 2rem;
+			font-family: "Work Sans", sans-serif;
+		}
+
+		#introduction_slide .love-warning {
+			margin-bottom: 5rem;
+		}
+
+		#introduction_slide .love-warning .love-warning-logo {
+			max-width: 370px;
+			margin-left: 1rem;
+			margin-right: 1rem;
+		}
+
+		#introduction_slide .love-warning h2 {
+			font-size: 52px;
+			color: #14594C;
+			font-family: "Libre Baskerville", serif;
+			margin-bottom: 2rem;
+		}
+
+		.livweal_slide h2 {
+			margin-bottom: 2rem;
+		}
+
+		#introduction_slide .love-warning p {
+			font-family: "Work Sans", sans-serif;
+			font-size: 1rem;
+			line-height: 1.8rem;
+		}
+		#introduction_slide .important-note p {
+			color: #000;
+			font-size: 1rem;
+		}
+		#introduction_slide .important-note {
+			border-top: 2px solid #000;
+			border-bottom: 2px solid #000;
+			padding: 1rem 0rem;
+			margin-bottom: 2rem;
+			text-align: center;
+		}
+
+		.overall_average {
+			margin-top: -2rem;
+			text-align: center;
+			font-size: 24px;
+		}
+
+		@media (max-width: 960px) {
+			/* Your styles for screens with a width of 960 pixels or less go here */
+			#introduction_slide .green-box {
+				padding: 2rem;
+			}
+			#introduction_slide .green-box img { width: 100%; }
+			#introduction_slide .main-title h1 {
+				font-size: 40px;
+				margin-bottom: 4rem;
+ 				line-height: 1.3;
+			}
+			#introduction_slide .direction-box { padding: 2rem; }
+			#introduction_slide .love-warning .love-warning-logo {
+				margin-left: auto;
+				margin-right: auto;
+				width: 100%;
+				margin-bottom: 2rem;
+			}
+			#introduction_slide .love-warning h2 {	
+				text-align: center;
+				font-size: 40px;
+				line-height: 1.3;
+			}
+			.livweal_slide .row {
+				display: flex;
+				flex-direction: column-reverse;
+			}
+
+			.question:first-child {
+				margin-top: 4rem;
+			}
+			
+			.wheel-form {
+				max-width: 380px;
+			}
+
+			.overall_average {
+				margin-top: 2rem;
+				line-height: 1.5;
+			}
+
+			#final_result_slide h1 {
+				margin-bottom: 3rem;
+				line-height: 1.5;
+			}
+		}
+		
 	</style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css" />
 
 	<div id="app">
         <div>
+			<!-- INTRODUCTION PAGE -->
+			<div id="introduction_slide" class="livweal_slide">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="new-box">
+								<img src="https://livweal.com/wp-content/uploads/2023/12/design_structure_elements__10_.png" />
+							</div>
+							<!-- <div class="green-box">
+								<img src="https://livweal.com/wp-content/uploads/2023/12/livweal-institute-logo.png" />
+							</div> -->
+							<div class="main-title">
+								<h1>The Living Wealthy Wheel</h1>
+							</div>
+							<div class="direction-box">
+								<h2>Directions</h2>
+								<p>We’ve made this assessment super easy peasy lemon squeeeeeeezy for you!  For each prompt, move the slider to the percentage that you believe best represents how the statement is true for you today.   what your life looks like today. </p>
+							</div>
+							<div class="love-warning">
+								<div class="row">
+									<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
+										<img class="love-warning-logo" src="https://livweal.com/wp-content/uploads/2023/12/love-warning.png" />
+									</div>
+									<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+										<h2>Loving Warning!</h2>
+										<p>What you learn about yourself with the Living Wealthy Wheel is not to bring you down. It’s a fun little reality check. I’m asking you to be honest with yourself so that you have a starting place to grow from. Every single one of us can grow from wherever we are today. Also, notice the patterns of your answers. Are you someone who tends to lean on the hopeful side of your answers? Or are you habitually hard on yourself? How we answer can tell us just as much as what we answer! Work toward being unfiltered and honest. See what happens!</p>
+									</div>
+								</div>
+							</div>
+							<div class="important-note">
+								<p><strong>Important Note: </strong></p>
+								<p>When you select your answer, select the answer that is true RIGHT NOW. This is NOT what you hope or wish for yourself in the future.</p>
+							</div>
+							<div class="begin-botton text-center">
+								<button class="nav-button" @click="beginTest">START HERE</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
             <!-- SOMATIC WEALTH -->
-            <div id="somatic_wealth_slide" class="livweal_slide">
+            <div id="somatic_wealth_slide" class="livweal_slide" style="display: none;">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -246,6 +438,7 @@
                         </div>
 						<div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<p class="text-center mbottom-2">Use the sliders to indicate how true each statement is for you.</p>
                             <div class="canvas_parent">
                                 <canvas id="somatic_wealth_chart"></canvas>
                             </div>
@@ -306,7 +499,8 @@
                         </div>
 						<div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                            <div class="canvas_parent">
+                            <p class="text-center mbottom-2">Use the sliders to indicate how true each statement is for you.</p>
+							<div class="canvas_parent">
                                 <canvas id="mental_wealth_chart"></canvas>
                             </div>
                         </div>
@@ -366,7 +560,8 @@
                         </div>
 						<div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                            <div class="canvas_parent">
+                            <p class="text-center mbottom-2">Use the sliders to indicate how true each statement is for you.</p>
+							<div class="canvas_parent">
                                 <canvas id="emotional_wealth_chart"></canvas>
                             </div>
                         </div>
@@ -426,7 +621,8 @@
                         </div>
 						<div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                            <div class="canvas_parent">
+                            <p class="text-center mbottom-2">Use the sliders to indicate how true each statement is for you.</p>
+							<div class="canvas_parent">
                                 <canvas id="interpersonal_wealth_chart"></canvas>
                             </div>
                         </div>
@@ -486,7 +682,8 @@
                         </div>
 						<div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                            <div class="canvas_parent">
+                            <p class="text-center mbottom-2">Use the sliders to indicate how true each statement is for you.</p>
+							<div class="canvas_parent">
                                 <canvas id="energetic_wealth_chart"></canvas>
                             </div>
                         </div>
@@ -546,7 +743,8 @@
                         </div>
 						<div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                            <div class="canvas_parent">
+                            <p class="text-center mbottom-2">Use the sliders to indicate how true each statement is for you.</p>
+							<div class="canvas_parent">
                                 <canvas id="financial_wealth_chart"></canvas>
                             </div>
                         </div>
@@ -558,17 +756,21 @@
                 <div class="container">
                     <div class="row">
 						<div class="col-12 text-center">
-							<h1>Living Wealthy Wheel</h1>
+							<h1>Living Wealthy Wheel Final Result</h1>
 						</div>
-                        <div class="col-12 text-center">
-                            <h2>Final Result</h2>
-                        </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <div style="max-width: 800px; margin-left: auto; margin-right: auto; margin-top: -3rem;">
                                 <canvas id="final_result_chart"></canvas>
-                                <div style="margin-top: 2rem; text-align: justify;">To receive prompts and reflections from your Living Wealthy Wheel results for taking specific steps towards even more wholistic wealth in your life, share your best contact details here.</div>
+								<div class="overall_average">
+									Living Wealthy Total: {{ overall_average }}%
+								</div>
+                                <div style="margin-top: 4rem; text-align: justify;">
+									<h3 style="text-align: center;font-size: 22px;">Take the next step!</h3>
+									<p>To receive prompts and reflections from your Living Wealthy Wheel results for taking specific steps towards even more wholistic wealth in your life, share your best contact details here.</p>
+								  
+								  </div>
 								<div class="wheel-form">
                                     <div class="form-fields">
                                         <label>Name</label>
@@ -590,10 +792,10 @@
             
             <div class="container" id="nav_buttons">
                 <div class="row">
-                    <div class="col-6 text-left"><button @click="prevChart" class="nav-button" v-if="current_chart !== 0">Previous</button></div>
+                    <div class="col-6 text-left"><button @click="prevChart" class="nav-button" v-if="current_chart !== 1 && current_chart !== 0">Previous</button></div>
                     <div class="col-6 text-right">
-                        <button @click="nextChart" class="nav-button" v-if="current_chart !== 5">Next</button>
-                        <button class="nav-button" v-if="current_chart === 5" @click="renderFinalResult">View Result</button>
+                        <button @click="nextChart" class="nav-button" v-if="current_chart !== 6 && current_chart !== 0">Next</button>
+                        <button class="nav-button" v-if="current_chart === 6" @click="renderFinalResult">View Result</button>
                     </div>
                 </div>
             </div>
@@ -736,75 +938,79 @@
                   <label for="mr-field-element-906626996623" class="moonray-form-label">I am in flow with my environment and actively consider the impact and consequences of my choices.</label>
                   <input name="f2271" required type="text" v-model="somatic_wealth_question5" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-906626996623" />
                 </div>
+				<div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+					<label for="mr-field-element-498870689731" class="moonray-form-label">LivWeal Wheel Result Link</label>
+					<input v-model="preview_link" name="f2272" type="text" class="moonray-form-input" id="mr-field-element-498870689731" />
+				  </div>
                 <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-center moonray-form-input-type-submit">
                   <input type="submit" name="submit-button" value="SIGN UP!" class="moonray-form-input" id="mr-field-element-996842232134" src />
                 </div>
                 <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="afft_" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="aff_" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="sess_" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="ref_" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="own_" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="oprid" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="contact_id" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="utm_source" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="utm_medium" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="utm_term" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="utm_content" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="utm_campaign" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="referral_page" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="_op_gclid" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="_op_gcid" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="_fbc" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="_fbp" type="hidden" value="" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="uid" type="hidden" value="p2c186826f156" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="uniquep2c186826f156" type="hidden" value="0" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="mopsbbk" type="hidden" value="581991BDECE70DBB27FD1810:27633C681908E12B3C5D585C" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="mopbelg" type="hidden" value="0165801:C98EBE5F3672AC9F27C7DEDE:6A7B7C56767D07FD60840218" />
-                </div>
-                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
-                  <input name="_vcid" type="hidden" value="NzkzNTY3fCQyYSQwOCRHbm1KLlNmcnBxWjgxd3lVbnVrT0xleC5PUm5xU2R1bThiNDgvaEMvM0VoQ1dyeUFPNUxsRw==" />
-                </div>
+					<input name="afft_" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="aff_" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="sess_" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="ref_" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="own_" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="oprid" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="contact_id" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+				<input name="utm_source" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="utm_medium" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="utm_term" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="utm_content" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="utm_campaign" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="referral_page" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="_op_gclid" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="_op_gcid" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="_fbc" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="_fbp" type="hidden" value="" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="uid" type="hidden" value="p2c186826f156" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="uniquep2c186826f156" type="hidden" value="0" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="mopsbbk" type="hidden" value="963B5F6E7DFF98C55BDBD8F9:40082001AC1A2502166F3E96" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="mopbelg" type="hidden" value="0165930:B6C03EA8E4DA160A493E3C75:846938D41D5F82DA6B26D073" />
+				</div>
+				<div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+					<input name="_vcid" type="hidden" value="NzkzNTY3fCQyYSQwOCRHbm1KLlNmcnBxWjgxd3lVbnVrT0xleC5PUm5xU2R1bThiNDgvaEMvM0VoQ1dyeUFPNUxsRw==" />
+				</div>
               </form>
             </div>
         </div>
@@ -816,6 +1022,9 @@
 		new Vue({
 			el: '#app',
 			data: {
+				arc_label_font_size: 18,
+				preview_link: "",
+				overall_average: 0,
 				current_chart: 0,
 				is_view_result: false,
 				somatic_wealth_chart: null,
@@ -930,8 +1139,13 @@
 					}
 				},
 				full_name: "",
-				email_address: "",
-				preview_url: ""
+				email_address: ""
+			},
+			created() {
+				const screen_width = document.documentElement.clientWidth;
+				if(screen_width < 980) {
+					this.arc_label_font_size = 12;
+				}
 			},
 			watch: {
 				somatic_wealth_question1($value) { this.updateSomaticWealthData(); },
@@ -1079,12 +1293,20 @@
 							},
 							scale: {
 								ticks: {
+									display: false,
 									beginAtZero: true,
 									steps: 0,
 									stepValue: 5,
 									max: 100,
 									suggestedMax: 100,
 									suggestedMin: 0
+								}
+							},
+							scales: {
+								r: {
+									ticks: {
+										display: false // Remove vertical numbers
+									}
 								}
 							}
 						}
@@ -1131,12 +1353,20 @@
 							},
 							scale: {
 								ticks: {
+									display: false,
 									beginAtZero: true,
 									steps: 0,
 									stepValue: 5,
 									max: 100,
 									suggestedMax: 100,
 									suggestedMin: 0
+								}
+							},
+							scales: {
+								r: {
+									ticks: {
+										display: false // Remove vertical numbers
+									}
 								}
 							}
 						}
@@ -1183,12 +1413,20 @@
 							},
 							scale: {
 								ticks: {
+									display: false,
 									beginAtZero: true,
 									steps: 0,
 									stepValue: 5,
 									max: 100,
 									suggestedMax: 100,
 									suggestedMin: 0
+								}
+							},
+							scales: {
+								r: {
+									ticks: {
+										display: false // Remove vertical numbers
+									}
 								}
 							}
 						}
@@ -1235,12 +1473,20 @@
 							},
 							scale: {
 								ticks: {
+									display: false,
 									beginAtZero: true,
 									steps: 0,
 									stepValue: 5,
 									max: 100,
 									suggestedMax: 100,
 									suggestedMin: 0
+								}
+							},
+							scales: {
+								r: {
+									ticks: {
+										display: false // Remove vertical numbers
+									}
 								}
 							}
 						}
@@ -1287,12 +1533,20 @@
 							},
 							scale: {
 								ticks: {
+									display: false,
 									beginAtZero: true,
 									steps: 0,
 									stepValue: 5,
 									max: 100,
 									suggestedMax: 100,
 									suggestedMin: 0
+								}
+							},
+							scales: {
+								r: {
+									ticks: {
+										display: false // Remove vertical numbers
+									}
 								}
 							}
 						}
@@ -1339,6 +1593,7 @@
 							},
 							scale: {
 								ticks: {
+									display: false,
 									beginAtZero: true,
 									steps: 0,
 									stepValue: 5,
@@ -1346,17 +1601,101 @@
 									suggestedMax: 100,
 									suggestedMin: 0
 								}
+							},
+							scales: {
+								r: {
+									ticks: {
+										display: false // Remove vertical numbers
+									}
+								}
 							}
 						}
 					});
 
 					
 				},
+				calculateAverage() {
+					const $s1 = parseInt(this.somatic_wealth_question1);
+					const $s2 = parseInt(this.somatic_wealth_question2);
+					const $s3 = parseInt(this.somatic_wealth_question3);
+					const $s4 = parseInt(this.somatic_wealth_question4);
+					const $s5 = parseInt(this.somatic_wealth_question5);
+					const $m1 = parseInt(this.mental_wealth_question1);
+					const $m2 = parseInt(this.mental_wealth_question2);
+					const $m3 = parseInt(this.mental_wealth_question3);
+					const $m4 = parseInt(this.mental_wealth_question4);
+					const $m5 = parseInt(this.mental_wealth_question5);
+					const $em1 = parseInt(this.emotional_wealth_question1);
+					const $em2 = parseInt(this.emotional_wealth_question2);
+					const $em3 = parseInt(this.emotional_wealth_question3);
+					const $em4 = parseInt(this.emotional_wealth_question4);
+					const $em5 = parseInt(this.emotional_wealth_question5);
+					const $i1 = parseInt(this.interpersonal_wealth_question1);
+					const $i2 = parseInt(this.interpersonal_wealth_question2);
+					const $i3 = parseInt(this.interpersonal_wealth_question3);
+					const $i4 = parseInt(this.interpersonal_wealth_question4);
+					const $i5 = parseInt(this.interpersonal_wealth_question5);
+					const $en1 = parseInt(this.energetic_wealth_question1);
+					const $en2 = parseInt(this.energetic_wealth_question2);
+					const $en3 = parseInt(this.energetic_wealth_question3);
+					const $en4 = parseInt(this.energetic_wealth_question4);
+					const $en5 = parseInt(this.energetic_wealth_question5);
+					const $f1 = parseInt(this.financial_wealth_question1);
+					const $f2 = parseInt(this.financial_wealth_question2);
+					const $f3 = parseInt(this.financial_wealth_question3);
+					const $f4 = parseInt(this.financial_wealth_question4);
+					const $f5 = parseInt(this.financial_wealth_question5);
+
+					const $average_somatic = parseFloat((($s1 + $s2 + $s3 + $s4 + $s5) / 5).toFixed(2));
+
+					const $average_mental = parseFloat((($m1 + $m2 + $m3 + $m4 + $m5) / 5).toFixed(2));
+
+					const $average_emotional = parseFloat((($em1 + $em2 + $em3 + $em4 + $em5) / 5).toFixed(2));
+
+					const $average_interpersonal = parseFloat((($i1 + $i2 + $i3 + $i4 + $i5) / 5).toFixed(2));
+
+					const $average_energetic = parseFloat((($en1 + $en2 + $en3 + $en4 + $en5) / 5).toFixed(2));
+
+					const $average_financial = parseFloat((($f1 + $f2 + $f3 + $f4 + $f5) / 5).toFixed(2));
+
+					this.overall_average = parseFloat((($average_somatic + $average_mental + $average_emotional + $average_interpersonal + $average_energetic + $average_financial) / 6).toFixed(2));
+
+					const screen_width = document.documentElement.clientWidth;
+					let $return_data = [];
+					if(screen_width < 600) {
+						$return_data = [
+							['Somatic',`${$average_somatic}%`],
+							['Mental',`${$average_mental}%`],
+							['Emotional',`${$average_emotional}%`],
+							['Interpersonal',`${$average_interpersonal}%`],
+							['Energetic',`${$average_energetic}%`],
+							['Financial',`${$average_financial}%`]
+						];
+					} else {
+						$return_data = [
+							['Somatic Wealth',`${$average_somatic}%`],
+							['Mental Wealth',`${$average_mental}%`],
+							['Emotional Wealth',`${$average_emotional}%`],
+							['Interpersonal Wealth',`${$average_interpersonal}%`],
+							['Energetic Wealth',`${$average_energetic}%`],
+							['Financial Wealth',`${$average_financial}%`]
+						];
+					}
+
+					return $return_data;
+				},
+				scrollToTop() {
+					setTimeout(function() {
+						window.scrollTo({
+							top: 0,
+							behavior: 'smooth'
+						});
+					},500)
+				},
 				renderFinalResult() {
 					// Chart.js configuration
 					const ctx = document.getElementById('final_result_chart').getContext('2d');
-
-					
+                
 					const $data = [
 						this.somatic_wealth_question1,
 						this.somatic_wealth_question2,
@@ -1388,53 +1727,16 @@
 						this.financial_wealth_question3,
 						this.financial_wealth_question4,
 						this.financial_wealth_question5,
-					]
+					];
 
-					this.preview_url = `?
-						q1=${this.somatic_wealth_question1}&
-						q2=${this.somatic_wealth_question2}&
-						q3=${this.somatic_wealth_question3}&
-						q4=${this.somatic_wealth_question4}&
-						q5=${this.somatic_wealth_question5}&
-						q6=${this.mental_wealth_question1}&
-						q7=${this.mental_wealth_question2}&
-						q8=${this.mental_wealth_question3}&
-						q9=${this.mental_wealth_question4}&
-						q10=${this.mental_wealth_question5}&
-						q11=${this.emotional_wealth_question1}&
-						q12=${this.emotional_wealth_question2}&
-						q13=${this.emotional_wealth_question3}&
-						q14=${this.emotional_wealth_question4}&
-						q15=${this.emotional_wealth_question5}&
-						q16=${this.interpersonal_wealth_question1}&
-						q17=${this.interpersonal_wealth_question2}&
-						q18=${this.interpersonal_wealth_question3}&
-						q19=${this.interpersonal_wealth_question4}&
-						q20=${this.interpersonal_wealth_question5}&
-						q21=${this.energetic_wealth_question1}&
-						q22=${this.energetic_wealth_question2}&
-						q23=${this.energetic_wealth_question3}&
-						q24=${this.energetic_wealth_question4}&
-						q25=${this.energetic_wealth_question5}&
-						q26=${this.financial_wealth_question1}&
-						q27=${this.financial_wealth_question2}&
-						q28=${this.financial_wealth_question3}&
-						q29=${this.financial_wealth_question4}&
-						q30=${this.financial_wealth_question5}`;
-
+					this.preview_link = `https://livweal.com/wheel-preview/?q1=${this.somatic_wealth_question1}&q2=${this.somatic_wealth_question2}&q3=${this.somatic_wealth_question3}&q4=${this.somatic_wealth_question4}&q5=${this.somatic_wealth_question5}&q6=${this.mental_wealth_question1}&q7=${this.mental_wealth_question2}&q8=${this.mental_wealth_question3}&q9=${this.mental_wealth_question4}&q10=${this.mental_wealth_question5}&q11=${this.emotional_wealth_question1}&q12=${this.emotional_wealth_question2}&q13=${this.emotional_wealth_question3}&q14=${this.emotional_wealth_question4}&q15=${this.emotional_wealth_question5}&q16=${this.interpersonal_wealth_question1}&q17=${this.interpersonal_wealth_question2}&q18=${this.interpersonal_wealth_question3}&q19=${this.interpersonal_wealth_question4}&q20=${this.interpersonal_wealth_question5}&q21=${this.energetic_wealth_question1}&q22=${this.energetic_wealth_question2}&q23=${this.energetic_wealth_question3}&q24=${this.energetic_wealth_question4}&q25=${this.energetic_wealth_question5}&q26=${this.financial_wealth_question1}&q27=${this.financial_wealth_question2}&q28=${this.financial_wealth_question3}&q29=${this.financial_wealth_question4}&q30=${this.financial_wealth_question5}`;
+					
 					this.final_result_chart = new Chart(ctx, {
 						type: 'polarArea',
 						data: {
-							labels: [
-								...this.options.questions.somatic_wealth,
-								...this.options.questions.mental_wealth,
-								...this.options.questions.emotional_wealth,
-								...this.options.questions.interpersonal_wealth,
-								...this.options.questions.energetic_wealth,
-								...this.options.questions.financial_wealth
-							],
+							labels: this.calculateAverage(),
 							datasets: [{
-								label: 'Sample Data Only',
+								label: 'Living Wealthy Wheel',
 								data: $data,
 								backgroundColor: [
 									...this.options.colors.somatic_wealth,
@@ -1450,11 +1752,12 @@
 						options: {
 							plugins: {
 								legend: {
-								display: false
+									display: false
 								}
 							},
 							scale: {
 								ticks: {
+									display: false,
 									beginAtZero: true,
 									steps: 0,
 									stepValue: 5,
@@ -1462,28 +1765,52 @@
 									suggestedMax: 100,
 									suggestedMin: 0
 								}
+							},
+							scales: {
+								r: {
+									pointLabels: {
+										display: true,
+										centerPointLabels: true,
+										font: {
+											size: this.arc_label_font_size
+										},
+										arc: true,
+										position: 'outside'
+									},
+									ticks: {
+										display: false // Remove vertical numbers
+									}
+								}
 							}
 						}
 					});
-
 					$('#financial_wealth_slide').css('display', 'none');
 					$('#final_result_slide').css('display','block');
 					$('#nav_buttons').css('display', 'none');
 					// this.is_view_result = true;
+					this.scrollToTop();
+				},
+				beginTest() {
+					this.current_chart++;
+					this.manageVisibility();
+					this.scrollToTop();
 				},
 				prevChart() {
-					if(this.current_chart !== 0) {
+					if(this.current_chart !== 1) {
 						this.current_chart--;
 						this.manageVisibility();
 					}
+					this.scrollToTop();
 				},
 				nextChart() {
-					if(this.current_chart !== 5) {
+					if(this.current_chart !== 6) {
 						this.current_chart++;
 						this.manageVisibility();
 					}
+					this.scrollToTop();
 				},
 				manageVisibility() {
+					$('#introduction_slide').css('display', 'none');
 					$('#somatic_wealth_slide').css('display', 'none');
 					$('#mental_wealth_slide').css('display', 'none');
 					$('#emotional_wealth_slide').css('display', 'none');
@@ -1493,16 +1820,18 @@
 					
 					switch(this.current_chart) {
 						case 0: 
+							$('#introduction_slide').css('display', 'block'); break;
+						case 1: 
 							$('#somatic_wealth_slide').css('display', 'block'); break;
-						case 1:
-							$('#mental_wealth_slide').css('display', 'block'); break;
 						case 2:
-							$('#emotional_wealth_slide').css('display', 'block'); break;
+							$('#mental_wealth_slide').css('display', 'block'); break;
 						case 3:
-							$('#interpersonal_wealth_slide').css('display', 'block'); break;
+							$('#emotional_wealth_slide').css('display', 'block'); break;
 						case 4:
-							$('#energetic_wealth_slide').css('display', 'block'); break;
+							$('#interpersonal_wealth_slide').css('display', 'block'); break;
 						case 5:
+							$('#energetic_wealth_slide').css('display', 'block'); break;
+						case 6:
 							$('#financial_wealth_slide').css('display', 'block'); break;
 					}
 				},
