@@ -10,7 +10,7 @@
             text-align: center;
             padding-bottom: 20rem;
             h1 {
-                font-size: 5rem;
+                font-size: $lg_heading;
                 margin-bottom: 5rem;
                 span: {
                     display: inline-block;
@@ -20,12 +20,12 @@
                 }
                 span:last-child {
                     font-family:  $font_amalfi;
-                    color: #4F3080;
+                    color: $color_violet;
                 }
             }
             h3 {
                 font-family: $font_kazimir;
-                font-size: 3rem;
+                font-size: $lg_subheading;
                 margin-bottom: 4rem;
                 line-height: 1.5;
             }
@@ -35,7 +35,7 @@
                 margin-left: auto;
                 margin-right: auto;
                 line-height: 1.5;
-                font-size: 1.2rem;
+                font-size: $lg_paragraph_heading;
                 margin-bottom: 0;
             }
         }
@@ -54,7 +54,7 @@
             }
             .standard-button {
                 display: inline-block;
-                font-size: 1.2rem;
+                font-size: $lg_button_size;
                 padding-left: 3rem;
                 padding-right: 3rem;
             }
@@ -64,13 +64,13 @@
             h2 {
                 font-family: $font_amalfi;
                 color: #fff;
-                font-size: 5rem;
+                font-size: $lg_heading;
             }
             h3 {
                 font-family: $font_kazimir;
                 color: $red_color;
                 line-height: 1.5;
-                font-size: 3rem;
+                font-size: $lg_subheading;
                 margin-left: 3.5rem;
                 margin-top: -1.5rem;
                 margin-bottom: 3rem;
@@ -80,7 +80,7 @@
                 color: $light_color;
                 line-height: 1.5;
                 margin-bottom: 3rem;
-                font-size: 1.2rem;
+                font-size: $lg_paragraph_heading;
             }
             ul {
                 list-style: none;
@@ -90,7 +90,7 @@
                 position: relative;
                 height:583px;
                 li {
-                    font-size: 1.2rem;
+                    font-size: $lg_paragraph;
                     line-height: 1.5;
                     font-weight: bold;
                     text-align: center;
@@ -158,7 +158,7 @@
             padding-right: 7rem;
             h2 {
                 text-align: left;
-                font-size: 5rem;
+                font-size: $lg_heading;
                 margin-bottom: 3rem;
                 font-family: $font_amalfi;
                 color: $red_color;
@@ -168,7 +168,7 @@
                 font-family: $font_kazimir;
                 color: $primary_color;
                 line-height: 1.5;
-                font-size: 3rem;
+                font-size: $lg_subheading;
                 font-weight: normal;
                 margin-bottom: 4rem;
             }
@@ -176,10 +176,10 @@
                 color: $blackColor;
                 line-height: 1.5;
                 margin-bottom: 2rem;
-                font-size: 1.2rem;
+                font-size: $lg_paragraph_heading;
             }
             .standard-button {
-                font-size: 1.2rem;
+                font-size: $lg_button_size;
                 padding-left: 4rem;
                 padding-right: 4rem;
             }
@@ -197,7 +197,7 @@
             padding-right: 7rem;
             h2 {
                 text-align: left;
-                font-size: 5rem;
+                font-size: $lg_heading;
                 margin-bottom: 3rem;
                 font-family: $font_amalfi;
                 color: $light_color2;
@@ -206,7 +206,7 @@
             p {
                 line-height: 1.5;
                 margin-bottom: 2rem;
-                font-size: 1.2rem;
+                font-size: $lg_paragraph_heading;
                 color: $light_color;
             }
             .standard-form {
@@ -240,7 +240,7 @@
                 .field-item:last-child {
                     text-align: center;
                     .standard-button {
-                        font-size: 1.2rem;
+                        font-size: $lg_button_size;
                         padding-left: 4rem;
                         padding-right: 4rem;
                     }
@@ -269,7 +269,42 @@
     }
 }
 
+@media screen and (max-width: 1760px) {
+    .offerings_courses {
+        .courses-left-side {
+            ul {
+                transform: scale(0.9);
+                transform-origin: left top;
+                height: 525px;
+            }
+        }
+    }
+}
 
+@media screen and (max-width: 1745px) {
+    .offerings_courses {
+        .courses-left-side {
+            ul {
+                transform: scale(0.7);
+                transform-origin: left top;
+                height: 470px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    .offerings_courses {
+        .courses-left-side {
+            
+            ul {
+                height: 430px;
+                transform: scale(0.8);
+                transform-origin: left top;
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 1280px) {
     #body_section {
@@ -278,19 +313,44 @@
                 padding-top: 10rem;
                 padding-bottom: 15rem;
                 h1 {
-                    font-size: 4rem;
+                    font-size: $md_heading;
                     margin-bottom: 4rem;
                 }
                 h3 {
                     font-family: $font_kazimir;
-                    font-size: 2.3rem;
+                    font-size: $md_subheading;
                     margin-bottom: 3rem;
                 }
                 p {
                     // font-family: $font_kazimir;
                     max-width: 800px;
+                    font-size: $md_paragraph_heading;
+                }
+            }
+        }
+        .offerings_courses {
+            .courses-left-side {
+                padding-left: 2rem;
+                h2 {
+                    font-size: 4rem;
+                }
+                h3 {
+                    font-size: 2.3rem;
+                }
+                p {
                     font-size: 1.1rem;
                 }
+                .standard-button {
+                    font-size: 1.1rem;
+                }
+                ul {
+                    height: 360px;
+                    transform: scale(0.6);
+                    transform-origin: left top;
+                }
+            }
+            .courses-right-side {
+                
             }
         }
     }
@@ -304,18 +364,41 @@
                 padding-top: 8rem;
                 padding-bottom: 12rem;
                 h1 {
-                    font-size: 3rem;
+                    font-size: $sm_heading;
                     margin-bottom: 3rem;
                 }
                 h3 {
                     font-family: $font_kazimir;
-                    font-size: 1.8rem;
+                    font-size: $sm_subheading;
                     margin-bottom: 2rem;
                 }
                 p {
                     // font-family: $font_kazimir;
                     max-width: 800px;
-                    font-size: 1rem;
+                    font-size: $sm_paragraph;
+                }
+            }
+        }
+        .offerings_courses {
+            .courses-left-side {
+                padding-left: 2rem;
+                ul {
+                    height: 310px;
+                    transform: scale(0.5);
+                    transform-origin: left top;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #body_section {
+        .offerings_courses {
+            .courses-left-side {
+                ul {
+                    height: 580px;
+                    transform: scale(1);
                 }
             }
         }
@@ -327,19 +410,19 @@
         .offerings_hero {
             .hero_main_title {
                 h1 {
-                    font-size: 2rem;
+                    font-size: $xs_heading;
                     margin-bottom: 2rem;
                 }
                 h3 {
                     font-family: $font_kazimir;
-                    font-size: 1.3rem;
+                    font-size: $xs_subheading;
                     margin-bottom: 2rem;
                 }
                 p {
                     // font-family: $font_kazimir;
                     margin-left: 2rem;
                     margin-right: 2rem;
-                    font-size: 1rem;
+                    font-size: $xs_paragraph_heading;
                 }
             }
         }
@@ -347,19 +430,19 @@
         .offerings_courses {
             .courses-right-side {
                 .standard-button {
-                    font-size: 1rem;
+                    font-size: $xs_button_size;
                 }
             }
             .courses-left-side {
                 padding-left: 5rem;
                 h2 {
-                    font-size: 3.5rem;
+                    font-size: $xs_heading;
                 }
                 h3 {
-                    font-size: 2rem;
+                    font-size: $xs_subheading;
                 }
                 p {
-                    font-size: 1rem;
+                    font-size: $xs_paragraph_heading;
                 }
                 
             }
