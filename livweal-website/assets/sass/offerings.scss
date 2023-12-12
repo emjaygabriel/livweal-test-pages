@@ -3,7 +3,7 @@
 @import 'variables';
 
 #body_section {
-    .offerings_hero {
+    .offerings_hero { 
         background: url('../images/bg/offerings-hero-bg.png') no-repeat bottom center;
         .hero_main_title {
             padding-top: 13rem;
@@ -227,13 +227,15 @@
                         display: block;
                         font-size: 1.2rem;
                         color: $light_color;
-                        line-height: 1.5;
+                        font-family: $font_kazimir;
+                        margin-bottom: 0;
+                        line-height: 2;
                     }
                     input[type=text] {
                         border: 0;
                         border-radius: 30px;
                         width: 100%;
-                        padding: 0.5rem;
+                        padding: 0.5rem 1rem;
                     }
                     &.last-field {
                         margin-bottom: 2rem;
@@ -263,6 +265,7 @@
     .offerings_courses_bottom {
         img {
             width: 100%;
+            vertical-align: top;
         }
     }
     .offerings_retreat_top {
@@ -356,6 +359,32 @@
                 
             }
         }
+        .offerings_community {
+            .community-right-side {
+                padding-left: 4rem;
+                padding-right: 4rem;
+                padding-bottom: 5rem;
+                padding-top: 5rem;
+                h2 {
+                    font-size: $md_heading;
+                    margin-top: 4rem;
+                }
+                h3 {
+                    font-size: $md_subheading;
+                }
+                p {
+                    font-size: $md_paragraph_heading;
+                }
+                .standard-button {
+                    font-size: $md_button_size;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+            }
+            .community-left-side {
+                padding: 2rem 2rem;
+            }
+        }
         .offerings_retreat {
             padding-bottom: 10rem;
             .retreat-left-side {
@@ -423,6 +452,7 @@
             }
         }
         .offerings_courses {
+            
             .courses-left-side {
                 padding-left: 2rem;
                 ul {
@@ -501,11 +531,40 @@
 @media screen and (max-width: 991px) {
     #body_section {
         .offerings_courses {
+            .row {
+                display: flex;
+				flex-direction: column-reverse;
+            }
             .courses-left-side {
                 ul {
                     height: 580px;
                     transform: scale(0.9);
                     transform-origin: left top;
+                }
+                p:first-child {
+                    margin-bottom: 2rem;
+                }
+                p:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .courses-right-side {
+                margin-bottom: 7rem;
+            }
+        }
+        .offerings_retreat {
+            padding-bottom: 10rem;
+            .row {
+                display: flex;
+				flex-direction: column-reverse;
+                .retreat-right-side {
+                    margin-bottom: 5rem;
+                }
+            }
+            .standard-form { 
+                .row {
+                    display: block;
+                    flex-direction: column;
                 }
             }
         }
@@ -538,59 +597,65 @@
             }
         }
         .offerings_courses {
-            .courses-right-side {
-                .standard-button {
-                    font-size: $xs_button_size;
-                }
-            }
-            .courses-left-side {
-                padding-left: 1rem;
-                padding-right: 1rem;
-                h2 {
-                    margin-top: 5rem;
-                    font-size: $xs_heading;
-                }
-                h3 {
-                    font-size: $xs_subheading;
-                }
-                p {
-                    font-size: $xs_paragraph_heading;
-                }
-                ul {
-                    height: auto;
-                    transform: scale(1);
+            .row {
+                display: flex;
+				flex-direction: column-reverse;
+                .courses-right-side {
                     margin-bottom: 2rem;
-                    margin-left: 0rem;
-                    margin-right: 0rem;
-                    li {
-                        background: none;
-                        position: static;
-                        width: 100%;
-                        height: auto;
-                        padding: 0;
-                        text-align: left;
-                        font-weight: normal;
-                        margin-bottom: 1.5rem;
-                        font-size: $xs_paragraph;
-                        background: url('../images/offerings/checkmark-bullet.png') no-repeat center left !important;
-                        min-height: 55px;
-                        padding-left: 95px !important;
-                        line-height: 1.5;
+                    .standard-button {
+                        font-size: $xs_button_size;
                     }
-                    li:nth-child(1) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
-                    li:nth-child(2) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
-                    li:nth-child(3) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
-                    li:nth-child(4) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
-                    li:nth-child(5) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
-
                 }
-                
+                .courses-left-side {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    h2 {
+                        margin-top: 5rem;
+                        font-size: $xs_heading;
+                    }
+                    h3 {
+                        font-size: $xs_subheading;
+                    }
+                    p {
+                        font-size: $xs_paragraph_heading;
+                    }
+                    ul {
+                        height: auto;
+                        transform: scale(1);
+                        margin-bottom: 2rem;
+                        margin-left: 0rem;
+                        margin-right: 0rem;
+                        li {
+                            background: none;
+                            position: static;
+                            width: 100%;
+                            height: auto;
+                            padding: 0;
+                            text-align: left;
+                            font-weight: normal;
+                            margin-bottom: 1.5rem;
+                            font-size: $xs_paragraph;
+                            background: url('../images/offerings/checkmark-bullet.png') no-repeat center left !important;
+                            min-height: 55px;
+                            padding-left: 95px !important;
+                            line-height: 1.5;
+                        }
+                        li:nth-child(1) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
+                        li:nth-child(2) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
+                        li:nth-child(3) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
+                        li:nth-child(4) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
+                        li:nth-child(5) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
+    
+                    }
+                    
+                }
             }
         }
         .offerings_community {
             .community-right-side {
                 padding-left: 1rem;
                 padding-right: 1rem;
+                padding-top: 0;
                 h2 {
                     font-size: $xs_heading;
                     margin-top: 2rem; 
@@ -613,44 +678,50 @@
         }
         .offerings_retreat {
             padding-bottom: 10rem;
-            .retreat-left-side {
-                padding-left: 1rem;
-                padding-right: 1rem;
-                h2 {
-                    font-size: $xs_heading;
-                    margin-top: 5rem;
-                }
-                p {
-                    font-size: $xs_paragraph_heading;
-                }
-                .standard-form {
+            .row {
+                display: flex;
+				flex-direction: column-reverse;
+                .retreat-left-side {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    h2 {
+                        font-size: $xs_heading;
+                        margin-top: 5rem;
+                    }
                     p {
-                        font-size: $xs_paragraph;
+                        font-size: $xs_paragraph_heading;
                     }
-                    .field-item {
-                        margin-bottom: 1rem;
-                        label { 
+                    .standard-form {
+                        p {
                             font-size: $xs_paragraph;
-                            display:block;
                         }
-                        input[type=text] {
-                            width: 100%;
+                        .field-item {
+                            margin-bottom: 1rem;
+                            label { 
+                                font-size: $xs_paragraph;
+                                display:block;
+                                margin-bottom: 0.250rem;
+                            }
+                            input[type=text] {
+                                width: 100%;
+                            }
+                            &.last-field {
+                                margin-bottom: 2rem;
+                            }
                         }
-                        &.last-field {
-                            margin-bottom: 2rem;
-                        }
-                    }
-                    .field-item:last-child {
-                        text-align: center;
-                        .standard-button {
-                            font-size: $xs_button_size;
+                        .field-item:last-child {
+                            text-align: center;
+                            .standard-button {
+                                font-size: $xs_button_size;
+                            }
                         }
                     }
                 }
-            }
-            .retreat-right-side {
-                padding: 0 2rem;
-                img { width: 100%; }
+                .retreat-right-side {
+                    padding: 0 2rem;
+                    margin-bottom: 2rem;
+                    img { width: 100%; }
+                }
             }
         }
     }

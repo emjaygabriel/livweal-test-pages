@@ -6,8 +6,11 @@
     position: relative;
     .logo {
         display: inline-block;
-        margin-left: 1rem;
+        margin-left: 2rem;
         margin-top: 1rem;
+        img {
+            width: 222px;
+        }
     }
 
     nav {
@@ -19,7 +22,7 @@
             color: $light_color;
             border-radius: 30px;
             font-size: 1.2rem;
-            filter: drop-shadow(-1px 5px 3px #aaaaaa);
+            // filter: drop-shadow(-1px 5px 3px #aaaaaa);
         }
         .start-here:hover { text-decoration: none; }
         ul {
@@ -57,6 +60,9 @@
     z-index: 6;
     top: 1rem;
     left: 1rem;
+    img {
+        width: 130px;
+    }
   }
   h1 {
     position: fixed;
@@ -202,6 +208,9 @@
     .footer-logo {
         display: inline-block;
         margin-top: 1rem;
+        img {
+            width: 300px;
+        }
     }
     .footer-menu {
         margin: 0;
@@ -227,6 +236,10 @@
     padding: 1rem;
     .footer-logo {
         text-align: center;
+        margin-bottom: 2rem;
+        img {
+            width: 300px;
+        }
     }
     .social-media {
         text-align: center;
