@@ -11,6 +11,17 @@
     <!-- Add your custom stylesheets or additional CSS links here -->
     <link rel="stylesheet" href="assets/sass/main.min.css" />
     <link rel="stylesheet" href="assets/sass/offerings.min.css" />
+    <style>
+        @media screen and (max-width: 768px) {
+            .offerings_retreat {
+                padding-bottom: 5rem !important;
+                margin-bottom: 0;
+            }
+            #footer_mobile .newsletter-box {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -27,15 +38,15 @@
                 <li><a href="#">Contact</a></li>
             </ul>  
         </nav>
-        <a href="#" class="logo"><img src="assets/images/LivwealLogo_GRN.png" /></a>
+        <a href="#" class="logo"><img src="assets/images/livweal-logo-green-desktop.webp" /></a>
     </header>
     <!-- END HEADER DESKTOP -->
 
     <!-- HEADER MOBILE -->
     <header id="header_mobile">
         <a href="#" class="header-logo">
-            <img class="menu-on" src="assets/images/LivwealLogo_WHT.png" style="display: none;" />
-            <img class="menu-off" src="assets/images/LivwealLogo_GRN.png" style="display: inline-block;" />
+            <img class="menu-on" src="assets/images/livweal-logo-white-mobile.webp" style="display: none;" />
+            <img class="menu-off" src="assets/images/livweal-logo-green-mobile.webp" style="display: inline-block;" />
         </a>
 
         <input id="main-menu-toggle" type="checkbox" />
@@ -70,7 +81,8 @@
                 <h3>
                     Supporting You in Mastering<br />The Art of Living Wealthy
                 </h3>
-                <p>We are architects of transformative weal-being for leaders and entrepreneurs. We blend the wisdom of nature with practical wholistic wealth principles and leadership strategies, where overall satisfaction is the optimal and ultimate ROI… <strong>A Life Lived Weal</strong></p>
+                <p class="hero-paragraph">We are architects of transformative weal-being for leaders and entrepreneurs. We blend the wisdom of nature with practical wholistic wealth principles and leadership strategies, where overall satisfaction is the optimal and ultimate ROI…</p>
+                <p class="life-livweal"><strong>A Life Lived Weal</strong></p>
             </div>
         </section>
         <!-- END HERO SECTION -->
@@ -96,12 +108,15 @@
                                 <li>Learn the Art of Self-Observation to Discern the 'What' and 'Who, While in Deep Listening to Understand the 'Why' and 'How'</li>
                             </ul>
                             <p>This is for leaders and entrepreneurs who are ready to take their practical experience with wealth to entirely new heights.</p>
+                            <p align="center"><a href="#" class="standard-button light-green mobile_only">learn more about this course</a></p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div class="courses-right-side">
-                            <img src="assets/images/offerings/courses-main-cut.png" />
-                            <a href="#" class="standard-button light-green">learn more about this course</a>
+                            <!-- <img src="assets/images/offerings/courses-main-1280.webp" /> -->
+                            <img id="courses_images" style="display: none;" />
+
+                            <a href="#" class="standard-button light-green desktop_only">learn more about this course</a>
                         </div>
                     </div>
                 </div>
@@ -119,7 +134,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div class="community-left-side">
-                            <img src="assets/images/offerings/community-main.png" />
+                            <img id="community_image" style="display: none;" />
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -151,12 +166,12 @@
                             <div class="standard-form">
                                 <p>Enter your info here to be notified of our upcoming retreats</p>
                                 <div class="field-item row">
-                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12"><label>Name</label></div>
-                                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12"><input type="text" /></div>
+                                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12"><label>Name</label></div>
+                                    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12"><input type="text" /></div>
                                 </div>
                                 <div class="field-item last-field row">
-                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12"><label>Email Address</label></div>
-                                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12"><input type="text" /></div>
+                                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12"><label>Email Address</label></div>
+                                    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12"><input type="text" /></div>
                                 </div>
                                 <div class="field-item">
                                     <a href="#" class="standard-button red">sign up</a>
@@ -166,7 +181,7 @@
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div class="retreat-right-side">
-                            <img src="assets/images/offerings/retreat-raw.png" />
+                            <img id="retreat_image" style="display: none;" />
                         </div>
                     </div>
                 </div>
@@ -178,7 +193,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                    <a href="#" class="footer-logo"><img src="assets/images/LivwealLogo_WHT.png" /></a>
+                    <a href="#" class="footer-logo"><img src="assets/images/livweal-logo-footer.webp" /></a>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
                     <div class="newsletter-box">
@@ -245,7 +260,7 @@
         </div>
         <div class="footer-logo">
             <a href="#">
-                <img src="assets/images/LivwealLogo_WHT.png" />
+                <img src="assets/images/livweal-logo-footer.webp" />
             </a>
         </div>
     </footer>
