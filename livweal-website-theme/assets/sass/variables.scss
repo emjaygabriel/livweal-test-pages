@@ -1,0 +1,142 @@
+// _variables.scss
+
+/* colors */
+$primary_color: #14594C; 
+$light_green: #258F7D;
+$color_violet: #4F3080;
+$light_color: #fff;
+$light_color2: #F8EFD7;
+$text_color1: #000;
+$blackColor: #020304;
+$red_color: #D06C68;
+
+/* font sizes */
+$lg_heading: 5rem;
+$lg_subheading: 3rem;
+$lg_paragraph_heading: 1.2rem;
+$lg_paragraph: 1.2rem;
+$lg_button_size: 1.2rem;
+$lg_highlight_paragraph: 1.4rem;
+
+$md_heading: 4rem;
+$md_subheading: 3rem;
+$md_paragraph_heading: 1.2rem;
+$md_paragraph: 1.2rem;
+$md_button_size: 1.2rem;
+$md_highlight_paragraph: 1.3rem;
+
+$sm_heading: 3rem;
+$sm_subheading: 1.8rem;
+$sm_paragraph_heading: 1rem;
+$sm_paragraph: 1rem;
+$sm_button_size: 1.2rem;
+$sm_highlight_paragraph: 1.2rem;
+
+$xs_heading: 2.5rem;
+$xs_subheading: 1.8rem;
+$xs_paragraph_heading: 1rem;
+$xs_paragraph: 1rem;
+$xs_button_size: 1rem;
+$xs_highlight_paragraph: 1.2rem;
+
+/* font family */
+$font_amalfi: 'amalfi_coastregular';
+$font_kazimir: 'Kazimir'; 
+
+@font-face {
+    font-family: 'amalfi_coastregular';
+    src: url('../fonts/amalfi_coast-webfont.woff2') format('woff2'),
+         url('../fonts/amalfi_coast-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('../fonts/Kazimir-BlackItalic.woff2') format('woff2'),
+        url('../fonts/Kazimir-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('../fonts/Kazimir-Black.woff2') format('woff2'),
+        url('../fonts/Kazimir-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('../fonts/Kazimir-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Kazimir-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('../fonts/Kazimir-Bold.woff2') format('woff2'),
+        url('../fonts/Kazimir-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kazimir-RegularItalic';
+    src: url('../fonts/Kazimir-RegularItalic.woff2') format('woff2'),
+        url('../fonts/Kazimir-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('../fonts/Kazimir-LightItalic.woff2') format('woff2'),
+        url('../fonts/Kazimir-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('../fonts/Kazimir-Light.woff2') format('woff2'),
+        url('../fonts/Kazimir-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('../fonts/Kazimir-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Kazimir-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('../fonts/Kazimir-Medium.woff2') format('woff2'),
+        url('../fonts/Kazimir-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('../fonts/Kazimir-Regular.woff2') format('woff2'),
+        url('../fonts/Kazimir-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

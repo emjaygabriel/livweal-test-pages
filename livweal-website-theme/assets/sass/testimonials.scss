@@ -1,0 +1,23 @@
+// _testimonials.scss
+@import 'variables';
+
+
+.testimonials-hero {
+    background: url('../images/bg/woman-standing-rock-formation-during-daytime-1920.webp') no-repeat top center;
+    min-height: 1280px;
+    padding: 10rem 4rem 0 4rem;
+    h1 {
+        font-family: $font_kazimir;
+        color: $light_color;
+        max-width: 550px;
+        font-size: $lg_subheading;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        font-weight: normal;
+    }
+    p {
+        max-width: 550px;
+        color: $light_color;
+        font-size: $lg_paragraph_heading;
+    }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LivWeal Website Development</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add your custom stylesheets or additional CSS links here -->
+    <link rel="stylesheet" href="assets/sass/main.min.css" />
+    <link rel="stylesheet" href="assets/sass/testimonials.min.css" />
+</head>
+
+<body>
+    <!-- HEADER DESKTOP -->
+    <header id="header_desktop">
+        <nav>
+            <a href="#" class="start-here">START HERE</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Offerings</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Read, Watch, Listen</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>  
+        </nav>
+        <a href="#" class="logo"><img src="assets/images/livweal-logo-green-desktop.webp" /></a>
+    </header>
+    <!-- END HEADER DESKTOP -->
+
+    <!-- HEADER MOBILE -->
+    <header id="header_mobile">
+        <a href="#" class="header-logo">
+            <img class="menu-on" src="assets/images/livweal-logo-white-mobile.webp" style="display: none;" />
+            <img class="menu-off" src="assets/images/livweal-logo-green-mobile.webp" style="display: inline-block;" />
+        </a>
+
+        <input id="main-menu-toggle" type="checkbox" />
+
+        <label for="main-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav>    
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Offerings</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Read, Watch, Listen</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>  
+        </nav>
+    </header>
+    <!-- END HEADER MOBILE -->
+    
+    <article id="body_section">
+        <section class="testimonials-hero">
+            <h1>LivWeal has created XYZ
+                <br />for nearly ### Leaders</h1>
+                <p>They did it and so can you. These students put in tremendous focus and energy to create their success and life satisfaction.</p>
+        </section>
+    </article>
+
+    <footer id="footer_desktop">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <a href="#" class="footer-logo"><img src="assets/images/livweal-logo-footer.webp" /></a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div class="newsletter-box">
+                        <p>Subscribe to our Newsletter</p>
+                        <div class="newsletter-entry">
+                            <button class="btn_subscribe">SUBSCRIBE</button>
+                            <input type="text" />
+                        </div>
+                        <div class="social-desktop">
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                            <ul class="footer-menu">
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/offerings">Offerings</a></li>
+                                <li><a href="/read-watch-and-listen">Read, Watch &amp; Listen</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                            <ul class="footer-menu">
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/press-link">Press Link</a></li>
+                                <li><a href="/podcast">Podcast</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer id="footer_mobile">
+        <div class="newsletter-box">
+            <p>Subscribe to our Newsletter</p>
+            <div class="newsletter-entry">
+                <button class="btn_subscribe">SUBSCRIBE</button>
+                <input type="text" />
+            </div>
+        </div> 
+        <div class="links">
+            <ul>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/press-link">Press Link</a></li>
+                <li><a href="/podcast">Podcast</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <p>Follow us on:</p>
+            <div>
+                <a href="https://twitter.com/livweal_"><i class="fa-brands fa-twitter"></i></a>
+                <a href="http://facebook.com/profile.php?id=100086894267664"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/livweal"><i class="fa-brands fa-instagram"></i></a>
+                <a href="http://linkedin.com/company/livweal"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-logo">
+            <a href="#">
+                <img src="assets/images/livweal-logo-footer.webp" />
+            </a>
+        </div>
+    </footer>
+
+    <!-- Replace the following CDN link with the latest Foundation for Sites CDN link -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@latest/dist/js/foundation.min.js"></script>
+
+    <!-- Add your custom scripts or additional JavaScript links here -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/offerings.js"></script>
+</body>
+
+</html>
