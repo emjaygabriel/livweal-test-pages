@@ -6,33 +6,47 @@ document.addEventListener("DOMContentLoaded", function() {
 const init_story_slider = () => {
     console.log("init story slider!");
     var slickOptions = {
-        autoplay: false,
-        dots: true,
-        arrows: true,
-        infinite: false,
-      };
-  
-      var $slider = $('#story_slider');
-  
-      $slider.slick(slickOptions);
-  
-      // Pause the currently playing video when changing slides
-      $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        var currentVideo = $slider.find('.slick-current video')[0];
-        currentVideo.controls = false;
-        if (currentVideo) {
-          currentVideo.pause();
-        }
-      });
-  
-      // Trigger a function when navigating to a new slide
-      $slider.on('afterChange', function(event, slick, currentSlide){
-        var currentVideo = $slider.find('.slick-current video')[0];
-        currentVideo.controls = false;
-        if (currentVideo) {
-          // Reset the playback position to the beginning
-          currentVideo.currentTime = 0;
-          currentVideo.play();
-        }
-      });
+      autoplay: false,
+      dots: true,
+      arrows: true,
+      infinite: false,
+    };
+
+    var $slider = $('#story_slider');
+
+    $slider.slick(slickOptions);
+
+    // Trigger a function when navigating to a new slide
+    $slider.on('afterChange', function(event, slick, currentSlide){
+      var currentVideo = $slider.find('.slick-current video')[0];
+      if (currentVideo) {
+        loadAndPlayVideo(currentVideo);
+      }
+    });
+
+    // Play the video on the first slide after the slider is initialized
+    var firstVideo = $slider.find('.slick-current video')[0];
+    if (firstVideo) {
+      loadAndPlayVideo(firstVideo);
+    }
 };
+
+// Function to load and play the video
+const loadAndPlayVideo = (video) => {
+  // Check if the video source has not been loaded
+  if (!video.hasAttribute('src')) {
+    var source = video.querySelector('source[data-src]');
+    console.log(source.getAttribute('data-src'));
+    if (source) {
+      // Load the source attribute
+      video.src = source.getAttribute('data-src');
+    }
+  }
+
+  setTimeout(function() {
+    // Reset the playback position to the beginning
+    video.currentTime = 0;
+    // Play the video
+    video.play();
+  },1000)
+}
