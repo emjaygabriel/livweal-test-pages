@@ -20,7 +20,7 @@
                     font-family: $font_kazimir;
                 }
                 span:last-child {
-                    font-family:  $font_amalfi;
+                    font-family: $font_amalfi;
                     color: $color_violet;
                 }
             }
@@ -221,44 +221,8 @@
                 font-size: $lg_paragraph_heading;
                 color: $light_color;
             }
-            .standard-form {
-                max-width: 600px;
-                margin-left: auto;
-                margin-right: auto;
-                p {
-                    font-family: $font_kazimir;
-                    text-align: center;
-                    color: $light_color2;
-                    font-size: 1.2rem;
-                }
-                .field-item {
-                    margin-bottom: 1rem;
-                    label { 
-                        display: block;
-                        font-size: 1.2rem;
-                        color: $light_color;
-                        font-family: $font_kazimir;
-                        margin-bottom: 0;
-                        line-height: 2;
-                    }
-                    input[type=text] {
-                        border: 0;
-                        border-radius: 30px;
-                        width: 100%;
-                        padding: 0.5rem 1rem;
-                    }
-                    &.last-field {
-                        margin-bottom: 2rem;
-                    }
-                }
-                .field-item:last-child {
-                    text-align: center;
-                    .standard-button {
-                        font-size: $lg_button_size;
-                        padding-left: 4rem;
-                        padding-right: 4rem;
-                    }
-                }
+            .standard-button {
+                font-size: $lg_button_size;
             }
         }
         .retreat-right-side {
@@ -270,6 +234,7 @@
         margin-top: -145px;
         img {
             width: 100%;
+            vertical-align: bottom;
         }
     }
     .offerings_courses_bottom {
@@ -281,6 +246,7 @@
     .offerings_retreat_top {
         img {
             width: 100%;
+            vertical-align: bottom;
         }
     }
 }
@@ -329,6 +295,9 @@
             .hero_main_title {
                 padding-top: 10rem;
                 padding-bottom: 15rem;
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
                 h1 {
                     font-size: $md_heading;
                     margin-bottom: 4rem;
@@ -418,28 +387,8 @@
                 p {
                     font-size: $md_paragraph_heading;
                 }
-                .standard-form {
-                    p {
-                        font-size: $md_paragraph;
-                    }
-                    .field-item {
-                        margin-bottom: 1rem;
-                        label { 
-                            font-size: $md_paragraph;
-                        }
-                        input[type=text] {
-                            width: 100%;
-                        }
-                        &.last-field {
-                            margin-bottom: 2rem;
-                        }
-                    }
-                    .field-item:last-child {
-                        text-align: center;
-                        .standard-button {
-                            font-size: $lg_button_size;
-                        }
-                    }
+                .standard-button {
+                    font-size: $md_button_size;
                 }
             }
             .retreat-right-side {
@@ -559,28 +508,8 @@
                 p {
                     font-size: $sm_paragraph_heading;
                 }
-                .standard-form {
-                    p {
-                        font-size: $sm_paragraph;
-                    }
-                    .field-item {
-                        margin-bottom: 1rem;
-                        label { 
-                            font-size: $sm_paragraph;
-                        }
-                        input[type=text] {
-                            width: 100%;
-                        }
-                        &.last-field {
-                            margin-bottom: 2rem;
-                        }
-                    }
-                    .field-item:last-child {
-                        text-align: center;
-                        .standard-button {
-                            font-size: $sm_button_size;
-                        }
-                    }
+                .standard-button {
+                    font-size: $sm_button_size;
                 }
             }
             .retreat-right-side {
@@ -781,6 +710,9 @@
                             input[type=text] {
                                 width: 100%;
                             }
+                            input[type=email] {
+                                width: 100%;
+                            }
                             &.last-field {
                                 margin-bottom: 2rem;
                             }
@@ -816,6 +748,11 @@
                     img {
                         width: 100%;
                         margin: 2rem auto 0 auto;
+                    }
+                }
+                .courses-left-side {
+                    h3 {
+                        margin-top: -1rem;
                     }
                 }
             }
