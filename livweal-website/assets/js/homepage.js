@@ -10,6 +10,9 @@ const init_story_slider = () => {
       dots: true,
       arrows: true,
       infinite: false,
+      prevArrow: `<span class="slider_prev"><i class="fa-solid fa-circle-chevron-up"></i></span>`,
+      nextArrow: `<span class="slider_next"><i class="fa-solid fa-circle-chevron-down"></i></span>`,
+      fade: true
     };
 
     var $slider = $('#story_slider');
@@ -48,5 +51,5 @@ const loadAndPlayVideo = (video) => {
     video.currentTime = 0;
     // Play the video
     video.play();
-  },1000)
+  },300)
 }

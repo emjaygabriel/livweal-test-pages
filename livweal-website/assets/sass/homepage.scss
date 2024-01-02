@@ -1,6 +1,10 @@
 // _homepage.scss
 @import 'variables';
 
+#body_section {
+    background-color:#F8EFD7;
+}
+
 #header_desktop {
     padding-bottom: 1rem;
 }
@@ -60,13 +64,54 @@
 }
 
 #story_section {
-    height: 600px;
+    position:relative;
     background-color: $light_color2;
+    #story_slider {
+        video {
+            width: 100%;
+            max-width: 100%;
+        }
+        .slider_next {
+            position: absolute;
+            bottom: 30%;
+            right: 1rem;
+            font-size: 3rem;
+            transform: translateY(-30%);
+            cursor: pointer;
+        }
+        .slider_prev {
+            position: absolute;
+            top: 34%;
+            right: 1rem;
+            font-size: 3rem;
+            transform: translateY(-34%);
+            cursor: pointer;
+        }
+        .slick-dots {
+            position: absolute;
+            top: 50%;
+            right: 1.1rem;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            li {
+                cursor: pointer;
+                button {
+                    display: none;
+                }
+                &.slick-active {
+                    color: $primary_color;
+                }
+            }
+        }
+    }
 }
 
 
 .story_section_bottom {
-    background-color: $light_color2;
+    // background-color: $light_color2;
+    z-index: 10;
+    position: relative;
+    margin-top: -10rem;
     img { width: 100%; }
 }
 
