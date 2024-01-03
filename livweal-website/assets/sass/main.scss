@@ -425,6 +425,37 @@
     }
 }
 
+#video_overlay {
+    position: fixed;
+    top: -100%; /* Initially off-screen */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary_color2;
+    z-index: 100;
+    transition: top 0.5s ease; /* Add smooth transition effect */
+    &.active {
+        top: 0; /* Slide in when active class is added */
+    }
+    video {
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+    }
+    #overlay_container {
+        padding-top: 5rem;
+    }
+    #close_overlay {
+        position: absolute;
+        top: 0rem;
+        right: 2rem;
+        font-size: 2rem;
+        color: #fff;
+    }
+}
+
 @media screen and (max-width: 1280px) {
     .standard-form {
         p {

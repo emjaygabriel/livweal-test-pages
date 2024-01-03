@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Code to be executed when the DOM is ready
     init_story_slider();
+    init_testimonial_video1_click(); 
+    init_testimonial_video2_click();
+    init_welcome_video_click();
 });
 
 const init_story_slider = () => {
@@ -28,10 +31,12 @@ const init_story_slider = () => {
     });
 
     // Play the video on the first slide after the slider is initialized
-    var firstVideo = $slider.find('.slick-current video')[0];
-    if (firstVideo) {
-      loadAndPlayVideo(firstVideo);
-    }
+    setTimeout(function() {
+      var firstVideo = $slider.find('.slick-current video')[0];
+      if (firstVideo) {
+        loadAndPlayVideo(firstVideo);
+      }
+    },1000);
 };
 
 // Function to load and play the video
@@ -52,4 +57,103 @@ const loadAndPlayVideo = (video) => {
     // Play the video
     video.play();
   },300)
+};
+
+const init_testimonial_video1_click = () => {
+    const $btn_testimonial1 = document.getElementById("btn_testimonial1");
+    const $btn_testimonial1_link = document.getElementById("btn_testimonial1_link");
+
+    const $btn_testimonial_click = ($video) => {
+      load_overlay_video($video);
+    }
+
+    $btn_testimonial1.addEventListener('click', function(event) {
+      event.preventDefault();
+      $btn_testimonial_click('assets/images/home/video/test.webm');
+    });
+
+    $btn_testimonial1_link.addEventListener('click', function(event) {
+      event.preventDefault();
+      $btn_testimonial_click('assets/images/home/video/test.webm');
+    });
+};
+
+const init_testimonial_video2_click = () => {
+  const $btn_testimonial2 = document.getElementById("btn_testimonial2");
+  const $btn_testimonial2_link = document.getElementById("btn_testimonial2_link");
+
+  const $btn_testimonial2_click = ($video) => {
+    load_overlay_video($video);
+  }
+
+  $btn_testimonial2.addEventListener('click', function(event) {
+    event.preventDefault();
+    $btn_testimonial2_click('assets/images/home/video/test.webm');
+  });
+
+  $btn_testimonial2_link.addEventListener('click', function(event) {
+    event.preventDefault();
+    $btn_testimonial2_click('assets/images/home/video/test.webm');
+  });
+};
+
+const init_welcome_video_click = () => {
+  //btn_welcome_video
+  const $btn_welcome_video = document.getElementById("btn_welcome_video");
+
+  const $btn_welcome_video_click = ($video) => {
+    load_overlay_video($video);
+  }
+
+  $btn_welcome_video.addEventListener('click', function(event) {
+    event.preventDefault();
+    $btn_welcome_video_click('assets/images/home/video/test.webm');
+  });
+}
+
+const load_overlay_video = ($video) => {
+  const overlay_container = document.getElementById('video_overlay')
+      const overlay = document.getElementById('overlay_container');
+      // document.getElementById('video_overlay').classList.toggle('active');
+      overlay_container.classList.toggle('active');
+
+      let video = document.createElement('video');
+      video.id = 'overlayVideo';
+      video.autoplay = false;
+      video.loop = true;
+      video.controls = true; // Add controls to the video
+
+      setTimeout(function() {
+        if (overlay_container.classList.contains('active')) {
+          let source = document.createElement('source');
+          source.src = $video;  // Replace with the actual path or URL to your webm video file
+          source.type = 'video/webm';
+  
+          video.appendChild(source);
+          overlay.appendChild(video);
+
+          console.log("init overlay");
+          const $close_overlay = document.getElementById('close_overlay');
+
+          $close_overlay.addEventListener('click', function(event) {
+              console.log("init overlay click");
+              event.preventDefault();
+
+              if (video) {
+                  video.pause();
+                  video.currentTime = 0;
+                  overlay.removeChild(video);
+
+                  document.getElementById('video_overlay').classList.toggle('active');
+              }
+          });
+        } else {
+            let existingVideo = document.getElementById('overlayVideo');
+            if (existingVideo) {
+                existingVideo.pause();
+                existingVideo.currentTime = 0;
+                overlay.removeChild(existingVideo);
+            }
+        }
+      },500);
 }
