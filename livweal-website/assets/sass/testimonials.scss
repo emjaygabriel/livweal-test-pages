@@ -1,11 +1,28 @@
 // _testimonials.scss
 @import 'variables';
 
+//Notes:
+// You need SASS compiler for this. Install Sass then run/compile SASS in console. 
+// Example: sass input.scss output.css
+// Example for compressed: sass --style compressed input.scss output.min.css
 
 #testimonials-hero {
     background: url('../images/bg/woman-standing-rock-formation-during-daytime-1920.webp') no-repeat top center;
     min-height: 1280px;
     padding: 10rem 4rem 0 4rem;
+    position:relative;
+    z-index: 1;
+    .testimonials-hero-overlay {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: #14594C;
+        opacity: 0.5;
+    }
     h1 {
         font-family: $font_kazimir;
         color: $light_color;
@@ -14,36 +31,49 @@
         line-height: 1.5;
         margin-bottom: 2rem;
         font-weight: normal;
+        position: relative;
+        z-index: 2;
     }
     p {
         max-width: 550px;
         color: $light_color;
         font-size: $lg_paragraph_heading;
+        position: relative;
+        z-index: 2;
     }
 }
 
 #dark-green-wave {
     background-color: transparent;
     margin-top: -7rem;
+    position: relative;
+    z-index: 10;
 }
 
 #testimonials-categories {
     padding-top: 2rem;
-    padding-bottom: 2rem;
     background-color: $primary_color2;
     text-align: center;
-    a {
-        padding: 0 0.5rem;
-        img {
-            width: 285.45px;
-            height: 285.45px;
-        }
-        &:hover {
+    #testimonial-category-item {
+        position: relative;
+        z-index: 10;
+        a {
+            padding: 0 0.5rem;
             img {
-                outline: 3px solid #fff;
-                border-radius: 50%;
+                width: 285.45px;
+                height: 285.45px;
+            }
+            &:hover {
+                img {
+                    outline: 3px solid #fff;
+                    border-radius: 50%;
+                }
             }
         }
+    }
+    #violet-wave {
+        background-color: transparent;
+        margin-top: -3rem;
     }
     p {
         font-size: $lg_paragraph_heading;
@@ -56,7 +86,8 @@
 
 #testimonials-category-content {
     background-color: $color_violet;
-    padding-top: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
     .product {
         .title-section {
             margin-bottom: 3rem;
@@ -100,9 +131,28 @@
     }
 }
 
+#tab-wave {
+    background-color: transparent;
+    margin-top: -10rem;
+}
+
+.double-wave-bottom {
+    margin-top: -7rem;
+}
+
+.double-wave-bottom-footer {
+    margin-top: -7rem;
+}
+
+
 .testimonials-containers {
     position: relative;
-    background-color: $primary_color2;
+    padding-bottom: 10rem;
+    background-color: $primary_color;
+    &.first {
+        background: rgb(4,50,41);
+        background: linear-gradient(180deg, rgba(4,50,41,1) 0%, rgba(4,50,41,1) 10%, rgba(20,89,76,1) 100%);
+    }
     .bird {
         position: absolute;
         top: 0;
@@ -110,17 +160,17 @@
     }
     .tree {
         position: absolute;
-        top: 2rem;
+        top: -5rem;
         right: 0;
     }
     .butterfly {
         position: absolute;
-        top: 2rem;
+        top: -5rem;
         right: 1rem;
     }
     .flower {
         position: absolute;
-        bottom: 2rem;
+        bottom: 7rem;
         left: 1rem;
     }
     .right_double_quote {
@@ -167,6 +217,12 @@
             }
         }
     }
+}
+
+.double-wave-top {
+    margin-top: -8rem;
+    z-index: 10;
+    position: relative;
 }
 
 .testimonials-column {

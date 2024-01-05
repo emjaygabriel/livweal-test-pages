@@ -60,6 +60,7 @@
     
     <article id="body_section">
         <section id="testimonials-hero" class="testimonials-hero">
+            <div class="testimonials-hero-overlay"></div>
             <h1>LivWeal has created XYZ
                 <br />for nearly ### Leaders</h1>
                 <p>They did it and so can you. These students put in tremendous focus and energy to create their success and life satisfaction.</p>
@@ -69,14 +70,17 @@
         </section>
         <section id="testimonials-categories">
             <p>Witness their stories from many different industries, countries, and walks of life</p>
-            <div>
-                <a href="#"><img src="assets/images/testimonials/categories/product.png" /></a>
-                <a href="#"><img src="assets/images/testimonials/categories/coaching.png" /></a>
-                <a href="#"><img src="assets/images/testimonials/categories/service.png" /></a>
-                <a href="#"><img src="assets/images/testimonials/categories/tech.png" /></a>
-                <a href="#"><img src="assets/images/testimonials/categories/education.png" /></a>
-                <a href="#"><img src="assets/images/testimonials/categories/expert.png" /></a>
+            <div id="testimonial-category-item">
+                <a id="btn_show_testimonials_products" href="#" role="button"><img src="assets/images/testimonials/categories/product.png" /></a>
+                <a href="#" onclick="view_testimonial_coaching"><img src="assets/images/testimonials/categories/coaching.png" /></a>
+                <a href="#" onclick="view_testimonial_service"><img src="assets/images/testimonials/categories/service.png" /></a>
+                <a href="#" onclick="view_testimonial_tech"><img src="assets/images/testimonials/categories/tech.png" /></a>
+                <a href="#" onclick="view_testimonial_education"><img src="assets/images/testimonials/categories/education.png" /></a>
+                <a href="#" onclick="view_testimonial_expert"><img src="assets/images/testimonials/categories/expert.png" /></a>
             </div>
+            <section id="violet-wave">
+                <img src="assets/images/testimonials/violet-wave.png" />
+            </section>
         </section>
         <section id="testimonials-category-content">
             <div class="product">
@@ -162,7 +166,10 @@
                 </div>
             </div>
         </section>
-        <section class="testimonials-containers">
+        <section id="tab-wave">
+            <img src="assets/images/testimonials/tab-wave.png" />
+        </section>
+        <section class="testimonials-containers first">
             <img class="bird" src="assets/images/testimonials/bird.svg" />
             <div class="right_double_quote">
                 <span>&ldquo;</span>
@@ -188,6 +195,9 @@
                 </div>
             </div>
         </section>
+        <div class="double-wave-top">
+            <img src="assets/images/testimonials/double-wave-top.png" />
+        </div>
         <section class="testimonials-column">
             <div class="container-fluid">
                 <div class="row testimonial-column-content">
@@ -210,6 +220,9 @@
                 </div>
             </div>
         </section>
+        <div class="double-wave-bottom">
+            <img src="assets/images/testimonials/double-wave-bottom.png" />
+        </div>
         <section class="testimonials-containers">
             <img class="tree" src="assets/images/testimonials/tree.svg" />
             <div class="testimonial-content normal-padding-top"> 
@@ -237,6 +250,9 @@
                 </div>
             </div>
         </section>
+        <div class="double-wave-top">
+            <img src="assets/images/testimonials/double-wave-top.png" />
+        </div>
         <section class="testimonials-column">
             <div class="container-fluid">
                 <div class="row testimonial-column-content">
@@ -259,6 +275,9 @@
                 </div>
             </div>
         </section>
+        <div class="double-wave-bottom">
+            <img src="assets/images/testimonials/double-wave-bottom.png" />
+        </div>
         <section class="testimonials-containers">
             <img class="butterfly" src="assets/images/testimonials/butterfly.svg" />
             <img class="flower" src="assets/images/testimonials/flower.svg" />
@@ -283,6 +302,9 @@
                 </div>
             </div>
         </section>
+        <div class="double-wave-top">
+            <img src="assets/images/testimonials/double-wave-top.png" />
+        </div>
         <section class="testimonials-column">
             <div class="container-fluid">
                 <div class="row testimonial-column-content">
@@ -305,6 +327,9 @@
                 </div>
             </div>
         </section>
+        <div class="double-wave-bottom-footer">
+            <img src="assets/images/testimonials/double-wave-bottom-footer.png" />
+        </div>
     </article>
 
     <footer id="footer_desktop">
@@ -574,7 +599,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="assets/js/slick.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/testimonials.min.js"></script>
+    <script src="assets/js/testimonials.js"></script>
 </body>
 
 </html>
