@@ -28,6 +28,25 @@
     }
 }
 
+#homepage #header_desktop {
+    nav {
+        ul {
+            display: inline-block;
+            li {
+                a {
+                    color: $light_color;
+                }
+                a:hover {
+                    border-bottom: 2px solid $light_color;
+                }
+                a.active {
+                    border-bottom: 2px solid $light_color;
+                }
+            }
+        }
+    }
+}
+
 #header_desktop {
     display: block;
     position: absolute;
