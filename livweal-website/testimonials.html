@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
 </head>
 
-<body>
+<body id="testimonial_page">
     <!-- HEADER -->
     <header id="header_desktop">
         <nav>
@@ -28,7 +28,7 @@
                 <li><a href="/contact/">Contact</a></li>
             </ul>  
         </nav>
-        <a href="/" class="logo"><img src="https://livweal.com/wp-content/uploads/2023/12/livweal-logo-green-desktop.webp" /></a>
+        <a href="/" class="logo"><img src="https://livweal.com/wp-content/uploads/2023/12/livweal-logo-white-desktop.webp" /></a>
     </header>
   
     <header id="header_mobile">
@@ -71,26 +71,41 @@
         <section id="testimonials-categories">
             <p>Witness their stories from many different industries, countries, and walks of life</p>
             <div id="testimonial-category-item">
-                <a id="btn_show_testimonials_products" href="#" role="button"><img src="assets/images/testimonials/categories/product.png" /></a>
-                <a href="#" onclick="view_testimonial_coaching"><img src="assets/images/testimonials/categories/coaching.png" /></a>
-                <a href="#" onclick="view_testimonial_service"><img src="assets/images/testimonials/categories/service.png" /></a>
-                <a href="#" onclick="view_testimonial_tech"><img src="assets/images/testimonials/categories/tech.png" /></a>
-                <a href="#" onclick="view_testimonial_education"><img src="assets/images/testimonials/categories/education.png" /></a>
-                <a href="#" onclick="view_testimonial_expert"><img src="assets/images/testimonials/categories/expert.png" /></a>
+                <span id="btn_show_testimonials_product" class="testimonial-category-button active"><img src="assets/images/testimonials/categories/product.png" /></span>
+                <span id="btn_show_testimonials_coaching" class="testimonial-category-button"><img src="assets/images/testimonials/categories/coaching.png" /></span>
+                <span id="btn_show_testimonials_service" class="testimonial-category-button"><img src="assets/images/testimonials/categories/service.png" /></span>
+                <span id="btn_show_testimonials_tech" class="testimonial-category-button"><img src="assets/images/testimonials/categories/tech.png" /></span>
+                <span id="btn_show_testimonials_education" class="testimonial-category-button"><img src="assets/images/testimonials/categories/education.png" /></span>
+                <span id="btn_show_testimonials_expert" class="testimonial-category-button"><img src="assets/images/testimonials/categories/expert.png" /></span>
             </div>
-            <section id="violet-wave">
+            <section id="product-wave" class="category_wave">
+                <img src="assets/images/testimonials/violet-wave.png" />
+            </section>
+            <section id="coaching-wave" class="category_wave" style="display: none;">
+                <img src="assets/images/testimonials/violet-wave.png" />
+            </section>
+            <section id="service-wave" class="category_wave" style="display: none;">
+                <img src="assets/images/testimonials/violet-wave.png" />
+            </section>
+            <section id="tech-wave" class="category_wave" style="display: none;">
+                <img src="assets/images/testimonials/violet-wave.png" />
+            </section>
+            <section id="education-wave" class="category_wave" style="display: none;">
+                <img src="assets/images/testimonials/violet-wave.png" />
+            </section>
+            <section id="expert-wave" class="category_wave" style="display: none;">
                 <img src="assets/images/testimonials/violet-wave.png" />
             </section>
         </section>
         <section id="testimonials-category-content">
-            <div class="product">
+            <div id="product-category-section" class="testimonials-category">
                 <div class="title-section">
                     <h2>Products</h2>
                     <p>Brief description about the professions covered<br />and a general run through of the results.</p>
                 </div>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="testimonial-item">
                                 <p><a href="#"><img src="assets/images/testimonials/video-thumb.png" /></a></p>
                                 <p><span>Full Name Here</span> <span>Industry</span></p>
@@ -98,7 +113,7 @@
                                 <p><a href="#" class="standard-button red">WATCH FULL VIDEO</a></p>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="testimonial-item">
                                 <p><a href="#"><img src="assets/images/testimonials/video-thumb.png" /></a></p>
                                 <p><span>Full Name Here</span> <span>Industry</span></p>
@@ -106,7 +121,7 @@
                                 <p><a href="#" class="standard-button red">WATCH FULL VIDEO</a></p>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="testimonial-item">
                                 <p><a href="#"><img src="assets/images/testimonials/video-thumb.png" /></a></p>
                                 <p><span>Full Name Here</span> <span>Industry</span></p>
@@ -114,7 +129,7 @@
                                 <p><a href="#" class="standard-button red">WATCH FULL VIDEO</a></p>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="testimonial-item">
                                 <p><a href="#"><img src="assets/images/testimonials/video-thumb.png" /></a></p>
                                 <p><span>Full Name Here</span> <span>Industry</span></p>
@@ -122,7 +137,7 @@
                                 <p><a href="#" class="standard-button red">WATCH FULL VIDEO</a></p>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="testimonial-item">
                                 <p><a href="#"><img src="assets/images/testimonials/video-thumb.png" /></a></p>
                                 <p><span>Full Name Here</span> <span>Industry</span></p>
@@ -130,7 +145,7 @@
                                 <p><a href="#" class="standard-button red">WATCH FULL VIDEO</a></p>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="testimonial-item">
                                 <p><a href="#"><img src="assets/images/testimonials/video-thumb.png" /></a></p>
                                 <p><span>Full Name Here</span> <span>Industry</span></p>
@@ -138,7 +153,7 @@
                                 <p><a href="#" class="standard-button red">WATCH FULL VIDEO</a></p>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="testimonial-item">
                                 <p><a href="#"><img src="assets/images/testimonials/video-thumb.png" /></a></p>
                                 <p><span>Full Name Here</span> <span>Industry</span></p>
@@ -146,7 +161,7 @@
                                 <p><a href="#" class="standard-button red">WATCH FULL VIDEO</a></p>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="testimonial-item">
                                 <p><a href="#"><img src="assets/images/testimonials/video-thumb.png" /></a></p>
                                 <p><span>Full Name Here</span> <span>Industry</span></p>
@@ -154,7 +169,7 @@
                                 <p><a href="#" class="standard-button red">WATCH FULL VIDEO</a></p>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="testimonial-item">
                                 <p><a href="#"><img src="assets/images/testimonials/video-thumb.png" /></a></p>
                                 <p><span>Full Name Here</span> <span>Industry</span></p>
@@ -163,6 +178,36 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div id="coaching-category-section" class="testimonials-category" style="display: none;">
+                <div class="title-section">
+                    <h2>Coaching</h2>
+                    <p>Brief description about the professions covered<br />and a general run through of the results.</p>
+                </div>
+            </div>
+            <div id="service-category-section" class="testimonials-category" style="display: none;">
+                <div class="title-section">
+                    <h2>Service</h2>
+                    <p>Brief description about the professions covered<br />and a general run through of the results.</p>
+                </div>
+            </div>
+            <div id="tech-category-section" class="testimonials-category" style="display: none;">
+                <div class="title-section">
+                    <h2>Tech</h2>
+                    <p>Brief description about the professions covered<br />and a general run through of the results.</p>
+                </div>
+            </div>
+            <div id="education-category-section" class="testimonials-category" style="display: none;">
+                <div class="title-section">
+                    <h2>Education</h2>
+                    <p>Brief description about the professions covered<br />and a general run through of the results.</p>
+                </div>
+            </div>
+            <div id="expert-category-section" class="testimonials-category" style="display: none;">
+                <div class="title-section">
+                    <h2>Expert</h2>
+                    <p>Brief description about the professions covered<br />and a general run through of the results.</p>
                 </div>
             </div>
         </section>
@@ -177,14 +222,14 @@
             <div class="testimonial-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
                             <div class="light-box">
                                 <p>“I feel there have been mental changes taking place and my thoughts are not so much a problem. I look at things differently and feel my awareness building. I can identify the voices in my head as separate from me and am catching them early before they take hold. I can shrug stress off more.  I have more mental and emotional space to tend to valuable relationships. I’ve had an increased frequency of joyful moments.  There's a quietness in my head”</p>
                                 <p>Christopher Roberts</p>
                                 <P>on how a LivWeal course helped shift his mental state to one of living wealthy.</P>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
                             <div class="light-box">
                                 <p>“I feel so much gratitude. And what that feels like in my body is an opening, a softening, a place of self acceptance, a deeper level of self worthiness. I feel like there are more possibilities. On a daily level, I don't have as much anxiety anymore. I feel like there's so much more potential to become and to have.  There's more to abundance than money.”</p>
                                 <p>Josette Williams</p>
@@ -201,10 +246,10 @@
         <section class="testimonials-column">
             <div class="container-fluid">
                 <div class="row testimonial-column-content">
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 image">
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 image">
                         <img src="assets/images/testimonials/bailey-roberts.png" />
                     </div>
-                    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 text-content">
+                    <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-content">
                         <div class="box">
                             <p>“I think about things differently and now everything is different.  My emotional world was unknown to me before doing this work and now it is known.  Now that I am in the know about my emotions, I feel I have a choice in what I am feeling and thinking.  I have more ownership over what is happening inside of me.I feel like a lot of the work I've done has really helped make behaviors that were  unconscious and running on their own, now are conscious where I can address them.  Instead of internalizing all of my feelings, I am able to access, express and then articulate them.  This helps get them out into the open rather than stored inside of me.  I feel more at peace with whatever is happening and there's nothing brooding inside of me. I feel more free. ”</p>
                             <div class="row">
@@ -228,7 +273,7 @@
             <div class="testimonial-content normal-padding-top"> 
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
                             <div class="light-box">
                                 <p>“I lost 20 pounds. But I didn't diet.  Now when my body feels hungry, I first ask myself what my soul needs, and I feed it what it needs, and then my body can eat. And that's how I lost 20 pounds just by feeding my soul instead of my stomach.<br /><br />
 
@@ -239,7 +284,7 @@
                                 <P>on how money therapy and her diligent work defeats emotional poverty.</P>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
                             <div class="light-box">
                                 <p>“I’ve come out of a constant state of confusion. I am able to say things in my close relationships now rather than holding back and being afraid to speak.  I have learned new vocabulary to communicate better and I’m not playing the victim, hero or bully anymore.  I am willing to share how I feel rather than discredit my feelings, like I have in the past. I walk around with a softness around my heart and that is changing my physicality and how I relate to everything.  I spend more time at the gym.  I do things that are beneficial for me now.  I am starting to focus on the things I know I can do right now to better myself and am able to take one step at a time.”</p>
                                 <p>Derek Neidert</p>
@@ -256,7 +301,7 @@
         <section class="testimonials-column">
             <div class="container-fluid">
                 <div class="row testimonial-column-content">
-                    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 text-content">
+                    <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-content">
                         <div class="box">
                             <p>“I want to say, I need to say: WOW! I could not have known exactly how much I needed this work or how much it would unearth so quickly. After hitting burnout a couple years ago, I was beyond frustrated and confused. I didn't know how to get deeper with what was going on for me, or how to move forward. Despite a great deal of work on myself, I had not healed or understood my own money story. Through everything we have done together, I have now begun to heal the generational scarcity that has been at the centre of my relationship with not only work or money, but my worldview. I can't say thank you enough. This work is cracking me open (and freaking me out... in the best of ways)! This work is incredibly important.”</p>
                             <div class="row">
@@ -269,7 +314,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 image">
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 image">
                         <img src="assets/images/testimonials/lee-william.png" />
                     </div>
                 </div>
@@ -284,14 +329,14 @@
             <div class="testimonial-content normal-padding-top"> 
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
                             <div class="light-box">
                                 <p>“I am SO glad I decided to take a leap of faith and do this program at this point in my life and in my business.  Getting Dirty (LivWeal course) has taught me so much about myself and has taught me that I always have a choice with whatever comes my way.  It was incredibly helpful to learn and grow with the same group of people, and hear their challenges and progress.  I truly believe this work is so important because it impacts everything in our lives (our relationships, our finances, our careers) and I wish my family and close friends would do this work too!  It has helped me understand where and why I'm stuck (in my personal life and my business), and what steps I can take to get unstuck.  One of the most important things that I learned was that I need to accept myself where I am, and then work from there.  I also love how this program taught me that wealth is not only about making money, but it's about being spiritually and emotionally wealthy too and when all of those things are aligned, this is when we thrive.”</p>
                                 <p>Vanessa Chui</p>
                                 <P>Doing the work, leads to results.</P>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
                             <div class="light-box">
                                 <p>“I’ve come out of a constant state of confusion. I am able to say things in my close relationships now rather than holding back and being afraid to speak.  I have learned new vocabulary to communicate better and I’m not playing the victim, hero or bully anymore.  I am willing to share how I feel rather than discredit my feelings, like I have in the past. I walk around with a softness around my heart and that is changing my physicality and how I relate to everything.  I spend more time at the gym.  I do things that are beneficial for me now.  I am starting to focus on the things I know I can do right now to better myself and am able to take one step at a time.”</p>
                                 <p>Derek Neidert</p>
@@ -308,10 +353,10 @@
         <section class="testimonials-column">
             <div class="container-fluid">
                 <div class="row testimonial-column-content">
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 image">
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 image">
                         <img src="assets/images/testimonials/lisa-barker.png" />
                     </div>
-                    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 text-content">
+                    <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-content">
                         <div class="box">
                             <p>“To sit in it (my stuff) and go, ‘oh wow’ and know how to transform myself feels like I’m looking at my life with a different pair of glasses on.  Its been so fantastic!”</p>
                             <div class="row">
@@ -599,7 +644,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="assets/js/slick.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/testimonials.js"></script>
+    <script src="assets/js/testimonials.min.js"></script>
 </body>
 
 </html>

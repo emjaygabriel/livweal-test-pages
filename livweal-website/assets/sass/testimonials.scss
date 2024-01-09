@@ -9,7 +9,7 @@
 #testimonials-hero {
     background: url('../images/bg/woman-standing-rock-formation-during-daytime-1920.webp') no-repeat top center;
     min-height: 1280px;
-    padding: 10rem 4rem 0 4rem;
+    padding: 15rem 4rem 0 4rem;
     position:relative;
     z-index: 1;
     .testimonials-hero-overlay {
@@ -48,6 +48,9 @@
     margin-top: -7rem;
     position: relative;
     z-index: 10;
+    img {
+        width: 100%;
+    }
 }
 
 #testimonials-categories {
@@ -57,13 +60,14 @@
     #testimonial-category-item {
         position: relative;
         z-index: 10;
-        a {
-            padding: 0 0.5rem;
+        span {
+            padding: 1rem 0.5rem;
             img {
                 width: 285.45px;
                 height: 285.45px;
             }
-            &:hover {
+            &:hover, &.active {
+                cursor: pointer;
                 img {
                     outline: 3px solid #fff;
                     border-radius: 50%;
@@ -71,9 +75,12 @@
             }
         }
     }
-    #violet-wave {
+    .category_wave {
         background-color: transparent;
         margin-top: -3rem;
+        img {
+            width: 100%;
+        }
     }
     p {
         font-size: $lg_paragraph_heading;
@@ -88,7 +95,7 @@
     background-color: $color_violet;
     padding-top: 5rem;
     padding-bottom: 10rem;
-    .product {
+    .testimonials-category {
         .title-section {
             margin-bottom: 3rem;
             h2 {
@@ -134,14 +141,23 @@
 #tab-wave {
     background-color: transparent;
     margin-top: -10rem;
+    img {
+        width: 100%;
+    }
 }
 
 .double-wave-bottom {
     margin-top: -7rem;
+    img {
+        width: 100%;
+    }
 }
 
 .double-wave-bottom-footer {
     margin-top: -7rem;
+    img {
+        width: 100%;
+    }
 }
 
 
@@ -223,11 +239,14 @@
     margin-top: -8rem;
     z-index: 10;
     position: relative;
+    img {
+        width: 100%;
+    }
 }
 
 .testimonials-column {
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
     background-color: $light_color2;
     .testimonial-column-content {
         .image {
@@ -289,4 +308,311 @@
 
 
 
+/* 1680px */
+@media screen and (max-width: 1680px) {
+/* Your styles for 1680px and larger screens */
+    #dark-green-wave {
+        margin-top: -6rem;
+    }
 
+}
+
+/* 1600px */
+@media screen and (max-width: 1600px) {
+/* Your styles for 1600px and larger screens */
+    .double-wave-top {
+        margin-top: -7rem;
+    }
+}
+
+/* 1440px */
+@media screen and (max-width: 1440px) {
+/* Your styles for 1440px and larger screens */
+    #dark-green-wave {
+        margin-top: -5rem;
+    }
+    .double-wave-top {
+        margin-top: -6rem;
+    }
+}
+
+/* 1366px */
+@media screen and (max-width: 1366px) {
+/* Your styles for 1366px and larger screens */
+}
+
+/* 1360px */
+@media screen and (max-width: 1360px) {
+/* Your styles for 1360px and larger screens */
+}
+
+/* 1280px */
+@media screen and (max-width: 1280px) {
+    /* Your styles for 1280px and larger screens */
+    #testimonials-hero {
+        min-height: 1024px;
+        background-size: cover;
+    }
+    #dark-green-wave {
+        margin-top: -4.5rem;
+    }
+    .double-wave-top {
+        margin-top: -5rem;
+    }
+}
+
+/* 1176px */
+@media screen and (max-width: 1176px) {
+    /* Your styles for 1176px and larger screens */
+    .testimonials-column {
+        padding-top: 0;
+        .testimonial-column-content {
+            .image {
+                text-align: center;
+                img {
+                    width: 640px;
+                }
+            }
+            .text-content {
+                .box {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    .testimonials-containers {
+        .butterfly {
+            top: -3rem;
+        }
+        .testimonial-content {
+            padding-bottom: 0;
+            &.normal-padding-top {
+                padding-top: 7rem;
+            }
+        }
+    }
+
+    #dark-green-wave {
+        margin-top: -75px;
+    }
+}
+
+/* 1152px */
+@media screen and (max-width: 1152px) {
+/* Your styles for 1152px and larger screens */
+    
+}
+
+/* 1024px */
+@media screen and (max-width: 1024px) {
+    /* Your styles for 1024px and larger screens */
+    #testimonials-hero {
+        h1 {
+            font-size: $md_subheading;
+        }
+        p {
+            font-size: $md_paragraph_heading;
+        }
+    }
+
+    #testimonials-category-content {
+        .testimonial-item {
+            p { 
+                font-size: $sm_paragraph_heading;
+            }
+        }
+    } 
+    
+    #testimonials-hero {
+        min-height: 768px;
+        background-size: cover;
+    }
+    #dark-green-wave {
+        margin-top: -4rem;
+    }
+
+    .testimonials-containers  {
+        .testimonial-content {
+            .light-box {
+                p:nth-child(1) { font-size: $sm_paragraph;  }
+                p:nth-child(2) { font-size: $sm_subheading; }
+                p:nth-child(3) { font-size: $sm_paragraph; }
+            }
+        }
+    }
+
+    .testimonials-column {
+        .testimonial-column-content {
+            .text-content {
+                .box {
+                    p {
+                        font-size: $sm_paragraph;
+                    }
+                    .row {
+                        .right {
+                            p { 
+                                font-size: $sm_paragraph;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* 800px */
+@media screen and (max-width: 768px) {
+    /* Your styles for 800px and larger screens */
+    #testimonials-hero {
+        h1 {
+            font-size: $sm_subheading;
+        }
+        p {
+            font-size: $sm_paragraph_heading;
+        }
+    }
+
+    #testimonials-categories {
+        p {
+            font-size: $sm_paragraph;
+        }
+    }
+
+    #testimonials-category-content {
+        .testimonials-category {
+            .title-section {
+                h2 {
+                    font-size: $sm_heading;
+                }
+                p {
+                    font-size: $sm_paragraph;
+                }
+            }
+        }
+    }
+
+    #dark-green-wave {
+        margin-top: -3rem;   
+    }
+    .double-wave-top {
+        margin-top: -3rem;
+    }
+    .testimonials-containers {
+        margin-top: 0rem;
+        .tree {
+            top: 0;
+        }
+        .butterfly {
+            top: -1rem;
+        }
+    }
+    .testimonials-column {
+        padding-top: 0;
+        .testimonial-column-content {
+            .image {
+                text-align: center;
+                img {
+                    width: 480px;
+                }
+            }
+        }
+    }
+    #testimonials-categories {
+        p {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+}
+
+/* 480px */
+@media screen and (max-width: 480px) {
+/* Your styles for 480px and larger screens */
+    #testimonials-hero {
+        min-height: 480px;   
+        padding: 8rem 4rem 0 2rem; 
+    }
+
+    #dark-green-wave {
+        margin-top: -1.8rem;   
+    }
+
+    .double-wave-top {
+        margin-top: -2rem;
+    }
+    .testimonials-column {
+        .testimonial-column-content {
+            .image {
+                text-align: center;
+                img {
+                    width: 380px;
+                }
+            }
+        }
+    }
+
+    #testimonials-hero {
+        h1 {
+            font-size: $xs_subheading;
+        }
+        p {
+            font-size: $xs_paragraph_heading;
+        }
+    }
+
+    #testimonials-categories {
+        p {
+            font-size: $xs_paragraph;
+        }
+    }
+
+    #testimonials-category-content {
+        .testimonials-category {
+            .title-section {
+                h2 {
+                    font-size: $xs_heading;
+                }
+                p {
+                    font-size: $xs_paragraph;
+                }
+            }
+        }
+    }
+}
+
+/* 380px */
+@media screen and (max-width: 380px) {
+/* Your styles for 380px and larger screens */
+    #testimonials-hero {
+        min-height: 480px;   
+        padding: 9rem 1rem 0 1rem; 
+    }
+
+    #dark-green-wave {
+        margin-top: -1.7rem;   
+    }
+
+    .testimonials-column {
+        padding-top: 0;
+        .testimonial-column-content {
+            .image {
+                text-align: center;
+                img {
+                    width: 280px;
+                }
+            }
+            .text-content .box {
+                padding-top: 3rem;
+            }
+        }
+    }
+
+    .double-wave-top {
+        margin-top: -1.5rem;
+    }
+
+    
+}
