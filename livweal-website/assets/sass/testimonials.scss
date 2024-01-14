@@ -93,6 +93,24 @@
 
 #testimonials-category-content {
     background-color: $color_violet;
+    &.coaching-wave {
+        background-color: $red_color;
+    }
+    &.coaching-wave {
+        background-color: $red_color;
+    }
+    &.service-wave {
+        background-color: $light_green;
+    }
+    &.tech-wave {
+        background-color: $color_violet;
+    }
+    &.education-wave {
+        background-color: $red_color;
+    }
+    &.expert-wave {
+        background-color: $light_green;
+    }
     padding-top: 5rem;
     padding-bottom: 10rem;
     .testimonials-category {
@@ -306,7 +324,33 @@
     background-color: $light_color2;
 }
 
-
+/*slick override - testimonials */
+#testimonial-category-item {
+    .slick-dots {
+        li {
+            display: inline-block;
+            margin-right: 10px; /* Adjust as needed */
+            button {
+                width: 20px; /* Adjust as needed */
+                height: 20px; /* Ensure width and height are equal for a circle */
+                border-radius: 50%; /* Make it circular */
+                background-color: #fff; /* Set background color */
+                border: none; /* Remove border */
+                color: #fff; /* Set text color */
+                font-size: 16px; /* Adjust as needed */
+                cursor: pointer; /* Show pointer on hover */
+                text-indent: -9999px;
+                overflow: hidden;
+            }
+            &.slick-active {
+                button {
+                    width: 40px;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+}
 
 /* 1680px */
 @media screen and (max-width: 1680px) {
@@ -322,6 +366,30 @@
 /* Your styles for 1600px and larger screens */
     .double-wave-top {
         margin-top: -7rem;
+    }
+}
+
+/* 1600px */
+@media screen and (max-width: 1537px) {
+/* Your styles for 1600px and larger screens */
+    .double-wave-top {
+        margin-top: -7rem;
+    }
+
+    .testimonials-column {
+        .testimonial-column-content {
+            .image {
+                text-align: center;
+                img {
+                    width: 420px;
+                }
+            }
+            .text-content {
+                .box {
+                    padding-top: 0;
+                }
+            }
+        }
     }
 }
 

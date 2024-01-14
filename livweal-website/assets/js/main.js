@@ -39,10 +39,12 @@ const handle_newsletter_subscribe_click_mobile = ($event) => {
 const init_close_overlay = () => {
     console.log("init overlay");
     const $close_overlay = document.getElementById('close_overlay');
+    $('body').addClass('overflow-hidden');
     $close_overlay.addEventListener('click', function(event) {
         console.log("init overlay click");
         event.preventDefault();
         document.getElementById('video_overlay').classList.toggle('active');
+        $('boday').removeClass('overflow-hidden');
     });
 }
 

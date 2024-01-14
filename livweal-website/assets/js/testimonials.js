@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 slidesToShow: 5,
                 slidesToScroll: 1,
                 infinite: false,
-                dots: false,
+                dots: true,
                 arrows: false,
               }
             },
@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 breakpoint: 1500,
                 settings: {
                   slidesToShow: 4,
-                  slidesToScroll: 2,
+                  slidesToScroll: 1,
                   infinite: false,
-                  dots: false,
+                  dots: true,
                   arrows: false,
                 }
             },
@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 breakpoint: 1280,
                 settings: {
                   slidesToShow: 4,
-                  slidesToScroll: 2,
+                  slidesToScroll: 1,
                   infinite: false,
-                  dots: false,
+                  dots: true,
                   arrows: false,
                 }
             },
@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 breakpoint: 1025,
                 settings: {
                   slidesToShow: 3,
-                  slidesToScroll:3,
+                  slidesToScroll:1,
                   infinite: false,
-                  dots: false,
+                  dots: true,
                   arrows: false,
                 }
             },
@@ -63,9 +63,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 breakpoint: 769,
                 settings: {
                   slidesToShow: 2,
-                  slidesToScroll: 2,
+                  slidesToScroll: 1,
                   infinite: false,
-                  dots: false,
+                  dots: true,
                   arrows: false,
                 }
             },
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
                   slidesToShow: 1,
                   slidesToScroll: 1,
                   infinite: false,
-                  dots: false,
+                  dots: true,
                   arrows: false,
                   centerMode: true,
                   centerPadding: '40px'
@@ -123,8 +123,11 @@ const view_testimonials_by_category = ($section) => {
         $category_buttons[i].classList.remove('active');
     }
     
+    const $body_element = document.getElementById("testimonials-category-content");
+    $body_element.className = "";
+    $body_element.classList.add(`${$section}-wave`);
+
     document.getElementById(`${$section}-category-section`).style.display = 'block';
     document.getElementById(`${$section}-wave`).style.display = 'block';
     document.getElementById(`btn_show_testimonials_${$section}`).classList.add('active');
-    
 }

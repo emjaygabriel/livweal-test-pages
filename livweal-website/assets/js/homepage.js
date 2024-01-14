@@ -1,10 +1,50 @@
+// Notes
+// To compress and minify this, use uglify
+// Example: uglifyjs input.js -o output.min.js -m -c (compressed version)
+// Example: uglifyjs input.js -o output.min.js
+
 document.addEventListener("DOMContentLoaded", function() {
     // Code to be executed when the DOM is ready
-    init_story_slider();
+    create_video_elements();
     init_testimonial_video1_click(); 
     init_testimonial_video2_click();
     init_welcome_video_click();
 });
+
+const create_video_elements = () => {
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  var storySliderContainer = document.getElementById('story_slider');
+  storySliderContainer.innerHTML = ''; // Clear previous content
+
+  var videoSources;
+  if (screenWidth > 640) {
+      videoSources = [
+          "https://livweal.com/wp-content/uploads/2024/01/Story1.webm",
+          "https://livweal.com/wp-content/uploads/2024/01/Story2.webm",
+          "https://livweal.com/wp-content/uploads/2024/01/Story3.webm",
+          "https://livweal.com/wp-content/uploads/2024/01/Story4.webm",
+          "https://livweal.com/wp-content/uploads/2024/01/Story5.webm"
+      ];
+  } else {
+      videoSources = [
+          "https://livweal.com/wp-content/uploads/2024/01/Story1_mobile_1.webm",
+          "https://livweal.com/wp-content/uploads/2024/01/Story2_Mobile_1.webm",
+          "https://livweal.com/wp-content/uploads/2024/01/Story3_Mobile.webm",
+          "https://livweal.com/wp-content/uploads/2024/01/Story4_Mobile.webm",
+          "https://livweal.com/wp-content/uploads/2024/01/Story5_Mobile.webm"
+      ];
+  }
+
+  for (var i = 0; i < videoSources.length; i++) {
+      var videoElement = document.createElement('div');
+      videoElement.innerHTML = '<video id="video' + (i + 1) + '"><source data-src="' + videoSources[i] + '" type="video/webm"></video>';
+      storySliderContainer.appendChild(videoElement);
+  }
+
+  // Call the initialization function after elements are added to the DOM
+  init_story_slider();
+}
 
 const init_story_slider = () => {
     console.log("init story slider!");
@@ -32,6 +72,7 @@ const init_story_slider = () => {
 
     // Play the video on the first slide after the slider is initialized
     setTimeout(function() {
+      console.log("loading the first video")
       var firstVideo = $slider.find('.slick-current video')[0];
       if (firstVideo) {
         loadAndPlayVideo(firstVideo);
@@ -69,12 +110,12 @@ const init_testimonial_video1_click = () => {
 
     $btn_testimonial1.addEventListener('click', function(event) {
       event.preventDefault();
-      $btn_testimonial_click('assets/images/home/video/test.webm');
+      $btn_testimonial_click('assets/images/sholeh_shahinfar_testimonial-1.webm');
     });
 
     $btn_testimonial1_link.addEventListener('click', function(event) {
       event.preventDefault();
-      $btn_testimonial_click('assets/images/home/video/test.webm');
+      $btn_testimonial_click('assets/images/sholeh_shahinfar_testimonial-1.webm');
     });
 };
 
@@ -88,12 +129,12 @@ const init_testimonial_video2_click = () => {
 
   $btn_testimonial2.addEventListener('click', function(event) {
     event.preventDefault();
-    $btn_testimonial2_click('assets/images/home/video/test.webm');
+    $btn_testimonial2_click('assets/images/sholeh_shahinfar_testimonial-2.webm');
   });
 
   $btn_testimonial2_link.addEventListener('click', function(event) {
     event.preventDefault();
-    $btn_testimonial2_click('assets/images/home/video/test.webm');
+    $btn_testimonial2_click('assets/images/sholeh_shahinfar_testimonial-2.webm');
   });
 };
 

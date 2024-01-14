@@ -330,6 +330,20 @@
     #story_section #story_slider .slider_prev { top: 32%; }
 }
 
+/* 1536px */
+@media screen and (max-width: 1536px) {
+    /* Your styles for 1440px and larger screens */
+        #story_section #story_slider .slider_next {  bottom: 25%; }
+        #story_section #story_slider .slider_prev { top: 30%; }
+        .offering-item {
+            a {            
+                img {
+                    width: 400px;
+                }
+            }
+        }
+    }
+
 /* 1440px */
 @media screen and (max-width: 1440px) {
 /* Your styles for 1440px and larger screens */
