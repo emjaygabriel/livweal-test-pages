@@ -1,0 +1,230 @@
+// _testimonials.scss
+@import 'variables';
+
+//Notes:
+// You need SASS compiler for this. Install Sass then run/compile SASS in console. 
+// Example: sass input.scss output.css
+// Example for compressed: sass --style compressed input.scss output.min.css
+
+#hero-section {
+    min-height: 1024px;
+    background: url('../images/contact/hero-bgs.jpg') no-repeat bottom center;
+    padding-top: 10rem;
+    h1 {
+        font-family:$font_kazimir;
+        font-size: $lg_subheading;
+        line-height: 1.5;
+        color: $primary_color2;
+        padding-left: 6rem;
+        max-width: 700px;
+        font-weight: normal;
+    }
+    p {
+        font-size: $lg_paragraph;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        color: $primary_color2;
+        .standard-button {
+            font-size: $lg_button_size;
+        }
+        &:nth-child(3) {
+            text-align: center;
+        }
+        max-width: 800px;
+    }
+}
+
+.green-wave-top {
+    margin-top: -8rem;
+}
+
+#founder-note-section {
+    background-color: $primary_color2;
+    background-image: url('https://fakeimg.pl/600x700/852828/a6b8e0');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    padding: 5rem 0rem 10rem 0rem;
+    h2 {
+        text-align: center;
+        font-family: $font_kazimir;
+        font-size: $lg_subheading2;
+        color: $light_color2;
+        margin-bottom: 1rem;
+        font-weight: normal;
+        span {
+            font-family: $font_amalfi;
+            font-size: $lg_subheading;
+        }
+    }
+    img {
+        width: 75%;
+    }
+}
+
+.cream-wave-top {
+    margin-top: -8rem;
+}
+
+#mission-section {
+    background-color: $light_color2;
+    padding: 5rem 0rem 10rem 0rem;
+    
+    h2 {
+        margin-top: 15rem;
+        font-family: $font_kazimir;
+        font-size: $lg_subheading2;
+        color: $primary_color2;
+        margin-bottom: 1rem;
+        font-weight: normal;
+        span {
+            font-family: $font_amalfi;
+            font-size: $lg_subheading;
+        }
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+    p {
+        font-size: $lg_paragraph;
+        margin-bottom: 2rem;
+        .standard-button {
+            font-size: $lg_button_size;
+        }
+        padding-left: 6rem;
+        padding-right: 6rem;
+        &:nth-child(3) {
+            text-align: center;
+        }
+    }
+}
+
+#our-values-section {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    background-color: $primary_color2;
+    h2 {
+        text-align: center;
+        font-family: $font_kazimir;
+        font-size: $lg_subheading2;
+        color: $light_color2;
+        margin-bottom: 1rem;
+        font-weight: normal;
+        span {
+            font-family: $font_amalfi;
+            font-size: $lg_subheading;
+        }
+        margin-bottom: 2rem;
+    }
+    .standard-list {
+        list-style: none;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            padding-left: 5rem;
+            background: url('../images/contact/default-bullet.png') no-repeat top left;
+            margin-bottom: 2rem;
+            div {
+                color: $light_color2;
+                line-height: 1.5;
+                &:nth-child(1) {
+                    font-size: $lg_highlight_paragraph;
+                    font-family: $font_kazimir;
+                }
+                &:nth-child(2) {
+                    font-size: $lg_paragraph;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+.red-wave-top {
+    margin-top: -8rem; 
+}
+#our-leaders-section {
+    background-color: $red_color;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    h2 {
+        text-align: center;
+        font-family: $font_kazimir;
+        font-size: $lg_subheading2;
+        color: $light_color2;
+        margin-bottom: 1rem;
+        font-weight: normal;
+        span {
+            font-family: $font_amalfi;
+            font-size: $lg_subheading;
+        }
+        margin-bottom: 2rem;
+    }
+    .leader-item {
+        img {
+            display: block;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: $light_color;
+            text-align: center;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            &:nth-child(2) {
+                font-size: $lg_subheading2;
+                font-family: $font_kazimir;
+            }
+            &:nth-child(3) {
+                font-size: $lg_paragraph;
+            }
+        }
+    }
+}
+
+.white-wave-top {
+    margin-top: -8rem;
+}
+
+#testimonials-section {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    background-image: url('../images/contact/testimonials-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    h2 {
+        font-family: $font_kazimir;
+        font-size: $lg_subheading;
+        color: $primary_color;
+        font-weight: normal;
+        margin-bottom: 4rem;
+        text-align:center;
+    }
+    .light-box {
+        border: 1px solid $primary_color2;
+        padding: 3rem;
+        height: 100%;
+        border-radius: 30px;
+        p {
+            color: $primary_color2;
+            line-height: 1.5;
+            &:nth-child(1) {
+                font-size: $lg_paragraph;
+                margin-bottom: 5rem;
+            }
+            &:nth-child(2) {
+                font-family: $font_amalfi;
+                font-size: $lg_subheading;
+                margin-bottom: 1rem;
+            }
+            &:nth-child(3) {
+                font-size: $lg_highlight_paragraph;
+                width: 70%;
+            }
+        }
+    }
+}
+
+.green-wave-footer {
+    margin-top: -8rem;
+}
