@@ -1,0 +1,93 @@
+// _about.scss
+@import 'variables';
+
+//Notes:
+// You need SASS compiler for this. Install Sass then run/compile SASS in console. 
+// Example: sass input.scss output.css
+// Example for compressed: sass --style compressed input.scss output.min.css
+
+#hero-section {
+    position: relative;
+    height: 980px;
+    .hero-bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+    .hero-container {
+        position: absolute;
+        top: 19rem;
+        width: 100%;
+        .hero-info {
+            text-align: center;
+            width: 55%;
+            margin-left: auto;
+            margin-right: auto;
+            h1 {
+                color: #fff;
+                line-height: 1.5;
+                padding: 0;
+                margin: 0 0 2rem 0;
+                font-family: $font_kazimir !important;
+                font-weight: normal;
+                font-size: 3.5rem;
+            }
+            p {
+                color: #fff;
+                line-height: 1.5;
+                padding: 0;
+                font-family: $font_libre_franklin !important;
+                font-size: 1.4rem;
+                font-weight: normal;
+                margin-left: 3rem;
+                margin-right: 3rem;
+            }
+        }
+    }
+}
+
+#provide-support-you {
+    overflow: hidden;
+    position: relative;
+    .separator-top {
+        position: relative;
+        z-index: 1;
+    }
+    .leaves-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+    }
+    .leaves-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 5;
+    }
+    .about-container {
+        position: relative;
+        z-index: 10;
+        .about-content {
+            width: 50%;
+            margin: 6rem auto 6rem auto;
+            text-align: center;
+            h3 {
+                line-height: 1.5;
+                font-family: $font_amalfi !important;
+                font-size: 2.5rem;
+                color: $primary_color2;
+                margin-bottom: 2rem;
+            }
+            p {
+                line-height: 1.5;
+                padding-bottom: 0;
+                font-family: $font_libre_franklin !important;
+                font-size: 1.5rem;
+                color: $primary_color2;
+                margin-bottom: 5rem;
+            }
+        }
+    }
+}
