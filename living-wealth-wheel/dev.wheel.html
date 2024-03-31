@@ -1,0 +1,661 @@
+<p style="display: none;">
+  <link rel="stylesheet" href="/wp-content/themes/livweal-website-theme/assets/sass/wheel.min.css" />
+</p>
+<div id="app">
+    <div>
+      <div id="introduction_slide" class="livweal_slide" v-show="current_chart == 0">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="new-box">
+                <img src="/wp-content/uploads/assets_2024/new-assessment-logo.png">
+              </div>
+              <div class="main-title">
+                <h1>The Wealthy Life Assessment</h1>
+              </div>
+              <div class="direction-box">
+                <h2>Directions</h2>
+                <p>We’ve made this assessment super easy peasy lemon squeeeeeeezy for you! For each prompt, move the slider to the percentage that you believe best represents how the statement is true for you today. what your life looks like today.</p>
+              </div>
+              <div class="love-warning">
+                <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <img class="love-warning-logo" src="/wp-content/uploads/2023/12/love-warning.png">
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <h2>Loving Warning!</h2>
+                    <p>What you learn about yourself with the Wealthy Life Assessment is not to bring you down. It’s a fun little reality check. I’m asking you to be honest with yourself so that you have a starting place to grow from. Every single one of us can grow from wherever we are today. Also, notice the patterns of your answers. Are you someone who tends to lean on the hopeful side of your answers? Or are you habitually hard on yourself? How we answer can tell us just as much as what we answer! Work toward being unfiltered and honest. See what happens!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="important-note">
+                <p>
+                  <strong>Important Note:</strong>
+                </p>
+                <p>When you select your answer, select the answer that is true RIGHT NOW. This is NOT what you hope or wish for yourself in the future.</p>
+              </div>
+              <div class="begin-botton text-center">
+                <button class="nav-button" @click="beginTest">START HERE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="somatic_wealth_slide" class="livweal_slide" v-show="current_chart == 1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2>{{ options.slide_title[0] }}</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+              <div class="question">
+                <div>{{ options.questions.somatic_wealth[0] }}</div>
+                <div class="range-slider">
+                  <input v-model="somatic_wealth_question1" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.somatic_wealth[1] }}</div>
+                <div class="range-slider">
+                  <input v-model="somatic_wealth_question2" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.somatic_wealth[2] }}</div>
+                <div class="range-slider">
+                  <input v-model="somatic_wealth_question3" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.somatic_wealth[3] }}</div>
+                <div class="range-slider">
+                  <input v-model="somatic_wealth_question4" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.somatic_wealth[4] }}</div>
+                <div class="range-slider">
+                  <input v-model="somatic_wealth_question5" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <p class="text-center mbottom-2">Use the sliders to indicate how true each statement is for you.</p>
+              <div class="canvas_parent">
+                <canvas id="somatic_wealth_chart"></canvas>
+              </div>
+              <div class="specific_wheel_progress" id="somatic_wealth_progress">
+                <p class="specific_wealth_score">Your Somatic Wealth Score = {{ somatic_wealth_progress }}</p>
+                <p class="specific_wealth_possible_score">Total Possible Somatic Wealth = 100%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="mental_wealth_slide" class="livweal_slide" v-show="current_chart == 2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2>{{ options.slide_title[1] }}</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+              <div class="question">
+                <div>{{ options.questions.mental_wealth[0] }}</div>
+                <div class="range-slider">
+                  <input v-model="mental_wealth_question1" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.mental_wealth[1] }}</div>
+                <div class="range-slider">
+                  <input v-model="mental_wealth_question2" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.mental_wealth[2] }}</div>
+                <div class="range-slider">
+                  <input v-model="mental_wealth_question3" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.mental_wealth[3] }}</div>
+                <div class="range-slider">
+                  <input v-model="mental_wealth_question4" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.mental_wealth[4] }}</div>
+                <div class="range-slider">
+                  <input v-model="mental_wealth_question5" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <p class="text-center mbottom-2">Use the sliders to indicate how true each statement is for you.</p>
+              <div class="canvas_parent">
+                <canvas id="mental_wealth_chart"></canvas>
+              </div>
+              <div class="specific_wheel_progress" id="mental_wealth_progress">
+                <p class="specific_wealth_score">Your Mental Wealth Score = {{ mental_wealth_progress }}</p>
+                <p class="specific_wealth_possible_score">Total Possible Mental Wealth = 100%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="emotional_wealth_slide" class="livweal_slide" v-show="current_chart == 3">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2>{{ options.slide_title[2] }}</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+              <div class="question">
+                <div>{{ options.questions.emotional_wealth[0] }}</div>
+                <div class="range-slider">
+                  <input v-model="emotional_wealth_question1" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.emotional_wealth[1] }}</div>
+                <div class="range-slider">
+                  <input v-model="emotional_wealth_question2" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.emotional_wealth[2] }}</div>
+                <div class="range-slider">
+                  <input v-model="emotional_wealth_question3" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.emotional_wealth[3] }}</div>
+                <div class="range-slider">
+                  <input v-model="emotional_wealth_question4" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.emotional_wealth[4] }}</div>
+                <div class="range-slider">
+                  <input v-model="emotional_wealth_question5" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <p class="text-center mbottom-2">Use the sliders to indicate how true each statement is for you.</p>
+              <div class="canvas_parent">
+                <canvas id="emotional_wealth_chart"></canvas>
+              </div>
+              <div class="specific_wheel_progress" id="emotional_wealth_progress">
+                <p class="specific_wealth_score">Your Emotional Wealth Score = {{ emotional_wealth_progress }}</p>
+                <p class="specific_wealth_possible_score">Total Possible Emotional Wealth = 100%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="interpersonal_wealth_slide" class="livweal_slide" v-show="current_chart == 4">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2>{{ options.slide_title[3] }}</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+              <div class="question">
+                <div>{{ options.questions.interpersonal_wealth[0] }}</div>
+                <div class="range-slider">
+                  <input v-model="interpersonal_wealth_question1" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.interpersonal_wealth[1] }}</div>
+                <div class="range-slider">
+                  <input v-model="interpersonal_wealth_question2" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.interpersonal_wealth[2] }}</div>
+                <div class="range-slider">
+                  <input v-model="interpersonal_wealth_question3" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.interpersonal_wealth[3] }}</div>
+                <div class="range-slider">
+                  <input v-model="interpersonal_wealth_question4" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.interpersonal_wealth[4] }}</div>
+                <div class="range-slider">
+                  <input v-model="interpersonal_wealth_question5" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <p class="text-center mbottom-2">Use the sliders to indicate how true each statement is for you.</p>
+              <div class="canvas_parent">
+                <canvas id="interpersonal_wealth_chart"></canvas>
+              </div>
+              <div class="specific_wheel_progress" id="interpersonal_wealth_progress">
+                <p class="specific_wealth_score">Your Interpersonal Wealth Score = {{ interpersonal_wealth_progress }}</p>
+                <p class="specific_wealth_possible_score">Total Possible Interpersonal Wealth = 100%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="energetic_wealth_slide" class="livweal_slide" v-show="current_chart == 5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2>{{ options.slide_title[4] }}</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+              <div class="question">
+                <div>{{ options.questions.energetic_wealth[0] }}</div>
+                <div class="range-slider">
+                  <input v-model="energetic_wealth_question1" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.energetic_wealth[1] }}</div>
+                <div class="range-slider">
+                  <input v-model="energetic_wealth_question2" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.energetic_wealth[2] }}</div>
+                <div class="range-slider">
+                  <input v-model="energetic_wealth_question3" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.energetic_wealth[3] }}</div>
+                <div class="range-slider">
+                  <input v-model="energetic_wealth_question4" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.energetic_wealth[4] }}</div>
+                <div class="range-slider">
+                  <input v-model="energetic_wealth_question5" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <p class="text-center mbottom-2">Use the sliders to indicate how true each statement is for you.</p>
+              <div class="canvas_parent">
+                <canvas id="energetic_wealth_chart"></canvas>
+              </div>
+              <p class="specific_wheel_progress" id="energetic_wealth_progress">
+              <p class="specific_wealth_score">Your Energetic Wealth Score = {{ energetic_wealth_progress }}</p>
+              <p class="specific_wealth_possible_score">Total Possible Energetic Wealth = 100%</p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="financial_wealth_slide" class="livweal_slide" v-show="current_chart == 6">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2>{{ options.slide_title[5] }}</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+              <div class="question">
+                <div>{{ options.questions.financial_wealth[0] }}</div>
+                <div class="range-slider">
+                  <input v-model="financial_wealth_question1" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.financial_wealth[1] }}</div>
+                <div class="range-slider">
+                  <input v-model="financial_wealth_question2" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.financial_wealth[2] }}</div>
+                <div class="range-slider">
+                  <input v-model="financial_wealth_question3" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.financial_wealth[3] }}</div>
+                <div class="range-slider">
+                  <input v-model="financial_wealth_question4" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+              <div class="question">
+                <div>{{ options.questions.financial_wealth[4] }}</div>
+                <div class="range-slider">
+                  <input v-model="financial_wealth_question5" class="range-slider__range" type="range" value="0" min="0" max="100">
+                  <span class="range-slider__value">0%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <p class="text-center mbottom-2">Use the sliders to indicate how true each statement is for you.</p>
+              <div class="canvas_parent">
+                <canvas id="financial_wealth_chart"></canvas>
+              </div>
+              <div class="specific_wheel_progress" id="financial_wealth_progress">
+                <p class="specific_wealth_score">Your Financial Wealth Score = {{ financial_wealth_progress }}</p>
+                <p class="specific_wealth_possible_score">Total Possible Financial Wealth = 100%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="final_result_slide" class="livweal_slide" v-show="current_chart == 7">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h1>Wealthy Life Assessment Final Result</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div style="max-width:800px;margin-left:auto;margin-right:auto;margin-top:-3rem">
+                <canvas id="final_result_chart"></canvas>
+                <div class="overall_average">
+                  <p class="specific_wealth_score">Your Total Wealthy Life Score = {{ overall_average }}%</p>
+                  <p class="specific_wealth_possible_score">Total Possible Wealthy Life Score = 100%</p>
+                </div>
+                <div style="margin-top:4rem;text-align:justify">
+                  <h3 style="text-align:center;font-size:22px">Take the next step!</h3>
+                  <p>To receive prompts and reflections from your Wealthy Life Assessment results for taking specific steps towards even more wholistic wealth in your life, share your best contact details here.</p>
+                </div>
+                <div class="wheel-form">
+                  <div class="form-fields">
+                    <label>Name</label>
+                    <input v-model="full_name" type="text">
+                  </div>
+                  <div class="form-fields">
+                    <label>Email</label>
+                    <input v-model="email_address" type="text">
+                  </div>
+                  <div class="form-fields text-center">
+                    <button class="nav-button" @click="submitResult">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="nav_buttons">
+        <div class="row">
+          <div class="col-6 text-left">
+            <button @click="prevChart" class="nav-button" v-if="current_chart !== 1 && current_chart !== 0">Previous</button>
+          </div>
+          <div class="col-6 text-right">
+            <button @click="nextChart" class="nav-button" v-if="current_chart !== 6 && current_chart !== 0">Next</button>
+            <button class="nav-button" v-if="current_chart === 6" @click="renderFinalResult">View Result</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="moonray-form-p2c186826f156 ussr" style="display:none">
+      <div class="moonray-form moonray-form-label-pos-left">
+        <form class="moonray-form-clearfix" action="https://forms.ontraport.com/v2.4/form_processor.php?" method="post" accept-charset="UTF-8">
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-323877635092" class="moonray-form-label">Name</label>
+            <input name="firstname" v-model="full_name" type="text" class="moonray-form-input" id="mr-field-element-323877635092" required value="" placeholder>
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-email">
+            <label for="mr-field-element-243592629670" class="moonray-form-label">E-mail Address</label>
+            <input name="email" v-model="email_address" type="email" class="moonray-form-input" id="mr-field-element-243592629670" required value="" placeholder>
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-953306770013" class="moonray-form-label">How did you hear about us?</label>
+            <input name="f1571" type="text" class="moonray-form-input" id="mr-field-element-953306770013" value="" placeholder>
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-930213014495" class="moonray-form-label">I am able to remain open, receptive, and at peace with what life brings.</label>
+            <input name="f2242" required type="text" v-model="energetic_wealth_question1" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-930213014495">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-100153283779" class="moonray-form-label">I feel deeply connected with myself, others, and the greater world around me.</label>
+            <input name="f2243" required type="text" v-model="energetic_wealth_question2" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-100153283779">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-124986556226" class="moonray-form-label">My purpose guides my decisions and how I show up every day.</label>
+            <input name="f2244" required type="text" v-model="energetic_wealth_question3" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-124986556226">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-738818465275" class="moonray-form-label">My life is full of gratitude, pleasure, creativity and satisfaction.</label>
+            <input name="f2245" required type="text" v-model="energetic_wealth_question4" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-738818465275">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-528347514831" class="moonray-form-label">I use my values to filter how I spend my time, resources and attention.</label>
+            <input name="f2246" required type="text" v-model="energetic_wealth_question5" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-528347514831">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-955559910915" class="moonray-form-label">I identify and manage my emotions responsibly for myself and in social situations.</label>
+            <input name="f2247" required type="text" v-model="emotional_wealth_question1" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-955559910915">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-91235513764" class="moonray-form-label">I am able to deal with, and effectively recover from adversity, disappointment and stress.</label>
+            <input name="f2248" required type="text" v-model="emotional_wealth_question2" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-91235513764" value="" placeholder>
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-647912370396" class="moonray-form-label">I feel and appropriately express a wide range of emotions.</label>
+            <input name="f2249" required type="text" v-model="emotional_wealth_question3" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-647912370396">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-634622433751" class="moonray-form-label">Others would describe me as even-keeled and emotionally stable.</label>
+            <input name="f2250" required type="text" v-model="emotional_wealth_question4" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-634622433751">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-447624841827" class="moonray-form-label">I recognise my value and see all of life’s events as opportunities for growth.</label>
+            <input name="f2251" required type="text" v-model="emotional_wealth_question5" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-447624841827">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-468320537301" class="moonray-form-label">I recognise the impact that words and actions have on others and myself.</label>
+            <input name="f2252" required type="text" v-model="interpersonal_wealth_question1" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-468320537301">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-197949720275" class="moonray-form-label">I have at least three people with whom I have an open, trusting and connected relationship.</label>
+            <input name="f2253" required type="text" v-model="interpersonal_wealth_question2" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-197949720275">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-627583137544" class="moonray-form-label">I experience a sense of belonging in relationships with others.</label>
+            <input name="f2254" required type="text" v-model="interpersonal_wealth_question3" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-627583137544">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-128227939172" class="moonray-form-label">My self-awareness informs my decisions and choices with others.</label>
+            <input name="f2255" required type="text" v-model="interpersonal_wealth_question4" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-128227939172">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-286779901879" class="moonray-form-label">I am able to communicate and establish effective boundaries for myself and with others.</label>
+            <input name="f2256" required type="text" v-model="interpersonal_wealth_question5" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-286779901879">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-688872654169" class="moonray-form-label">I think, understand, and process information easily and efficiently.</label>
+            <input name="f2257" required type="text" v-model="mental_wealth_question1" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-688872654169">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-51172093514" class="moonray-form-label">I am able to problem solve, think creatively, and learn new things.</label>
+            <input name="f2258" required type="text" v-model="mental_wealth_question2" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-51172093514">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-121316109248" class="moonray-form-label">I am present with my own thoughts, feelings, and behaviors.</label>
+            <input name="f2259" required type="text" v-model="mental_wealth_question3" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-121316109248">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-790705943441" class="moonray-form-label">I have an optimistic outlook and trust myself and others.</label>
+            <input name="f2260" required type="text" v-model="mental_wealth_question4" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-790705943441">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-823916210757" class="moonray-form-label">I am in full alignment with my needs, values, and desires.</label>
+            <input name="f2261" required type="text" v-model="mental_wealth_question5" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-823916210757">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-412174135274" class="moonray-form-label">I comfortably manage expenses and have no financial stress about handling the unexpected.</label>
+            <input name="f2262" required type="text" v-model="financial_wealth_question1" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-412174135274">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-557839783208" class="moonray-form-label">I am financially self-reliant without need of external income or employment.</label>
+            <input name="f2263" required type="text" v-model="financial_wealth_question2" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-557839783208">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-904106224227" class="moonray-form-label">I understand how money works and make empowered financial decisions for myself.</label>
+            <input name="f2264" required type="text" v-model="financial_wealth_question3" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-904106224227">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-412384920324" class="moonray-form-label">I have a regular practice of reviewing and managing my financial resources and investments.</label>
+            <input name="f2265" required type="text" v-model="financial_wealth_question4" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-412384920324">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-401772319393" class="moonray-form-label">My financial activities are in alignment with my life values and circumstances.</label>
+            <input name="f2266" required type="text" v-model="financial_wealth_question5" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-401772319393">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-878732388693" class="moonray-form-label">I can move my body with confidence, ease and freedom.</label>
+            <input name="f2267" v-model="somatic_wealth_question1" required type="text" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-878732388693">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-730351875852" class="moonray-form-label">I am physically resilient and bounce back easily from periods of stress, illness, or injury.</label>
+            <input name="f2268" required type="text" v-model="somatic_wealth_question2" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-730351875852">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-654917754401" class="moonray-form-label">I eat a balanced, nourishing diet and exercise regularly to maintain my health and joy.</label>
+            <input name="f2269" required type="text" v-model="somatic_wealth_question3" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-654917754401">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-472493004064" class="moonray-form-label">I am connected with my body and I give it what it needs, when it needs it.</label>
+            <input name="f2270" required type="text" v-model="somatic_wealth_question4" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-472493004064">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-906626996623" class="moonray-form-label">I am in flow with my environment and actively consider the impact and consequences of my choices.</label>
+            <input name="f2271" required type="text" v-model="somatic_wealth_question5" class="moonray-form-input" pattern="[0-9]*" id="mr-field-element-906626996623">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+            <label for="mr-field-element-498870689731" class="moonray-form-label">LivWeal Wheel Result Link</label>
+            <input v-model="preview_link" name="f2272" type="text" class="moonray-form-input" id="mr-field-element-498870689731">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-center moonray-form-input-type-submit">
+            <input type="submit" name="submit-button" value="SIGN UP!" class="moonray-form-input" id="mr-field-element-996842232134" src>
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="afft_" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="aff_" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="sess_" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="ref_" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="own_" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="oprid" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="contact_id" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="utm_source" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="utm_medium" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="utm_term" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="utm_content" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="utm_campaign" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="referral_page" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="_op_gclid" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="_op_gcid" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="_fbc" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="_fbp" type="hidden" value="">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="uid" type="hidden" value="p2c186826f156">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="uniquep2c186826f156" type="hidden" value="0">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="mopsbbk" type="hidden" value="963B5F6E7DFF98C55BDBD8F9:40082001AC1A2502166F3E96">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="mopbelg" type="hidden" value="0165930:B6C03EA8E4DA160A493E3C75:846938D41D5F82DA6B26D073">
+          </div>
+          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+            <input name="_vcid" type="hidden" value="NzkzNTY3fCQyYSQwOCRHbm1KLlNmcnBxWjgxd3lVbnVrT0xleC5PUm5xU2R1bThiNDgvaEMvM0VoQ1dyeUFPNUxsRw==">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <p class="d-none">
+    <script src="/wp-content/themes/livweal-website-theme/assets/js/wheel.min.js"></script>
+  </p>

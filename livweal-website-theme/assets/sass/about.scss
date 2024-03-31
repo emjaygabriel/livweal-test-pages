@@ -1,0 +1,802 @@
+// _about.scss
+@import 'variables';
+
+//Notes:
+// You need SASS compiler for this. Install Sass then run/compile SASS in console. 
+// Example: sass input.scss output.css
+// Example for compressed: sass --style compressed input.scss output.min.css
+
+#hero-section {
+    min-height: 1340px;
+    background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/about/hero-bg.webp') no-repeat bottom center;
+    padding-top: 10rem;
+    h1 {
+        font-family:$font_kazimir;
+        font-size: $lg_subheading;
+        line-height: 1.5;
+        color: $primary_color2;
+        padding-left: 6rem;
+        max-width: 700px;
+        font-weight: normal;
+    }
+    p {
+        font-size: $lg_paragraph;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        color: $primary_color2;
+        .standard-button {
+            font-size: $lg_button_size;
+        }
+        &:nth-child(3) {
+            text-align: center;
+        }
+        max-width: 800px;
+    }
+}
+
+.wave1 {
+    margin-top: -8rem;
+    img {
+        width: 100%;
+    }
+}
+
+.wave2 {
+    margin-top: -8rem;
+    img {
+        width: 100%;
+    }
+}
+
+.wave3 {
+    margin-top: -8rem;
+    img {
+        width: 100%;
+    }
+}
+
+.wave4 {
+    margin-top: -8rem;
+    img {
+        width: 100%;
+    }
+}
+
+.wave5 {
+    margin-top: -8rem;
+    img {
+        width: 100%;
+    }
+}
+
+.wave6 {
+    margin-top: -8rem;
+    img {
+        width: 100%;
+    }
+}
+
+#self_asses {
+    padding: 1rem 0 7rem 0;
+    background-color: $primary_color;
+    p {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        line-height: 1.5;
+        font-size: $lg_paragraph;
+        color: $light_color;
+    }
+    .standard-button {
+        font-size: $lg_button_size;
+        margin-top: 1.5rem;
+    }
+}
+
+#founder-note-section {
+    background-color: $primary_color2;
+    // background-image: url('https://fakeimg.pl/600x700/852828/a6b8e0');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    padding: 5rem 0rem 10rem 0rem;
+    .label-section {
+        display: flex;
+        justify-content: center; /* horizontally center the content */
+        align-items: center; /* vertically center the content */
+        h2 {
+            text-align: center;
+            font-family: $font_kazimir;
+            font-size: $lg_subheading2;
+            color: $light_color2;
+            margin-bottom: 1rem;
+            font-weight: normal;
+            margin: 0;
+            margin-left: 12rem;
+            span {
+                font-family: $font_amalfi;
+                font-size: $lg_subheading;
+            }
+        }
+    }
+    img {
+        width: 75%;
+    }
+}
+
+#what_we_stand {
+    background-color: $red_color;
+    padding: 0rem 0 10rem 0;
+    .text_content {
+        text-align: center;
+        color: $light_color;
+        h2 {
+            font-size: $lg_subheading2;
+            font-family: $font_kazimir;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            span {
+                font-family: $font_amalfi;
+            }
+        }
+        p {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+            font-size: $lg_paragraph;
+        }
+    }
+}
+
+
+#mission-section {
+    background-color: $light_color2;
+    padding: 0rem 0rem 6rem 0rem;
+    
+    h2 {
+        margin-top: 16rem;
+        font-family: $font_kazimir;
+        font-size: $lg_subheading2;
+        color: $primary_color2;
+        margin-bottom: 1rem;
+        font-weight: normal;
+        span {
+            font-family: $font_amalfi;
+            font-size: $lg_subheading;
+        }
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+    p {
+        font-size: $lg_paragraph;
+        margin-bottom: 2rem;
+        .standard-button {
+            font-size: $lg_button_size;
+        }
+        padding-left: 6rem;
+        padding-right: 6rem;
+        &:nth-child(3) {
+            text-align: center;
+        }
+    }
+}
+
+#our-values-section {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    background-color: $primary_color2;
+    h2 {
+        text-align: center;
+        font-family: $font_kazimir;
+        font-size: $lg_subheading2;
+        color: $light_color2;
+        margin-bottom: 1rem;
+        font-weight: normal;
+        span {
+            font-family: $font_amalfi;
+            font-size: $lg_subheading;
+        }
+        margin-bottom: 2rem;
+    }
+    .value-item {
+        position: relative;
+        margin-bottom: 1rem;
+        img {
+            width: 100%;
+        }
+    }
+    .container-fluid {
+        padding-left: 4.5rem;
+    }
+}
+
+
+.red-wave-top {
+    margin-top: -8rem; 
+}
+#our-leaders-section {
+    background-color: $red_color;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    h2 {
+        text-align: center;
+        font-family: $font_kazimir;
+        font-size: $lg_subheading2;
+        color: $light_color2;
+        margin-bottom: 1rem;
+        font-weight: normal;
+        span {
+            font-family: $font_amalfi;
+            font-size: $lg_subheading;
+        }
+        margin-bottom: 2rem;
+    }
+    .leader-item {
+        img {
+            display: block;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: $light_color;
+            text-align: center;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            &:nth-child(2) {
+                font-size: $lg_subheading2;
+                font-family: $font_kazimir;
+            }
+            &:nth-child(3) {
+                font-size: $lg_paragraph;
+            }
+        }
+    }
+}
+
+.white-wave-top {
+    margin-top: -8rem;
+}
+
+#testimonials-section {
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+    background-image: url('https://dev.livweal.com/wp-content/uploads/assets_2024/about/testimonials-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    h2 {
+        font-family: $font_kazimir;
+        font-size: $lg_subheading;
+        color: $primary_color;
+        font-weight: normal;
+        margin-bottom: 4rem;
+        text-align:center;
+    }
+    .light-box {
+        border: 1px solid $primary_color2;
+        padding: 3rem;
+        height: 100%;
+        border-radius: 30px;
+        p {
+            color: $primary_color2;
+            line-height: 1.5;
+            &:nth-child(1) {
+                font-size: $lg_paragraph;
+                margin-bottom: 5rem;
+            }
+            &:nth-child(2) {
+                font-family: $font_amalfi;
+                font-size: $lg_subheading;
+                margin-bottom: 1rem;
+            }
+            &:nth-child(3) {
+                font-size: $lg_highlight_paragraph;
+                width: 70%;
+            }
+        }
+    }
+}
+
+.green-wave-footer {
+    margin-top: -8rem;
+    img {
+        width: 100%;
+    }
+}
+
+#testimonials-section {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+/* 1600px */
+@media screen and (max-width: 1600px) {
+    /* Your styles for 1600px and larger screens */
+    #self_asses .standard-button {
+        margin-top: 2rem;
+    }
+
+    .wave6 {
+        margin-top: -7rem;
+    }
+
+    #mission-section img {
+        width: 600px;
+    }
+    #mission-section h2 {
+        margin-top: 13rem;
+    }
+}
+
+/* 1536px */
+@media screen and (max-width: 1536px) {
+    /* Your styles for 1536px and larger screens */
+    #self_asses .standard-button {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .wave6 {
+        margin-top: -6rem;
+    }
+}
+
+/* 1280px */
+@media screen and (max-width: 1280px) {
+    /* Your styles for 1280px and larger screens */
+    #self_asses .standard-button {
+        margin-top: 2rem;
+    }
+
+    #hero-section {
+        min-height: 1280px;
+        h1 {
+            font-size: $md_subheading;
+            padding-left: 2rem;
+        }
+        p {
+            font-size: $md_paragraph;
+            margin-top: 1rem;
+        }
+    }
+
+    #mission-section {
+        padding: 0rem 0rem 8rem 0rem;
+        h2 {
+            margin-top: 8rem;
+        }
+        img {
+            width: 500px;
+        }
+        p {
+            .standard-button {
+                display: block;
+            }
+        }
+    }
+
+    .wave6 {
+        margin-top: -5rem;
+    }
+
+    #our-values-section .container-fluid {
+        padding-left: 4rem;
+    }
+
+    #testimonials-section .light-box p:nth-child(2) {
+        font-size: 2rem;
+    }
+
+    #testimonials-section {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+/* 1024px */
+@media screen and (max-width: 1024px) {
+    /* Your styles for 1024px and larger screens */
+    #hero-section {
+        min-height: 1024px;
+        h1 {
+            font-size: $md_subheading2;
+            padding-left: 0rem;
+        }
+        p {
+            font-size: $md_paragraph;
+            margin-top: 0;
+        }
+    }
+
+    #self_asses {
+        .standard-button {
+            margin-top: 4rem;
+            font-size: $md_paragraph;
+        }
+        p {
+            font-size: $md_paragraph;
+        }
+    }
+
+    #mission-section {
+        padding: 1rem 0rem 9rem 0rem;
+        h2 {
+            margin-top: 4rem;
+            line-height: 2;
+            padding: 0 3rem 0 3rem;
+            font-size: $md_subheading;
+        }
+        p {
+            font-size: $md_paragraph;
+            padding: 0 3rem 0 3rem;
+        }
+        .standard-button {
+            display: inline-block;
+            font-size: $md_paragraph;
+            padding: 0.5rem 3rem 0.5rem 3rem;
+        }
+        img {
+            width: 400px;
+        }
+    }
+
+    #founder-note-section {
+        .label-section {
+            h2 {
+                margin-left: 6rem;
+                text-align: center;
+                font-size: $md_subheading2;
+                span {
+                    font-size: $md_subheading;
+                }
+            }
+        }
+    }
+
+    .wave6 {
+        margin-top: -4rem;
+    }
+
+    #testimonials-section {
+        h2 {
+            font-size: $md_subheading;
+        }
+        .testimonial-content {
+            .light-box {
+                p {
+                    font-size: $md_paragraph;
+                }
+            }
+        }
+    }
+
+    #our-values-section .container-fluid {
+        padding-left: 3.5rem;
+    }
+
+    #self_asses {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        p {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        .standard-button {
+            margin-top: 3rem;
+        }
+    }
+    #testimonials-section .testimonial-content .light-box p.signature {
+        font-size: 2rem;
+    }
+    #mission-section img {
+        width: 500px;
+    }
+}
+
+/* 768px */
+@media screen and (max-width: 768px) {
+    /* Your styles for 768px and larger screens */
+    #hero-section {
+        min-height: 940px;
+        background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/about/hero-bg-tablet.webp') no-repeat bottom center;
+        h1 {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            text-align: center;
+            max-width: 100%;
+            margin-bottom: 3rem;
+        }
+        p {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            max-width: 100%;
+        }
+    }
+
+    #self_asses {
+        padding: 1rem 0 10rem 0;
+        .standard-button {
+            margin-bottom: 2rem;
+        }
+    }
+
+    #founder-note-section {
+        padding: 5rem 0rem 12rem 0rem;
+        .label-section {
+            h2 {
+                margin-left: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    #what_we_stand {
+        padding: 3rem 0 12rem 0;
+    }
+
+    #mission-section {
+        padding: 2rem 0rem 9rem 0rem;
+        h2 {
+            margin-top: 0;
+            margin-bottom: 0rem;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            
+        }
+    }
+
+    .wave6 {
+        margin-top: -3rem;
+    }
+
+    #testimonials-section {
+        padding-top: 2rem;
+    }
+
+    #our-values-section .container-fluid {
+        padding-left: 15px;
+    }
+
+    #self_asses p { padding-left: 2rem; padding-right: 2rem; }
+    #our-values-section .value-item:nth-child(5) {
+        margin-bottom: 3rem;
+    }
+
+    #testimonials-section .testimonial-content .light-box p.signature {
+        font-size: 2rem;
+    }
+
+    #testimonials-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* 480px */
+@media screen and (max-width: 480px) {
+    /* Your styles for 480px and larger screens */ 
+    #hero-section {
+        min-height: 800px;
+        padding-top: 5rem;
+        background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/about/hero-bg-mobile.webp') no-repeat bottom center;
+        h1 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-size: $sm_subheading;
+        }
+        p {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-size: $sm_paragraph;
+        }
+    }
+
+    #self_asses {
+        p {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-size: $sm_paragraph;
+        }
+        .standard-button {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            font-size: $sm_button_size;
+        }
+    }
+
+    #mission-section {
+        padding-top: 5rem;
+        padding-bottom: 10rem;
+        h2 {
+            line-height: 2;
+            margin-bottom: 1rem;
+            font-size: $sm_paragraph;
+            padding: 0;
+            span {
+                font-size: $sm_subheading;
+            }
+        }
+        p {
+            font-size: $sm_paragraph;
+            padding: 0; 
+            .standard-button {
+                font-size: $sm_button_size;
+            }
+        }
+        img {
+            width: 80%
+        }
+        
+    }
+
+    #our-values-section {
+        padding-bottom: 6rem;
+        h2 {
+            font-size: $sm_paragraph;
+            span {
+                font-size: $sm_subheading;
+            }
+        }
+    }
+
+    .wave6 {
+        margin-top: -1.5rem;
+    }
+
+    #founder-note-section {
+        .label-section {
+            h2 {
+                font-size: $sm_paragraph;
+                span {
+                    font-size: $sm_subheading;
+                }
+            }
+        }
+        img {
+            width: 90%;
+        }
+    }
+
+    #what_we_stand {
+        .text_content {
+            h2 {
+                font-size: $sm_paragraph;
+                line-height: 2;
+                span {
+                    font-size: $sm_subheading;
+                }
+            }
+            p {
+                font-size: $sm_paragraph;
+            }
+        }
+    }
+
+    #testimonials-section {
+        background-image: url("https://dev.livweal.com/wp-content/uploads/assets_2024/about/about-bg-footer-mobile.webp");
+        h2 {
+            font-size: $sm_subheading;
+        }
+        .testimonial-content {
+            .light-box {
+                padding: 2rem 1.5rem;
+                p {
+                    font-size: $sm_paragraph;
+                    &.signature {
+                        font-size: $sm_subheading;
+                    }
+                }
+            }
+        }
+    }
+    #testimonials-section .light-box p:nth-child(3) {
+        width: 100%;
+    }
+
+    #testimonials-section {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+}
+
+/* 380px */
+@media screen and (max-width: 380px) {
+    /* Your styles for 380px and larger screens */ 
+    #hero-section {
+        h1 {
+            font-size: $xs_subheading;
+        }
+        p {
+            font-size: $xs_paragraph;
+        }
+    }
+
+    #self_asses {
+        p {
+            font-size: $xs_paragraph;
+        }
+        .standard-button {
+            font-size: $xs_button_size;
+        }
+    }
+
+    #mission-section {
+        padding-top: 3rem;
+        padding-bottom: 10rem;
+        h2 {
+            font-size: $xs_paragraph;
+            span {
+                font-size: $xs_subheading;
+            }
+        }
+        p {
+            font-size: $xs_paragraph;
+            .standard-button {
+                font-size: $xs_button_size;
+            }
+        }
+        img {
+            width: 90%
+        }
+    }
+
+    #our-values-section {
+        h2 {
+            font-size: $xs_paragraph;
+            margin-bottom: 1rem;
+            span {
+                font-size: $xs_subheading;
+            }
+        }
+    }
+
+    .wave6 {
+        margin-top: -1.5rem;
+    }
+
+    #founder-note-section {
+        .label-section {
+            h2 {
+                font-size: $xs_paragraph;
+                span {
+                    font-size: $xs_subheading;
+                }
+            }
+        }
+        img {
+            width: 90%;
+        }
+    }
+
+    #what_we_stand {
+        padding: 2rem 0 10rem 0;
+        .text_content {
+            h2 {
+                line-height: 2;
+                font-size: $xs_paragraph;
+                span {
+                    font-size: $xs_subheading;
+                }
+            }
+            p {
+                font-size: $xs_paragraph;
+            }
+        }
+    }
+
+    #testimonials-section {
+        h2 {
+            font-size: $xs_subheading;
+            margin-bottom: 2rem;
+        }
+        .testimonial-content {
+            .light-box {
+                p {
+                    font-size: $xs_paragraph;
+                    &.signature {
+                        font-size: $xs_subheading;
+                    }
+                }
+            }
+        }
+    }
+}

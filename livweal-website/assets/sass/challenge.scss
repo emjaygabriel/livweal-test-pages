@@ -1,0 +1,195 @@
+// _contact.scss
+@import 'variables';
+
+//Notes:
+// You need SASS compiler for this. Install Sass then run/compile SASS in console. 
+// Example: sass input.scss output.css
+// Example for compressed: sass --style compressed input.scss output.min.css
+
+#hero-section {
+    background-color: #043229;
+    position: relative;
+    width: 100%;
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .hero-content {
+        position: absolute;
+        top: 18rem;
+        width: 100%;
+        .labels-section {
+            width: 50%;
+            text-align: center;
+            margin: 0 auto 3rem auto;
+            h1 {
+                font-family: $font_amalfi !important;
+                font-size: 4.5rem;
+                color: $primary_color2;
+                margin-bottom: 2rem;
+                padding-bottom: 0;
+            }
+            p {
+                font-size: 1.2rem;
+                font-family: $font_libre_franklin !important;
+                color: $primary_color2;
+                margin-bottom: 2rem;
+                padding-bottom: 0;
+            }
+        }
+    }
+    .standard-form {
+        max-width: 500px;
+        .field-item {
+            input {
+                font-size: 1.2rem;
+            }
+            &.submit-field {
+                margin-top: 2rem;
+                text-align: center;
+            }
+            .standard-button {
+                padding-left: 3rem;
+                padding-right: 3rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+.footer-bottom2 {
+    position: relative;
+    margin-top: -25rem;
+    img {
+        width: 100%;
+    }
+}
+
+#footer_desktop {
+    position: relative;
+}
+
+#footer_desktop .newsletter-box {
+    visibility: hidden;
+}
+
+#footer_mobile { padding-top: 4rem; }
+#footer_mobile .newsletter-box {
+    display: none;
+}
+
+@media screen and (max-width: 1700px) {
+    .footer-bottom2 {
+        margin-top: -20rem;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .footer-bottom2 {
+        margin-top: -17rem;
+    }
+}
+
+@media screen and (max-width: 1536px) {
+    .footer-bottom2 {
+        margin-top: -14rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #hero-section .hero-content .labels-section h1 {
+        font-size: 3.5rem;
+    }
+    #hero-section .hero-content .labels-section {
+        margin: 0 auto 3rem auto;
+    }
+
+    .footer-bottom2 {
+        margin-top: -12rem;
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .footer-bottom2 {
+        margin-top: -10rem;
+    }
+}
+
+
+@media screen and (max-width: 1280px) {
+    .footer-bottom2 {
+        margin-top: -6rem;
+    }
+    #hero-section .hero-content {
+        top: 15rem;
+    }
+}
+
+@media screen and (max-width: 1180px) { 
+    .footer-bottom2 {
+        margin-top: -4rem;
+    }
+    #hero-section .hero-content {
+        top: 10rem;
+    }
+}
+
+@media screen and (max-width: 1058px) { 
+    .footer-bottom2 {
+        margin-top: -3.5rem;
+    }
+    #hero-section .hero-content {
+        top: 10rem;
+    }
+    #hero-section .hero-content .labels-section h1 {
+        font-size: 3rem;
+    }
+    #hero-section .hero-content .labels-section p { 
+        font-size: 1rem; 
+    }
+}
+
+@media screen and (max-width: 991px) { 
+    #hero-section .standard-form .field-item input {
+        font-size: 1rem;
+    }
+    #hero-section {
+        height: 750px;
+    }
+}
+
+@media screen and (max-width: 928px) {
+    #footer_mobile {
+        position: relative;
+    }
+    #hero-section .hero-content .labels-section {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 767px) { 
+
+}
+
+@media screen and (max-width: 575px) { 
+
+    #hero-section {
+        height: 750px;
+    }
+}
+
+@media screen and (max-width: 480px) { 
+
+}
+
+@media screen and (max-width: 380px) { 
+    #hero-section {
+        height: 750px;
+    }
+}
+
+
+

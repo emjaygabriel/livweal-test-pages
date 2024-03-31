@@ -47,6 +47,7 @@ $xs_highlight_paragraph: 1.2rem;
 /* font family */
 $font_amalfi: 'amalfi_coastregular';
 $font_kazimir: 'Kazimir'; 
+$font_libre_franklin: 'Libre-Franklin';
 
 @font-face {
     font-family: 'amalfi_coastregular';
@@ -144,4 +145,32 @@ $font_kazimir: 'Kazimir';
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+
+@font-face {
+    font-family: 'Libre-Franklin';
+    src: url('../fonts/librefranklin-regular.ttf') format('truetype'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Libre-Franklin';
+    src: url('../fonts/librefranklin-bold.ttf') format('truetype'); 
+    font-weight: bold; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Libre-Franklin';
+    src: url('../fonts/librefranklin-bolditalic.ttf') format('truetype'); 
+    font-weight: bold; 
+    font-style: italic; 
+}
+
+@font-face {
+    font-family: 'Libre-Franklin';
+    src: url('../fonts/librefranklin-italic.ttf') format('truetype'); 
+    font-weight: normal; 
+    font-style: italic; 
 }

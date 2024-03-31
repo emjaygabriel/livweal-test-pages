@@ -1,0 +1,1180 @@
+/* Enter Your Custom CSS Here */
+
+#wpadminbar {
+	display: none;
+}
+
+@font-face {
+    font-family: 'Kazimir-Medium';
+    src: url('https://dev.livweal.com/wp-content/themes/livweal/font/Kazimir-Medium.woff2') format('woff2'),
+        url('https://dev.livweal.com/wp-content/themes/livweal/font/Kazimir-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+ }
+
+@font-face {
+    font-family: 'Kazimir-Bold';
+    src: url('https://dev.livweal.com/wp-content/themes/livweal/font/Kazimir-Bold.woff2') format('woff2'),
+        url('https://dev.livweal.com/wp-content/themes/livweal/font/Kazimir-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kazimir-Regular';
+    src: url('https://dev.livweal.com/wp-content/themes/livweal/font/Kazimir-Regular.woff2') format('woff2'),
+        url('https://dev.livweal.com/wp-content/themes/livweal/font/Kazimir-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LibreFranklin-Medium';
+    src: url('https://dev.livweal.com/wp-content/themes/livweal/font/LibreFranklin-Medium.woff2') format('woff2'),
+        url('https://dev.livweal.com/wp-content/themes/livweal/font/LibreFranklin-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LibreFranklin-Regular';
+    src: url('https://dev.livweal.com/wp-content/themes/livweal/font/LibreFranklin-Regular.woff2') format('woff2'),
+        url('https://dev.livweal.com/wp-content/themes/livweal/font/LibreFranklin-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LibreFranklin-Bold';
+    src: url('https://dev.livweal.com/wp-content/themes/livweal/font/LibreFranklin-Bold.woff2') format('woff2'),
+        url('https://dev.livweal.com/wp-content/themes/livweal/font/LibreFranklin-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+ }
+
+body, #page-container { overflow-x:hidden; }
+
+header { position:fixed; width:100%; top:0px; z-index:10; }
+
+#page-container { padding-top:80px; } 
+
+.testimonials { padding-top: 0!important; }
+
+/*.testimonials-bottom-img .et_pb_image_wrap {
+	top: -55px!important;
+}*/
+
+.testimonials .et_pb_testimonial_author {
+	font-family: 'Kazimir-Regular' !important;
+	font-size: 30px;
+	text-align: center;
+	color: #b47273;
+}
+
+.testimonials .et_pb_testimonial_position {
+	color: #4F3080;
+	text-align: center;
+}
+
+.testimonials .et_pb_testimonial_meta {
+	text-align: center;
+}
+
+.testimonials .et_pb_testimonial_content {
+	min-height: 570px;
+}
+
+h1, h2, h3 {
+	font-family: 'Kazimir-Regular' !important;
+}
+h4, h5, h6, body{
+	font-family: 'LibreFranklin-Regular' !important;
+}
+.supportanger a{
+	text-decoration: underline;
+    color: #fff;
+}
+.foundation .et_pb_section_0_tb_footer.bgfooter, .foundation .et_pb_section.mobilebgfooter{
+	background-color: #253671!important;
+}
+.foundation .et_pb_section_0_tb_footer.bgfooter:before, .foundation .et_pb_section.mobilebgfooter:before{
+	display: none;
+}
+
+.noevent p { color: #696969!important;    font-size: 20px;
+    line-height: 25px; }
+
+
+.PostItems .et_pb_column.et_pb_column_1_3:nth-child(3n) { margin-right:0px; }
+
+.supportanger a:hover{
+	text-decoration: none !important;
+}
+#bear_brian-garcia-13VwsTt9pAw-unsplash { display:none; }
+
+h2 span, h3 span, h4 span { font-family: 'amalfi_coastregular'; }
+
+.rwlRow.homerwl{
+	display: flex;
+}
+.teamposttitile h2{
+	font-family: 'LibreFranklin-Regular' !important;
+}
+.butterflypurble header .et_pb_section_0_tb_header.et_pb_section{
+    background-color: #4f3080 !important;
+	position: relative;
+}
+.error404 header .et_pb_section_0_tb_header.et_pb_section {
+  position: relative;
+}
+.single-teams.butterflypurble header .et_pb_section_0_tb_header.et_pb_section {
+    background-color: #14594c !important;
+}
+
+.mb-0 p{
+	margin-bottom: 0 !important;
+}
+
+.Header-menus ul li a{
+	padding: 50px 20px !important;
+    background: transparent;
+}
+.Header-menus ul li.blue a{
+	background: #253671;
+	color: #fff !important;
+}
+.Header-menus ul li{
+	margin-top: 0 !important;
+	margin:0px; padding:0px !important; 
+}
+
+.single-post .et_pb_post_content ul { margin-left:30px; }
+.single-post .et_pb_post_content ul li { margin-bottom:15px; }
+
+
+.single-post .fluid-width-video-wrapper { padding-top:550px !important; max-height:500px; }
+
+.et_pb_post_content a {     color: #fff; text-decoration:underline;
+      }
+ 
+.et_pb_post_content a:hover {  text-decoration:none;  }
+
+
+.btn_white_outline {  padding:10px 20px; border-radius:30px; display:inline-block; border:1px solid #fff; text-decoration:none !important; }
+.btn_white_outline:hover { background:#fff; color:#16594c; }
+
+.Footermenus ul{
+	padding: 0px;
+	list-style: none;
+}
+.Footermenus ul li{
+	margin-bottom: 8px;
+}
+.Footermenus ul li a{
+	font-size: 20px;
+    color: #ffffff!important;
+}
+ul.footer-social li a:before{
+	line-height: 25px !important;
+}
+ul.footer-social li a{
+	width: 30px !important;
+    height: 30px !important;
+    margin-right: 5px;
+	font-size: 20px !important;
+ }
+footer.et-l--footer{
+	border-bottom: 5px solid #fff;
+}
+.mx-wd {
+	max-width: 65%;
+}
+.mx-wd h1{
+	margin-bottom: 20px;
+	font-size: 55px!important;
+	line-height: 50px;
+}
+.mx-wd h2 {
+	font-family: 'LibreFranklin-Regular' !important;
+	font-size: 40px;
+	font-weight: 300;
+	padding: 0;
+	margin-bottom: 20px;
+	line-height: 50px;
+}
+.clrWht {
+	color: #fff;
+}
+.clrYellow { color: #f8efd7; }
+.clrOrange { color: #cc6d6b; }
+.clrGreen { color: #135549; }
+
+p {
+	padding-bottom: 20px;
+}
+
+.wealth-zones h2 span {
+	font-family: 'Kazimir-Regular';
+}
+
+.wealth-zones .section-subtitle {
+	font-size: 20px;
+	color: #135549;
+	padding-bottom: 50px;
+}
+
+.wholistic-wealth .event-type {
+	color: #F8EFD7;
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.wholistic-wealth .section-subtitle {
+	font-size: 20px;
+	color: #fff;
+	font-family: 'Kazimir-Regular';
+	padding-bottom: 40px;
+}
+
+.membership  {
+	text-align: right;
+}
+.membership .highlight-text, .membership h2 {
+	display: inline;
+}
+
+.membership .highlight-text {
+	font-size: 50px;
+	font-family: 'amalfi_coastregular';
+	color: #d46d68;
+}
+
+.birdbg:after{
+	 background-image: url(https://dev.livweal.com/wp-content/uploads/2023/01/livweal-bird.svg);
+  content: "";
+    position: absolute;
+    left: -278px;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    bottom: -660px;
+    background-size: auto 80%;
+}
+.btnspace{
+	text-transform: uppercase;
+}
+.Equalimgs{
+	align-items: center;
+}
+.Posible p{
+	max-width: 55%;
+    margin: 0 auto;
+}
+.Posible h2{
+	margin-bottom: 55px;
+}
+.pb-0 h2{
+	padding: 0 !important;
+}
+.clrpra p{
+	margin-bottom: 35px;
+	text-transform: uppercase;
+}
+.md-full p{
+	max-width: 75%;
+    margin: 0;
+}
+.mobile_menu_bar{
+	position: relative;
+}
+
+#about { z-index:10; }
+
+
+h2 span { font-family: 'amalfi_coastregular'; }
+
+@media only screen and (max-width: 980px){
+	.birdbg:after{
+		display: none;
+	}
+	
+	
+	.et-db #et-boc .et-l .et_pb_column_0_tb_header { padding-bottom:12px; }
+	#nav-fly-trigger1 { top:-17px; }
+
+	.aboutteam p{
+		opacity: 1 !important;
+	}
+	.aboutteam a.minusico{
+	display: block !important;
+}
+.aboutteam a.plusico{
+	display: none;
+}
+.aboutteam .teamimg:before{
+	opacity: 55%;
+}
+	.homerwl .et_pb_text_14.rwl-txt, .homerwl .et_pb_text.rwl-txt{
+		bottom: 120px !important;
+		position: absolute;
+	}
+	.mx-wd {
+		max-width: 100%;
+	}
+	.Posible p {
+    max-width: 100%;
+}
+	.clrpra p {
+    margin-bottom: 20px;
+	}
+	header .et_pb_row_0_tb_header.et_pb_row--with-menu{
+		display: flex;
+    align-items: center;
+    padding: 0 38px !important;
+	}
+	.mr-0{
+		margin-bottom: 0 !important;
+	}
+	footer.et-l--footer{
+		border-bottom: none !important;
+	}
+	
+	
+	
+	
+	.page-id-321 .et_pb_section_0_tb_header.et_pb_section { background:#253671 !important; }
+	
+	
+	.et_pb_text_12, .et_pb_text_14, .et_pb_text_16 { font-size:20px !important; line-height:27px !important; }
+	
+	
+}
+.bgfooter, .mobilebgfooter{
+	position: relative;
+}
+.bgfooter:before{
+	background-image: url(https://dev.livweal.com/wp-content/uploads/2023/01/footerbg-1.png);
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0px;
+    z-index: 1;
+    width: 308px;
+    height: 448px;
+    background-repeat: no-repeat;
+}
+.mobilebgfooter:before{
+	background-image: url(https://dev.livweal.com/wp-content/uploads/2023/01/mobilefooter-1.png);
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0px;
+    z-index: 1;
+    width: 145px;
+    height: 455px;
+    background-repeat: no-repeat;
+}
+.img-wd .et_pb_image_wrap, .img-wd .et_pb_image_wrap img{
+	width: 100% !important;
+}
+
+
+.homerwl .et_pb_code_inner { position:unset; }
+
+.homerwl .et_pb_code_inner a { position:absolute; left:0px; top:0px; width:100%; height:100%; z-index:10; }
+
+
+@media screen and (min-device-width: 980px) and (max-device-width: 1250px){
+	.Header-menus ul li a {
+		font-size: 17px !important;
+    padding: 40px 10px !important;
+		line-height: 2;
+}
+	.mx-wd {
+    max-width: 95%;
+}
+	.birdbg.et_pb_section_0:before{
+		width: 404px;
+	}
+	.et_pb_button{
+		font-size: 16px !important;
+	}
+	.birdbg:after{
+		top: 30%;
+    background-size: 70%;
+		bottom: unset !important;
+	}
+	.foundtxt h2{
+		font-size: 70px !important;
+    line-height: 75px !important;
+	}
+	.foundtxt h4{
+		font-size: 50px !important;
+    line-height: 65px !important;
+	}
+	.img-wd .et_pb_column_1_3.et_pb_column{
+		width: 31.6667%!important;
+	}
+	.md-full h2{
+		font-size: 58px !important;
+		line-height: 60px;
+	}
+	.md-full p {
+    max-width: 95%;
+}
+}
+@media screen and (min-device-width: 1250px) and (max-device-width: 1320px){
+	.Header-menus ul li a {
+    padding: 45px 15px !important;
+    font-size: 18px !important;
+}
+	.md-full h2{
+		font-size: 70px !important;
+		line-height: 75px;
+	}
+
+}
+
+.et_pb_menu_0_tb_header .mobile_nav.closed .mobile_menu_bar:before{
+	content: "" !important;
+	background: url(https://dev.livweal.com/wp-content/uploads/2023/01/hampurgar-icon-livweal.svg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+	width: 26px;
+    height: 14px;
+    position: absolute;
+    z-index: 99;
+}
+.et_pb_menu_0_tb_header .mobile_nav.opened .mobile_menu_bar:before{
+	content: "" !important;
+	background: url(https://dev.livweal.com/wp-content/uploads/2023/01/close-livweal-1.svg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+	width: 20px;
+    height: 19px;
+    position: absolute;
+    z-index: 99;
+}
+.et_pb_menu_0_tb_header.et_pb_menu ul.et_mobile_menu{
+	background-color: #14594c!important;
+}
+ul.et_mobile_menu{
+	left: -15px;
+	border: none;
+}
+ul.et_mobile_menu li a{
+	font-size: 40px !important;
+    padding: 0px !important;
+    border: none;
+    line-height: 45px;
+    margin-bottom: 20px;
+}
+
+.retreatIcon { margin-top:120px; }
+.img-wd .et_pb_column .rwl-txt { opacity:0; transition: all .5s ease; }
+.img-wd .et_pb_column:hover .rwl-txt { opacity:1; transition: all .5s ease; }
+.img-wd .et_pb_column .et_pb_image_wrap  { position:relative; }
+.img-wd .et_pb_column .et_pb_image_wrap:before { position:absolute; left:0px; top:0px; content:''; background:#253671a8; width:100%; height:100%; z-index: 1; }
+.img-wd .et_pb_column:hover .et_pb_image_wrap:before { opacity:0; transition: all .5s ease; }
+.img-wd .et_pb_column .et_pb_text, .img-wd .et_pb_column .et_pb_icon { z-index:2; }
+.btn-green-fill, .btn-green-outline, .btn-blue-outline { transition: all .5s ease; }
+body #page-container .et_pb_section .btn-green-fill:hover { background:#fff; color:#258f7d !important;  transition: all .5s ease; }
+body #page-container .et_pb_section .btn-green-outline:hover { background:transparent; color:#258f7d !important; border-color:#258f7d !important; transition: all .5s ease; }
+body #page-container .et_pb_section .btn-blue-outline:hover { background:transparent; color:#253671 !important; border-color:#253671 !important; transition: all .5s ease; }
+
+ul#menu-main-menu li a { position:relative;  }
+ul#menu-main-menu li:hover a { color:#258F7D; opacity:1; }
+ul#menu-main-menu li:hover a:after, ul#menu-main-menu li.current-menu-item a:after  {        position: absolute;
+    left: 0px;
+    bottom: 27px;
+    content: '';
+    background: url(https://dev.livweal.com/wp-content/uploads/2023/01/nav-hover.svg);
+    width: 68%;
+    height: 100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    
+    right: 0px;
+    margin: 0 auto; }
+
+footer ul li a:hover { text-decoration:underline; }
+.et_pb_social_media_follow li a:hover { text-decoration:none; }
+
+
+#foundation .iconpos { margin-bottom:0px !important; }
+#rwl .et_pb_column:hover .defaulticon { opacity:0; }
+
+@media (max-width:1800px)
+{
+	.birdbg:after { background-size: auto 50%;
+    bottom: -950px;  }
+}
+
+
+@media screen and ( min-width: 980px ) and (max-width:1200px) {
+	
+	.butterflypurble header .et_pb_section_0_tb_header.et_pb_section:before, .error404 header .et_pb_section_0_tb_header.et_pb_section:before{
+		width: 30%;
+	}
+
+.et_pb_text_10, .et_pb_text_12, .et_pb_text_14.rwl-txt,  .et_pb_text.rwl-txt
+	{
+		
+		 font-size:14px !important; bottom:50px !important; padding-left:37px !important; padding-right:37px !important;  
+		
+	}
+	
+	
+	.et_pb_menu_0_tb_header.et_pb_menu ul li a {     font-size: 18px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important; }
+		
+	
+}
+@media screen and ( min-width: 980px ) and (max-width:1300px) {
+	.rwlRow.homerwl .et_pb_column .et-pb-icon{
+		font-size: 22px;
+	}
+}
+@media screen and ( max-width: 980px ) {
+    .rowReverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+	.rwlRow.homerwl .et_pb_column .et-pb-icon{
+		font-size: 22px;
+	}
+	
+	.jenIcon #Component_6_2 {     margin-left: -78px; margin-bottom:-370px; }
+	
+	.rwlRow .et_pb_column_12, .rwlRow  .et_pb_column_13, .rwlRow .et_pb_column_14 {
+    margin-right: 8px!important;
+     
+}
+	
+	.img-wd .et_pb_column .rwl-txt { opacity:1 !important; }
+	.mobileNavigation ul li.blue {     background: #253671; }
+	
+} 
+.d-flex{
+display: flex;
+    column-gap: 15px;	
+}
+.ContFrm label{
+	color: #fff;
+} 
+.ContFrm input, .ContFrm textarea{
+	background: transparent;
+    box-shadow: none;
+    border-bottom: 2px solid #fff !important;
+    border: none;
+    min-height: 25px;
+    margin-bottom: 35px;
+}
+.ContFrm textarea{
+	height: 120px;
+    width: 100%;
+}
+.ContFrm .wd-50 input{
+	width: 98%;
+}
+.ContFrm{
+	position: relative;
+}
+input.form-sub{
+	border: none !important;
+    padding: 18px 23px !important;
+    text-transform: uppercase;
+    margin: 0;
+}
+.contact-bg:after{
+	background-image: url(https://dev.livweal.com/wp-content/uploads/2023/01/contact-icon.svg);
+    content: "";
+    position: absolute;
+    left: 0px;
+	  right: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 710px;
+    background-repeat: no-repeat;
+    bottom: 0px;
+    background-size: 100%;
+}
+.readimg .et_pb_image_wrap, .readimg img{
+	width: 100%;
+}
+.readbg{
+	background: #258f7d;
+    font-size: 16px;
+    padding: 5px 8px;
+	text-transform:uppercase;
+    }
+.mr-10 span{
+	margin-right: 10px;
+}
+.angre a{
+	color: #fff;
+	text-decoration: underline;
+}
+.readbgicon:before{
+	background-image: url(https://dev.livweal.com/wp-content/uploads/2023/01/read-icon.svg);
+    content: "";
+    position: absolute;
+    right: 5%;
+    z-index: 1;
+    width: 166px;
+    height: 185px;
+    background-repeat: no-repeat;
+    top: 1%;
+    background-size: 100%;
+}
+.readbgicon:after{
+	background-image: url(https://dev.livweal.com/wp-content/uploads/2023/01/read-icon2.svg);
+    content: "";
+    position: absolute;
+    left: 5%;
+    z-index: 1;
+    width: 129px;
+    height: 86px;
+    background-repeat: no-repeat;
+    top: 50%;
+	  background-size: 100%;
+}
+.blgimg, .blgimg img{
+	width: 100%;
+}
+.blgimg img{
+	margin-bottom: 10px;
+}
+.blgcont p{
+	margin-bottom: 10px;
+}
+.blgcont span{
+	font-size: 16px;
+    color: #14594c;
+}
+.blgcont span.readbg{
+	color: #fff;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+.blgcont h4{
+	  font-size: 25px;
+    line-height: 30px;
+    color: #14594c;
+    font-family: 'LibreFranklin-Bold' !important;
+}
+
+.blgcont a:hover { text-decoration:underline; }
+
+.bgyellow, .category-watch .readbg, .bgWorkshops {
+	background: #f4b52d;
+}
+.bgred, .category-listen .readbg, .bgTeam-retreats {
+	background: #d06c68;
+}
+.bggreen, .category-read .readbg, .bgRetreats
+{
+	background: #258f7d;
+}
+.greenlist ul{
+	list-style: none;
+	padding: 0;
+}
+.greenlist ul li{
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 20px;
+}
+.greenlist ul li:nth-child(1):before, .greenlist ul li:nth-child(4):before, .greenlist ul li:nth-child(7):before, .greenlist ul li:nth-child(10):before, .greenlist ul li:nth-child(13):before{
+	background-image: url(https://dev.livweal.com/wp-content/uploads/2023/02/list-1.svg);
+	content: "";
+	position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    left: 0;
+    background-size: 22px;
+	  background-color: transparent;
+}
+.greenlist ul li:nth-child(2):before, .greenlist ul li:nth-child(5):before, .greenlist ul li:nth-child(8):before, .greenlist ul li:nth-child(11):before, .greenlist ul li:nth-child(14):before{
+	background-image: url(https://dev.livweal.com/wp-content/uploads/2023/02/list-2.svg);
+	content: "";
+	position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    left: 0;
+    background-size: 22px;
+	  background-color: transparent;
+}
+.greenlist ul li:nth-child(3):before, .greenlist ul li:nth-child(6):before, .greenlist ul li:nth-child(9):before, .greenlist ul li:nth-child(12), .greenlist ul li:nth-child(15):before{
+	background-image: url(https://dev.livweal.com/wp-content/uploads/2023/02/list-3.svg);
+	content: "";
+	position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    left: 0;
+    background-size: 22px;
+	  background-color: transparent;
+}
+
+.mobileNavigation ul.footer-social li a {     padding-left: 5px !important;
+    padding-right: 5px !important; }
+
+/*.greenlist ul li.icon-1:before, .greenlist ul li.icon-2:before, .greenlist ul li.icon-3:before{
+	background-image: url(https://dev.livweal.com/wp-content/uploads/2023/02/list-1.svg);
+	content: "";
+	position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    left: 0;
+    background-size: 22px;
+	  background-color: transparent;
+}
+.greenlist ul li.icon-2:before{
+	background-image: url(https://dev.livweal.com/wp-content/uploads/2023/02/list-2.svg);
+}
+.greenlist ul li.icon-3:before{
+	background-image: url(https://dev.livweal.com/wp-content/uploads/2023/02/list-3.svg);
+}*/
+.list-tick ul{
+	list-style: none;
+    padding: 0;
+}
+.list-tick ul li{
+	margin-bottom: 20px;
+	padding-left: 55px;
+    position: relative;
+}
+.Blog_two{
+	display: flex;
+    position: relative;
+    justify-content: center;
+}
+.blodDate{
+	width: 23%;
+    margin-top: 5px;
+	line-height:34px;
+}
+.pstdate{
+	font-size: 40px;
+    font-family: 'LibreFranklin-Bold';
+    color: #258f7d;
+}
+.pstmon{
+	text-transform: uppercase;
+    color: #258f7d;
+    font-family: 'LibreFranklin-Bold';
+    font-size: 20px;
+}
+
+.blodDate span { display:block; }
+
+.blgcont-two{
+	width: 77%;
+}
+.blgcont-two span{
+	text-transform: uppercase;
+	color: #fff;
+}
+.blgcont-two h4{
+	font-size: 18px;
+    color: #14594c;
+    font-family: 'LibreFranklin-Bold' !important;
+    margin-top: 7px;
+}
+
+.blgcont-two a:hover { text-decoration:underline; }
+
+.light .RWlpostbox, .light .RWlpostbox a, .light .RWlpostbox .blgcont span { color:#fff; }
+
+.et_pb_text_inner a:hover { text-decoration:underline; }
+
+body.archive .et_pb_column_1_3 { margin-bottom:25px; }
+body.archive .et_pb_column_1_3:nth-child(3n) { margin-right:0px !important; }
+.found.birdbg:after{
+	display: none;
+}
+
+
+@media (max-width:1950px)
+{
+	.birdbg:after {     bottom: -900px;
+    background-size: auto 56%; }
+	
+	
+}
+
+@media(max-width:1600px)
+{
+	.et_pb_row.HomeHeroImg { right:-20% !important; }
+	
+}
+
+
+@media(max-width:1250px)
+{
+	.birdbg:hover #JL-illustrations-01 { opacity:0; }
+	
+	.et_pb_text_inner h2 { font-size: 50px !important; }
+	
+	.blgcont h4 {
+    font-size: 17px;
+    line-height: 22px;
+	}
+	
+	
+}
+
+
+
+@media screen and (min-device-width: 982px) and (max-device-width: 1250px){
+	
+	et_pb_text_0 h2 {
+    font-size: 65px;
+	}
+	.birdbg:after{
+		background-size: auto 45%;
+		top: 40%;
+	}
+	.bgfooter:before{
+		width: 213px;
+	}
+	.pb-0.clrpra{
+		padding-bottom: 35px !important;
+	}
+	.et_pb_text_8.clrpra.foundtxt{
+		padding: 0px !important;
+	}
+	.AboutTwoIcon{
+		position: relative;
+    left: -55px;
+	}
+	.et_pb_text_2 h3, .et_pb_text_3 h3 {
+    font-size: 45px !important;
+	}
+	.et_pb_text_0 h2 {
+    font-size: 65px !important;
+	}
+}
+.autdes p{
+	font-size: 22px;
+    color: #FFF;
+    line-height: 1.5;
+}
+.authorinfo{
+	display: flex;
+	column-gap: 20px;
+	padding-top: 15px;
+}
+.authcont h6{
+	font-size: 18px;
+    color: #fff;
+    font-family: 'LibreFranklin-bold' !important;
+    padding-bottom: 0px;
+}
+.authcont p{
+	font-style: italic;
+    color: #fff;
+    font-size: 16px;
+}
+.list-tick ul li:before{
+	content: "\4e";
+	font-family: ETmodules;font-size: 22px;
+    border: 2px solid #14594c;
+    border-radius: 30px;
+    padding: 5px 7px;
+    margin-right: 12px;
+	color: #14594c;
+	position: absolute;
+    z-index: 1;
+    left: 0px;
+	font-weight: bold;
+}
+
+.offer-testimonal { padding-left: 30px;
+    border-left: 3px solid #fff;
+    padding-right: 50px; }
+
+@media screen and (max-width: 480px){
+	 .et_pb_text h1, .et_pb_text_0.buter h1 {
+		padding-top: 40px;
+		word-wrap: normal;
+	}
+	
+ 
+	
+	
+	.et_pb_text_0 h2 {
+    font-size: 40px !important;
+}
+	.et_pb_text_12 h3, .et_pb_text_6 h3, .et_pb_text_9 h3, .et_pb_section_3 h3 {
+    font-size: 38px !important;
+	}
+	.ContFrm .d-flex{
+		display: block;
+	}
+	.et_pb_text_11 h3, .et_pb_text_13 h3, .et_pb_text_15 h3{
+		font-size: 35px;
+    line-height: 40px;
+		
+	}
+}
+
+
+
+
+
+@media(max-width:1023px){
+	.homerwl.rwlRow .et_pb_column{
+		width: 100%!important;
+    margin-bottom: 5px!important;
+	}
+	.rwlRow.homerwl{
+	display: block !important;
+}
+	
+
+	
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1325px){
+	.homerwl .et_pb_text_14.rwl-txt, .homerwl .et_pb_text_12.rwl-txt, .homerwl .et_pb_text_10.rwl-txt, .homerwl .et_pb_text.rwl-txt {
+		bottom: 110px !important;
+		font-size: 18px !important;
+	}
+	.rwlRow.homerwl .et_pb_column .et-pb-icon {
+    font-size: 18px;
+}
+}
+@media screen and (min-device-width: 1024px) and (max-device-width: 1200px){
+	.rwlRow.homerwl .et_pb_text_13 h6, .rwlRow.homerwl .et_pb_text_9 h6, .rwlRow.homerwl .et_pb_text_11 h6 {
+    font-size: 30px;
+	}
+	.rwlRow.homerwl .et_pb_text_11.readtxt, .rwlRow.homerwl .et_pb_text_9.readtxt, .rwlRow.homerwl .et_pb_text_13.readtxt, .rwlRow.homerwl .et_pb_module.et_pb_icon{
+		left: 25px;
+	}
+	.rwlRow.homerwl .et_pb_text_10, .rwlRow.homerwl .et_pb_text_12, .rwlRow.homerwl .et_pb_text_14, .rwlRow.homerwl .et_pb_text {
+    padding-right: 25px!important;
+    padding-left: 25px!important;
+    line-height: 1.3 !important;
+    bottom: 100px !important;
+}
+	.rwlRow.homerwl .et_pb_icon .et_pb_icon_wrap{
+		padding-top: 10px!important;
+    padding-right: 10px!important;
+    padding-bottom: 10px!important;
+    padding-left: 10px!important;
+	}
+	.rwlRow.homerwl .et_pb_column .et-pb-icon {
+    font-size: 17px;
+}
+}
+
+@media (max-width:1100px)
+{
+	  .et_pb_menu_0_tb_header.et_pb_menu ul li a {
+    font-size: 16px !important;
+    
+}
+}
+
+
+@media screen and (min-device-width: 980px) and (max-device-width: 1024px){
+	.img-wd .et_pb_column .rwl-txt {
+    opacity: 1 !important;
+		bottom: 150px !important;
+}
+	.rwlRow.homerwl .et_pb_module.et_pb_icon{
+		bottom: 100px !important;
+	}
+}
+
+
+@media (min-width:1024px)
+{
+		.homerwl.rwlRow .et_pb_image { margin-bottom:0px !important; }
+	
+	.homerwl.rwlRow .readtxt { padding-left:0px !important; }
+	.rwlRow.homerwl .et_pb_module.et_pb_icon {
+    bottom: 30px !important;
+   }
+	
+	.img-wd .et_pb_column .rwl-txt {
+    
+    bottom: 65px !important;
+}
+	
+}
+
+
+/* Team About*/
+.img-wd .et_pb_column .teamimg .et_pb_image_wrap:before{
+	background: #437a70;
+	opacity: 80%;
+}
+.teamhead h6{
+	line-height: 1 !important;
+}
+.aboutteam .teamimg{
+	position: relative;
+}
+.aboutteam .teamimg:before{
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    content: '';
+    background: #437a70;
+    opacity: 80%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.aboutteam h3{
+	position: absolute;
+    top: 20px;
+    left: 37px;
+    margin-bottom: 0;
+    font-size: 35px;
+    color: #ffffff!important;
+    line-height: 40px;
+    z-index: 1;
+    max-width: 100%;
+}
+.aboutteam p{
+	font-size: 20px;
+    padding-right: 37px!important;
+    padding-left: 37px!important;
+    position: absolute;
+    bottom: 145px;
+	line-height: 1.3;
+    opacity: 0;
+    transition: all .5s ease;
+    color: #FFFFFF!important;
+    z-index: 1;
+}
+.aboutteam a{
+	position: absolute;
+    bottom: 55px;
+    left: 37px;
+    margin-bottom: 0;
+    margin-left: 0;
+    background-color: #258f7d;
+    border-radius: 50% 50% 50% 50%;
+    overflow: hidden;
+    color: #14594c;
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+	  z-index: 1;
+}
+.aboutteam a.minusico{
+	width: auto;
+    height: auto;
+    color: #258f7d;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #fff;
+    padding: 10px 25px !important;
+    border-radius: 30px;
+    line-height: 2;
+}
+.aboutteam:hover p{
+	opacity: 1;
+}
+.aboutteam a.minusico{
+	display: none;
+}
+.aboutteam:hover a.minusico{
+	display: block;
+}
+.aboutteam:hover a.plusico{
+	display: none;
+}
+.aboutteam:hover .teamimg:before{
+	opacity: 55%;
+}
+
+
+@media(max-width:500px){
+.et_pb_text_inner h2 { font-size: 37px !important; }
+	
+}
+
+
+@media(max-width:380px){
+	.aboutteam h3{
+		font-size: 28px;
+		line-height: 30px;
+		max-width: 100%;
+		left: 25px;
+	}
+	.aboutteam p {
+    font-size: 16px;
+    padding-right: 25px!important;
+    padding-left: 25px!important;
+    position: absolute;
+    bottom: 135px;
+	}
+	.aboutteam a {
+		left: 25px;
+	}
+}
+
+@media(max-width:768px){
+	.homerwl .et_pb_text_16.rwl-txt{
+		bottom: 150px !important;
+    position: absolute !important;
+	}
+	.butterflypurble header .et_pb_section_0_tb_header.et_pb_section:before, .error404 header .et_pb_section_0_tb_header.et_pb_section:before{
+		width: 50%;
+	}
+	
+	.readbgicon:before { display:none; }
+	
+}
+@media screen and (min-device-width: 1250px) and (max-device-width: 1300px){
+	.mx-wd.et_pb_text_0 h6 {
+    font-size: 45px;
+	}
+}
+.pmb-0 p{
+	margin-bottom: 0 !important;
+}
+ul.postlist{
+	  list-style: none;
+    padding-top: 25px;
+}
+ul.postlist li{
+	margin-bottom: 10px;
+}
+ul.postlist li:nth-child(even){
+	list-style-image: url(https://dev.livweal.com/wp-content/uploads/2023/01/list-icon-3.svg);
+}
+ul.postlist li:nth-child(odd){
+	list-style-image: url(https://dev.livweal.com/wp-content/uploads/2023/01/list-icon-2.svg);
+}
+
+input.text, input.title, input[type=email], input[type=password], input[type=tel], input[type=text], select, textarea, input.text:focus, input.title:focus, input[type=text]:focus, select:focus, textarea:focus { color:#fff; }
+.wpcf7 form.sent .wpcf7-response-output {
+    border-color: #16594c;
+    background: #16594c;
+    color: #fff;
+}
+
+
+#cssmenuscroll .et_pb_social_media_follow li a.icon:before {     color: #268f7d !important; font-size:20px !important; }
+.op-login-form-2 {     margin: 0px auto !important; margin-bottom:50px !important;  }
+body.normalheader .main_title { text-align:center; margin-top:50px !important;  }
+ 

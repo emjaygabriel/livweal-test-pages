@@ -1,4 +1,4 @@
-// _testimonials.scss
+// _contact.scss
 @import 'variables';
 
 //Notes:
@@ -7,219 +7,94 @@
 // Example for compressed: sass --style compressed input.scss output.min.css
 
 #hero-section {
-    min-height: 1024px;
-    background: url('../images/contact/hero-bgs.jpg') no-repeat bottom center;
-    padding-top: 10rem;
-    h1 {
-        font-family:$font_kazimir;
-        font-size: $lg_subheading;
-        line-height: 1.5;
-        color: $primary_color2;
-        padding-left: 6rem;
-        max-width: 700px;
-        font-weight: normal;
-    }
-    p {
-        font-size: $lg_paragraph;
-        line-height: 1.5;
-        margin-bottom: 2rem;
-        color: $primary_color2;
-        .standard-button {
-            font-size: $lg_button_size;
-        }
-        &:nth-child(3) {
-            text-align: center;
-        }
-        max-width: 800px;
-    }
-}
-
-.green-wave-top {
-    margin-top: -8rem;
-}
-
-#founder-note-section {
-    background-color: $primary_color2;
-    background-image: url('https://fakeimg.pl/600x700/852828/a6b8e0');
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    padding: 5rem 0rem 10rem 0rem;
-    h2 {
-        text-align: center;
-        font-family: $font_kazimir;
-        font-size: $lg_subheading2;
-        color: $light_color2;
-        margin-bottom: 1rem;
-        font-weight: normal;
-        span {
-            font-family: $font_amalfi;
-            font-size: $lg_subheading;
-        }
-    }
-    img {
-        width: 75%;
-    }
-}
-
-.cream-wave-top {
-    margin-top: -8rem;
-}
-
-#mission-section {
-    background-color: $light_color2;
-    padding: 5rem 0rem 10rem 0rem;
-    
-    h2 {
-        margin-top: 15rem;
-        font-family: $font_kazimir;
-        font-size: $lg_subheading2;
-        color: $primary_color2;
-        margin-bottom: 1rem;
-        font-weight: normal;
-        span {
-            font-family: $font_amalfi;
-            font-size: $lg_subheading;
-        }
-        padding-left: 6rem;
-        padding-right: 6rem;
-    }
-    p {
-        font-size: $lg_paragraph;
-        margin-bottom: 2rem;
-        .standard-button {
-            font-size: $lg_button_size;
-        }
-        padding-left: 6rem;
-        padding-right: 6rem;
-        &:nth-child(3) {
-            text-align: center;
-        }
-    }
-}
-
-#our-values-section {
-    padding-top: 5rem;
-    padding-bottom: 10rem;
-    background-color: $primary_color2;
-    h2 {
-        text-align: center;
-        font-family: $font_kazimir;
-        font-size: $lg_subheading2;
-        color: $light_color2;
-        margin-bottom: 1rem;
-        font-weight: normal;
-        span {
-            font-family: $font_amalfi;
-            font-size: $lg_subheading;
-        }
-        margin-bottom: 2rem;
-    }
-    .standard-list {
-        list-style: none;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        li {
-            padding-left: 5rem;
-            background: url('../images/contact/default-bullet.png') no-repeat top left;
-            margin-bottom: 2rem;
-            div {
-                color: $light_color2;
-                line-height: 1.5;
-                &:nth-child(1) {
-                    font-size: $lg_highlight_paragraph;
-                    font-family: $font_kazimir;
-                }
-                &:nth-child(2) {
-                    font-size: $lg_paragraph;
-                    
-                }
-            }
-        }
-    }
-}
-
-
-.red-wave-top {
-    margin-top: -8rem; 
-}
-#our-leaders-section {
-    background-color: $red_color;
-    padding-top: 5rem;
-    padding-bottom: 10rem;
-    h2 {
-        text-align: center;
-        font-family: $font_kazimir;
-        font-size: $lg_subheading2;
-        color: $light_color2;
-        margin-bottom: 1rem;
-        font-weight: normal;
-        span {
-            font-family: $font_amalfi;
-            font-size: $lg_subheading;
-        }
-        margin-bottom: 2rem;
-    }
-    .leader-item {
-        img {
-            display: block;
-            margin-bottom: 1rem;
-        }
-        p {
-            color: $light_color;
-            text-align: center;
-            padding-left: 3rem;
-            padding-right: 3rem;
-            &:nth-child(2) {
-                font-size: $lg_subheading2;
-                font-family: $font_kazimir;
-            }
-            &:nth-child(3) {
-                font-size: $lg_paragraph;
-            }
-        }
-    }
-}
-
-.white-wave-top {
-    margin-top: -8rem;
-}
-
-#testimonials-section {
-    padding-top: 5rem;
-    padding-bottom: 10rem;
-    background-image: url('../images/contact/testimonials-bg.jpg');
-    background-repeat: no-repeat;
-    background-position: top center;
+    background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/contact/hero-bg.webp') no-repeat top center;
     background-size: cover;
-    h2 {
-        font-family: $font_kazimir;
-        font-size: $lg_subheading;
-        color: $primary_color;
-        font-weight: normal;
-        margin-bottom: 4rem;
-        text-align:center;
+    padding-top: 15rem;
+    padding-bottom: 0;
+    height: 700px;
+    p {
+        color: $primary_color2;
+        text-align: center;
+        padding-bottom: 0;
+        line-height: 1.5;
+        &:nth-child(1) {
+            font-size: 2.5rem;
+        }
+        &:nth-child(2) {
+            font-size: 3.5rem;
+            font-family: $font_kazimir !important;
+            span {
+                font-family: $font_amalfi !important;
+            }
+        }
     }
-    .light-box {
-        border: 1px solid $primary_color2;
-        padding: 3rem;
-        height: 100%;
-        border-radius: 30px;
-        p {
-            color: $primary_color2;
-            line-height: 1.5;
-            &:nth-child(1) {
+}
+
+.green-contact-wave1 {
+    margin-top: -8rem;
+    img {
+        width: 100%;
+    }
+}
+
+#form-section {
+    background-color: $primary_color;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    .standard-form {
+        margin-top: 10rem;
+        .field-item {
+            input[type=text], input[type=tel], input[type=email], textarea {
                 font-size: $lg_paragraph;
-                margin-bottom: 5rem;
             }
+            .standard-button {
+                font-size: $lg_paragraph;
+            }
+        }
+    }
+}
+
+.cream-wave {
+    margin-top: -8rem;
+    img {
+        width: 100%;
+    }
+}
+
+#enquiry-section {
+    background-color: $light_color2;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    .left-section {
+        p {
+            line-height: 1.5;
+            margin-bottom: 0;
+            font-family: $font_kazimir !important;
+            font-size: $lg_subheading;
+            color: $primary_color2;
+            text-align: center;
+            span {
+                font-family: $font_amalfi !important;
+            }
+        }
+    }
+    .right-section {
+        p {
+            line-height: 1.5;
+            text-align: center;
+            color: $primary_color;
+            font-size: $lg_paragraph;
+            &:nth-child(1) {
+                line-height: 1.5;
+                margin-bottom: 1.5rem;
+            }   
             &:nth-child(2) {
-                font-family: $font_amalfi;
-                font-size: $lg_subheading;
-                margin-bottom: 1rem;
-            }
-            &:nth-child(3) {
-                font-size: $lg_highlight_paragraph;
-                width: 70%;
+                .standard-button {
+                    padding-left: 5rem;
+                    padding-right: 5rem;
+                    color: $light_color2;
+                    text-align: center;
+                }
             }
         }
     }
@@ -227,4 +102,260 @@
 
 .green-wave-footer {
     margin-top: -8rem;
+    img {
+        width: 100%;
+    }
 }
+
+
+#form-section img {
+    margin-left: 5rem;
+}  
+
+/* 1680px */
+@media screen and (max-width: 1680px) {
+/* Your styles for 1680px and larger screens */
+
+}
+
+
+/* 1600px */
+@media screen and (max-width: 1600px) {
+    /* Your styles for 1600px and larger screens */
+    #form-section img {
+        width: 100%;
+        margin-left: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 1537px) {
+/* Your styles for 1600px and larger screens */
+    #hero-section {
+        background-size: cover;
+        padding-top: 9rem;
+        height: 500px;
+        // padding-bottom: 20rem;
+        p {
+            padding-bottom: 0;
+            &:nth-child(1) {
+                font-size: 2.5rem;
+            }
+            &:nth-child(2) {
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    #form-section {
+        .send-us-a-form {
+            text-align: center;
+            img {
+                width: 80%;
+            }
+        }
+        .standard-form {
+            margin-top: 3rem;
+            padding-right: 4rem;
+            .field-item {
+                input[type=text], input[type=tel], input[type=email], textarea {
+                    font-size: $md_paragraph;
+                }
+            }
+            .standard-button {
+                font-size: $md_paragraph;
+            }
+        }
+    }
+
+    #form-section img {
+        width: 85%;
+        margin-left: 1rem;
+    }
+}
+
+/* 1440px */
+@media screen and (max-width: 1440px) {
+/* Your styles for 1440px and larger screens */
+
+}
+
+/* 1366px */
+@media screen and (max-width: 1366px) {
+    /* Your styles for 1366px and larger screens */
+}
+
+/* 1360px */
+@media screen and (max-width: 1360px) {
+    /* Your styles for 1360px and larger screens */
+
+}
+
+/* 1280px */
+@media screen and (max-width: 1280px) {
+    /* Your styles for 1280px and larger screens */
+
+}
+    
+/* 1176px */
+@media screen and (max-width: 1176px) {
+    #hero-section {
+        p {
+            padding-bottom: 0;
+            color: $primary_color2;
+            &:nth-child(1) {
+                font-size: $sm_subheading;
+            }
+            &:nth-child(2) {
+                font-size: $sm_heading;
+            }
+        }
+    }
+
+    #form-section {
+        padding-top: 3rem;
+        .standard-form {
+            .field-item {
+                input[type=text], input[type=tel], input[type=email], textarea {
+                    font-size: $sm_paragraph !important;
+                }
+            }
+        }
+    }
+
+    #enquiry-section {
+        padding-top: 3rem;
+        padding-bottom: 8rem;
+        .left-section {
+            p {
+                padding-bottom: 0;
+                font-size: $sm_subheading;
+            }
+        }
+        .right-section {
+            p {
+                padding-bottom: 0;
+                &:nth-child(1) {
+                    margin-top: -1.5rem;
+                }
+                font-size: $sm_paragraph;
+            }
+        }
+    }
+}
+    
+/* 1152px */
+@media screen and (max-width: 1152px) {
+/* Your styles for 1152px and larger screens */
+    
+}
+    
+/* 1024px */
+@media screen and (max-width: 1024px) {
+    /* Your styles for 1024px and larger screens */
+    
+}
+    
+/* 800px */
+@media screen and (max-width: 768px) {
+    /* Your styles for 800px and larger screens */
+    #form-section {
+        .send-us-a-form {
+            text-align: center;
+            img {
+                width: 80%;
+            }
+        }
+        .standard-form {
+            margin-top: 3rem;
+            padding-right: 0;
+            .field-item {
+                input[type=text], input[type=tel], input[type=email], textarea {
+                    font-size: $sm_paragraph;
+                }
+            }
+        }
+    }
+
+    #enquiry-section {
+        padding-top: 3rem;
+        padding-bottom: 10rem;
+        .left-section {
+            p {
+                padding-bottom: 0;
+                font-size: $sm_subheading;
+            }
+        }
+        .right-section {
+            p {
+                padding-bottom: 0;
+                &:nth-child(1) {
+                    margin-top: 2rem;
+                }
+                font-size: $sm_paragraph;
+            }
+        }
+    }
+}
+    
+/* 480px */
+@media screen and (max-width: 480px) {
+/* Your styles for 480px and larger screens */
+    #hero-section {
+        padding-top: 8rem;
+        padding-bottom: 0rem;
+        background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/contact/hero-bg-mobile.webp') no-repeat top center;
+        height: 480px;
+        p {
+            padding-bottom: 0;
+            &:nth-child(1) {
+                font-size: 1.3rem;
+            }
+            &:nth-child(2) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    #form-section {
+        .send-us-a-form {
+            text-align: center;
+            img {
+                width: 80%;
+            }
+        }
+        .standard-form {
+            padding-right: 2rem;
+            padding-left: 2rem;
+            .field-item {
+                input[type=text], input[type=tel], input[type=email], textarea {
+                    font-size: $sm_paragraph;
+                }
+            }
+            .standard-button {
+                font-size: $xs_paragraph;
+            }
+        }
+    }
+}
+    
+/* 380px */
+@media screen and (max-width: 380px) {
+/* Your styles for 380px and larger screens */
+    #form-section {
+        .send-us-a-form {
+            text-align: center;
+            img {
+                width: 90%;
+            }
+        }
+        .standard-form {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+        .standard-button {
+            font-size: $xs_paragraph !important;
+        }
+    }
+}
+    

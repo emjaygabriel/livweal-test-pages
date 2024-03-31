@@ -2,9 +2,15 @@
 
 @import 'variables';
 
+//Notes:
+// You need SASS compiler for this. Install Sass then run/compile SASS in console. 
+// Example: sass input.scss output.css
+// Example for compressed: sass --style compressed input.scss output.min.css
+
+
 #body_section {
     .offerings_hero { 
-        background: url('../images/bg/hero-offerings-1920.webp') no-repeat bottom center;
+        background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/bg/hero-offerings-1920.webp') no-repeat bottom center;
         background-size: cover;
         .hero_main_title {
             padding-top: 13rem;
@@ -20,7 +26,7 @@
                     font-family: $font_kazimir;
                 }
                 span:last-child {
-                    font-family:  $font_amalfi;
+                    font-family: $font_amalfi;
                     color: $color_violet;
                 }
             }
@@ -106,7 +112,7 @@
                     background-size: contain !important;
                 }
                 li:nth-child(1) {
-                    background: url('../images/offerings/001.svg') no-repeat top left;
+                    background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/offerings/001.svg') no-repeat top left;
                     width: 300px;
                     height: 332px;
                     padding: 3rem 7rem 3rem 3rem;
@@ -115,7 +121,7 @@
                     left: 0;
                 }
                 li:nth-child(2) {
-                    background: url('../images/offerings/002.svg') no-repeat top left;
+                    background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/offerings/002.svg') no-repeat top left;
                     width: 284px;
                     height: 319px;
                     padding: 10.5rem 2rem 1rem 3rem;
@@ -124,7 +130,7 @@
                     left: 12rem;
                 }
                 li:nth-child(3) { 
-                    background: url('../images/offerings/003-edited.svg') no-repeat top left;
+                    background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/offerings/003-edited.svg') no-repeat top left;
                     width: 331px;
                     height: 330px;
                     padding: 4rem 2rem 1rem 8rem;
@@ -133,7 +139,7 @@
                     left: 33rem;
                 }
                 li:nth-child(4) {
-                    background: url('../images/offerings/004.svg') no-repeat top left;
+                    background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/offerings/004.svg') no-repeat top left;
                     width: 355px;
                     height: 200px;
                     color: $light_color;
@@ -142,7 +148,7 @@
                     padding: 3rem;
                 }
                 li:nth-child(5) {
-                    background: url('../images/offerings/005.svg') no-repeat top left;
+                    background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/offerings/005.svg') no-repeat top left;
                     width: 368px;
                     height: 363px;
                     color: $light_color;
@@ -221,44 +227,8 @@
                 font-size: $lg_paragraph_heading;
                 color: $light_color;
             }
-            .standard-form {
-                max-width: 600px;
-                margin-left: auto;
-                margin-right: auto;
-                p {
-                    font-family: $font_kazimir;
-                    text-align: center;
-                    color: $light_color2;
-                    font-size: 1.2rem;
-                }
-                .field-item {
-                    margin-bottom: 1rem;
-                    label { 
-                        display: block;
-                        font-size: 1.2rem;
-                        color: $light_color;
-                        font-family: $font_kazimir;
-                        margin-bottom: 0;
-                        line-height: 2;
-                    }
-                    input[type=text] {
-                        border: 0;
-                        border-radius: 30px;
-                        width: 100%;
-                        padding: 0.5rem 1rem;
-                    }
-                    &.last-field {
-                        margin-bottom: 2rem;
-                    }
-                }
-                .field-item:last-child {
-                    text-align: center;
-                    .standard-button {
-                        font-size: $lg_button_size;
-                        padding-left: 4rem;
-                        padding-right: 4rem;
-                    }
-                }
+            .standard-button {
+                font-size: $lg_button_size;
             }
         }
         .retreat-right-side {
@@ -270,6 +240,7 @@
         margin-top: -145px;
         img {
             width: 100%;
+            vertical-align: bottom;
         }
     }
     .offerings_courses_bottom {
@@ -281,6 +252,7 @@
     .offerings_retreat_top {
         img {
             width: 100%;
+            vertical-align: bottom;
         }
     }
 }
@@ -325,10 +297,13 @@
 @media screen and (max-width: 1280px) {
     #body_section {
         .offerings_hero {
-            background: url('../images/bg/hero-offerings-1280.webp') no-repeat bottom center;
+            background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/bg/hero-offerings-1280.webp') no-repeat bottom center;
             .hero_main_title {
                 padding-top: 10rem;
                 padding-bottom: 15rem;
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
                 h1 {
                     font-size: $md_heading;
                     margin-bottom: 4rem;
@@ -418,28 +393,8 @@
                 p {
                     font-size: $md_paragraph_heading;
                 }
-                .standard-form {
-                    p {
-                        font-size: $md_paragraph;
-                    }
-                    .field-item {
-                        margin-bottom: 1rem;
-                        label { 
-                            font-size: $md_paragraph;
-                        }
-                        input[type=text] {
-                            width: 100%;
-                        }
-                        &.last-field {
-                            margin-bottom: 2rem;
-                        }
-                    }
-                    .field-item:last-child {
-                        text-align: center;
-                        .standard-button {
-                            font-size: $lg_button_size;
-                        }
-                    }
+                .standard-button {
+                    font-size: $md_button_size;
                 }
             }
             .retreat-right-side {
@@ -453,7 +408,7 @@
 @media screen and (max-width: 1024px) {
     #body_section {
         .offerings_hero {
-            background: url('../images/bg/hero-offerings-1024.webp') no-repeat bottom center;
+            background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/bg/hero-offerings-1024.webp') no-repeat bottom center;
             .hero_main_title {
                 padding-top: 8rem;
                 padding-bottom: 12rem;
@@ -559,28 +514,8 @@
                 p {
                     font-size: $sm_paragraph_heading;
                 }
-                .standard-form {
-                    p {
-                        font-size: $sm_paragraph;
-                    }
-                    .field-item {
-                        margin-bottom: 1rem;
-                        label { 
-                            font-size: $sm_paragraph;
-                        }
-                        input[type=text] {
-                            width: 100%;
-                        }
-                        &.last-field {
-                            margin-bottom: 2rem;
-                        }
-                    }
-                    .field-item:last-child {
-                        text-align: center;
-                        .standard-button {
-                            font-size: $sm_button_size;
-                        }
-                    }
+                .standard-button {
+                    font-size: $sm_button_size;
                 }
             }
             .retreat-right-side {
@@ -638,7 +573,7 @@
 @media screen and (max-width: 768px) {
     #body_section {
         .offerings_hero {
-            background: url('../images/bg/hero-offerings-768.webp') no-repeat bottom center;
+            background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/bg/hero-offerings-768.webp') no-repeat bottom center;
             .hero_main_title {
                 padding-left: 1.5rem;
                 padding-right: 1.5rem;
@@ -707,7 +642,7 @@
                             font-weight: normal;
                             margin-bottom: 1.5rem;
                             font-size: $xs_paragraph;
-                            background: url('../images/offerings/checkmark-bullet.png') no-repeat center left !important;
+                            background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/offerings/checkmark-bullet.png') no-repeat center left !important;
                             min-height: 55px;
                             padding-left: 95px !important;
                             line-height: 1.5;
@@ -781,6 +716,9 @@
                             input[type=text] {
                                 width: 100%;
                             }
+                            input[type=email] {
+                                width: 100%;
+                            }
                             &.last-field {
                                 margin-bottom: 2rem;
                             }
@@ -807,7 +745,7 @@
 @media screen and (max-width: 480px) {
     #body_section {
         .offerings_hero {
-            background: url('../images/bg/hero-offerings-480.webp') no-repeat bottom center;
+            background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/bg/hero-offerings-480.webp') no-repeat bottom center;
             background-size: cover;
         }
         .offerings_courses {
@@ -816,6 +754,11 @@
                     img {
                         width: 100%;
                         margin: 2rem auto 0 auto;
+                    }
+                }
+                .courses-left-side {
+                    h3 {
+                        margin-top: -1rem;
                     }
                 }
             }
@@ -839,7 +782,7 @@
 @media screen and (max-width: 380px) {
     #body_section {
         .offerings_hero {
-            background: url('../images/bg/hero-offerings-480.webp') no-repeat bottom center;
+            background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/bg/hero-offerings-480.webp') no-repeat bottom center;
             background-size: auto;
         }
     }

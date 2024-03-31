@@ -1,0 +1,774 @@
+// _offerings.scss
+
+@import 'variables';
+
+#body_section {
+    .offerings_hero { 
+        background: url('../images/bg/hero-offerings-1920.webp') no-repeat bottom center;
+        background-size: cover;
+        .hero_main_title {
+            padding-top: 13rem;
+            text-align: center;
+            padding-bottom: 20rem;
+            h1 {
+                font-size: $lg_heading;
+                margin-bottom: 5rem;
+                span: {
+                    display: inline-block;
+                }
+                span:first-child {
+                    font-family: $font_kazimir;
+                }
+                span:last-child {
+                    font-family:  $font_amalfi;
+                    color: $color_violet;
+                }
+            }
+            h3 {
+                font-family: $font_kazimir;
+                font-size: $lg_subheading;
+                margin-bottom: 4rem;
+                line-height: 1.5;
+            }
+            p {
+                // font-family: $font_kazimir;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+                line-height: 1.5;
+                font-size: $lg_paragraph_heading;
+                margin-bottom: 0;
+                &.hero-paragraph {
+                    margin-bottom: 2rem;
+                }
+                &.life-livweal {
+                    font-size: $lg_highlight_paragraph;
+                }
+            }
+            
+        }
+    }
+    .offerings_courses {
+        background: rgb(61,33,107);
+        background: linear-gradient(180deg, rgba(61,33,107,1) 0%, rgba(70,41,117,1) 50%, rgba(60,32,104,1) 100%);
+        padding-top: 2rem;
+        padding-bottom: 7rem;
+        .courses-right-side {
+            text-align: center;
+            img {
+                width: 100%;
+                display: block;
+                margin-bottom: 3rem;
+            }
+            .standard-button {
+                font-size: $lg_button_size;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+        .courses-left-side {
+            padding-left: 5rem;
+            h2 {
+                font-family: $font_amalfi;
+                color: #fff;
+                font-size: $lg_heading;
+            }
+            h3 {
+                font-family: $font_kazimir;
+                color: $red_color;
+                line-height: 1.5;
+                font-size: $lg_subheading;
+                margin-left: 3.5rem;
+                margin-top: -1.5rem;
+                margin-bottom: 3rem;
+                font-weight: normal;
+            }
+            p {
+                color: $light_color;
+                line-height: 1.5;
+                margin-bottom: 3rem;
+                font-size: $lg_paragraph_heading;
+            }
+            ul {
+                list-style: none;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                height:583px;
+                li {
+                    font-size: $lg_paragraph;
+                    line-height: 1.5;
+                    font-weight: bold;
+                    text-align: center;
+                    position:absolute;
+                    display: block;
+                    background-size: contain !important;
+                }
+                li:nth-child(1) {
+                    background: url('../images/offerings/001.svg') no-repeat top left;
+                    width: 300px;
+                    height: 332px;
+                    padding: 3rem 7rem 3rem 3rem;
+                    color: $light_color;
+                    top: 0;
+                    left: 0;
+                }
+                li:nth-child(2) {
+                    background: url('../images/offerings/002.svg') no-repeat top left;
+                    width: 284px;
+                    height: 319px;
+                    padding: 10.5rem 2rem 1rem 3rem;
+                    color: $color_violet;
+                    top: 0;
+                    left: 12rem;
+                }
+                li:nth-child(3) { 
+                    background: url('../images/offerings/003-edited.svg') no-repeat top left;
+                    width: 331px;
+                    height: 330px;
+                    padding: 4rem 2rem 1rem 8rem;
+                    color: $color_violet;
+                    top: 0;
+                    left: 33rem;
+                }
+                li:nth-child(4) {
+                    background: url('../images/offerings/004.svg') no-repeat top left;
+                    width: 355px;
+                    height: 200px;
+                    color: $light_color;
+                    top: 21rem;
+                    left: 1rem;
+                    padding: 3rem;
+                }
+                li:nth-child(5) {
+                    background: url('../images/offerings/005.svg') no-repeat top left;
+                    width: 368px;
+                    height: 363px;
+                    color: $light_color;
+                    top: 9rem;
+                    left: 23rem;
+                    padding: 9rem 2rem 2rem 3.5rem;
+                }
+            }
+            .standard-button {
+                font-size: $lg_button_size;
+            }
+        }
+    }
+    .offerings_community {
+        background-color: #f8efd7;
+        .community-left-side {
+            text-align: center;
+            padding: 2rem 5rem;
+            img {
+                width: 100%;
+            }
+        }
+        .community-right-side {
+            padding-left: 10rem;
+            padding-right: 10rem;
+            h2 {
+                text-align: left;
+                font-size: $lg_heading;
+                margin-bottom: 3rem;
+                font-family: $font_amalfi;
+                color: $red_color;
+                margin-top: 13rem;
+            }
+            h3 {
+                font-family: $font_kazimir;
+                color: $primary_color;
+                line-height: 1.5;
+                font-size: $lg_subheading;
+                font-weight: normal;
+                margin-bottom: 4rem;
+            }
+            p {
+                color: $blackColor;
+                line-height: 1.5;
+                margin-bottom: 2rem;
+                font-size: $lg_paragraph_heading;
+            }
+            .standard-button {
+                font-size: $lg_button_size;
+                padding-left: 4rem;
+                padding-right: 4rem;
+            }
+            div {
+                text-align: center;
+            }
+        }
+    }
+    .offerings_retreat {
+        // background: rgb(13,73,62);
+        background: linear-gradient(180deg, rgba(13,73,62,1) 0%, rgba(13,73,62,1) 0%, rgba(3,49,40,1) 90%);
+        padding-bottom: 10rem;
+        .retreat-left-side {
+            padding-left: 10rem;
+            padding-right: 10rem;
+            h2 {
+                text-align: left;
+                font-size: $lg_heading;
+                margin-bottom: 3rem;
+                font-family: $font_amalfi;
+                color: $light_color2;
+                margin-top: 13rem;
+            }
+            p {
+                line-height: 1.5;
+                margin-bottom: 2rem;
+                font-size: $lg_paragraph_heading;
+                color: $light_color;
+            }
+        }
+        .retreat-right-side {
+            padding: 0 5rem;
+            img { width: 100%; }
+        }
+    }
+    .offerings_courses_top {
+        margin-top: -145px;
+        img {
+            width: 100%;
+            vertical-align: bottom;
+        }
+    }
+    .offerings_courses_bottom {
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+    }
+    .offerings_retreat_top {
+        img {
+            width: 100%;
+            vertical-align: bottom;
+        }
+    }
+}
+
+@media screen and (max-width: 1760px) {
+    .offerings_courses {
+        .courses-left-side {
+            ul {
+                transform: scale(0.9);
+                transform-origin: left top;
+                height: 525px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1745px) {
+    .offerings_courses {
+        .courses-left-side {
+            ul {
+                transform: scale(0.7);
+                transform-origin: left top;
+                height: 470px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    .offerings_courses {
+        .courses-left-side {
+            
+            ul {
+                height: 430px;
+                transform: scale(0.8);
+                transform-origin: left top;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #body_section {
+        .offerings_hero {
+            background: url('../images/bg/hero-offerings-1280.webp') no-repeat bottom center;
+            .hero_main_title {
+                padding-top: 10rem;
+                padding-bottom: 15rem;
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+                h1 {
+                    font-size: $md_heading;
+                    margin-bottom: 4rem;
+                }
+                h3 {
+                    font-family: $font_kazimir;
+                    font-size: $md_subheading;
+                    margin-bottom: 3rem;
+                }
+                p {
+                    // font-family: $font_kazimir;
+                    max-width: 800px;
+                    font-size: $md_paragraph_heading;
+                    &.hero-paragraph {
+                        margin-bottom: 2rem;
+                    }
+                    &.life-livweal {
+                        font-size: $md_highlight_paragraph;
+                    }
+                }
+                
+                
+            }
+        }
+        .offerings_courses {
+            .courses-left-side {
+                padding-left: 2rem;
+                h2 {
+                    font-size: $md_heading;
+                }
+                h3 {
+                    font-size: $md_subheading;
+                }
+                p {
+                    font-size: $md_paragraph_heading;
+                }
+                .standard-button {
+                    font-size: $md_button_size;
+                }
+                ul {
+                    height: 360px;
+                    transform: scale(0.6);
+                    transform-origin: left top;
+                }
+            }
+            .courses-right-side {
+                .standard-button {
+                    font-size: $md_button_size;
+                }
+            }
+        }
+        .offerings_community {
+            .community-right-side {
+                padding-left: 4rem;
+                padding-right: 4rem;
+                padding-bottom: 5rem;
+                padding-top: 5rem;
+                h2 {
+                    font-size: $md_heading;
+                    margin-top: 4rem;
+                }
+                h3 {
+                    font-size: $md_subheading;
+                }
+                p {
+                    font-size: $md_paragraph_heading;
+                }
+                .standard-button {
+                    font-size: $md_button_size;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+            }
+            .community-left-side {
+                padding: 2rem 2rem;
+            }
+        }
+        .offerings_retreat {
+            padding-bottom: 10rem;
+            .retreat-left-side {
+                padding-left: 3rem;
+                padding-right: 3rem;
+                h2 {
+                    font-size: $md_heading;
+                    margin-top: 3rem;
+                }
+                p {
+                    font-size: $md_paragraph_heading;
+                }
+            }
+            .retreat-right-side {
+                padding: 0 3rem;
+                img { width: 100%; }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #body_section {
+        .offerings_hero {
+            background: url('../images/bg/hero-offerings-1024.webp') no-repeat bottom center;
+            .hero_main_title {
+                padding-top: 8rem;
+                padding-bottom: 12rem;
+                h1 {
+                    font-size: $sm_heading;
+                    margin-bottom: 3rem;
+                }
+                h3 {
+                    font-family: $font_kazimir;
+                    font-size: $sm_subheading;
+                    margin-bottom: 3rem;
+                }
+                p {
+                    // font-family: $font_kazimir;
+                    max-width: 800px;
+                    font-size: $sm_paragraph;
+                    &.hero-paragraph {
+                        margin-bottom: 1rem;
+                    }
+                    &.life-livweal {
+                        font-size: $md_highlight_paragraph;
+                    }
+                }
+                p:first-child {
+                    margin-bottom: 2rem !important;
+                }
+            }
+        }
+        .offerings_courses {
+            .row {
+                .courses-right-side {
+                    padding: 0;
+                    margin-bottom: 0rem;
+                    .standard-button {
+                        font-size: $sm_button_size;
+                    }
+                    img {
+                        margin-top: 10rem;
+                        margin-bottom: 0;
+                    }
+                }
+                .courses-left-side {
+                    padding: 0 1.5rem;
+                    h2 {
+                        margin-top: 3rem;
+                        font-size: $sm_heading;
+                    }
+                    h3 {
+                        font-size: $sm_subheading;
+                        line-height: 1.3;
+                        margin-bottom: 2rem;
+                    }
+                    p {
+                        font-size: $sm_paragraph_heading;
+                        margin-bottom: 2rem;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                    ul {
+                        height: 310px;
+                        transform: scale(0.5);
+                        transform-origin: left top;
+                    }
+                    .standard-button {
+                        font-size: $sm_button_size;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .offerings_community {
+            .community-right-side {
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-bottom: 5rem;
+                h2 {
+                    font-size: $sm_heading;
+                    margin-top: 4rem;
+                }
+                h3 {
+                    font-size: $sm_subheading;
+                }
+                p {
+                    font-size: $sm_paragraph_heading;
+                }
+                .standard-button {
+                    font-size: $sm_button_size;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+            }
+        }
+        .offerings_retreat {
+            padding-bottom: 10rem;
+            .retreat-left-side {
+                padding-left: 2rem;
+                padding-right: 2rem;
+                h2 {
+                    font-size: $sm_heading;
+                    margin-top: 2rem;
+                }
+                p {
+                    font-size: $sm_paragraph_heading;
+                }
+            }
+            .retreat-right-side {
+                padding: 0 2rem;
+                img { width: 100%; }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #body_section {
+        .offerings_courses {
+            .row {
+                display: flex;
+				flex-direction: column-reverse;
+            }
+            .courses-left-side {
+                ul {
+                    height: 580px;
+                    transform: scale(0.9);
+                    transform-origin: left top;
+                }
+                p:first-child {
+                    margin-bottom: 2rem;
+                }
+                p:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .courses-right-side {
+                margin-bottom: 7rem;
+            }
+        }
+        .offerings_retreat {
+            padding-bottom: 5rem;
+            .row {
+                // display: flex;
+				// flex-direction: column-reverse;
+                .retreat-right-side {
+                    margin-bottom: 0rem;
+                    margin-top: 4rem;
+                }
+            }
+            .standard-form { 
+                .row {
+                    display: block;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #body_section {
+        .offerings_hero {
+            background: url('../images/bg/hero-offerings-768.webp') no-repeat bottom center;
+            .hero_main_title {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                h1 {
+                    font-size: $xs_heading;
+                    margin-bottom: 3rem;
+                }
+                h3 {
+                    font-family: $font_kazimir;
+                    font-size: $xs_subheading;
+                    margin-bottom: 3rem;
+                    line-height: 1.3;
+                }
+                p {
+                    font-size: $xs_paragraph_heading;
+                }
+            }
+        }
+        .offerings_courses {
+            padding-bottom: 4rem;
+            .row {
+                display: flex;
+				flex-direction: column-reverse;
+                .courses-right-side {
+                    padding: 0;
+                    margin-bottom: 0rem;
+                    .standard-button {
+                        font-size: $xs_button_size;
+                    }
+                    img {
+                        width: 80%;
+                        margin: 2rem auto 0 auto;
+                    }
+                }
+                .courses-left-side {
+                    padding: 0 1.5rem;
+                    h2 {
+                        margin-top: 5rem;
+                        font-size: $xs_heading;
+                    }
+                    h3 {
+                        font-size: $xs_subheading;
+                        line-height: 1.3;
+                        margin-bottom: 2rem;
+                    }
+                    p {
+                        font-size: $xs_paragraph_heading;
+                        margin-bottom: 2rem;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                    ul {
+                        height: auto;
+                        transform: scale(1);
+                        margin-bottom: 0rem;
+                        margin-left: 0rem;
+                        margin-right: 0rem;
+                        li {
+                            background: none;
+                            position: static;
+                            width: 100%;
+                            height: auto;
+                            padding: 0;
+                            text-align: left;
+                            font-weight: normal;
+                            margin-bottom: 1.5rem;
+                            font-size: $xs_paragraph;
+                            background: url('../images/offerings/checkmark-bullet.png') no-repeat center left !important;
+                            min-height: 55px;
+                            padding-left: 95px !important;
+                            line-height: 1.5;
+                        }
+                        li:nth-child(1) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
+                        li:nth-child(2) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
+                        li:nth-child(3) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
+                        li:nth-child(4) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
+                        li:nth-child(5) { background: none; padding: 0; width: 100%; height: auto; color: $light_color; }
+    
+                    }
+                    .standard-button {
+                        font-size: $xs_button_size;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .offerings_community {
+            .community-right-side {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: 0;
+                h2 {
+                    font-size: $xs_heading;
+                    margin-top: 2rem; 
+                }
+                h3 {
+                    font-size: $xs_subheading;
+                    line-height: 1.3;
+                }
+                p {
+                    font-size: $xs_paragraph_heading;
+                }
+                .standard-button {
+                    font-size: $xs_button_size;
+                }
+            }
+            .community-left-side { 
+                padding-left: 1rem;
+                padding-right: 1rem;
+                img { width: 80%; }
+            }
+        }
+        .offerings_retreat {
+            padding-bottom: 5rem; // formerly 10rem
+            .row {
+                // display: flex;
+				// flex-direction: column-reverse;
+                .retreat-left-side {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    h2 {
+                        font-size: $xs_heading;
+                        margin-top: 5rem;
+                    }
+                    p {
+                        font-size: $xs_paragraph_heading;
+                    }
+                    .standard-form {
+                        p {
+                            font-size: $xs_paragraph;
+                        }
+                        .field-item {
+                            margin-bottom: 1rem;
+                            label { 
+                                font-size: $xs_paragraph;
+                                display:block;
+                                margin-bottom: 0.250rem;
+                            }
+                            input[type=text] {
+                                width: 100%;
+                            }
+                            input[type=email] {
+                                width: 100%;
+                            }
+                            &.last-field {
+                                margin-bottom: 2rem;
+                            }
+                        }
+                        .field-item:last-child {
+                            text-align: center;
+                            .standard-button {
+                                font-size: $xs_button_size;
+                            }
+                        }
+                    }
+                }
+                .retreat-right-side {
+                    padding: 0 2rem;
+                    margin-bottom: 0rem;
+                    text-align: center;
+                    img { width: 80%; margin: 0 auto 0 auto; }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #body_section {
+        .offerings_hero {
+            background: url('../images/bg/hero-offerings-480.webp') no-repeat bottom center;
+            background-size: cover;
+        }
+        .offerings_courses {
+            .row {
+                .courses-right-side {
+                    img {
+                        width: 100%;
+                        margin: 2rem auto 0 auto;
+                    }
+                }
+                .courses-left-side {
+                    h3 {
+                        margin-top: -1rem;
+                    }
+                }
+            }
+        }
+        .offerings_community {
+            .community-left-side { 
+                img { width: 100%; }
+            }
+        }
+        .offerings_retreat {
+            padding-bottom: 5rem;
+            .row {
+                .retreat-right-side {
+                    img { width: 100%;  }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #body_section {
+        .offerings_hero {
+            background: url('../images/bg/hero-offerings-480.webp') no-repeat bottom center;
+            background-size: auto;
+        }
+    }
+}

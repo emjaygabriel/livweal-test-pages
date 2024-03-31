@@ -1,15 +1,21 @@
+// Notes
+// To compress and minify this, use uglify
+// Example: uglifyjs input.js -o output.min.js -m -c (compressed version)
+// Example: uglifyjs input.js -o output.min.js
+// //wp-content/uploads/assets_2024/ --> live ur
+
 // Enter code here for all the functionalities only inside offerings page.
+const $live_url = "https://livweal.com/";
 
-
-
+// live url prefix to any url when updating - /wp-content/themes/livweal-website-theme/
 const init_courses_image = () => {
     let $courses_image = document.getElementById("courses_images");
     const $images = [
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/courses-main-480.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/courses-main-768.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/courses-main-1024.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/courses-main-1280.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/courses-main-1920.webp'
+        `${$live_url}wp-content/uploads/assets_2024/offerings/courses-main-480.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/offerings/courses-main-768.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/offerings/courses-main-1024.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/offerings/courses-main-1280.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/offerings/courses-main-1920.webp`
     ];
 
     const $screen_width = window.screen.width;
@@ -31,11 +37,11 @@ const init_courses_image = () => {
 const init_community_image = () => {
     let $community_image = document.getElementById("community_image");
     const $images = [
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/community-main-480.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/community-main-768.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/community-main-1024.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/community-main-1280.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/community-main-1920.webp'
+        `${$live_url}wp-content/uploads/assets_2024/offerings/community-main-480.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/offerings/community-main-768.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/offerings/community-main-1024.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/offerings/community-main-1280.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/offerings/community-main-1920.webp`
     ];
 
     const $screen_width = window.screen.width;
@@ -57,11 +63,11 @@ const init_community_image = () => {
 const init_retreat_image = () => {
     let $retreat_image = document.getElementById("retreat_image");
     const $images = [
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/retreat-480.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/retreat-768.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/retreat-1024.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/retreat-1280.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/offerings/retreat-1920.webp'
+        `${$live_url}wp-content/uploads/assets_2024/offerings/retreat-480.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/offerings/retreat-768.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/offerings/retreat-1024.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/offerings/retreat-1280.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/offerings/retreat-1920.webp`
     ];
 
     const $screen_width = window.screen.width;
@@ -83,11 +89,11 @@ const init_retreat_image = () => {
 const init_offerings_courses_top = () => {
     let $offerings_courses_top = document.getElementById("offerings-courses-top");
     const $images = [
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerings-courses-top-480.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerings-courses-top-768.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerings-courses-top-1024.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerings-courses-top-1280.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerings-courses-top-1920.webp'
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerings-courses-top-480.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerings-courses-top-768.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerings-courses-top-1024.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerings-courses-top-1280.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerings-courses-top-1920.webp`
     ];
 
     const $screen_width = window.screen.width;
@@ -109,11 +115,11 @@ const init_offerings_courses_top = () => {
 const init_offerings_courses_bottom = () => {
     let $offerings_courses_bottom = document.getElementById("offerings-courses-bottom");
     const $images = [
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerings-courses-bottom-480.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerings-courses-bottom-768.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerings-courses-bottom-1024.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerings-courses-bottom-1280.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerings-courses-bottom-1920.webp'
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerings-courses-bottom-480.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerings-courses-bottom-768.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerings-courses-bottom-1024.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerings-courses-bottom-1280.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerings-courses-bottom-1920.webp`
     ];
 
     const $screen_width = window.screen.width;
@@ -135,11 +141,11 @@ const init_offerings_courses_bottom = () => {
 const init_offerrings_retreat = () => {
     let $offerrings_retreat = document.getElementById("offerrings-retreat");
     const $images = [
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerrings-retreat-480.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerrings-retreat-768.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerrings-retreat-1024.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerrings-retreat-1280.webp',
-        '/wp-content/themes/livweal-website-theme/assets/images/bg/offerrings-retreat-1920.webp'
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerrings-retreat-480.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerrings-retreat-768.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerrings-retreat-1024.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerrings-retreat-1280.webp`,
+        `${$live_url}wp-content/uploads/assets_2024/bg/offerrings-retreat-1920.webp`
     ];
 
     const $screen_width = window.screen.width;
@@ -158,6 +164,18 @@ const init_offerrings_retreat = () => {
     $offerrings_retreat.style["display"] = "";
 };
 
+const init_sign_up_button = () => {
+    // Get the anchor element by its ID
+    var $btn_signup = document.getElementById('btn_signup');
+    // Add a click event listener to the anchor element
+    $btn_signup.addEventListener('click', handle_signup_click);
+};
+
+const handle_signup_click = ($event) => {
+    $event.preventDefault();
+    const $signup_input_button = document.getElementById('mr-field-element-996842232134');
+    $signup_input_button.click();
+};
 
 init_courses_image();
 init_community_image();
@@ -165,3 +183,4 @@ init_retreat_image();
 init_offerings_courses_top();
 init_offerings_courses_bottom();
 init_offerrings_retreat();
+init_sign_up_button();

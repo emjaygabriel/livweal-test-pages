@@ -294,6 +294,14 @@
 		font-size: 24px;
 	}
 
+	.specific_wheel_progress {
+		text-align: center;
+		font-size: 2rem;
+		margin-top: 2rem;
+		font-weight: bold;
+		color: #333;
+	}
+
 	@media (max-width: 960px) {
 		/* Your styles for screens with a width of 960 pixels or less go here */
 		#introduction_slide .green-box {
@@ -340,6 +348,7 @@
 			line-height: 1.5;
 		}
 	}
+	
 	
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css" />
@@ -442,6 +451,7 @@
 						<div class="canvas_parent">
 							<canvas id="somatic_wealth_chart"></canvas>
 						</div>
+						<p class="specific_wheel_progress" id="somatic_wealth_progress">{{ somatic_wealth_progress }}</p>
 					</div>
 				</div>
 			</div>
@@ -503,6 +513,7 @@
 						<div class="canvas_parent">
 							<canvas id="mental_wealth_chart"></canvas>
 						</div>
+						<p class="specific_wheel_progress" id="mental_wealth_progress">{{ mental_wealth_progress }}</p>
 					</div>
 				</div>
 			</div>
@@ -564,6 +575,7 @@
 						<div class="canvas_parent">
 							<canvas id="emotional_wealth_chart"></canvas>
 						</div>
+						<p class="specific_wheel_progress" id="emotional_wealth_progress">{{ emotional_wealth_progress }}</p>
 					</div>
 				</div>
 			</div>
@@ -625,6 +637,7 @@
 						<div class="canvas_parent">
 							<canvas id="interpersonal_wealth_chart"></canvas>
 						</div>
+						<p class="specific_wheel_progress" id="interpersonal_wealth_progress">{{ interpersonal_wealth_progress }}</p>
 					</div>
 				</div>
 			</div>
@@ -686,6 +699,7 @@
 						<div class="canvas_parent">
 							<canvas id="energetic_wealth_chart"></canvas>
 						</div>
+						<p class="specific_wheel_progress" id="energetic_wealth_progress">{{ energetic_wealth_progress }}</p>
 					</div>
 				</div>
 			</div>
@@ -747,6 +761,7 @@
 						<div class="canvas_parent">
 							<canvas id="financial_wealth_chart"></canvas>
 						</div>
+						<p class="specific_wheel_progress" id="financial_wealth_progress">{{ financial_wealth_progress }}</p>
 					</div>
 				</div>
 			</div>
@@ -764,12 +779,11 @@
 						<div style="max-width: 800px; margin-left: auto; margin-right: auto; margin-top: -3rem;">
 							<canvas id="final_result_chart"></canvas>
 							<div class="overall_average">
-								Living Wealthy Total: {{ overall_average }}%
+								Living Wealthy Total: {{ overall_average }}% out of 100%
 							</div>
 							<div style="margin-top: 4rem; text-align: justify;">
 								<h3 style="text-align: center;font-size: 22px;">Take the next step!</h3>
 								<p>To receive prompts and reflections from your Living Wealthy Wheel results for taking specific steps towards even more wholistic wealth in your life, share your best contact details here.</p>
-							  
 							  </div>
 							<div class="wheel-form">
 								<div class="form-fields">
@@ -1065,6 +1079,13 @@
 			financial_wealth_question3: 0,
 			financial_wealth_question4: 0,
 			financial_wealth_question5: 0,
+			somatic_wealth_progress: "",
+			mental_wealth_progress: "",
+			emotional_wealth_progress: "",
+			energetic_wealth_progress: "",
+			interpersonal_wealth_progress: "",
+			energetic_wealth_progress: "",
+			financial_wealth_progress: "",
 			options: {
 				slide_title: [
 					"Somatic Wealth",
@@ -1188,6 +1209,78 @@
 			financial_wealth_question5($value) { this.updateFinancialWealthData(); },
 		},
 		methods: {
+			calculate_somatic_wealth_wheel() {
+				const data = [
+					parseInt(this.somatic_wealth_question1),
+					parseInt(this.somatic_wealth_question2),
+					parseInt(this.somatic_wealth_question3),
+					parseInt(this.somatic_wealth_question4),
+					parseInt(this.somatic_wealth_question5)
+				];
+				const sum = data.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+				const average = sum / data.length;
+				this.somatic_wealth_progress = `${average.toFixed()}% out of 100%`;
+			},
+			calculate_mental_wealth_wheel() {
+				const data = [
+					parseInt(this.mental_wealth_question1),
+					parseInt(this.mental_wealth_question2),
+					parseInt(this.mental_wealth_question3),
+					parseInt(this.mental_wealth_question4),
+					parseInt(this.mental_wealth_question5)
+				];
+				const sum = data.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+				const average = sum / data.length;
+				this.mental_wealth_progress = `${average.toFixed()}% out of 100%`;
+			},
+			calculate_emotional_wealth_wheel() {
+				const data = [
+					parseInt(this.emotional_wealth_question1),
+					parseInt(this.emotional_wealth_question2),
+					parseInt(this.emotional_wealth_question3),
+					parseInt(this.emotional_wealth_question4),
+					parseInt(this.emotional_wealth_question5)
+				];
+				const sum = data.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+				const average = sum / data.length;
+				this.emotional_wealth_progress = `${average.toFixed()}% out of 100%`;
+			},
+			calculate_interpersonal_wealth_wheel() {
+				const data = [
+					parseInt(this.interpersonal_wealth_question1),
+					parseInt(this.interpersonal_wealth_question2),
+					parseInt(this.interpersonal_wealth_question3),
+					parseInt(this.interpersonal_wealth_question4),
+					parseInt(this.interpersonal_wealth_question5)
+				];
+				const sum = data.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+				const average = sum / data.length;
+				this.interpersonal_wealth_progress = `${average.toFixed()}% out of 100%`;
+			},
+			calculate_energetic_wealth_wheel() {
+				const data = [
+					parseInt(this.energetic_wealth_question1),
+					parseInt(this.energetic_wealth_question2),
+					parseInt(this.energetic_wealth_question3),
+					parseInt(this.energetic_wealth_question4),
+					parseInt(this.energetic_wealth_question5)
+				];
+				const sum = data.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+				const average = sum / data.length;
+				this.energetic_wealth_progress = `${average.toFixed()}% out of 100%`;
+			},
+			calculate_financial_wealth_wheel() {
+				const data = [
+					parseInt(this.financial_wealth_question1),
+					parseInt(this.financial_wealth_question2),
+					parseInt(this.financial_wealth_question3),
+					parseInt(this.financial_wealth_question4),
+					parseInt(this.financial_wealth_question5)
+				];
+				const sum = data.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+				const average = sum / data.length;
+				this.financial_wealth_progress = `${average.toFixed()}% out of 100%`;
+			},
 			updateSomaticWealthData() {
 				const $data = [
 					this.somatic_wealth_question1,
@@ -1198,6 +1291,7 @@
 				];
 				this.somatic_wealth_chart.data.datasets[0].data = $data;
 				this.somatic_wealth_chart.update();
+				this.calculate_somatic_wealth_wheel();
 			},
 			updateMentalWealthData() {
 				const $data = [
@@ -1209,6 +1303,7 @@
 				];
 				this.mental_wealth_chart.data.datasets[0].data = $data;
 				this.mental_wealth_chart.update();  
+				this.calculate_mental_wealth_wheel();
 			},
 			updateEmotionalWealthData() {
 				const $data = [
@@ -1219,7 +1314,8 @@
 					this.emotional_wealth_question5
 				];
 				this.emotional_wealth_chart.data.datasets[0].data = $data;
-				this.emotional_wealth_chart.update();  
+				this.emotional_wealth_chart.update();
+				this.calculate_emotional_wealth_wheel(); 
 			},
 			updateInterpersonalWealthData() {
 				const $data = [
@@ -1231,6 +1327,7 @@
 				];
 				this.interpersonal_wealth_chart.data.datasets[0].data = $data;
 				this.interpersonal_wealth_chart.update();  
+				this.calculate_interpersonal_wealth_wheel();
 			},
 			updateEnergeticWealthData() {
 				const $data = [
@@ -1241,7 +1338,8 @@
 					this.energetic_wealth_question5
 				];
 				this.energetic_wealth_chart.data.datasets[0].data = $data;
-				this.energetic_wealth_chart.update();  
+				this.energetic_wealth_chart.update(); 
+				this.calculate_energetic_wealth_wheel(); 
 			},
 			updateFinancialWealthData() {
 				const $data = [
@@ -1253,6 +1351,7 @@
 				];
 				this.financial_wealth_chart.data.datasets[0].data = $data;
 				this.financial_wealth_chart.update();  
+				this.calculate_financial_wealth_wheel();
 			},
 
 			renderSomaticWealthWheel() {
@@ -1649,19 +1748,19 @@
 				const $f4 = parseInt(this.financial_wealth_question4);
 				const $f5 = parseInt(this.financial_wealth_question5);
 
-				const $average_somatic = parseFloat((($s1 + $s2 + $s3 + $s4 + $s5) / 5).toFixed(2));
+				const $average_somatic = parseFloat((($s1 + $s2 + $s3 + $s4 + $s5) / 5).toFixed());
 
-				const $average_mental = parseFloat((($m1 + $m2 + $m3 + $m4 + $m5) / 5).toFixed(2));
+				const $average_mental = parseFloat((($m1 + $m2 + $m3 + $m4 + $m5) / 5).toFixed());
 
-				const $average_emotional = parseFloat((($em1 + $em2 + $em3 + $em4 + $em5) / 5).toFixed(2));
+				const $average_emotional = parseFloat((($em1 + $em2 + $em3 + $em4 + $em5) / 5).toFixed());
 
-				const $average_interpersonal = parseFloat((($i1 + $i2 + $i3 + $i4 + $i5) / 5).toFixed(2));
+				const $average_interpersonal = parseFloat((($i1 + $i2 + $i3 + $i4 + $i5) / 5).toFixed());
 
-				const $average_energetic = parseFloat((($en1 + $en2 + $en3 + $en4 + $en5) / 5).toFixed(2));
+				const $average_energetic = parseFloat((($en1 + $en2 + $en3 + $en4 + $en5) / 5).toFixed());
 
-				const $average_financial = parseFloat((($f1 + $f2 + $f3 + $f4 + $f5) / 5).toFixed(2));
+				const $average_financial = parseFloat((($f1 + $f2 + $f3 + $f4 + $f5) / 5).toFixed());
 
-				this.overall_average = parseFloat((($average_somatic + $average_mental + $average_emotional + $average_interpersonal + $average_energetic + $average_financial) / 6).toFixed(2));
+				this.overall_average = parseFloat((($average_somatic + $average_mental + $average_emotional + $average_interpersonal + $average_energetic + $average_financial) / 6).toFixed());
 
 				const screen_width = document.documentElement.clientWidth;
 				let $return_data = [];

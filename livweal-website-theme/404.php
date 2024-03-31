@@ -1,11 +1,17 @@
-<?php get_header(); ?>
-<article id="post-0" class="post not-found">
-<header class="header">
-<h1 class="entry-title" itemprop="name"><?php esc_html_e( 'Not Found', 'blankslate' ); ?></h1>
-</header>
-<div class="entry-content" itemprop="mainContentOfPage">
-<p><?php esc_html_e( 'Nothing found for the requested page. Try a search instead?', 'blankslate' ); ?></p>
-<?php get_search_form(); ?>
-</div>
-</article>
+<?php get_header(); ?>
+
+<section id="hero-404">
+    <img src="https://dev.livweal.com/wp-content/uploads/assets_2024/mountain-with-trees-shrubs-clouds-1.webp" />
+    <div class="hero-404-captions">
+        <div class="center-section">
+            <h1>Ooops&hellip;</h1>
+            <p>The page you're trying to reach does not exist.</p>
+            <p><a href="/" class="standard-button light-green">BACK TO HOME</a></p>
+        </div>
+    </div>
+</section>
+<div class="green-wave-footer-404">
+    <img decoding="async" src="https://dev.livweal.com/wp-content/uploads/assets_2024/about/green-wave-footer.png">
+</div>
+
 <?php get_footer(); ?>

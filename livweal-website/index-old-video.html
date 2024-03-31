@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LivWeal Website Development</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add your custom stylesheets or additional CSS links here -->
+    <link rel="stylesheet" href="assets/sass/main.min.css" />
+    <link rel="stylesheet" href="assets/sass/homepage.min.css?v=1" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
+    
+    <style>
+        #story_slider {
+            transition: height 0.5s ease-in-out;
+        }
+
+        #myVideo {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body id="homepage">
+    <!-- HEADER -->
+    <header id="header_desktop">
+        <nav>
+            <a href="/fundamentals-live/" class="start-here" target="_blank">START HERE</a>
+            <ul>
+                <li><a class="menu-item-home" href="/">Home</a></li>
+                <li><a class="menu-item-about" href="/about/">About</a></li>
+                <li><a class="menu-item-offerings" href="/offerings/">Offerings</a></li>
+                <li><a class="menu-item-testimonials" href="/testimonials/">Testimonials</a></li>
+                <li>
+                    <a class="menu-item-rwl" href="/rwl/"><span id="label_read">Read</span>, <span id="label_watch">Watch</span>, <span id="label_listen">Listen</span></a>
+                    <ul>    
+                        <li><a href="/category/read">Read</a></li>
+                        <li><a href="/category/watch">Watch</a></li>
+                        <li><a href="/category/listen">Listen</a></li>
+                    </ul>
+                </li>
+                <li><a class="menu-item-contact" href="/contact/">Contact</a></li>
+            </ul>  
+        </nav>
+        <a  href="/" id="desktop_logo" class="logo"></a>
+    </header>
+  
+    <header id="header_mobile">
+        <a href="/" class="header-logo">
+            <img class="menu-on" src="assets/images/livweal-logo-white-mobile.png" style="display: none;" />
+            <img class="menu-off" src="assets/images/livweal-logo-green-mobile.png" style="display: inline-block;" />
+        </a>
+  
+        <input id="main-menu-toggle" type="checkbox" />
+  
+        <label for="main-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+  
+        <nav>    
+            <ul>
+                <li><a class="menu-item-home" href="/">Home</a></li>
+                <li><a class="menu-item-about" href="/about/">About</a></li>
+                <li><a class="menu-item-offerings" href="/offerings/">Offerings</a></li>
+                <li><a class="menu-item-testimonials" href="/testimonials/">Testimonials</a></li>
+                <li><a class="menu-item-rwl" href="/rwl/">Read, Watch, Listen</a></li>
+                <li><a class="menu-item-contact" href="/contact/">Contact</a></li>
+            </ul>  
+        </nav>
+    </header>
+    <!-- END HEADER -->
+    
+    <article id="body_section">
+        <section id="homepage_hero">
+            <picture>
+                <source media="(max-width: 480px)" srcset="https://dev.livweal.com/wp-content/uploads/assets_2024/home/homepage-hero-480.webp">
+                <source media="(max-width: 1280px)" srcset="https://dev.livweal.com/wp-content/uploads/assets_2024/home/homepage-hero-1280.webp">
+                <source media="(max-width: 1600px)" srcset="https://dev.livweal.com/wp-content/uploads/assets_2024/home/homepage-hero-1600.webp">
+
+                <img class="bg-image" src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/homepage-hero-main.webp" alt="Image 1">
+            </picture>
+            <picture>
+                <source media="(max-width: 480px)" srcset="https://dev.livweal.com/wp-content/uploads/assets_2024/home/sad-480.webp">
+                <source media="(max-width: 768px)" srcset="https://dev.livweal.com/wp-content/uploads/assets_2024/home/sad-768.webp">
+                <source media="(max-width: 1280px)" srcset="https://dev.livweal.com/wp-content/uploads/assets_2024/home/sad-1280.webp">
+
+                <img class="bg-sad" src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/sad.webp" />
+            </picture>
+
+            <picture>
+                <source media="(max-width: 480px)" srcset="https://dev.livweal.com/wp-content/uploads/assets_2024/home/happy-480.webp">
+                <source media="(max-width: 768px)" srcset="https://dev.livweal.com/wp-content/uploads/assets_2024/home/happy-768.webp">
+                <source media="(max-width: 1280px)" srcset="https://dev.livweal.com/wp-content/uploads/assets_2024/home/happy-1280.webp">
+
+                <img class="bg-happy" src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/happy.webp" />
+            </picture>
+            
+            <div class="hero-text-container">
+                <div class="hero-text">
+                    <div class="top">
+                        <h1>Your Wealthy Life<br /> Starts Here</h1>
+                        <p>Stop living the life you think you should.</p>
+                        <p>Live the life you wish you would.</p>
+                        <p>You've got this -<br />and we've got you!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="hero-section-bottom">
+            <img id="hero-section-bottom" src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/hero-bottom-divider.webp" />
+        </div>
+        <section id="hero-section-bottom-caption">
+            <div class="hero-captions">
+                <p>Get clear on where you are in your full spectrum of wealth.</p>
+                <p><a href="/assessment/" class="standard-button red" target="_blank">TAKE THE WEALTHY LIFE ASSESSMENT</a></p>
+            </div>
+        </section>
+        <div class="story_section_top">
+            <img id="story_section_top" src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/story-section-top-1920.webp" />
+        </div>
+        <section id="story_section">
+            <h2>Is this your story?</h2>
+            <div id="story_slider">
+                <video id="myVideo" preload="metadata" muted="muted" loop>
+                    <source src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/video/homepage-story.webm" type="video/webm">
+                </video>
+                
+                <video id="myVideoMobile" preload="metadata" muted="muted" loop>
+                    <source src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/video/mobile-homepage-story.webm" type="video/webm">
+                </video>
+            </div>
+        </section>
+        <div class="story_section_bottom">
+            <img id="story_section_bottom" src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/story-section-bottom-1920.webp" />
+        </div>
+        
+        <section id="welcome_section">
+            <img class="leaves1" src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/leaves1.png" />
+            <img class="leaves2" src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/leaves2.png" />
+            <h2>Hi there...</h2>
+
+            <p>Here at LivWeal we help impact-focused entrepreneurs and professionals  (and their teams + loved ones) live their wealthy life by creating the most unique personal and professional experiential learning environments and opportunities you’ll ever encounter.</p>
+
+            <p>We help you with your business growth.</p>
+            <p>We help you with your money growth.</p>
+            <p>We definitely help you with your inner growth.</p>
+        </section>
+
+        <div class="video_section_top">
+            <img id="story_section_bottom" src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/video-section-top-1920.webp" />
+        </div>
+        <section id="video_section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 video-section-image">
+                        <h2>Why you need this...</h2>
+                        <div class="video-container">
+                            <div class="video">
+                              <iframe src="https://player.vimeo.com/video/927788274?h=5efd2c1522&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Homepage_16x9_1.01"></iframe>
+                            </div>
+                        </div>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="offerings_section_top">
+            <img id="offerings_section_top" src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/offerings-section-top-1920.webp" />
+        </div>
+        <section id="offerings_section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-xs-12 col-sm-12">
+                        <div class="offering-item">
+                            <p class="enclosure">
+                                <a href="/freebies">
+                                    <picture>
+                                        <img src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/freebies.webp" />
+                                    </picture>
+                                </a>
+                            </p>
+                            <h3>Freebies</h3>
+                            <div class="short-desc">
+                                <p>Tools to kickstart your journey towards</p>
+                                <p class="mb-5">YOUR WEALTHY LIFE</p>
+                                <p class="mb-5"><a href="/freebies" class="standard-button red">GET ONE (OR ALL)</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-xs-12 col-sm-12">
+                        <div class="offering-item">
+                            <p class="enclosure">
+                                <a href="/dear-money">
+                                    <picture>
+                                        <img src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/money-talk.webp" />
+                                    </picture>
+                                </a>
+                            </p>
+                            <h3>Dear Money, Let’s Talk Retreat&trade;</h3>
+                            <div class="short-desc">
+                                <p class="mb-5">A proven framework that guides you through a heart-to-heart conversation with money that grows self-trust, self-worth, and amplifies your value for powerful exchange with others.</p>
+                                <p class="mb-5"><a href="/dear-money" class="standard-button red">LEARN MORE</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-xs-12 col-sm-12">
+                        <div class="offering-item">
+                            <p class="enclosure">
+                                <a href='javascript://' data-opf-trigger='p2c186826f171'>
+                                    <picture>
+                                        <img src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/new-membership.png" />
+                                    </picture>
+                                </a>
+                            </p>
+                            <h3>My Wealthy Life Membership</h3>
+                            <div class="short-desc">
+                                <p class="mb-5">A practice space for those on the journey of living their wealthy life.</p>
+                                <p class="mb-5"><a href='javascript://' data-opf-trigger='p2c186826f171' class="standard-button red">MORE INFO</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="offerings_section_bottom">
+            <img id="offerings_section_bottom" src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/story-section-top-1920.webp" />
+        </div>
+
+        <section id="testimonials_section">
+            <h2>Testimonials</h2>
+            <div class="container-fluid testimonial-list">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div class="testimonial-item">
+                            <p>
+                                <a id="btn_testimonial1" href="#">
+                                    <picture>
+                                        <img src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/video-1.webp" />
+                                    </picture>
+                                </a>
+                            </p>
+                            <p>Sholeh Shahinfar</p>
+                            <p>Entrepreneur &amp; Speech Therapist</p>
+                            <p><a id="btn_testimonial1_link" href="#" class="standard-button light-green">WATCH FULL VIDEO</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div class="testimonial-item">
+                            <p>
+                                <a id="btn_testimonial2" href="#">
+                                    <picture>
+                                        <img src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/video-2.webp" />
+                                    </picture>
+                                </a>
+                            </p>
+                            <p>Kim Davey</p>
+                            <p>Entrepreneur &amp; Real-Estate Investor</p>
+                            <p><a id="btn_testimonial2_link" href="#" class="standard-button light-green">WATCH FULL VIDEO</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid testimonial-list-desc">
+                <div id="testi-tyler" class="row set_reverse_800 homepage-testimonial">
+                    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                        <div class="text-container">
+                            <p>“Why” should you go through this process with Jennifer? To start…It shows up in your bank account. During this process I purchased my dream home, bought another vacation home, brought on a business partner, signed a $multi-7-figure contract and that’s all really just the cherry on top. My entire life has transformed for the better.</p>
+
+                            <p><strong>Literally everything has changed – how I feel, how I think, and my body. Jennifer offers compassionate but tough coaching that brings out your truth.</strong> </p>
+
+                            <p>That’s the thing that will set you free to reach your potential. It’s why I’ve enrolled my sister and my business partner to do this work too.”</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 text-md-center position-relative">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="https://dev.livweal.com/wp-content/uploads/assets_2024/home/tyler-lowe-mobile.webp">
+                            
+                            <img src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/tyler-lowe.webp">
+                        </picture>
+                        <div class="testimonial-caption">
+                            <span>Tyler Lowe</span>
+                            <span>Cofounder &amp; CEO</span>
+                            <span>Return On Ideas, USA</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="testi-lourdes" class="row homepage-testimonial">
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 text-md-center position-relative">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="https://dev.livweal.com/wp-content/uploads/assets_2024/home/lourdes-paredes-mobile.webp">
+                            <img src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/lourdes-paredes.webp" />
+                        </picture>
+                        <div class="testimonial-caption left-side">
+                            <span>Lourdes Paredes</span>
+                            <span>Entrepreneur &amp; Yoga</span>
+                            <span>Teacher, USA</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                        <div class="text-container">
+                            <p>“I wanted to start the day thanking you for your love and guidance. I hope you don’t mind that I gush all over you from time to time. But I seriously am so grateful for being a part of this community you have created with your intention. Thank you for seeing me, really seeing me, and reflecting that back with gentle force. Thank you for shifting how I am seeing a “problem” and living into a new way of being. It’s so not easy and yet so so essential for me and I believe, for everyone.<br /><br /><br />
+                            <strong>Your way of leadership is healing for me.</strong>”</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </section>
+
+        
+        <section id="rwl_section">
+            <div class="rwl_section_top">
+                <img id="rwl_section_top" src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/rwl-top-1920.webp" />
+            </div>
+            
+            <div class="rwl_section_main_bottom">
+                <h2>Are you ready to live Your Wealthy Life?</h2>
+                <p>Take your first step.</p>
+                <p><a href="/assessment" class="standard-button red">START HERE</a></p>
+            </div>
+            <div class="rwl_section_bottom">
+                <img id="rwl_section_top" src="https://dev.livweal.com/wp-content/uploads/assets_2024/home/rwl-bottom-1920.webp" />
+            </div>
+        </section>
+        <p style="display: none;"><script type='text/javascript' async='true' src='https://app.ontraport.com/js/ontraport/opt_assets/drivers/opf.js' data-opf-uid='p2c186826f171' data-opf-params='borderColor=#fff&borderSize=5px&embed=true&formHeight=600&formWidth=480px&popPosition=mc&instance=1751639376'></script></p>
+    </article>
+
+    <footer id="footer_desktop">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <a href="#" class="footer-logo"><img src="assets/images/livweal-logo-footer.png" /></a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div class="newsletter-box">
+                        <script type="text/javascript" src="https://forms.ontraport.com/v2.4/include/formEditor/genjs-v3.php?html=false&uid=p2c186826f161"></script>
+                        <form class="moonray-form-clearfix" action="https://forms.ontraport.com/v2.4/form_processor.php?" method="post" accept-charset="UTF-8">
+                        <p>Subscribe to our Newsletter</p>
+                        <div class="container-fluid standard-form">
+                            <div class="row">
+                                <div class="col-12 field-item">
+                                    <input name="email" type="email" class="moonray-form-input" id="mr-field-element-243592629670" required value="" placeholder="Name" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 field-item">
+                                    <input type="text" placeholder="Email" />
+                                </div>
+                                <div style="display: none;" class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                                    <label for="mr-field-element-953306770013" class="moonray-form-label">How did you hear about us?</label>
+                                    <input name="f1571" type="text" class="moonray-form-input" id="mr-field-element-953306770013" value="" placeholder />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="submit" name="submit-button" value="SUBSCRIBE" class="standard-button light-green" id="mr-field-element-996842232134" src />
+                                    <div style="display: none;">
+                                        <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="afft_" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="aff_" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="sess_" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="ref_" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="own_" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="oprid" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="contact_id" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="utm_source" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="utm_medium" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="utm_term" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="utm_content" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="utm_campaign" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="referral_page" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="_op_gclid" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="_op_gcid" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="_fbc" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="_fbp" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="uid" type="hidden" value="p2c186826f161" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="uniquep2c186826f161" type="hidden" value="0" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="mopsbbk" type="hidden" value="61F96C9C7E151DD553FDCB1B:9DADFFAC845F364FB20ABD1A" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="mopbelg" type="hidden" value="0166446:1E3234FEF8439B18A2AAA2A5:BEDFB8B80F70D3F7C53B633F" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="_vcid" type="hidden" value="NzkzNTY3fCQyYSQwOCRHbm1KLlNmcnBxWjgxd3lVbnVrT0xleC5PUm5xU2R1bThiNDgvaEMvM0VoQ1dyeUFPNUxsRw==" />
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="social-desktop">
+                                        <a href="https://twitter.com/livweal_"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="http://facebook.com/profile.php?id=100086894267664"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/livweal"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="http://linkedin.com/company/livweal"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                            <ul class="footer-menu">
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/offerings">Offerings</a></li>
+                                <li><a href="/read-watch-and-listen">Read, Watch &amp; Listen</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                            <ul class="footer-menu">
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/press-link">Press Link</a></li>
+                                <li><a href="/podcast">Podcast</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer id="footer_mobile">
+        <div class="newsletter-box">
+            <script type="text/javascript" src="https://forms.ontraport.com/v2.4/include/formEditor/genjs-v3.php?html=false&uid=p2c186826f161"></script>
+            <form class="moonray-form-clearfix" action="https://forms.ontraport.com/v2.4/form_processor.php?" method="post" accept-charset="UTF-8">
+            <p>Subscribe to our Newsletter</p>
+            <div class="container-fluid standard-form">
+                <div class="row">
+                    <div class="col-12 field-item">
+                        <input name="email" type="email" class="moonray-form-input" id="mr-field-element-243592629670" required value="" placeholder="Name" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 field-item">
+                        <input type="text" placeholder="Email" />
+                    </div>
+                    <div style="display: none;" class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                        <label for="mr-field-element-953306770013" class="moonray-form-label">How did you hear about us?</label>
+                        <input name="f1571" type="text" class="moonray-form-input" id="mr-field-element-953306770013" value="" placeholder />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <input type="submit" name="submit-button" value="SUBSCRIBE" class="standard-button light-green" id="mr-field-element-996842232134" src />
+                        <div style="display: none;">
+                            <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="afft_" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="aff_" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="sess_" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="ref_" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="own_" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="oprid" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="contact_id" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="utm_source" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="utm_medium" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="utm_term" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="utm_content" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="utm_campaign" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="referral_page" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="_op_gclid" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="_op_gcid" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="_fbc" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="_fbp" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="uid" type="hidden" value="p2c186826f161" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="uniquep2c186826f161" type="hidden" value="0" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="mopsbbk" type="hidden" value="61F96C9C7E151DD553FDCB1B:9DADFFAC845F364FB20ABD1A" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="mopbelg" type="hidden" value="0166446:1E3234FEF8439B18A2AAA2A5:BEDFB8B80F70D3F7C53B633F" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="_vcid" type="hidden" value="NzkzNTY3fCQyYSQwOCRHbm1KLlNmcnBxWjgxd3lVbnVrT0xleC5PUm5xU2R1bThiNDgvaEMvM0VoQ1dyeUFPNUxsRw==" />
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div> 
+        <div class="links">
+            <ul>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/press-link">Press Link</a></li>
+                <li><a href="/podcast">Podcast</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <p>Follow us on:</p>
+            <div>
+                <a href="https://twitter.com/livweal_"><i class="fa-brands fa-twitter"></i></a>
+                <a href="http://facebook.com/profile.php?id=100086894267664"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/livweal"><i class="fa-brands fa-instagram"></i></a>
+                <a href="http://linkedin.com/company/livweal"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-logo">
+            <a href="#">
+                <img src="assets/images/livweal-logo-footer.webp" />
+            </a>
+        </div>
+    </footer>
+
+    <div id="video_overlay">
+        <a id="close_overlay" href="#"><i class="fa-solid fa-xmark"></i></a> 
+        <div id="overlay_container"></div>
+    </div>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="assets/js/slick.js" defer></script>
+    <script type="text/javascript" src="assets/js/homepage.js" defer></script>
+
+    <script src="assets/js/main.js" defer></script>
+    
+
+</body>
+
+</html>

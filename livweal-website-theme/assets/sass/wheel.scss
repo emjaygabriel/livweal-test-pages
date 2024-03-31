@@ -1,0 +1,476 @@
+// _main.scss
+@import 'variables';
+
+#app {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-family: $font_libre_franklin;
+    .main_h1 {
+        margin-top: 5rem;
+        font-size: $lg_subheading;
+        font-family: $font_kazimir;
+        text-align: center;
+    }
+}
+
+.question {
+    margin-bottom: 2rem;
+  }
+  .range-slider {
+    margin: 10px 0 0 0;
+  }
+  .range-slider {
+    width: 100%;
+  }
+  .range-slider__range {
+    -webkit-appearance: none;
+    width: calc(100% - (73px));
+    height: 10px;
+    border-radius: 5px;
+    background: #d7dcdf;
+    outline: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .range-slider__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2c3e50;
+    cursor: pointer;
+    -webkit-transition: background 0.15s ease-in-out;
+    transition: background 0.15s ease-in-out;
+  }
+  .range-slider__range::-webkit-slider-thumb:hover {
+    background: #1abc9c;
+  }
+  .range-slider__range:active::-webkit-slider-thumb {
+    background: #1abc9c;
+  }
+  .range-slider__range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: #2c3e50;
+    cursor: pointer;
+    -moz-transition: background 0.15s ease-in-out;
+    transition: background 0.15s ease-in-out;
+  }
+  .range-slider__range::-moz-range-thumb:hover {
+    background: #1abc9c;
+  }
+  .range-slider__range:active::-moz-range-thumb {
+    background: #1abc9c;
+  }
+  .range-slider__range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1abc9c;
+  }
+  
+  .range-slider__value {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    background: #2c3e50;
+    padding: 5px 10px;
+    margin-left: 8px;
+  }
+  .range-slider__value:after {
+    position: absolute;
+    top: 8px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid #2c3e50;
+    border-bottom: 7px solid transparent;
+    content: "";
+  }
+  
+  ::-moz-range-track {
+    background: #d7dcdf;
+    border: 0;
+  }
+  
+  input::-moz-focus-inner,
+  input::-moz-focus-outer {
+    border: 0;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .nav-button {
+    border: 0;
+    background-color: #14594c;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .livweal_slide { padding-top: 7.5rem; padding-bottom: 7.5rem; }
+  .livweal_slide h2 {
+    margin-bottom: 2rem;
+  }
+  .mbottom-2 {
+    margin-bottom: 2rem;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .wheel-form {
+    margin: 2rem auto 0 auto;
+    max-width: 380px;
+  }
+  .wheel-form .form-fields {
+    margin-bottom: 1rem;
+  }
+  .wheel-form .form-fields label {
+    display: block;
+  }
+  .wheel-form .form-fields input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: #000 !important;
+    display: block;
+    font-size: 1rem;
+  }
+  
+  .moonray-form-input {
+    color: #000 !important;
+  }
+  
+  #somatic_wealth_slide .range-slider__value {
+    background-color: #14594c;
+  }
+  #somatic_wealth_slide .range-slider__value:after {
+    border-right: 7px solid #14594c;
+  }
+  #somatic_wealth_slide .range-slider__range::-webkit-slider-thumb {
+    background-color: #14594c;
+  }
+  #somatic_wealth_slide .range-slider__range::-webkit-slider-thumb:hover {
+    background-color: #14594c;
+  }
+  #somatic_wealth_slide .range-slider__range:active::-webkit-slider-thumb {
+    background-color: #14594c;
+  }
+  #somatic_wealth_slide .range-slider__range::-moz-range-thumb {
+    background-color: #14594c;
+  }
+  #somatic_wealth_slide .range-slider__range::-moz-range-thumb:hover {
+    background-color: #14594c;
+  }
+  #somatic_wealth_slide .range-slider__range:active::-moz-range-thumb {
+    background-color: #14594c;
+  }
+  #somatic_wealth_slide .range-slider__range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px #14594c;
+  }
+  
+  #mental_wealth_slide .range-slider__value {
+    background-color: #253671;
+  }
+  #mental_wealth_slide .range-slider__value:after {
+    border-right: 7px solid #253671;
+  }
+  #mental_wealth_slide .range-slider__range::-webkit-slider-thumb {
+    background-color: #253671;
+  }
+  #mental_wealth_slide .range-slider__range::-webkit-slider-thumb:hover {
+    background-color: #253671;
+  }
+  #mental_wealth_slide .range-slider__range:active::-webkit-slider-thumb {
+    background-color: #253671;
+  }
+  #mental_wealth_slide .range-slider__range::-moz-range-thumb {
+    background-color: #253671;
+  }
+  #mental_wealth_slide .range-slider__range::-moz-range-thumb:hover {
+    background-color: #253671;
+  }
+  #mental_wealth_slide .range-slider__range:active::-moz-range-thumb {
+    background-color: #253671;
+  }
+  #mental_wealth_slide .range-slider__range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px #253671;
+  }
+  
+  #emotional_wealth_slide .range-slider__value {
+    background-color: #831220;
+  }
+  #emotional_wealth_slide .range-slider__value:after {
+    border-right: 7px solid #831220;
+  }
+  #emotional_wealth_slide .range-slider__range::-webkit-slider-thumb {
+    background-color: #831220;
+  }
+  #emotional_wealth_slide .range-slider__range::-webkit-slider-thumb:hover {
+    background-color: #831220;
+  }
+  #emotional_wealth_slide .range-slider__range:active::-webkit-slider-thumb {
+    background-color: #831220;
+  }
+  #emotional_wealth_slide .range-slider__range::-moz-range-thumb {
+    background-color: #831220;
+  }
+  #emotional_wealth_slide .range-slider__range::-moz-range-thumb:hover {
+    background-color: #831220;
+  }
+  #emotional_wealth_slide .range-slider__range:active::-moz-range-thumb {
+    background-color: #831220;
+  }
+  #emotional_wealth_slide .range-slider__range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px #831220;
+  }
+  
+  #interpersonal_wealth_slide .range-slider__value {
+    background-color: #4f3080;
+  }
+  #interpersonal_wealth_slide .range-slider__value:after {
+    border-right: 7px solid #4f3080;
+  }
+  #interpersonal_wealth_slide .range-slider__range::-webkit-slider-thumb {
+    background-color: #4f3080;
+  }
+  #interpersonal_wealth_slide .range-slider__range::-webkit-slider-thumb:hover {
+    background-color: #4f3080;
+  }
+  #interpersonal_wealth_slide .range-slider__range:active::-webkit-slider-thumb {
+    background-color: #4f3080;
+  }
+  #interpersonal_wealth_slide .range-slider__range::-moz-range-thumb {
+    background-color: #4f3080;
+  }
+  #interpersonal_wealth_slide .range-slider__range::-moz-range-thumb:hover {
+    background-color: #4f3080;
+  }
+  #interpersonal_wealth_slide .range-slider__range:active::-moz-range-thumb {
+    background-color: #4f3080;
+  }
+  #interpersonal_wealth_slide .range-slider__range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px #4f3080;
+  }
+  
+  #energetic_wealth_slide .range-slider__value {
+    background-color: #d06c68;
+  }
+  #energetic_wealth_slide .range-slider__value:after {
+    border-right: 7px solid #d06c68;
+  }
+  #energetic_wealth_slide .range-slider__range::-webkit-slider-thumb {
+    background-color: #d06c68;
+  }
+  #energetic_wealth_slide .range-slider__range::-webkit-slider-thumb:hover {
+    background-color: #d06c68;
+  }
+  #energetic_wealth_slide .range-slider__range:active::-webkit-slider-thumb {
+    background-color: #d06c68;
+  }
+  #energetic_wealth_slide .range-slider__range::-moz-range-thumb {
+    background-color: #d06c68;
+  }
+  #energetic_wealth_slide .range-slider__range::-moz-range-thumb:hover {
+    background-color: #d06c68;
+  }
+  #energetic_wealth_slide .range-slider__range:active::-moz-range-thumb {
+    background-color: #d06c68;
+  }
+  #energetic_wealth_slide .range-slider__range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px #d06c68;
+  }
+  
+  #financial_wealth_slide .range-slider__value {
+    background-color: #b0c39a;
+  }
+  #financial_wealth_slide .range-slider__value:after {
+    border-right: 7px solid #b0c39a;
+  }
+  #financial_wealth_slide .range-slider__range::-webkit-slider-thumb {
+    background-color: #b0c39a;
+  }
+  #financial_wealth_slide .range-slider__range::-webkit-slider-thumb:hover {
+    background-color: #b0c39a;
+  }
+  #financial_wealth_slide .range-slider__range:active::-webkit-slider-thumb {
+    background-color: #b0c39a;
+  }
+  #financial_wealth_slide .range-slider__range::-moz-range-thumb {
+    background-color: #b0c39a;
+  }
+  #financial_wealth_slide .range-slider__range::-moz-range-thumb:hover {
+    background-color: #b0c39a;
+  }
+  #financial_wealth_slide .range-slider__range:active::-moz-range-thumb {
+    background-color: #b0c39a;
+  }
+  #financial_wealth_slide .range-slider__range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px #b0c39a;
+  }
+  
+  /* #somatic_wealth_chart { margin-left: auto; margin-right: auto; } */
+  .canvas_parent {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .overall_average {
+    margin-top: -2rem;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .specific_wheel_progress {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* living wealthy wheel */
+  #introduction_slide {
+    margin-top: 5rem;
+    .new-box {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 5rem;
+      img {
+        max-width: 640px;
+      }
+    }
+    .main-title {
+      h1 {
+        text-align: center;
+        font-size: $lg_heading;
+        font-family: $font_kazimir;
+        margin-bottom: 5rem;
+      }
+    }
+    .direction-box {
+      background-color: $light_green;
+      padding: 3rem 6rem;
+      color: #fff;
+      margin-bottom: 5rem;
+      h2 {
+        font-family: $font_kazimir;
+        font-size: $lg_subheading2;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: $lg_paragraph;
+      }
+    }
+    .love-warning {
+      margin-bottom: 5rem;
+      .love-warning-logo {
+        width: 80%;
+      }
+      h2 {
+        font-size: $lg_subheading;
+        color: $primary_color2;
+        margin-bottom: 2rem;
+        font-family: $font_kazimir;
+      }
+      p {
+        font-size: $lg_paragraph;
+        font-family: $font_libre_franklin;
+        line-height: 1.5;
+      }
+    }
+    .important-note {
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        padding: 1rem 0rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      p {
+        font-size: $lg_paragraph;
+        font-family: $font_libre_franklin;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .specific_wealth_score {
+		font-size: 2rem;
+		font-family: 'Kazimir-Regular' !important;
+		margin-bottom: 0.5rem;
+		text-align: center;
+		padding-bottom: 0;
+		font-weight: normal;
+	}
+
+	.specific_wealth_possible_score {
+		font-size: 1.5rem;
+		font-family: 'Kazimir-Regular' !important;
+		text-align: center;
+		padding-bottom: 0;
+		font-weight: normal;
+	}
+  
+  @media (max-width: 960px) {
+    /* Your styles for screens with a width of 960 pixels or less go here */
+    #introduction_slide .green-box {
+      padding: 2rem;
+    }
+    #introduction_slide .green-box img {
+      width: 100%;
+    }
+    #introduction_slide .main-title h1 {
+      font-size: 40px;
+      margin-bottom: 4rem;
+      line-height: 1.3;
+    }
+    #introduction_slide .direction-box {
+      padding: 2rem;
+    }
+    #introduction_slide .love-warning .love-warning-logo {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    #introduction_slide .love-warning h2 {
+      text-align: center;
+      font-size: 40px;
+      line-height: 1.3;
+    }
+    .livweal_slide .row {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .question:first-child {
+      margin-top: 4rem;
+    }
+  
+    .wheel-form {
+      max-width: 380px;
+    }
+  
+    .overall_average {
+      margin-top: 2rem;
+      line-height: 1.5;
+    }
+  
+    #final_result_slide h1 {
+      margin-bottom: 3rem;
+      line-height: 1.5;
+    }
+  }
+  

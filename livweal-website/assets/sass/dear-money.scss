@@ -1,0 +1,247 @@
+// _offerings.scss
+
+@import 'variables';
+
+//Notes:
+// You need SASS compiler for this. Install Sass then run/compile SASS in console. 
+// Example: sass input.scss output.css
+// Example for compressed: sass --style compressed input.scss output.min.css
+
+#hero-section {
+    position: relative;
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .wave-white {
+        position: absolute;
+        width:100%;
+        bottom: -5px;
+    }
+}
+
+#lets-talk-section {
+    background-color: #fff;
+    position: relative;
+    .wave-cream {
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+    }
+    .back_to_browse {
+        font-size: 1.5rem;
+        color: $primary_color2;
+        display: inline-block;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+    .lets-talk-box {
+        padding: 0rem 8rem 10rem 8rem;
+        h2 {
+            padding-bottom: 0;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: $primary_color2;
+            font-family: $font_kazimir !important;
+        }
+        p {
+            padding-bottom: 0;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .image_placeholder {
+        max-width: 863px;
+        height: 486px;
+        background-color: #aaa;
+        border-radius: 15px;
+    }
+}
+
+#events-section {
+    min-height: 500px;
+    background-color: $light_color2;
+    position: relative;
+    margin-top: -5px;
+    padding: 5rem 8rem 12rem 8rem;
+    .events-box {
+        h2 {
+            padding-bottom: 0;
+            text-align: center;
+            font-size: 2.5rem;
+            color: $primary_color2;
+            margin-bottom: 4rem;
+            font-family: $font_amalfi !important;
+        }
+        .event-option {
+            margin-bottom: 2rem;
+            .image {
+                position: relative;
+                img {
+                    width: 100%;
+                    border-radius: 1.5rem 1.5rem 0 0;
+                }
+                .zoom-event {
+                    width: auto;
+                    border-radius: 0;
+                    position: absolute;
+                    bottom: 1rem;
+                    right: 1rem;
+                }
+            }
+            &.live {
+                .option-info { 
+                    background-color: $primary_color;
+                }
+            }
+            .option-info {
+                background-color: $red_color;
+                padding: 1rem 1rem 2rem 1rem;
+                text-align: center;
+                border-radius: 0 0 1.5rem 1.5rem;
+                p {
+                    padding-bottom: 0;
+                    font-size: 1.2rem;
+                    text-align: center;
+                    font-family: $font_libre_franklin !important;
+                    color: #fff;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &.date {
+                        font-family: $font_kazimir !important;
+                        margin-bottom: 0.5rem;
+                        font-weight: bold;
+                    }
+                    &.short-desc {
+                        font-family: $font_libre_franklin !important;
+                        margin-bottom: 1.5rem;
+                    }
+                    .standard-button {
+                        font-family: $font_libre_franklin !important;
+                    }
+                    
+                }
+                .standard-button {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+.footer-bottom2 {
+    position: relative;
+    margin-top: -110px;
+    img {
+        width: 100%;
+    }
+}
+
+#footer_desktop {
+    position: relative;
+    background-color: #033128;
+    margin-top: -13px;
+}
+
+#footer_mobile {
+    position: relative;
+    background-color: #033128;
+    margin-top: -25px;
+}
+
+.video-container {
+    border-radius: 20px; 
+    overflow: hidden;
+    .video {
+        position:relative; 
+        padding:56.25% 0 0 0;
+        iframe {
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1536px) { 
+    #events-section {
+        padding: 5rem 6rem 12rem 6rem;
+    }
+    #lets-talk-section .lets-talk-box {
+        padding: 0rem 6rem 10rem 6rem;
+    }
+}
+
+@media screen and (max-width: 1360px) { 
+    #events-section {
+        padding: 5rem 4rem 12rem 4rem;
+    }
+    #lets-talk-section .lets-talk-box {
+        padding: 0rem 4rem 10rem 4rem;
+    }
+}
+
+@media screen and (max-width: 1280px) { 
+    #events-section {
+        padding: 5rem 2rem 12rem 2rem;
+    }
+    #lets-talk-section .lets-talk-box {
+        padding: 0rem 2rem 10rem 2rem;
+    }
+}
+
+@media screen and (max-width: 1180px) { 
+    #hero-section {
+        margin-top: 50px;
+    }
+}
+
+
+@media screen and (max-width: 1199px) { 
+    #events-section {
+        padding: 5rem 2rem 8rem 2rem;
+    }
+    #lets-talk-section .lets-talk-box {
+        padding: 0rem 2rem 5rem 2rem;
+    }
+}
+
+@media screen and (max-width: 918px) { 
+    #events-section .events-box h2,
+    #lets-talk-section .lets-talk-box h2 {
+        font-size: 1.8rem;
+    }
+    #events-section .events-box .event-option .option-info p {
+        font-size: 1rem;
+    }
+    #events-section .events-box .event-option .option-info .standard-button {
+        font-size: 1rem;
+    }
+    #lets-talk-section .lets-talk-box p:last-child {
+        margin-bottom: 2rem;
+    }
+    #lets-talk-section .lets-talk-box p {
+        font-size: 1rem;
+    }
+    #lets-talk-section .back_to_browse {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 380px) { 
+    #events-section {
+        padding: 5rem 1rem 8rem 1rem;
+    }
+    #lets-talk-section .lets-talk-box {
+        padding: 0rem 1rem 5rem 1rem;
+    }
+}
