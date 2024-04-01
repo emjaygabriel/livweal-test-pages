@@ -765,96 +765,96 @@ new Vue({
         },
         renderFinalResult() {
             // Chart.js configuration
-            const ctx = document.getElementById('final_result_chart').getContext('2d');
+            // const ctx = document.getElementById('final_result_chart').getContext('2d');
         
-            const $data = [
-                this.somatic_wealth_question1,
-                this.somatic_wealth_question2,
-                this.somatic_wealth_question3,
-                this.somatic_wealth_question4,
-                this.somatic_wealth_question5,
-                this.mental_wealth_question1,
-                this.mental_wealth_question2,
-                this.mental_wealth_question3,
-                this.mental_wealth_question4,
-                this.mental_wealth_question5,
-                this.emotional_wealth_question1,
-                this.emotional_wealth_question2,
-                this.emotional_wealth_question3,
-                this.emotional_wealth_question4,
-                this.emotional_wealth_question5,
-                this.interpersonal_wealth_question1,
-                this.interpersonal_wealth_question2,
-                this.interpersonal_wealth_question3,
-                this.interpersonal_wealth_question4,
-                this.interpersonal_wealth_question5,
-                this.energetic_wealth_question1,
-                this.energetic_wealth_question2,
-                this.energetic_wealth_question3,
-                this.energetic_wealth_question4,
-                this.energetic_wealth_question5,
-                this.financial_wealth_question1,
-                this.financial_wealth_question2,
-                this.financial_wealth_question3,
-                this.financial_wealth_question4,
-                this.financial_wealth_question5,
-            ];
+            // const $data = [
+            //     this.somatic_wealth_question1,
+            //     this.somatic_wealth_question2,
+            //     this.somatic_wealth_question3,
+            //     this.somatic_wealth_question4,
+            //     this.somatic_wealth_question5,
+            //     this.mental_wealth_question1,
+            //     this.mental_wealth_question2,
+            //     this.mental_wealth_question3,
+            //     this.mental_wealth_question4,
+            //     this.mental_wealth_question5,
+            //     this.emotional_wealth_question1,
+            //     this.emotional_wealth_question2,
+            //     this.emotional_wealth_question3,
+            //     this.emotional_wealth_question4,
+            //     this.emotional_wealth_question5,
+            //     this.interpersonal_wealth_question1,
+            //     this.interpersonal_wealth_question2,
+            //     this.interpersonal_wealth_question3,
+            //     this.interpersonal_wealth_question4,
+            //     this.interpersonal_wealth_question5,
+            //     this.energetic_wealth_question1,
+            //     this.energetic_wealth_question2,
+            //     this.energetic_wealth_question3,
+            //     this.energetic_wealth_question4,
+            //     this.energetic_wealth_question5,
+            //     this.financial_wealth_question1,
+            //     this.financial_wealth_question2,
+            //     this.financial_wealth_question3,
+            //     this.financial_wealth_question4,
+            //     this.financial_wealth_question5,
+            // ];
 
-            this.preview_link = `https://livweal.com/wheel-preview/?q1=${this.somatic_wealth_question1}&q2=${this.somatic_wealth_question2}&q3=${this.somatic_wealth_question3}&q4=${this.somatic_wealth_question4}&q5=${this.somatic_wealth_question5}&q6=${this.mental_wealth_question1}&q7=${this.mental_wealth_question2}&q8=${this.mental_wealth_question3}&q9=${this.mental_wealth_question4}&q10=${this.mental_wealth_question5}&q11=${this.emotional_wealth_question1}&q12=${this.emotional_wealth_question2}&q13=${this.emotional_wealth_question3}&q14=${this.emotional_wealth_question4}&q15=${this.emotional_wealth_question5}&q16=${this.interpersonal_wealth_question1}&q17=${this.interpersonal_wealth_question2}&q18=${this.interpersonal_wealth_question3}&q19=${this.interpersonal_wealth_question4}&q20=${this.interpersonal_wealth_question5}&q21=${this.energetic_wealth_question1}&q22=${this.energetic_wealth_question2}&q23=${this.energetic_wealth_question3}&q24=${this.energetic_wealth_question4}&q25=${this.energetic_wealth_question5}&q26=${this.financial_wealth_question1}&q27=${this.financial_wealth_question2}&q28=${this.financial_wealth_question3}&q29=${this.financial_wealth_question4}&q30=${this.financial_wealth_question5}`;
+            this.preview_link = `https://livweal.com/assessment-result/?q1=${this.somatic_wealth_question1}&q2=${this.somatic_wealth_question2}&q3=${this.somatic_wealth_question3}&q4=${this.somatic_wealth_question4}&q5=${this.somatic_wealth_question5}&q6=${this.mental_wealth_question1}&q7=${this.mental_wealth_question2}&q8=${this.mental_wealth_question3}&q9=${this.mental_wealth_question4}&q10=${this.mental_wealth_question5}&q11=${this.emotional_wealth_question1}&q12=${this.emotional_wealth_question2}&q13=${this.emotional_wealth_question3}&q14=${this.emotional_wealth_question4}&q15=${this.emotional_wealth_question5}&q16=${this.interpersonal_wealth_question1}&q17=${this.interpersonal_wealth_question2}&q18=${this.interpersonal_wealth_question3}&q19=${this.interpersonal_wealth_question4}&q20=${this.interpersonal_wealth_question5}&q21=${this.energetic_wealth_question1}&q22=${this.energetic_wealth_question2}&q23=${this.energetic_wealth_question3}&q24=${this.energetic_wealth_question4}&q25=${this.energetic_wealth_question5}&q26=${this.financial_wealth_question1}&q27=${this.financial_wealth_question2}&q28=${this.financial_wealth_question3}&q29=${this.financial_wealth_question4}&q30=${this.financial_wealth_question5}`;
             
-            this.final_result_chart = new Chart(ctx, {
-                type: 'polarArea',
-                data: {
-                    labels: this.calculateAverage(),
-                    datasets: [{
-                        label: 'Living Wealthy Wheel',
-                        data: $data,
-                        backgroundColor: [
-                            ...this.options.colors.somatic_wealth,
-                            ...this.options.colors.mental_wealth,
-                            ...this.options.colors.emotional_wealth,
-                            ...this.options.colors.interpersonal_wealth,
-                            ...this.options.colors.energetic_wealth,
-                            ...this.options.colors.financial_wealth
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    },
-                    scale: {
-                        ticks: {
-                            display: false,
-                            beginAtZero: true,
-                            steps: 0,
-                            stepValue: 5,
-                            max: 100,
-                            suggestedMax: 100,
-                            suggestedMin: 0
-                        }
-                    },
-                    scales: {
-                        r: {
-                            pointLabels: {
-                                display: true,
-                                centerPointLabels: true,
-                                font: {
-                                    size: this.arc_label_font_size
-                                },
-                                arc: true,
-                                position: 'outside'
-                            },
-                            ticks: {
-                                display: false // Remove vertical numbers
-                            }
-                        }
-                    }
-                }
-            });
+            // this.final_result_chart = new Chart(ctx, {
+            //     type: 'polarArea',
+            //     data: {
+            //         labels: this.calculateAverage(),
+            //         datasets: [{
+            //             label: 'Living Wealthy Wheel',
+            //             data: $data,
+            //             backgroundColor: [
+            //                 ...this.options.colors.somatic_wealth,
+            //                 ...this.options.colors.mental_wealth,
+            //                 ...this.options.colors.emotional_wealth,
+            //                 ...this.options.colors.interpersonal_wealth,
+            //                 ...this.options.colors.energetic_wealth,
+            //                 ...this.options.colors.financial_wealth
+            //             ],
+            //             borderWidth: 1
+            //         }]
+            //     },
+            //     options: {
+            //         plugins: {
+            //             legend: {
+            //                 display: false
+            //             }
+            //         },
+            //         scale: {
+            //             ticks: {
+            //                 display: false,
+            //                 beginAtZero: true,
+            //                 steps: 0,
+            //                 stepValue: 5,
+            //                 max: 100,
+            //                 suggestedMax: 100,
+            //                 suggestedMin: 0
+            //             }
+            //         },
+            //         scales: {
+            //             r: {
+            //                 pointLabels: {
+            //                     display: true,
+            //                     centerPointLabels: true,
+            //                     font: {
+            //                         size: this.arc_label_font_size
+            //                     },
+            //                     arc: true,
+            //                     position: 'outside'
+            //                 },
+            //                 ticks: {
+            //                     display: false // Remove vertical numbers
+            //                 }
+            //             }
+            //         }
+            //     }
+            // });
             
             this.current_chart++;
             document.getElementById('nav_buttons').style.display = 'none';

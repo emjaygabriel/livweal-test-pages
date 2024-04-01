@@ -8,7 +8,8 @@
 
 #hero-section {
     position: relative;
-    height: 980px;
+    // height: 980px;
+    z-index: 10;
     .hero-bg {
         width: 100%;
         height: 100%;
@@ -31,14 +32,14 @@
                 margin: 0 0 2rem 0;
                 font-family: $font_kazimir !important;
                 font-weight: normal;
-                font-size: 3.5rem;
+                font-size: 3rem;
             }
             p {
                 color: #fff;
                 line-height: 1.5;
                 padding: 0;
                 font-family: $font_libre_franklin !important;
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 font-weight: normal;
                 margin-left: 3rem;
                 margin-right: 3rem;
@@ -50,9 +51,13 @@
 #provide-support-you {
     overflow: hidden;
     position: relative;
+    z-index: 1;
+    margin-top: -155px;
+    background-color: $light-color2;
     .separator-top {
         position: relative;
         z-index: 1;
+        width: 100%;
     }
     .leaves-left {
         position: absolute;
@@ -71,12 +76,12 @@
         z-index: 10;
         .about-content {
             width: 50%;
-            margin: 6rem auto 6rem auto;
+            margin: 10rem auto 16rem auto;
             text-align: center;
             h3 {
                 line-height: 1.5;
                 font-family: $font_amalfi !important;
-                font-size: 2.5rem;
+                font-size: 2.2rem;
                 color: $primary_color2;
                 margin-bottom: 2rem;
             }
@@ -84,10 +89,640 @@
                 line-height: 1.5;
                 padding-bottom: 0;
                 font-family: $font_libre_franklin !important;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 color: $primary_color2;
                 margin-bottom: 5rem;
             }
         }
+    }
+}
+
+#founder-note {
+    z-index: 20;
+    position: relative;
+    margin-top: -245px;
+    .separator-top {
+        width: 100%;
+    }
+    .separator-bottom {
+        width: 100%;
+    }
+    .row {
+        display: flex;
+        align-items: center;
+    }
+    .founder-note-content {
+        margin-top: -5px;
+        background: rgb(4,50,41);
+        background: linear-gradient(180deg, rgba(4,50,41,1) 0%, rgba(13,71,60,1) 100%);
+        padding: 3rem 5rem 3rem 5rem;
+        .placeholder-box {
+            padding: 0 5rem 0 5rem;
+            .the-box {
+                width: 100%;
+                background-color: #aaa;
+                border-radius: 30px;
+                height: 600px;
+            }
+        }
+    }
+    h3 {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        font-family: $font_kazimir !important;
+        color: $light_color2;
+        font-size: 2.2rem;
+        span {
+            display: block;
+            padding: 0;
+            font-family: $font_amalfi;
+        }
+    }
+}
+
+#what-we-stand-for {
+    position: relative;
+    z-index: 10;
+    background-color: $light-color2;
+    margin-top: -130px;
+    .right-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .what-we-stand-for-content {
+        width: 60%;
+        padding: 10rem 15rem 10rem 15rem;
+        position: relative;
+        h2 {
+            color: $primary_color;
+            text-align: center;
+            font-family: $font_kazimir !important;
+            font-size: 2.2rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            &.sub-h2 {
+                margin-bottom: 5rem;
+            }
+            span {
+                font-family: $font_amalfi;
+            }
+        }
+        p {
+            line-height: 1.5;
+            font-family: $font_libre_franklin !important;;
+            padding: 0;
+            color: $primary_color;
+            font-size: 1.2rem;
+            text-align: center;
+            &:last-child {
+                margin-top: 7rem;
+            }
+        }
+    }
+}
+
+#our-values {
+    position: relative;
+    z-index: 11;
+    margin-top:-145px;
+    .separator-top {
+        width: 100%;
+    }
+    .bird {
+        position: absolute;
+        top: 7rem;
+        left: 0;
+    }
+    .our-values-content {
+        padding: 5rem 10rem 10rem 10rem;
+        background-color: $light_green;
+        margin-top: -5px;
+        h2 {
+            color: $light-color2;
+            font-size: 2.2rem;
+            font-family: $font_kazimir !important;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: bold;
+            span {
+                font-family: $font_amalfi !important;
+            }
+        }
+        .values-item{
+            margin-bottom: 2rem;
+            background-color: $light-color2;
+            padding: 4rem 8rem 4rem 8rem;
+            border-radius: 15px;
+            text-align: center;
+            h3 {
+                font-size: 1.5rem;
+                color: $light_green;
+                margin-bottom: 0.5rem;
+                font-family: $font_kazimir !important;
+                line-height: 1.5;
+            }
+            p {
+                padding: 0;
+                font-family: $font_libre_franklin !important;
+                line-height: 1.5;
+                color: $light_green;
+                margin: 0;
+                font-size: 1.2rem;
+            }
+
+        }
+    }
+}
+
+#testimonials {
+    position: relative;
+    z-index: 12;
+    margin-top: -130px;
+    .testimonials-bg {
+        width: 100%;
+        // height: 100%;
+        height: 850px;
+        object-fit: cover;
+        object-position: top;
+    }
+    .separator-top {
+        width: 100%;
+    }
+    .testimonials-container {
+        position: absolute;
+        top: 10rem;
+        width: 100%;
+        padding: 0rem 10rem 0rem 10rem;
+        h2 {
+            color: $primary_color;
+            font-size: 3rem;
+            font-family: $font_kazimir !important;
+            margin: 0 0 3rem 0;
+            text-align: center;
+            font-weight: normal;
+        }
+        .testimonials-content {
+            .testimonial-item {
+                border: 2px solid $primary_color;
+                border-radius: 15px;
+                padding: 2rem;
+                p {
+                    padding: 0;
+                    &.testi-content {
+                        font-family: $font_libre_franklin !important;
+                        color: $primary_color;
+                        margin-bottom: 5rem;
+                        font-size :1.2rem;
+                    }
+                    &.testi-author {
+                        font-family: $font_amalfi !important;
+                        color: $primary_color;
+                        margin-bottom: 1rem;
+                        font-size: 1.8rem;;
+                    }
+                    &.testi-short-blurb {
+                        font-family: $font_kazimir;
+                        color: $primary_color;
+                        margin-bottom: 0;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#bottom-footer {
+    margin-top: -150px;
+    position: relative;
+    z-index: 13;
+    margin-bottom: 0;
+    img {
+        width: 100%;
+    }
+}
+
+#footer_desktop {
+    display: block;
+    background-color: #033128;
+    padding: 4rem 1rem;
+    margin-top: -5px;
+    position: relative;
+    z-index: 14;
+}
+
+@media screen and (max-width: 1800px) {
+    #hero-section .hero-container {
+        top: 17rem;
+    }
+    #our-values {
+        margin-top: -155px;
+    }
+    #what-we-stand-for .what-we-stand-for-content {
+        padding: 10rem 15rem 10rem 15rem;
+    }
+
+    #what-we-stand-for .what-we-stand-for-content p:last-child {
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    #hero-section .hero-container {
+        top: 16rem;
+    }
+    #provide-support-you .about-container .about-content {
+        width: 40%;
+    }
+    #what-we-stand-for .what-we-stand-for-content {
+        padding: 10rem 10rem 10rem 10rem;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    #testimonials .testimonials-container {
+        top: 7.5rem;
+    }
+    #what-we-stand-for .what-we-stand-for-content {
+        padding: 10rem 7rem 10rem 7rem;
+    }
+}
+
+@media screen and (max-width: 1536px) { 
+    #what-we-stand-for .what-we-stand-for-content {
+        width: 50%;
+        padding: 10rem 5rem 10rem 6rem;
+    }
+    #our-values .our-values-content {
+        padding: 5rem 5rem 10rem 5rem;
+
+    }
+    #our-values .our-values-content .values-item {
+        padding: 2rem 4rem 2rem 4rem;
+    }
+    #testimonials .testimonials-container {
+        padding: 0rem 5rem 0rem 5rem;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    #hero-section .hero-container {
+        top: 15rem;
+    }
+    #founder-note .founder-note-content {
+        padding: 3rem 2rem 3rem 5rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #hero-section .hero-container {
+        top: 14rem;
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    #hero-section .hero-container {
+        top: 13rem;
+    }
+    #hero-section .hero-container .hero-info {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #hero-section .hero-container {
+        top: 12rem;
+    }
+    #what-we-stand-for .what-we-stand-for-content {
+        width: 55%;
+        padding: 10rem 5rem 10rem 6rem;
+    }
+    #testimonials .testimonials-bg {
+        height: 920px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #hero-section .hero-container {
+        top: 11rem;
+    }
+    #hero-section .hero-container .hero-info h1 {
+        font-size: 2.2rem;
+    }
+    #hero-section .hero-container .hero-info p {
+        font-size: 1rem;
+    }
+    #provide-support-you .about-container .about-content h3 {
+        font-size: 2rem;
+    }
+    #provide-support-you .about-container .about-content p {
+        font-size: 1rem;
+        margin-bottom: 4rem;
+    }
+    #provide-support-you .leaves-left { width: 460px; }
+    #provide-support-you .leaves-right { width: 460px; }
+    #founder-note .founder-note-content {
+        padding: 3rem 0rem 3rem 3rem;
+    }
+    #founder-note .founder-note-content .placeholder-box {
+        padding: 0 5rem 0 2rem;
+    }
+    #founder-note .founder-note-content .placeholder-box .the-box {
+        height: 475px;
+    }
+    #founder-note h3 {
+        font-size: 2rem;
+    }
+    #founder-note h3 span {
+        font-size: 2.2rem;
+    }
+    #what-we-stand-for .what-we-stand-for-content {
+        padding: 10rem 5rem 10rem 6rem;
+    }
+    #what-we-stand-for .what-we-stand-for-content h2.sub-h2 {
+        margin-bottom: 3rem;
+    }
+    #our-values .our-values-content {
+        padding: 5rem 3rem 10rem 3rem;
+    }
+    #what-we-stand-for .what-we-stand-for-content h2 {
+        font-size: 2rem;
+    }
+    #what-we-stand-for .what-we-stand-for-content p {
+        font-size: 1rem;
+    }
+    #our-values .our-values-content h2 {
+        font-size: 2rem;
+    }
+    #our-values .our-values-content .values-item h3 {
+        font-size: 1.3rem;
+    }
+    #our-values .our-values-content .values-item p {
+        font-size: 1rem;
+    }
+    #testimonials .testimonials-bg {
+        height: 830px;
+    }
+    #testimonials .testimonials-container {
+        padding: 0rem 3rem 0rem 3rem;
+        top: 5.5rem;
+    }
+    #testimonials .testimonials-container h2{
+        font-size: 2rem;
+    }
+    #testimonials .testimonials-container .testimonials-content .testimonial-item p.testi-content {
+        font-size: 1rem;
+    }
+    #testimonials .testimonials-container .testimonials-content .testimonial-item p.testi-author {
+        font-size: 1.4rem;
+    }
+    #testimonials .testimonials-container .testimonials-content .testimonial-item p.testi-short-blurb {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #hero-section .hero-container {
+        top: 9.5rem;
+    }
+    #founder-note h3 {
+        margin-bottom: 2rem;
+    }
+    #founder-note .founder-note-content {
+        padding: 1rem 3rem 3rem 3rem;
+    }
+    #founder-note .founder-note-content .placeholder-box {
+        padding: 0 0rem 0 0rem;
+    }
+    #what-we-stand-for .what-we-stand-for-content {
+        width: 60%;
+        padding: 10rem 5rem 10rem 6rem;
+    }
+    #testimonials .testimonials-container .testimonials-content .testimonial-item {
+        margin-bottom: 2rem;
+    }
+    #testimonials .testimonials-bg {
+        height: 1070px;
+        object-position: center 13rem;
+        background-color: #fff;
+    }
+    #provide-support-you .leaves-left,
+    #provide-support-you .leaves-right {
+        display: none;
+    }
+    #provide-support-you .about-container .about-content {
+        width: 60%;
+        margin: 12rem auto 18rem auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #hero-section .hero-container {
+        top: 8.5rem;
+    }
+    #testimonials .testimonials-bg {
+        height: 1120px;
+    }
+}
+
+@media screen and (max-width: 863px) { 
+    #hero-section .hero-container .hero-info {
+        width: 80%;
+    }
+    #what-we-stand-for .what-we-stand-for-content {
+        width: 70%;
+        padding: 10rem 4rem 10rem 4rem;
+    }
+    
+}
+
+@media screen and (max-width: 768px) { 
+    #hero-section .hero-container {
+        top: 6.5rem;
+    }
+    #hero-section .hero-container .hero-info h1,
+    #provide-support-you .about-container .about-content h3,
+    #founder-note h3,
+    #what-we-stand-for .what-we-stand-for-content h2,
+    #our-values .our-values-content h2,
+    #testimonials .testimonials-container h2 {
+        font-size: 1.8rem;
+    }
+    #founder-note .founder-note-content .placeholder-box .the-box {
+        height: 400px;
+    }
+    #what-we-stand-for .right-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #our-values .bird {
+        width: 35%;
+    }
+    #what-we-stand-for .what-we-stand-for-content {
+        width: 100%;
+        padding: 10rem 4rem 10rem 4rem;
+    }
+
+    .background-container {
+        background-color: rgba(248, 239, 215, 0.5); /* #f8efd7 with 50% opacity */
+        padding: 1rem; /* Adjust padding as needed */
+        border-radius: 15px;
+    }
+
+    #testimonials .testimonials-bg {
+        height: 1190px;
+    }
+    
+}
+
+@media screen and (max-width: 680px) { 
+    #hero-section .hero-bg {
+        height: 450px;
+    }
+    #hero-section .hero-container {
+        top: 8.5rem;
+    }
+    #what-we-stand-for .what-we-stand-for-content {
+        padding: 10rem 2rem 10rem 2rem;
+    }
+    #founder-note .founder-note-content {
+        padding: 1rem 1rem 3rem 1rem;
+    }
+    #what-we-stand-for .what-we-stand-for-content {
+        padding: 10rem 3.5rem 12rem 3.5rem;
+    }
+    #founder-note .founder-note-content {
+        padding: 1rem 2.5rem 3rem 2.5rem;
+    }
+}
+
+@media screen and (max-width: 574px) { 
+    #hero-section .hero-bg {
+        height: 490px;
+    }
+    #testimonials .testimonials-bg {
+        height: 1410px;
+    }
+}
+
+@media screen and (max-width: 556px) { 
+    #hero-section .hero-bg {
+        height: 520px;
+    }
+    #testimonials .testimonials-bg {
+        height: 1500px;
+    }
+    #founder-note .founder-note-content .placeholder-box .the-box {
+        height: 330px;
+    }
+}
+
+@media screen and (max-width: 511px) { 
+    #testimonials .testimonials-bg {
+        height: 1600px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #testimonials .testimonials-bg {
+        height: 1700px;
+    }
+
+    #hero-section .hero-container {
+        top: 10.5rem;
+    }
+
+    #hero-section .hero-container .hero-info {
+        width: 95%;
+    }
+
+    #provide-support-you .about-container .about-content {
+        width: 90%;
+    }
+
+    #founder-note .founder-note-content {
+        padding: 1rem 1rem 3rem 1rem;
+    }
+
+    #what-we-stand-for .what-we-stand-for-content {
+        padding: 10rem 2rem 12rem 2rem;
+    }
+
+    #our-values .our-values-content {
+        padding: 5rem 1rem 10rem 1rem
+    }
+
+    #testimonials .testimonials-container {
+        padding: 0rem 1rem 0rem 1rem;
+    }
+
+    #testimonials .testimonials-bg {
+        height: 1700px;
+    }
+
+    .background-container {
+        padding: 2rem;
+    }
+
+    #our-values .our-values-content {
+        padding: 28rem 1rem 10rem 1rem;
+    }
+    #our-values .bird {
+        width: 76%;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #hero-section .hero-bg {
+        height: 690px;
+    }
+    #hero-section .hero-container {
+        top: 13.5rem;
+    }
+    #our-values .our-values-content {
+        padding: 5rem 1rem 10rem 1rem;
+    }
+    #our-values .our-values-content .values-item {
+        padding: 2rem 2rem 2rem 2rem;
+    }
+    #testimonials .testimonials-container {
+        padding: 0rem 1rem 0rem 1rem;
+    }
+    #founder-note .founder-note-content .placeholder-box .the-box {
+        height: 300px;
+    }
+    #hero-section .hero-container .hero-info {
+        width: 90%;
+    }
+    #what-we-stand-for .right-image {
+        width: 100%;
+        display: block;
+        position: static;
+        object-position: center 5rem;
+    }
+    #what-we-stand-for .what-we-stand-for-content {
+        padding: 0rem 2rem 12rem 2rem;
+    }
+    #our-values .our-values-content {
+        padding: 26rem 1rem 10rem 1rem;
+    }
+    #our-values .bird {
+        width: 76%;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+    }
+    #what-we-stand-for .what-we-stand-for-content {
+        padding: 0rem 0rem 12rem 0rem;
     }
 }
