@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LivWeal Website Development</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add your custom stylesheets or additional CSS links here -->
+    <link rel="stylesheet" href="assets/sass/main.min.css" />
+    
+</head>
+
+<body id="contact_page">
+    <!-- HEADER -->
+    <header id="header_desktop">
+        <nav>
+            <a href="/fundamentals-live/" class="start-here" target="_blank">START HERE</a>
+            <ul>
+                <li><a class="menu-item-home" href="/">Home</a></li>
+                <li><a class="menu-item-about" href="/about/">About</a></li>
+                <li><a class="menu-item-offerings" href="/offerings/">Offerings</a></li>
+                <li><a class="menu-item-testimonials" href="/testimonials/">Testimonials</a></li>
+                <li><a class="menu-item-rwl" href="/rwl/">Read, Watch, Listen</a></li>
+                <li><a class="menu-item-contact" href="/contact/">Contact</a></li>
+            </ul>  
+        </nav>
+        <a href="/" id="desktop_logo" class="logo"></a>
+    </header>
+  
+    <header id="header_mobile">
+        <a href="/" class="header-logo">
+            <img class="menu-on" src="https://livweal.com/wp-content/uploads/2023/12/livweal-logo-white-mobile.webp" style="display: none;" />
+            <img class="menu-off" src="https://livweal.com/wp-content/uploads/2023/12/livweal-logo-green-mobile.webp" style="display: inline-block;" />
+        </a>
+  
+        <input id="main-menu-toggle" type="checkbox" />
+  
+        <label for="main-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+  
+        <nav>    
+            <ul>
+                <li><a class="menu-item-home" href="/">Home</a></li>
+                <li><a class="menu-item-about" href="/about/">About</a></li>
+                <li><a class="menu-item-offerings" href="/offerings/">Offerings</a></li>
+                <li><a class="menu-item-testimonials" href="/testimonials/">Testimonials</a></li>
+                <li><a class="menu-item-rwl" href="/rwl/">Read, Watch, Listen</a></li>
+                <li><a class="menu-item-contact" href="/contact/">Contact</a></li>
+            </ul>  
+        </nav>
+    </header>
+    <!-- END HEADER -->
+    
+    <article id="body_section">
+        <p style="display: none;">
+        <link rel="stylesheet" href="https://dev.livweal.com/wp-content/themes/livweal-website-theme/assets/sass/contact.min.css" />
+        <link rel="stylesheet" href="//optassets.ontraport.com/opt_assets/static/css/moonrayform.paymentplandisplay.css" type="text/css" />
+        <link rel="stylesheet" href="https://optassets.ontraport.com/opt_assets/css/form.default.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://forms.ontraport.com/v2.4/include/formEditor/gencss.php?uid=p2c186826f162" type="text/css" />
+        </p>
+            <section id="hero-section">
+            <div class="container-fluid">
+                <div class="row">
+                <div class="col-12">
+                    <p>CONTACT US</p>
+                    <p>We would love to <br /> hear from <span>you!</span>
+                    </p>
+                </div>
+                </div>
+            </div>
+        </section>
+        <div class="green-contact-wave1">
+            <img src="https://dev.livweal.com/wp-content/uploads/assets_2024/contact/green-contact-wave1.webp" />
+        </div>
+        <section id="form-section">
+            <form class="moonray-form-clearfix" action="https://forms.ontraport.com/v2.4/form_processor.php?" method="post" accept-charset="UTF-8">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12 send-us-a-form">
+                            <img src="https://dev.livweal.com/wp-content/uploads/assets_2024/contact/send-us-a-note.webp" />
+                        </div>
+                    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                        <div class="standard-form">
+                            <div class="row">
+                                <div class="col-12 field-item">
+                                    <input name="firstname" type="text" class="moonray-form-input" id="mr-field-element-323877635092" required value="" placeholder="Name*" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 field-item">
+                                    <input name="email" type="email" class="moonray-form-input" id="mr-field-element-243592629670" required value="" placeholder="Email Address*" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 field-item">
+                                    <input name="company" type="text" class="moonray-form-input" id="mr-field-element-10876327615" value="" placeholder="Company" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 field-item">
+                                    <input name="sms_number" type="tel" class="moonray-form-input" id="mr-field-element-555863976133" value="" placeholder="Phone Number" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 field-item">
+                                    <textarea name="f1582" class="moonray-form-input" id="mr-field-element-4118785417" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 field-item text-center">
+                                    <a id="btn_send_contact" href="#" class="standard-button red d-block w-100">SEND</a>
+                                    <input type="submit" name="submit-button" value="SEND" class="moonray-form-input d-none" id="mr-field-element-996842232134" src />
+                                </div>
+                            </div>
+                            <div class="d-none">
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="afft_" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="aff_" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="sess_" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="ref_" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="own_" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="oprid" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="contact_id" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="utm_source" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="utm_medium" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="utm_term" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="utm_content" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="utm_campaign" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="referral_page" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="_op_gclid" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="_op_gcid" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="_fbc" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="_fbp" type="hidden" value="" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="uid" type="hidden" value="p2c186826f162" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="uniquep2c186826f162" type="hidden" value="0" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="mopsbbk" type="hidden" value="B9B3884870637F11126D4593:F126522D22737EB0EFD00A74" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="mopbelg" type="hidden" value="0166927:F4DBEF1177A6D8AA4D34CB6E:CD8206512AAD774E0CD4B6A4" />
+                                </div>
+                                <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                    <input name="_vcid" type="hidden" value="NzkzNTY3fCQyYSQwOCRHbm1KLlNmcnBxWjgxd3lVbnVrT0xleC5PUm5xU2R1bThiNDgvaEMvM0VoQ1dyeUFPNUxsRw==" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </section>
+        <div class="cream-wave">
+        <img src="https://dev.livweal.com/wp-content/uploads/assets_2024/contact/cream-wave.webp" />
+        </div>
+        <section id="enquiry-section">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="left-section col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
+                <p>Press <span>Inquiry</span>
+                </p>
+            </div>
+            <div class="right-section col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
+                <p>If you like a press kit or interview <br /> information, please contact us. </p>
+                <p>
+                <a href="#" class="standard-button red">PRESS INFO</a>
+                </p>
+            </div>
+            </div>
+        </div>
+        </section>
+        <div class="green-wave-footer">
+        <img src="https://dev.livweal.com/wp-content/uploads/assets_2024/contact/green-wave-footer.webp" />
+        </div>
+        <p style="display: none;">
+        <script type="text/javascript" src="https://forms.ontraport.com/v2.4/include/formEditor/genjs-v3.php?html=false&uid=p2c186826f162"></script>
+        <script src="https://dev.livweal.com/wp-content/themes/livweal-website-theme/assets/js/contact.min.js"></script>
+        </p>
+    </article>
+
+    <footer id="footer_desktop">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <a href="#" class="footer-logo"><img src="assets/images/livweal-logo-footer.webp" /></a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div class="newsletter-box">
+                        <script type="text/javascript" src="https://forms.ontraport.com/v2.4/include/formEditor/genjs-v3.php?html=false&uid=p2c186826f161"></script>
+                        <form class="moonray-form-clearfix" action="https://forms.ontraport.com/v2.4/form_processor.php?" method="post" accept-charset="UTF-8">
+                        <p>Subscribe to our Newsletter</p>
+                        <div class="container-fluid standard-form">
+                            <div class="row">
+                                <div class="col-12 field-item">
+                                    <input name="email" type="email" class="moonray-form-input" id="mr-field-element-243592629670" required value="" placeholder="Name" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 field-item">
+                                    <input type="text" placeholder="Email" />
+                                </div>
+                                <div style="display: none;" class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                                    <label for="mr-field-element-953306770013" class="moonray-form-label">How did you hear about us?</label>
+                                    <input name="f1571" type="text" class="moonray-form-input" id="mr-field-element-953306770013" value="" placeholder />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="submit" name="submit-button" value="SUBSCRIBE" class="standard-button light-green" id="mr-field-element-996842232134" src />
+                                    <div style="display: none;">
+                                        <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="afft_" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="aff_" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="sess_" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="ref_" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="own_" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="oprid" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="contact_id" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="utm_source" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="utm_medium" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="utm_term" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="utm_content" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="utm_campaign" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="referral_page" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="_op_gclid" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="_op_gcid" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="_fbc" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="_fbp" type="hidden" value="" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="uid" type="hidden" value="p2c186826f161" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="uniquep2c186826f161" type="hidden" value="0" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="mopsbbk" type="hidden" value="61F96C9C7E151DD553FDCB1B:9DADFFAC845F364FB20ABD1A" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="mopbelg" type="hidden" value="0166446:1E3234FEF8439B18A2AAA2A5:BEDFB8B80F70D3F7C53B633F" />
+                                          </div>
+                                          <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                            <input name="_vcid" type="hidden" value="NzkzNTY3fCQyYSQwOCRHbm1KLlNmcnBxWjgxd3lVbnVrT0xleC5PUm5xU2R1bThiNDgvaEMvM0VoQ1dyeUFPNUxsRw==" />
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="social-desktop">
+                                        <a href="https://twitter.com/livweal_"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="http://facebook.com/profile.php?id=100086894267664"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/livweal"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="http://linkedin.com/company/livweal"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                            <ul class="footer-menu">
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/offerings">Offerings</a></li>
+                                <li><a href="/read-watch-and-listen">Read, Watch &amp; Listen</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                            <ul class="footer-menu">
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/press-link">Press Link</a></li>
+                                <li><a href="/podcast">Podcast</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer id="footer_mobile">
+        <div class="newsletter-box">
+            <script type="text/javascript" src="https://forms.ontraport.com/v2.4/include/formEditor/genjs-v3.php?html=false&uid=p2c186826f161"></script>
+            <form class="moonray-form-clearfix" action="https://forms.ontraport.com/v2.4/form_processor.php?" method="post" accept-charset="UTF-8">
+            <p>Subscribe to our Newsletter</p>
+            <div class="container-fluid standard-form">
+                <div class="row">
+                    <div class="col-12 field-item">
+                        <input name="email" type="email" class="moonray-form-input" id="mr-field-element-243592629670" required value="" placeholder="Name" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 field-item">
+                        <input type="text" placeholder="Email" />
+                    </div>
+                    <div style="display: none;" class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
+                        <label for="mr-field-element-953306770013" class="moonray-form-label">How did you hear about us?</label>
+                        <input name="f1571" type="text" class="moonray-form-input" id="mr-field-element-953306770013" value="" placeholder />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <input type="submit" name="submit-button" value="SUBSCRIBE" class="standard-button light-green" id="mr-field-element-996842232134" src />
+                        <div style="display: none;">
+                            <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="afft_" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="aff_" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="sess_" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="ref_" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="own_" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="oprid" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="contact_id" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="utm_source" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="utm_medium" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="utm_term" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="utm_content" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="utm_campaign" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="referral_page" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="_op_gclid" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="_op_gcid" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="_fbc" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="_fbp" type="hidden" value="" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="uid" type="hidden" value="p2c186826f161" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="uniquep2c186826f161" type="hidden" value="0" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="mopsbbk" type="hidden" value="61F96C9C7E151DD553FDCB1B:9DADFFAC845F364FB20ABD1A" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="mopbelg" type="hidden" value="0166446:1E3234FEF8439B18A2AAA2A5:BEDFB8B80F70D3F7C53B633F" />
+                              </div>
+                              <div class="moonray-form-element-wrapper moonray-form-input-type-hidden">
+                                <input name="_vcid" type="hidden" value="NzkzNTY3fCQyYSQwOCRHbm1KLlNmcnBxWjgxd3lVbnVrT0xleC5PUm5xU2R1bThiNDgvaEMvM0VoQ1dyeUFPNUxsRw==" />
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div> 
+        <div class="links">
+            <ul>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/press-link">Press Link</a></li>
+                <li><a href="/podcast">Podcast</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <p>Follow us on:</p>
+            <div>
+                <a href="https://twitter.com/livweal_"><i class="fa-brands fa-twitter"></i></a>
+                <a href="http://facebook.com/profile.php?id=100086894267664"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/livweal"><i class="fa-brands fa-instagram"></i></a>
+                <a href="http://linkedin.com/company/livweal"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-logo">
+            <a href="#">
+                <img src="assets/images/livweal-logo-footer.webp" />
+            </a>
+        </div>
+    </footer>
+
+    <div id="video_overlay">
+        <a id="close_overlay" href="#"><i class="fa-solid fa-xmark"></i></a> 
+        <div id="overlay_container"></div>
+    </div>
+
+    <!-- Replace the following CDN link with the latest Foundation for Sites CDN link -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@latest/dist/js/foundation.min.js"></script>
+
+    <!-- Add your custom scripts or additional JavaScript links here -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="assets/js/slick.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+</body>
+
+</html>
