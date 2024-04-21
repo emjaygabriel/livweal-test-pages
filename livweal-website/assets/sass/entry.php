@@ -47,19 +47,19 @@ $previous_post_url = get_permalink(get_previous_post());
                 $link_text = '';
                 switch (strtolower($category->name)) {
                     case 'read':
-                        $link_text = 'BACK TO READ';
+                        $link_text = '&lt;&lt; Back to Read';
                         break;
                     case 'watch':
-                        $link_text = 'BACK TO WATCH';
+                        $link_text = '&lt;&lt; Back to Watch';
                         break;
                     case 'listen':
-                        $link_text = 'BACK TO LISTEN';
+                        $link_text = '&lt;&lt; Back to Listen';
                         break;
                     default:
-                        $link_text = 'BACK'; // Default link text if category doesn't match any specific case
+                        $link_text = 'Back'; // Default link text if category doesn't match any specific case
                         break;
                 }
-                echo '<p><a class="back_to_category_page" href="' . esc_url(get_category_link($category->term_id)) . '"><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-left"></i> ' . esc_html($link_text) . '</a></p>';
+                echo '<a class="category-label" href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($link_text) . '</a> ';
             }
         }
     ?>
@@ -125,20 +125,7 @@ $previous_post_url = get_permalink(get_previous_post());
     
     <div class="blog-content">
         <?php get_template_part( 'entry', ( is_front_page() || is_home() || is_front_page() && is_home() || is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
-        <div class="row blog-social-icons mt-5">
-            <div class="col-12">
-                <p style="text-align: center;"><strong>Follow <a href="https://www.livweal.com">LivWeal</a> on
-        </strong></p>
-                <p style="text-align: center;">
-                    <a href="https://www.facebook.com/LivWeal"><img src="https://livweal.com/wp-content/uploads/2023/07/FB-icon.png" alt="" width="50" height="50" /></a><a href="https://www.instagram.com/livweal"><img class="alignnone wp-image-2836" src="https://livweal.com/wp-content/uploads/2023/07/IG-icon-1.png" alt="" width="50" height="50" /></a><a href="https://www.linkedin.com/company/livweal"><img class="alignnone wp-image-2832" src="https://livweal.com/wp-content/uploads/2023/07/LI-icon.png" alt="" width="50" height="50" /></a>
-                </p>
-
-                <p style="text-align: center;"><strong>Follow <a href="https://www.jenniferlove.com">Jennifer Love</a> on</strong></p>
-                <p style="text-align: center;">
-                    <a href="https://www.facebook.com/TheJenniferLove"><img src="https://livweal.com/wp-content/uploads/2023/07/FB-icon.png" alt="" width="50" height="50" /></a><a href="https://www.instagram.com/thejenniferlove"><img class="alignnone wp-image-2836" src="https://livweal.com/wp-content/uploads/2023/07/IG-icon-1.png" alt="" width="50" height="50" /></a><a href="https://www.linkedin.com/in/thejenniferlove"><img class="alignnone wp-image-2832" src="https://livweal.com/wp-content/uploads/2023/07/LI-icon.png" alt="" width="50" height="50" /></a>
-                </p>
-            </div>
-        </div>
+        
     </div>
     <div class="blog-nav">
         <div class="container-fluid">
@@ -147,7 +134,7 @@ $previous_post_url = get_permalink(get_previous_post());
                     <?php if ($prev_post_link) : ?>
                         <div class="prev-link">
                             <a href="<?php echo $previous_post_url; ?>">
-                                <span><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-left"></i> PREVIOUS</span>
+                                <span>&lt;&lt; PREVIOUS</span>
                                 <span><?php echo $prev_post_title; ?></span>
                             </a>
                         </div>
@@ -157,7 +144,7 @@ $previous_post_url = get_permalink(get_previous_post());
                     <?php if ($next_post_link) : ?>
                         <div class="next-link">
                             <a href="<?php echo $next_post_url; ?>">
-                                <span>NEXT <i class="fa-solid fa-chevron-right"></i><i class="fa-solid fa-chevron-right"></i></span>
+                                <span>NEXT &gt;&gt;</span>
                                 <span><?php echo $next_post_title; ?></span>
                             </a>
                         </div>

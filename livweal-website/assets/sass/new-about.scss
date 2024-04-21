@@ -317,6 +317,17 @@
     z-index: 14;
 }
 
+.testimonial-learn-more {
+    text-align: center;
+    color: $primary_color2;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+.testimonial-learn-more:hover {
+    text-decoration: none;
+    color: $primary_color2;
+}
+
 @media screen and (max-width: 1800px) {
     #hero-section .hero-container {
         top: 17rem;
@@ -488,6 +499,7 @@
 }
 
 @media screen and (max-width: 991px) {
+    .testimonial-learn-more { font-size: 1rem; }
     #hero-section .hero-container {
         top: 9.5rem;
     }

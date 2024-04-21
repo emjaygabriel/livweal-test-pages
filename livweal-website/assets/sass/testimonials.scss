@@ -17,11 +17,11 @@
         height: 100%;
         object-fit: cover;
         object-position: top;
-        height: 1300px;
+        height: 945px;
     }
     .hero-container {
         position: absolute;
-        top: 15rem;
+        top: 10rem;
         width: 100%;
         .hero-info {
             width: 100%;
@@ -43,7 +43,7 @@
             }
             p {
                 font-family: $font_libre_franklin !important;
-                font-size: 2.5rem;
+                font-size: 2rem;
                 margin: 0;
                 padding: 0;
                 line-height: 1.5;
@@ -264,10 +264,13 @@
     }
 }
 
-@media screen and (max-width: 1563px) {
-    #hero-section .hero-container .hero-info h1 {
-        width: 40%;
+@media screen and (max-width: 1778px) {
+    #hero-section .hero-container .hero-info h1 { 
+        width: 70%;
     }
+}
+
+@media screen and (max-width: 1563px) {
 
     .testimonial-list .testimonial-item .testimonial-box .testimonial-info span.name { font-size: 1.1rem; }
     .testimonial-list .testimonial-item .testimonial-box .testimonial-info span.industry { font-size: 1rem; }
@@ -294,6 +297,12 @@
     }
 }
 
+@media screen and (max-width: 1333px) {
+    #hero-section .hero-container .hero-info h1 { 
+        width: 70%;
+    }
+} 
+
 @media screen and (max-width: 1280px) {
     #hero-content-section .hero-content-container .hero-content {
         width: 85%;
@@ -313,9 +322,7 @@
 }
 
 @media screen and (max-width: 1180px) {
-    #hero-section .hero-container .hero-info h1 {
-        width: 50%;
-    }
+  
 }
 
 @media screen and (max-width: 1080px) {
@@ -325,9 +332,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-    #hero-section .hero-container .hero-info h1 {
-        width: 50%;
-    }
     #hero-section .hero-container {
         top: 10rem;
     }
@@ -360,9 +364,12 @@
 }
 
 @media screen and (max-width: 781px) {
-    #hero-section .hero-container .hero-info h1 {
-        width: 65%;
-    }
+
+}
+
+@media screen and (max-width: 635px) {
+    #hero-section .hero-container .hero-info h1 { width: 90%; }
+    #hero-section .hero-container .hero-info p { width: 90%; }
 }
 
 @media screen and (max-width: 602px) {
@@ -387,7 +394,7 @@
     #hero-section .hero-container .hero-info h1 { width: 90%; }
     #transformations-section h2,
     #working-with-jennifer-section .working-with-jennifer-section-container h2 { 
-        font-size: 2rem;
+        font-size: 1.8rem;
         line-height: 2;
         margin-left: 1rem;
         margin-right: 1rem;

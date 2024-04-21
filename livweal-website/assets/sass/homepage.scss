@@ -437,6 +437,7 @@
     .testimonial-list-desc {
         max-width: 90%;
         margin-bottom: 0rem;
+        padding-bottom: 4rem;
         .text-container {
             padding-top: 8rem;
             p {
@@ -559,7 +560,7 @@
     }
 
     .rwl_section_main_bottom {
-        margin-top: -35rem;
+        margin-top: -8rem;
         margin-bottom: 30rem;
         margin-left: auto;
         margin-right: auto;
@@ -594,6 +595,17 @@
 .enclosure {
     padding: 0 !important;
     margin: 0 !important;
+}
+
+.testimonial-learn-more {
+    text-align: center;
+    color: $primary_color2;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+.testimonial-learn-more:hover {
+    text-decoration: none;
+    color: $primary_color2;
 }
 
 
@@ -690,7 +702,7 @@
         margin-top: 0rem;
     }
     #rwl_section .rwl_section_main_bottom {
-        margin-top: -30rem;
+        margin-top: -8rem;
     }
     #rwl_section {
         background-position: center 15rem;
@@ -761,7 +773,7 @@
         top: 27%;
     }
     #rwl_section .rwl_section_main_bottom {
-        margin-top: -25rem;
+        margin-top: -8rem;
     }
     #video_section .video-section-image img { width: 80%; }
 
@@ -795,7 +807,7 @@
         top: 28%;
     }
     #rwl_section .rwl_section_main_bottom {
-        margin-top: -20rem;
+        margin-top: -5rem;
     }
 }
 
@@ -986,6 +998,7 @@
     #offerings_section p { font-size: $sm_paragraph; }
     #testimonials_section .testimonial-item p { font-size: $sm_paragraph; }
     #testimonials_section .testimonial-item .standard-button { font-size: $sm_button_size; }
+    .testimonial-learn-more { font-size: 1rem; }
     #testimonials_section .testimonial-list-desc .text-container p { font-size: $sm_paragraph; }
     #header_mobile input ~ nav { height: 75px; }
     #video_section .video-section-image { margin-bottom: 2rem; }
@@ -1003,7 +1016,7 @@
         font-size: 1rem;
     }
     #rwl_section .rwl_section_main_bottom {
-        margin-top: -15rem;
+        margin-top: 0rem;
     }
     #rwl_section {
         background-position: center 10rem;
@@ -1154,7 +1167,8 @@
     }
     
     #rwl_section .rwl_section_main_bottom { 
-        margin-top: -10rem;
+        margin-top: 0rem;
+        background-size: cover;
     }
     #homepage_hero .hero-text-container .hero-text .top p:nth-child(4) { margin-top: 0; }
 

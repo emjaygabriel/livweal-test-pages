@@ -20,11 +20,15 @@ p {
     padding: 0;
 }
 
+#body_section #primary, #body_section .wp-block-woocommerce-cart, #body_section .wp-block-woocommerce-checkout {
+	padding: 10rem 2rem 10rem 2rem;
+}
+
 #testimonials #header_desktop, #rwl #header_desktop {
     nav {
         ul {
             display: inline-block;
-            padding-left: 4rem;
+            padding-left: 0rem;
             li {
                 a {
                     color: $light_color;

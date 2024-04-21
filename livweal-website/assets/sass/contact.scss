@@ -7,11 +7,11 @@
 // Example for compressed: sass --style compressed input.scss output.min.css
 
 #hero-section {
-    background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/contact/hero-bg.webp') no-repeat top center;
+    background: url("https://dev.livweal.com/wp-content/uploads/assets_2024/contact/hero-bg.webp") no-repeat center -9rem;
     background-size: cover;
-    padding-top: 15rem;
+    padding-top: 13rem;
     padding-bottom: 0;
-    height: 700px;
+    height: 600px;
     p {
         color: $primary_color2;
         text-align: center;
@@ -28,6 +28,10 @@
             }
         }
     }
+}
+
+.moonray-form-iframe-p2c186826f162 {
+    margin-top: 10rem;
 }
 
 .green-contact-wave1 {
@@ -172,6 +176,10 @@
         width: 85%;
         margin-left: 1rem;
     }
+
+    .moonray-form-iframe-p2c186826f162 {
+        margin-top: 5rem;
+    }
 }
 
 /* 1440px */
@@ -183,6 +191,9 @@
 /* 1366px */
 @media screen and (max-width: 1366px) {
     /* Your styles for 1366px and larger screens */
+    .moonray-form-iframe-p2c186826f162 {
+        margin-top: 2rem;
+    }
 }
 
 /* 1360px */
@@ -255,6 +266,25 @@
     /* Your styles for 1024px and larger screens */
     
 }
+
+/* 1024px */
+@media screen and (max-width: 991px) {
+    /* Your styles for 1024px and larger screens */
+    #form-section .contact-form p {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .moonray-form-iframe-p2c186826f162 {
+        margin-top: 4rem;
+    }
+    #enquiry-section {
+        padding-bottom: 11rem;
+    }
+    #enquiry-section .left-section p {
+        margin-bottom: 2rem;
+    }
+}
     
 /* 800px */
 @media screen and (max-width: 768px) {
@@ -295,6 +325,10 @@
                 font-size: $sm_paragraph;
             }
         }
+    }
+
+    #form-section .contact-form p {
+        width: 90%;
     }
 }
     
@@ -342,6 +376,9 @@
 /* 380px */
 @media screen and (max-width: 380px) {
 /* Your styles for 380px and larger screens */
+    #form-section .contact-form p {
+        width: 100%;
+    }
     #form-section {
         .send-us-a-form {
             text-align: center;
