@@ -9,10 +9,8 @@
     padding-bottom: 1rem;
 }
 
-#myVideo, #vimeo_player_desktop { display: block; }
-#myVideoMobile, #vimeo_player_mobile { display: none;  }
-
-
+#myVideo { display: block; }
+#myVideoMobile { display: none;  }
 #homepage_hero {
     // background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/home/mountain-forest-blue-sky-1.webp') no-repeat top center;
     background-color: $primary_color2;
@@ -155,14 +153,10 @@
         z-index: 20;
         padding-top: 2rem;
         text-align: center;
-        position: relative;
-        z-index: 51;
     }
     #story_slider {
         padding-left: 10rem;
         padding-right: 10rem;
-        position: relative;
-        z-index: 50;
         video {
             width: 100%;
             max-width: 100%;
@@ -225,9 +219,10 @@
 
 
 .story_section_bottom {
+    // background-color: $light_color2;
     z-index: 10;
     position: relative;
-    margin-top: -7rem;
+    margin-top: -10rem;
     img { width: 100%; }
 }
 
@@ -437,7 +432,6 @@
     .testimonial-list-desc {
         max-width: 90%;
         margin-bottom: 0rem;
-        padding-bottom: 4rem;
         .text-container {
             padding-top: 8rem;
             p {
@@ -560,7 +554,7 @@
     }
 
     .rwl_section_main_bottom {
-        margin-top: -8rem;
+        margin-top: -35rem;
         margin-bottom: 30rem;
         margin-left: auto;
         margin-right: auto;
@@ -595,17 +589,6 @@
 .enclosure {
     padding: 0 !important;
     margin: 0 !important;
-}
-
-.testimonial-learn-more {
-    text-align: center;
-    color: $primary_color2;
-    font-size: 1.5rem;
-    text-decoration: underline;
-}
-.testimonial-learn-more:hover {
-    text-decoration: none;
-    color: $primary_color2;
 }
 
 
@@ -702,7 +685,7 @@
         margin-top: 0rem;
     }
     #rwl_section .rwl_section_main_bottom {
-        margin-top: -8rem;
+        margin-top: -30rem;
     }
     #rwl_section {
         background-position: center 15rem;
@@ -773,7 +756,7 @@
         top: 27%;
     }
     #rwl_section .rwl_section_main_bottom {
-        margin-top: -8rem;
+        margin-top: -25rem;
     }
     #video_section .video-section-image img { width: 80%; }
 
@@ -807,7 +790,7 @@
         top: 28%;
     }
     #rwl_section .rwl_section_main_bottom {
-        margin-top: -5rem;
+        margin-top: -20rem;
     }
 }
 
@@ -998,7 +981,6 @@
     #offerings_section p { font-size: $sm_paragraph; }
     #testimonials_section .testimonial-item p { font-size: $sm_paragraph; }
     #testimonials_section .testimonial-item .standard-button { font-size: $sm_button_size; }
-    .testimonial-learn-more { font-size: 1rem; }
     #testimonials_section .testimonial-list-desc .text-container p { font-size: $sm_paragraph; }
     #header_mobile input ~ nav { height: 75px; }
     #video_section .video-section-image { margin-bottom: 2rem; }
@@ -1016,7 +998,7 @@
         font-size: 1rem;
     }
     #rwl_section .rwl_section_main_bottom {
-        margin-top: 0rem;
+        margin-top: -15rem;
     }
     #rwl_section {
         background-position: center 10rem;
@@ -1167,8 +1149,7 @@
     }
     
     #rwl_section .rwl_section_main_bottom { 
-        margin-top: 0rem;
-        background-size: cover;
+        margin-top: -10rem;
     }
     #homepage_hero .hero-text-container .hero-text .top p:nth-child(4) { margin-top: 0; }
 
@@ -1263,8 +1244,8 @@
 /* 480px */
 @media screen and (max-width: 480px) {
     /* Your styles for 480px and larger screens */
-    #myVideo, #vimeo_player_desktop { display: none; }
-    #myVideoMobile, #vimeo_player_mobile { display: block;  }
+    #myVideo { display: none; }
+    #myVideoMobile { display: block;  }
     #welcome_section h2,
     #video_section h2,
     #testimonials_section h2,
@@ -1272,12 +1253,6 @@
         font-size: 1.8rem; 
         line-height: 2;
     }
-    #story_section h2 {
-        margin-bottom: -2rem;
-           padding-bottom: 0;
-           position: relative;
-           z-index: 51;
-   }
     #story_section #story_slider {
         padding-left: 1.5rem;
         padding-right: 1.5rem;

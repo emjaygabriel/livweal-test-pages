@@ -418,17 +418,6 @@
     }
 }
 
-
-@media screen and (max-width: 1177px) {  
-    #hero-section .hero-container .hero-info h1 {
-        font-size: 2.2rem;
-    }
-    #hero-section .hero-container .hero-info p {
-        font-size: 1rem;
-    }
-}
-
-
 @media screen and (max-width: 1150px) {
     #hero-section .hero-container {
         top: 11rem;
@@ -564,23 +553,10 @@
     
 }
 
-@media screen and (min-width: 681px) and (max-width: 940px) {
-    #hero-section .hero-bg {
-        height: 450px;
-    }
-    #hero-section .hero-container {
-        top: 9.5rem;
-    }
-}
-
-@media screen and (max-width: 680px) {  
+@media screen and (max-width: 768px) { 
     #hero-section .hero-container {
         top: 6.5rem;
     }
-}
-
-@media screen and (max-width: 768px) { 
-    
     #hero-section .hero-container .hero-info h1,
     #provide-support-you .about-container .about-content h3,
     #founder-note h3,

@@ -24,30 +24,32 @@
             text-align: center;
             h1 {
                 color: #000;
-                font-family: $font_kazimir;
+                font-family: $font_kazimir !important;
                 font-size: 3.5rem;
                 font-weight: normal;
                 margin-bottom: 4rem;
+                padding-bottom: 0;
                 span {
-                    font-family: $font_amalfi;
+                    font-family: $font_amalfi !important;
                     color: $primary_color;
                 }
             }
             p {
                 color: #000;
                 line-height: 1.5;
-                font-family: $font_libre_franklin;
+                font-family: $font_libre_franklin !important;
                 width: 60%;
                 margin-left: auto;
                 margin-right: auto;
                 font-size: 1.2rem;
+                padding-bottom: 0;
             }
         }
     }
 }
 
 #dear-money-section {
-    margin-top: -30rem;
+    margin-top: -27rem;
     position: relative;
     .dear-money-talk-top-bg {
         width: 100%;
@@ -55,7 +57,7 @@
     .container-fluid {
         background-color: $primary_color;
         padding-top: 10rem;
-        padding-bottom: 20rem;
+        padding-bottom: 22rem;
         margin-top: -1rem;
     }
     .dear-money-box {
@@ -73,16 +75,19 @@
         }
         h2 {
             font-size: 2.5rem;
-            font-family: $font_kazimir;
+            font-family: $font_kazimir !important;
             margin-bottom: 2rem;
             color: $primary_color;
+            padding-bottom: 0;
         }
         p {
             color: $primary_color;
             margin-bottom: 4rem;
             font-size: 1.2rem;
+            padding-bottom: 0;
             .standard-button {
                 font-size: 1.2rem;
+                margin-right: 6rem;
             }
             &:last-child {
                 margin-bottom: 0;
@@ -109,17 +114,19 @@
         h2 {
             font-size: 2.5rem;
             color: $light_color2;
-            font-family: $font_kazimir;
+            font-family: $font_kazimir !important;
             margin-bottom: 1rem;
+            padding-bottom: 0;
         }
         p {
             font-size: 1.2rem;
             margin-bottom: 3rem;
             color: $light_color2;
-            font-family: $font_libre_franklin;
+            font-family: $font_libre_franklin !important;
+            padding-bottom: 0;
             .standard-button {
                 font-size: 1.2rem;
-                font-family: $font_libre_franklin;
+                font-family: $font_libre_franklin !important;
             }
             &:last-child {
                 margin-bottom: 0;
@@ -151,16 +158,19 @@
         }
         h2 {
             font-size: 2.5rem;
-            font-family: $font_kazimir;
+            font-family: $font_kazimir !important;
             margin-bottom: 2rem;
             color: $primary_color;
+            padding-bottom: 0;
         }
         p {
             color: $primary_color;
             margin-bottom: 4rem;
             font-size: 1.2rem;
+            padding-bottom: 0;
             .standard-button {
                 font-size: 1.2rem;
+                margin-right: 6rem;
             }
             &:last-child {
                 margin-bottom: 0;
@@ -388,6 +398,10 @@
 
 
 @media screen and (max-width: 998px) { 
+    #wealthy-life-section .wealth-life-box p .standard-button,
+    #dear-money-section .dear-money-box p .standard-button {
+        margin-right: 0;
+    }
     #dear-money-section .dear-money-box {
         padding: 18rem 2rem 3rem 2rem;
         text-align: center;
@@ -576,6 +590,10 @@
 }
 
 @media screen and (max-width: 480px) {
+    #hero-section .hero-info .hero-centered h1 {
+        line-height: 2;
+    }
+
     #dear-money-section {
         margin-top: -10rem;
     }

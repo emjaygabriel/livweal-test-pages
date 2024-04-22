@@ -7,24 +7,31 @@
 // Example for compressed: sass --style compressed input.scss output.min.css
 
 #hero-section {
-    background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/contact/hero-bg.webp') no-repeat top center;
+    background: url("https://dev.livweal.com/wp-content/uploads/assets_2024/contact/hero-bg.webp") no-repeat center -9rem;
     background-size: cover;
-    padding-top: 20rem;
-    padding-bottom: 30rem;
+    padding-top: 13rem;
+    padding-bottom: 0;
+    height: 600px;
     p {
         color: $primary_color2;
         text-align: center;
+        padding-bottom: 0;
+        line-height: 1.5;
         &:nth-child(1) {
-            font-size: $lg_subheading;
+            font-size: 2.5rem;
         }
         &:nth-child(2) {
-            font-size: $lg_heading;
-            font-family: $font_kazimir;
+            font-size: 3.5rem;
+            font-family: $font_kazimir !important;
             span {
-                font-family: $font_amalfi;
+                font-family: $font_amalfi !important;
             }
         }
     }
+}
+
+.moonray-form-iframe-p2c186826f162 {
+    margin-top: 10rem;
 }
 
 .green-contact-wave1 {
@@ -64,18 +71,20 @@
     padding-bottom: 10rem;
     .left-section {
         p {
+            line-height: 1.5;
             margin-bottom: 0;
-            font-family: $font_kazimir;
+            font-family: $font_kazimir !important;
             font-size: $lg_subheading;
             color: $primary_color2;
             text-align: center;
             span {
-                font-family: $font_amalfi;
+                font-family: $font_amalfi !important;
             }
         }
     }
     .right-section {
         p {
+            line-height: 1.5;
             text-align: center;
             color: $primary_color;
             font-size: $lg_paragraph;
@@ -128,14 +137,16 @@
 /* Your styles for 1600px and larger screens */
     #hero-section {
         background-size: cover;
-        padding-top: 15rem;
-        padding-bottom: 20rem;
+        padding-top: 9rem;
+        height: 500px;
+        // padding-bottom: 20rem;
         p {
+            padding-bottom: 0;
             &:nth-child(1) {
-                font-size: $md_subheading;
+                font-size: 2.5rem;
             }
             &:nth-child(2) {
-                font-size: $md_heading;
+                font-size: 3.5rem;
             }
         }
     }
@@ -165,6 +176,10 @@
         width: 85%;
         margin-left: 1rem;
     }
+
+    .moonray-form-iframe-p2c186826f162 {
+        margin-top: 5rem;
+    }
 }
 
 /* 1440px */
@@ -176,6 +191,9 @@
 /* 1366px */
 @media screen and (max-width: 1366px) {
     /* Your styles for 1366px and larger screens */
+    .moonray-form-iframe-p2c186826f162 {
+        margin-top: 2rem;
+    }
 }
 
 /* 1360px */
@@ -194,6 +212,7 @@
 @media screen and (max-width: 1176px) {
     #hero-section {
         p {
+            padding-bottom: 0;
             color: $primary_color2;
             &:nth-child(1) {
                 font-size: $sm_subheading;
@@ -220,11 +239,13 @@
         padding-bottom: 8rem;
         .left-section {
             p {
+                padding-bottom: 0;
                 font-size: $sm_subheading;
             }
         }
         .right-section {
             p {
+                padding-bottom: 0;
                 &:nth-child(1) {
                     margin-top: -1.5rem;
                 }
@@ -244,6 +265,25 @@
 @media screen and (max-width: 1024px) {
     /* Your styles for 1024px and larger screens */
     
+}
+
+/* 1024px */
+@media screen and (max-width: 991px) {
+    /* Your styles for 1024px and larger screens */
+    #form-section .contact-form p {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .moonray-form-iframe-p2c186826f162 {
+        margin-top: 4rem;
+    }
+    #enquiry-section {
+        padding-bottom: 11rem;
+    }
+    #enquiry-section .left-section p {
+        margin-bottom: 2rem;
+    }
 }
     
 /* 800px */
@@ -272,11 +312,13 @@
         padding-bottom: 10rem;
         .left-section {
             p {
+                padding-bottom: 0;
                 font-size: $sm_subheading;
             }
         }
         .right-section {
             p {
+                padding-bottom: 0;
                 &:nth-child(1) {
                     margin-top: 2rem;
                 }
@@ -284,21 +326,27 @@
             }
         }
     }
+
+    #form-section .contact-form p {
+        width: 90%;
+    }
 }
     
 /* 480px */
 @media screen and (max-width: 480px) {
 /* Your styles for 480px and larger screens */
     #hero-section {
-        padding-top: 10rem;
-        padding-bottom: 15rem;
+        padding-top: 8rem;
+        padding-bottom: 0rem;
         background: url('https://dev.livweal.com/wp-content/uploads/assets_2024/contact/hero-bg-mobile.webp') no-repeat top center;
+        height: 480px;
         p {
+            padding-bottom: 0;
             &:nth-child(1) {
-                font-size: $xs_subheading;
+                font-size: 1.3rem;
             }
             &:nth-child(2) {
-                font-size: $xs_heading;
+                font-size: 2rem;
             }
         }
     }
@@ -328,6 +376,9 @@
 /* 380px */
 @media screen and (max-width: 380px) {
 /* Your styles for 380px and larger screens */
+    #form-section .contact-form p {
+        width: 100%;
+    }
     #form-section {
         .send-us-a-form {
             text-align: center;

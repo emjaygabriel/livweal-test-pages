@@ -1,27 +1,24 @@
 </article>
-    <?php
-            $template_directory_uri = esc_url(get_template_directory_uri());
-        ?>
     <footer id="footer_desktop">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 text-center">
                     <a href="#" class="footer-logo"><img src="/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-footer.png" /></a>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
                     <div class="newsletter-box">
                         <script type="text/javascript" src="https://forms.ontraport.com/v2.4/include/formEditor/genjs-v3.php?html=false&uid=p2c186826f161"></script>
-                        <form id="form_newsletter_desktop" class="moonray-form-clearfix" action="https://forms.ontraport.com/v2.4/form_processor.php?" method="post" accept-charset="UTF-8">
+                        <form class="moonray-form-clearfix" action="https://forms.ontraport.com/v2.4/form_processor.php?" method="post" accept-charset="UTF-8">
                         <p>Subscribe to our Newsletter</p>
                         <div class="container-fluid standard-form">
                             <div class="row">
                                 <div class="col-12 field-item">
-                                    <input name="firstname" type="text" class="moonray-form-input txtname" id="mr-field-element-323877635092" required value="" placeholder="Name" />
+                                    <input name="firstname" type="text" class="moonray-form-input" id="mr-field-element-323877635092" required value="" placeholder="Name" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 field-item">
-                                    <input name="email" type="email" class="moonray-form-input txtemail" id="mr-field-element-243592629670" required value="" placeholder="Email" />
+                                    <input name="email" type="email" class="moonray-form-input" id="mr-field-element-243592629670" required value="" placeholder="Email" />
                                 </div>
                                 <div style="display: none;" class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
                                     <label for="mr-field-element-953306770013" class="moonray-form-label">How did you hear about us?</label>
@@ -120,13 +117,14 @@
                             <ul class="footer-menu">
                                 <li><a href="/about">About</a></li>
                                 <li><a href="/offerings">Offerings</a></li>
-                                <!-- <li><a href="/read-watch-and-listen">Read, Watch &amp; Listen</a></li> -->
+                                <li><a href="/testimonials">Testimonials</a></li>
                                 <li><a href="/contact">Contact</a></li>
-                                <li><a href="/terms">Terms</a></li>
+                                
                             </ul>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
                             <ul class="footer-menu">
+                            <li><a href="/terms">Terms</a></li>
                                 <li><a href="/privacy-policy">Privacy Policy</a></li>
                                 <li><a href="mailto:ta@livweal.com">Press Link</a></li>
                                 <li><a href="https://podcasts.apple.com/ye/podcast/nature-of-money/id1557047216" target="_blank">Podcast</a></li>
@@ -141,17 +139,17 @@
     <footer id="footer_mobile">
         <div class="newsletter-box">
             <script type="text/javascript" src="https://forms.ontraport.com/v2.4/include/formEditor/genjs-v3.php?html=false&uid=p2c186826f161"></script>
-            <form id="form_newsletter_mobile" class="moonray-form-clearfix" action="https://forms.ontraport.com/v2.4/form_processor.php?" method="post" accept-charset="UTF-8">
+            <form class="moonray-form-clearfix" action="https://forms.ontraport.com/v2.4/form_processor.php?" method="post" accept-charset="UTF-8">
             <p>Subscribe to our Newsletter</p>
             <div class="container-fluid standard-form">
                 <div class="row">
                     <div class="col-12 field-item">
-                        <input name="firstname" type="text" class="moonray-form-input txtname" id="mr-field-element-323877635092" required value="" placeholder="Name" />
+                        <input name="firstname" type="text" class="moonray-form-input" id="mr-field-element-323877635092" required value="" placeholder="Name" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 field-item">
-                        <input name="email" type="email" class="moonray-form-input txtemail" id="mr-field-element-243592629670" required value="" placeholder="Email" />
+                        <input name="email" type="email" class="moonray-form-input" id="mr-field-element-243592629670" required value="" placeholder="Email" />
                     </div>
                     <div style="display: none;" class="moonray-form-element-wrapper moonray-form-element-wrapper-alignment-left moonray-form-input-type-text">
                         <label for="mr-field-element-953306770013" class="moonray-form-label">How did you hear about us?</label>
@@ -251,7 +249,7 @@
             </div>
         </div>
         <div class="footer-logo">
-            <a href="#">
+            <a href="/">
                 <img src="/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-footer.png" />
             </a>
         </div>
@@ -261,10 +259,10 @@
         <a id="close_overlay" href="#"><i class="fa-solid fa-xmark"></i></a> 
         <div id="overlay_container"></div>
     </div>
-
-    <?php wp_footer(); ?>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
-    <script src="<?php echo $template_directory_uri; ?>/assets/js/main.js"></script>
+    <script src="/wp-content/themes/livweal-website-theme/assets/js/main.js"></script>
+    <?php wp_footer(); ?>
 </body>
 </html>

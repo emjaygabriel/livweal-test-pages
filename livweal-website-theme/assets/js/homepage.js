@@ -247,14 +247,14 @@ init_story_slider_end_play = () => {
   });
 }
 
-document.getElementById('myVideo').addEventListener('click', function() {
-  var video = document.getElementById('myVideo');
-  video.play();
-});
-document.getElementById('myVideoMobile').addEventListener('click', function() {
-  var video = document.getElementById('myVideo');
-  video.play();
-});
+// document.getElementById('myVideo').addEventListener('click', function() {
+//   var video = document.getElementById('myVideo');
+//   video.play();
+// });
+// document.getElementById('myVideoMobile').addEventListener('click', function() {
+//   var video = document.getElementById('myVideo');
+//   video.play();
+// });
 
 const play_story_video = () => {
   const video = document.getElementById("myVideo");
@@ -291,6 +291,6 @@ var observer = new IntersectionObserver(function(entries) {
 		
 }, { threshold: [0.5] });
 
-observer.observe(document.querySelector("#myVideo"));
-observer.observe(document.querySelector("#myVideoMobile"));
+// observer.observe(document.querySelector("#myVideo"));
+// observer.observe(document.querySelector("#myVideoMobile"));
 

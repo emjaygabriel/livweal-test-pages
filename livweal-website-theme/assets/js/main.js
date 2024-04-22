@@ -13,9 +13,32 @@ document.addEventListener('DOMContentLoaded', function() {
     // Call the init_page function to initialize the page
     init_page();
     // Put the code that should run after the document is ready
+    init_newsletter_form();
 });
 
+const init_newsletter_form = () => {
+    $('#form_newsletter_desktop #mr-field-element-323877635092').keyup(function() {
+        
+        const $value = $('#form_newsletter_desktop #mr-field-element-323877635092').val();
+        console.log($value);
+        $('#form_newsletter_mobile #mr-field-element-323877635092').val($value);
+    });
 
+    $('#form_newsletter_desktop #mr-field-element-243592629670').keyup(function() {
+        const $value = $('#form_newsletter_desktop #mr-field-element-243592629670').val();
+        $('#form_newsletter_mobile #mr-field-element-243592629670').val($value);
+    });
+
+    $('#form_newsletter_mobile #mr-field-element-323877635092').keyup(function() {
+        const $value = $('#form_newsletter_mobile #mr-field-element-323877635092').val();
+        $('#form_newsletter_desktop #mr-field-element-323877635092').val($value);
+    });
+
+    $('#form_newsletter_mobile #mr-field-element-243592629670').keyup(function() {
+        const $value = $('#form_newsletter_mobile #mr-field-element-243592629670').val();
+        $('#form_newsletter_desktop #mr-field-element-243592629670').val($value);
+    });
+}
 
 // Enter code here for any header scripts
 $("#main-menu-toggle").change(function() {
@@ -27,41 +50,6 @@ $("#main-menu-toggle").change(function() {
         $('.header-logo .menu-off').css('display', 'inline-block');
     }
 });
-
-/*
-const init_newsletter_subscribe = () => {
-    var $btn_subscribe = document.getElementById('btn_newsletter_subscribe');
-    var $btn_subscribe_desktop = document.getElementById('btn_newsletter_subscribe_desktop');
-    $btn_subscribe.addEventListener('click', handle_newsletter_subscribe_click_mobile);
-    $btn_subscribe_desktop.addEventListener('click', handle_newsletter_subscribe_click_desktop);
-};
-
-//mr-field-element-996842232134-subscribe
-
-const handle_newsletter_subscribe_click_desktop = ($event) => {
-    $event.preventDefault();
-    const $subscribe_input_button = document.getElementById('mr-field-element-996842232134-subscribe-desktop');
-    $subscribe_input_button.click();
-};
-
-const handle_newsletter_subscribe_click_mobile = ($event) => {
-    $event.preventDefault();
-    const $subscribe_input_button = document.getElementById('mr-field-element-996842232134-subscribe-mobile');
-    $subscribe_input_button.click();
-};
-*/
-
-// const init_close_overlay = () => {
-//     console.log("init overlay");
-//     const $close_overlay = document.getElementById('close_overlay');
-
-//     $close_overlay.addEventListener('click', function(event) {
-//         console.log("init overlay click");
-//         event.preventDefault();
-//         document.getElementById('video_overlay').classList.toggle('active');
-
-//     });
-// }
 
 function init_page() {
     // Define functions for each case

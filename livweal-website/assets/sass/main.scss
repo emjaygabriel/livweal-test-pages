@@ -72,12 +72,13 @@ p {
             color: $light_color;
             border-radius: 30px;
             font-size: 1.2rem;
+            display: inline-block;
             // filter: drop-shadow(-1px 5px 3px #aaaaaa);
         }
         .start-here:hover { text-decoration: none; }
         ul {
             display: inline-block;
-            margin-left: 2rem;
+            margin-left: 0rem;
             li {
                 display: inline-block;
                 text-align: right;
@@ -281,7 +282,7 @@ p {
             text-align: right;
             color: $light_color;
             a {
-                color: $light_color2;
+                color: $light_color;
                 display: inline-block;
                 margin-left: 0.5rem;
                 margin-right: 0.5rem;
@@ -294,7 +295,9 @@ p {
             }
             .standard-button {
                 display: inline-block;
-                color: $light_color2;
+                color: $light_color;
+                font-size: 1.2rem;
+                letter-spacing: 0.1rem;
             }
         }
     }
@@ -376,6 +379,16 @@ p {
     }
     .newsletter-box {
         margin-bottom: 4rem;
+        .standard-form {
+            .standard-button {
+                color: $light_color;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1rem;
+                letter-spacing: 0.1rem;
+            }
+        }
     }
 }
 
@@ -637,6 +650,11 @@ p {
 
 a, abbr, acronym, address, applet, b, big, blockquote, body, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, tt, u, ul, var {
     vertical-align: bottom !important;
+}
+
+.op-login-form-2 {
+	margin-top: 15rem !important;
+	margin-bottom: 15rem !important;
 }
 
 

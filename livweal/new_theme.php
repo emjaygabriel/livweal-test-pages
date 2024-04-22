@@ -109,7 +109,7 @@
     <footer id="footer_desktop">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 text-center">
                     <a href="#" class="footer-logo"><img src="/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-footer.png" /></a>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">

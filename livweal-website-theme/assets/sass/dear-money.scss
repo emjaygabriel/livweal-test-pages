@@ -41,12 +41,14 @@
     .lets-talk-box {
         padding: 0rem 8rem 10rem 8rem;
         h2 {
+            padding-bottom: 0;
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: $primary_color2;
-            font-family: $font_kazimir;
+            font-family: $font_kazimir !important;
         }
         p {
+            padding-bottom: 0;
             margin-bottom: 2rem;
             font-size: 1.2rem;
             &:last-child {
@@ -70,11 +72,12 @@
     padding: 5rem 8rem 12rem 8rem;
     .events-box {
         h2 {
+            padding-bottom: 0;
             text-align: center;
             font-size: 2.5rem;
             color: $primary_color2;
             margin-bottom: 4rem;
-            font-family: $font_amalfi;
+            font-family: $font_amalfi !important;
         }
         .event-option {
             margin-bottom: 2rem;
@@ -103,24 +106,25 @@
                 text-align: center;
                 border-radius: 0 0 1.5rem 1.5rem;
                 p {
+                    padding-bottom: 0;
                     font-size: 1.2rem;
                     text-align: center;
-                    font-family: $font_libre_franklin;
+                    font-family: $font_libre_franklin !important;
                     color: #fff;
                     &:last-child {
                         margin-bottom: 0;
                     }
                     &.date {
-                        font-family: $font_kazimir;
+                        font-family: $font_kazimir !important;
                         margin-bottom: 0.5rem;
                         font-weight: bold;
                     }
                     &.short-desc {
-                        font-family: $font_libre_franklin;
+                        font-family: $font_libre_franklin !important;
                         margin-bottom: 1.5rem;
                     }
                     .standard-button {
-                        font-family: $font_libre_franklin;
+                        font-family: $font_libre_franklin !important;
                     }
                     
                 }
