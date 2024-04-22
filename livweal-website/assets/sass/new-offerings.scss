@@ -590,6 +590,10 @@
 }
 
 @media screen and (max-width: 480px) {
+    #hero-section .hero-info .hero-centered h1 {
+        line-height: 2;
+    }
+
     #dear-money-section {
         margin-top: -10rem;
     }

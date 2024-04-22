@@ -364,7 +364,9 @@
 }
 
 @media screen and (max-width: 781px) {
-
+    .livweal-text-modal .modal-dialog .modal-content .livweal-modal-body .author {
+        line-height: 2;
+    }
 }
 
 @media screen and (max-width: 635px) {
