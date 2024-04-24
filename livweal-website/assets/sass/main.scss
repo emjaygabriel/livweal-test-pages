@@ -73,6 +73,7 @@ p {
             border-radius: 30px;
             font-size: 1.2rem;
             display: inline-block;
+            text-decoration: none;
             // filter: drop-shadow(-1px 5px 3px #aaaaaa);
         }
         .start-here:hover { text-decoration: none; }
@@ -92,6 +93,7 @@ p {
                     display: inline-block;
                     padding-bottom: 0.10rem;
                     line-height: 1.5;
+                    text-decoration: none;
                 }
                 a:hover {
                     border-bottom: 2px solid $primary_color;
