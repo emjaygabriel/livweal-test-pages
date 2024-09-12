@@ -1054,6 +1054,12 @@
     }
 }
 
+@media (min-width: 801px) and (max-width: 1281px) {
+    #story_section {
+        padding-bottom: 5rem;
+    }
+}
+
 @media screen and (max-width: 1267px) {
     .hero-section-bottom {
         margin-top: -3rem;

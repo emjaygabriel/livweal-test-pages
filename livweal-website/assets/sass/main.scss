@@ -143,6 +143,12 @@ p {
   display: none;
   position: relative;
   z-index: 100;
+  &.not-on-top {
+    input ~ nav {
+        transition: 0.5ms;
+        background-color: #fff;
+    }
+  }
   .header-logo {
     position: fixed;
     z-index: 6;
@@ -216,7 +222,7 @@ p {
       }
     }
     input ~ nav {
-      background: white;
+      background: transparent;
       position: fixed;
       top: 0;
       left: 0;
@@ -268,11 +274,12 @@ p {
       }
     }
 }
+#main-menu-toggle { display: none; }
 
 #footer_desktop {
     display: block;
     background-color: #033128;
-    padding: 4rem 1rem;
+    padding: 4rem 1rem 1rem 1rem;
     .newsletter-box {
         .newsletter-entry {
             margin-bottom: 0.5rem;
@@ -659,6 +666,35 @@ a, abbr, acronym, address, applet, b, big, blockquote, body, center, cite, code,
 	margin-bottom: 15rem !important;
 }
 
+#testimonials #header_mobile input + label span {
+    background: #fff;
+} 
+#testimonials #header_mobile.not-on-top input + label span {
+    background: #14594C;
+}
+
+.bottom-footer-links {
+    text-align: right;
+    ul {
+        margin-bottom: 0;
+        margin-top: 2rem;
+        li {
+            display: inline-block;
+            margin: 0 1rem;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                color: #aaa;
+                text-align: center;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 1600px) {
     .green-wave-footer-404 {

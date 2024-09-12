@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "Dear Money, Let’s Talk™ Retreat",
+      "date": "June 8-9, 2024 | 10am - 6pm PT",
+      "price": "USD$500",
+      "image1_url": "",
+      "image2_url": ""
+    },
+    {
+      "id": 2,
+      "name": "Ignite Your Worth Workshop",
+      "date": "June 13, 2024 | 4pm - 6pm PT",
+      "price": "USD$75",
+      "image1_url": "",
+      "image2_url": ""
+    },
+    {
+      "id": 3,
+      "name": "Ignite Your Worth Workshop",
+      "date": "June 23rd, 2024 | 11am - 2pm PT",
+      "price": "USD$75",
+      "image1_url": "",
+      "image2_url": ""
+    },
+    {
+      "id": 4,
+      "name": "Dear Money, Let’s Talk™ Retreat",
+      "date": "July 13-14, 2024 | 10am - 6pm PT",
+      "price": "USD$500",
+      "image1_url": "",
+      "image2_url": ""
+    },
+    {
+      "id": 5,
+      "name": "Dear Money, Let’s Talk™ Retreat",
+      "date": "October 12-13, 2024 | 10am - 6pm PT",
+      "price": "USD$500",
+      "image1_url": "",
+      "image2_url": ""
+    },
+    {
+      "id": 6,
+      "name": "Dear Money, Let’s Talk™ Retreat",
+      "date": "November 9-10, 2024 | 10am - 6pm PT",
+      "price": "USD$500",
+      "image1_url": "",
+      "image2_url": ""
+    }
+    
+  ]

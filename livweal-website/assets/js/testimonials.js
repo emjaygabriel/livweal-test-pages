@@ -104,3 +104,21 @@ const init_element_height = (class_name) => {
     elements[i].style.height = maxHeight + 'px';
   }
 }
+
+// Function to check if the scroll reaches the very top
+function isAtTop() {
+  return window.scrollY === 0;
+}
+
+// Event listener for scroll
+window.addEventListener('scroll', function() {
+  // Check if the width of the screen is <= 1180
+  if (window.innerWidth <= 1180) {
+      // Check if the scroll reaches the very top
+      if (isAtTop()) {
+          $("#header_mobile .header-logo .menu-off").attr('src', '/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-white-mobile.png');
+      } else {
+          $("#header_mobile .header-logo .menu-off").attr('src', '/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-green-mobile.png');
+      }
+  }
+});

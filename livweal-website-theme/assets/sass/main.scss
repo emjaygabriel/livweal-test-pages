@@ -72,12 +72,14 @@ p {
             color: $light_color;
             border-radius: 30px;
             font-size: 1.2rem;
+            display: inline-block;
+            text-decoration: none;
             // filter: drop-shadow(-1px 5px 3px #aaaaaa);
         }
         .start-here:hover { text-decoration: none; }
         ul {
             display: inline-block;
-            margin-left: 2rem;
+            margin-left: 0rem;
             li {
                 display: inline-block;
                 text-align: right;
@@ -91,6 +93,7 @@ p {
                     display: inline-block;
                     padding-bottom: 0.10rem;
                     line-height: 1.5;
+                    text-decoration: none;
                 }
                 a:hover {
                     border-bottom: 2px solid $primary_color;
@@ -140,6 +143,12 @@ p {
   display: none;
   position: relative;
   z-index: 100;
+  &.not-on-top {
+    input ~ nav {
+        transition: 0.5ms;
+        background-color: #fff;
+    }
+  }
   .header-logo {
     position: fixed;
     z-index: 6;
@@ -213,7 +222,7 @@ p {
       }
     }
     input ~ nav {
-      background: white;
+      background: transparent;
       position: fixed;
       top: 0;
       left: 0;
@@ -265,11 +274,12 @@ p {
       }
     }
 }
+#main-menu-toggle { display: none; }
 
 #footer_desktop {
     display: block;
     background-color: #033128;
-    padding: 4rem 1rem;
+    padding: 4rem 1rem 1rem 1rem;
     .newsletter-box {
         .newsletter-entry {
             margin-bottom: 0.5rem;
@@ -281,7 +291,7 @@ p {
             text-align: right;
             color: $light_color;
             a {
-                color: $light_color2;
+                color: $light_color;
                 display: inline-block;
                 margin-left: 0.5rem;
                 margin-right: 0.5rem;
@@ -294,7 +304,9 @@ p {
             }
             .standard-button {
                 display: inline-block;
-                color: $light_color2;
+                color: $light_color;
+                font-size: 1.2rem;
+                letter-spacing: 0.1rem;
             }
         }
     }
@@ -376,6 +388,16 @@ p {
     }
     .newsletter-box {
         margin-bottom: 4rem;
+        .standard-form {
+            .standard-button {
+                color: $light_color;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1rem;
+                letter-spacing: 0.1rem;
+            }
+        }
     }
 }
 
@@ -639,6 +661,40 @@ a, abbr, acronym, address, applet, b, big, blockquote, body, center, cite, code,
     vertical-align: bottom !important;
 }
 
+.op-login-form-2 {
+	margin-top: 15rem !important;
+	margin-bottom: 15rem !important;
+}
+
+#testimonials #header_mobile input + label span {
+    background: #fff;
+} 
+#testimonials #header_mobile.not-on-top input + label span {
+    background: #14594C;
+}
+
+.bottom-footer-links {
+    text-align: right;
+    ul {
+        margin-bottom: 0;
+        margin-top: 2rem;
+        li {
+            display: inline-block;
+            margin: 0 1rem;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                color: #aaa;
+                text-align: center;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 1600px) {
     .green-wave-footer-404 {

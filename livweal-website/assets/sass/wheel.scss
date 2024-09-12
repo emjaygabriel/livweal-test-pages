@@ -422,6 +422,22 @@
 		padding-bottom: 0;
 		font-weight: normal;
 	}
+
+  .manual_wealth_selection { margin-bottom: 3rem; }
+  .manual_wealth_selection .col-4 a {
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid #000;
+    display: block;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .manual_wealth_selection .col-4 a.active {
+    background-color: #888;
+    color: #fff;
+  }
   
   @media (max-width: 960px) {
     /* Your styles for screens with a width of 960 pixels or less go here */

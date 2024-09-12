@@ -8,9 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" media="print" onload="this.media='all'">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="<?php echo $template_directory_uri; ?>/assets/sass/main.min.css" /> 
+        <link rel="stylesheet" href="<?php echo $template_directory_uri; ?>/assets/sass/main.min.css" media="print" onload="this.media='all'" /> 
 
         <?php wp_head(); ?>
 
@@ -77,13 +77,13 @@
                 <li><a class="menu-item-contact" href="/contact/">Contact</a></li>
             </ul>  
         </nav>
-        <a  href="/" id="desktop_logo" class="logo"></a>
+        <a href="/" id="desktop_logo" class="logo" title="livweal"></a>
     </header>
   
     <header id="header_mobile">
         <a href="/" class="header-logo">
-            <img class="menu-on" src="/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-white-mobile.png" style="display: none;" />
-            <img class="menu-off" src="/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-green-mobile.png" style="display: inline-block;" />
+            <img loading="lazy" class="menu-on" alt="livweal institute" src="/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-white-mobile.png" style="display: none;" />
+            <img loading="lazy" class="menu-off" alt="livweal institute" src="/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-green-mobile.png" style="display: inline-block;" />
         </a>
   
         <input id="main-menu-toggle" type="checkbox" />

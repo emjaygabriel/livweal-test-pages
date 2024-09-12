@@ -83,6 +83,7 @@ function init_page() {
         handled_active_page(".menu-item-testimonials");
         add_body_id("testimonials");
         update_main_logo("light");
+        set_mobile_logo_to_light();
         // Add your testimonials page logic here
     }
 
@@ -122,16 +123,20 @@ function init_page() {
         body.id = $id;
     }
 
+    const set_mobile_logo_to_light = () => {
+        $("#header_mobile .header-logo .menu-off").attr('src', '/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-white-mobile.png');
+    }
+
     const update_main_logo = ($version) => {
         // 2 versions only, light and dark. (dark is green);
         let $html = null;
         switch($version) {
             case "dark": {
-                $html = $(`<img class="green-version" src="https://dev.livweal.com/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-green-desktop.png" />`);
+                $html = $(`<img loading="lazy" alt="livweal institute" class="green-version" src="/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-green-desktop.png" />`);
                 break;
             }   
             case "light": {
-                $html = $(`<img class="white-version" src="https://dev.livweal.com/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-white-desktop.png" />`);
+                $html = $(`<img loading="lazy" alt="livweal institute" class="white-version" src="/wp-content/themes/livweal-website-theme/assets/images/livweal-logo-white-desktop.png" />`);
                 break;
             }
             default: {
@@ -184,6 +189,26 @@ function init_page() {
     }
     
 }
+
+// Function to check if the scroll reaches the very top
+function isAtTop() {
+    return window.scrollY === 0;
+}
+
+// Event listener for scroll
+window.addEventListener('scroll', function() {
+    // Check if the width of the screen is <= 1180
+    if (window.innerWidth <= 1180) {
+        // Check if the scroll reaches the very top
+        if (isAtTop()) {
+            console.log('You are at the very top of the page!');
+            // Your code to handle reaching the top of the page goes here
+            document.getElementById("header_mobile").classList.remove("not-on-top");
+        } else {
+            document.getElementById("header_mobile").classList.add("not-on-top");
+        }
+    }
+});
 
 
 

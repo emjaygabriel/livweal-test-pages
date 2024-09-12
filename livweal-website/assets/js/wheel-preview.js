@@ -121,7 +121,8 @@ new Vue({
                 ]
             }
         },
-        full_name: "",
+        first_name: "",
+        last_name: "",
         email_address: ""
     },
     created() {

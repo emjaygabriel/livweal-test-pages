@@ -170,6 +170,11 @@
             position: absolute;
             bottom: 0;
             width: 100%;
+            .nm.nm {
+                img {
+                    width: 100%;
+                }
+            }
             .testimonial-info {
                 background-color: $light_green;
                 padding: 1rem 2.5rem 1.5rem 2.5rem;

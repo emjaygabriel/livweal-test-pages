@@ -81,6 +81,13 @@
     display: none;
 }
 
+.challenge-form {
+    max-width: 470px;
+    min-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (max-width: 1700px) {
     .footer-bottom2 {
         margin-top: -20rem;
@@ -182,7 +189,7 @@
 }
 
 @media screen and (max-width: 480px) { 
-
+    #hero-section .hero-content .labels-section h1 { font-size: 2rem; }
 }
 
 @media screen and (max-width: 380px) { 

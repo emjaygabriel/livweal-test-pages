@@ -62,6 +62,12 @@ new Vue({
                 "Emotional Wealth",
                 "Interpersonal Wealth",
                 "Energetic Wealth",
+                "Financial Wealth",
+                "Somatic Wealth",
+                "Mental Wealth",
+                "Emotional Wealth",
+                "Interpersonal Wealth",
+                "Energetic Wealth",
                 "Financial Wealth"
             ],
             questions: {
@@ -129,8 +135,17 @@ new Vue({
                 ]
             }
         },
-        full_name: "",
-        email_address: ""
+        first_name: "",
+        last_name: "",
+        email_address: "",
+        manual_questions: {
+            somatic_wealth: ["","","","",""],
+            mental_wealth: ["","","","",""],
+            emotional_wealth: ["","","","",""],
+            interpersonal_wealth: ["","","","",""],
+            energetic_wealth: ["","","","",""],
+            financial_wealth: ["","","","",""]
+        }
     },
     created() {
         console.log("script created");
@@ -178,11 +193,83 @@ new Vue({
         financial_wealth_question5($value) { this.updateFinancialWealthData(); },
     },
     methods: {
+        set_manual_answer(event) {
+            const $zone = event.target.dataset.zone;
+            const $index = event.target.dataset.index;
+            const $value = event.target.dataset.value;
+            const $percentage = event.target.dataset.percentage;
+             
+            $(`.manual_answer_item[data-zone=${$zone}][data-index=${$index}]`).removeClass('active');
+            $(`.manual_answer_item[data-zone=${$zone}][data-index=${$index}][data-value=${$value}]`).addClass('active');
+
+            this.manual_questions[$zone][$index] = $value;
+
+            this.calculate_manual_answer($percentage, $value);
+        },
+        calculate_manual_answer($score_percentage, $answer) {
+            let $amount = 0;
+            let $total_amount = 0;
+            if($score_percentage < 33) {
+                switch($answer) {
+                    case "never": 
+                        amount = 0;
+                        $total_amount = $score_percentage;
+                        console.log(`%c Score: ${$score_percentage} | ${$answer} | ${0}`, `color: black; font-weight: bold;`);
+                        break;
+                    case "sometimes":
+                        amount = Math.round($score_percentage * 0.33);
+                        $total_amount = $score_percentage + amount;
+                        console.log(`%c Score: ${$score_percentage} | ${$answer} | ${amount} increased`, `color: green; font-weight: bold;`);
+                        break;
+                    case "always":
+                        amount = Math.round($score_percentage * 0.66);
+                        $total_amount = $score_percentage + amount;
+                        console.log(`%c Score: ${$score_percentage} | ${$answer} | ${amount} increased`, `color: green; font-weight: bold;`);
+                        break;
+                }
+            } else if (($score_percentage > 34) && ($score_percentage < 66)) {
+                switch($answer) {
+                    case "never": 
+                        amount = Math.round($score_percentage * 0.33);
+                        $total_amount = $score_percentage - amount;
+                        console.log(`%c Score: ${$score_percentage} | ${$answer} | ${amount} decreased`, `color: red; font-weight: bold;`);
+                        break;
+                    case "sometimes": 
+                        amount = 0;
+                        $total_amount = $score_percentage;
+                        console.log(`%c Score: ${$score_percentage} | ${$answer} | ${amount}`, `color: black; font-weight: bold;`);
+                        break;
+                    case "always": 
+                        amount = Math.round($score_percentage * 0.33);
+                        $total_amount = $score_percentage + amount;
+                        console.log(`%c Score: ${$score_percentage} | ${$answer} | ${amount} increased`, `color: green; font-weight: bold;`);
+                        break;
+                }
+            } else {
+                switch($answer) {
+                    case "never": 
+                        amount = Math.round($score_percentage * 0.66);
+                        $total_amount = $score_percentage - amount;
+                        console.log(`%c Score: ${$score_percentage} | ${$answer} | ${amount} decreased`, `color: red; font-weight: bold;`);
+                        break;
+                    case "sometimes": 
+                        amount = Math.round($score_percentage * 0.33);
+                        $total_amount = $score_percentage - amount;
+                        console.log(`%c Score: ${$score_percentage} | ${$answer} | ${amount} decreased`, `color: red; font-weight: bold;`);
+                        break;
+                    case "always":
+                        amount = 0;
+                        $total_amount = $score_percentage;
+                        console.log(`%c Score: ${$score_percentage} | ${$answer} | ${amount}`, `color: black; font-weight: bold;`);
+                        break;
+                }
+            }
+        },
         calculate_somatic_wealth_wheel() {
             const data = [
                 parseInt(this.somatic_wealth_question1),
                 parseInt(this.somatic_wealth_question2),
-                parseInt(this.somatic_wealth_question3),
+                parseInt(this.somatic_wealth_question3), 
                 parseInt(this.somatic_wealth_question4),
                 parseInt(this.somatic_wealth_question5)
             ];
@@ -874,7 +961,7 @@ new Vue({
             this.scrollToTop();
         },
         nextChart() {
-            if(this.current_chart !== 6) {
+            if(this.current_chart !== 12) {
                 this.current_chart++;
                 this.manageVisibility();
             }

@@ -618,6 +618,12 @@
     }
 }
 
+@media screen and (min-width: 381px) and (max-width: 440px) {
+    #dear-money-section {
+        margin-top: -2rem;
+    }
+}
+
 @media screen and (max-width: 380px) {
     #dear-money-section {
         margin-top: -3rem;

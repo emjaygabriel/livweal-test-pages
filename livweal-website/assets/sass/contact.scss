@@ -56,6 +56,17 @@
             }
         }
     }
+    .send-us-a-form {
+        img {
+            width: 100%;
+            margin-left: 5rem;
+            margin-right:  5rem;
+        }
+    }
+    .contact-form {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
 }
 
 .cream-wave {
@@ -128,8 +139,10 @@
     /* Your styles for 1600px and larger screens */
     #form-section img {
         width: 100%;
-        margin-left: 1rem;
+        // margin-left: 1rem;
     }
+
+
 
 }
 
@@ -205,7 +218,14 @@
 /* 1280px */
 @media screen and (max-width: 1280px) {
     /* Your styles for 1280px and larger screens */
+    #form-section .send-us-a-form img {
+        margin-left: 2rem;
+    }
 
+    #form-section .contact-form {
+        padding-left: 3rem;
+        padding-right: 2rem;
+    }
 }
     
 /* 1176px */
@@ -264,7 +284,14 @@
 /* 1024px */
 @media screen and (max-width: 1024px) {
     /* Your styles for 1024px and larger screens */
-    
+    #form-section .send-us-a-form img {
+        margin-left: 1rem;
+    }
+
+    #form-section .contact-form {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 /* 1024px */
@@ -283,6 +310,18 @@
     }
     #enquiry-section .left-section p {
         margin-bottom: 2rem;
+    }
+
+    #form-section .send-us-a-form img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    #form-section .contact-form {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
     

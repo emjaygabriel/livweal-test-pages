@@ -508,7 +508,12 @@
     }
 }
 
+@media screen and (max-width: 1005px) {
+    #bottom-footer { margin-top: -120px; }
+}
+
 @media screen and (max-width: 991px) {
+    #bottom-footer { margin-top: -85px; } 
     .testimonial-learn-more { font-size: 1rem; }
     #hero-section .hero-container {
         top: 9.5rem;
@@ -562,6 +567,12 @@
         padding: 10rem 4rem 10rem 4rem;
     }
     
+}
+
+@media screen and (max-width: 809px) { 
+    #testimonials .testimonials-bg {
+        height: 1180px;
+    }
 }
 
 @media screen and (min-width: 681px) and (max-width: 940px) {
@@ -619,6 +630,12 @@
     
 }
 
+@media screen and (max-width: 726px) { 
+    #testimonials .testimonials-bg {
+        height: 1260px;
+    }
+}
+
 @media screen and (max-width: 680px) { 
     #hero-section .hero-bg {
         height: 450px;
@@ -634,6 +651,24 @@
     }
     #founder-note .founder-note-content {
         padding: 1rem 2.5rem 3rem 2.5rem;
+    }
+}
+
+@media screen and (max-width: 662px) { 
+    #testimonials .testimonials-bg {
+        height: 1300px;
+    }
+}
+
+@media screen and (max-width: 634px) { 
+    #testimonials .testimonials-bg {
+        height: 1330px;
+    }
+}
+
+@media screen and (max-width: 582px) { 
+    #testimonials .testimonials-bg {
+        height: 1400px;
     }
 }
 
@@ -666,7 +701,7 @@
 
 @media screen and (max-width: 480px) {
     #testimonials .testimonials-bg {
-        height: 1700px;
+        height: 1420px;
     }
 
     #hero-section .hero-container {
@@ -713,6 +748,43 @@
         position: absolute;
         top: 5rem;
         left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #testimonials .testimonials-bg {
+        height: 1470px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #testimonials .testimonials-bg {
+        height: 1500px;
+    }
+}
+
+@media screen and (max-width: 405px) {
+    #testimonials .testimonials-bg {
+        height: 1550px;
+    }
+}
+
+
+@media screen and (max-width: 388px) {
+    #testimonials .testimonials-bg {
+        height: 1600px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #testimonials .testimonials-bg {
+        height: 1650px;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    #testimonials .testimonials-bg {
+        height: 1700px;
     }
 }
 
